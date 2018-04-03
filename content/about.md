@@ -1,5 +1,6 @@
 +++
-type="text"
+title="abt"
+layout="justified"
 +++
 
 i like typography, fountain pens, sunglasses, computers,

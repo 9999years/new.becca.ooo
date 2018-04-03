@@ -50,14 +50,14 @@ a:hover {
 	margin-right: auto;
 }
 
-.rule {
+.full-rule {
 	border-top: 1px solid #aff;
 	margin: 0.5em auto;
 	width: 100%;
 	height: 0;
 }
 
-.small-rule {
+.rule {
 	border-top: 1px solid #aff;
 	margin: 0.5em auto;
 	width: 50px;

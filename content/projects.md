@@ -1,5 +1,5 @@
 +++
-type="text"
+layout="text"
 +++
 
 ## projects
@@ -28,8 +28,6 @@ databending app
 a Chrome extension to modify Tumblr’s user interface by adding
 line-wrapping for post tags. Peaked at ≈35,000 users.
 
-{{% rule %}}
-
 ## twitter bots
 
 [@goodwordsbot](https://twitter.com/goodwordsbot) --- real-sounding
@@ -48,8 +46,6 @@ upset bot. currently on hiatus
 
 [@pastebinrecent](https://twitter.com/pastebinrecent) --- recent text
 from [pastebin.com](https://pastebin.com/). not guarenteed to be sfw
-
-{{partial "rule.html"}}
 
 ## misc
 

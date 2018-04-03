@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://becca.ooo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://becca.ooo/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://becca.ooo/art/</loc>
+  </url>
+  
+  <url>
+    <loc>https://becca.ooo/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://becca.ooo/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://becca.ooo/reel/hq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://becca.ooo/reel/</loc>
+  </url>
+  
+  <url>
+    <loc>https://becca.ooo/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://becca.ooo/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

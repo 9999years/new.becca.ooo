@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rebecca t</title>
+    <link>https://becca.ooo/</link>
+    <description>Recent content on rebecca t</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://becca.ooo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://becca.ooo/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://becca.ooo/about/</guid>
+      <description>i like typography, fountain pens, sunglasses, computers, calculus, physics (which i am terrible at), linguistics, modern art, angsty poetry, film, and plants.
+i was born in 1998 and i live near washington dc or boston. my pronouns are she/her, and my mbti is infp, i think.
+i write code often using vim, which i am fanatic about.
+i make many different kinds of art in my free time
+i enjoy both coffee and tea.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://becca.ooo/art/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://becca.ooo/art/</guid>
+      <description>art around the web 9999yea.rs, gif art mograph reel webprocess, work in progress techb@flickr, 35mm photography 999flowers@tumblr, still art </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://becca.ooo/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://becca.ooo/contact/</guid>
+      <description>{{partialCached &#34;css.html&#34; .}} contact info email:637275@gmail.com  skype:b637275  facebook:b637275  kik:637275 snapchat:pupbecca  steam:iceshepherd  battle.net:ice#13355 discord:pupbecca#4508 instagram:@gardensimulator  github:9999years  telegram:@beccaooo   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://becca.ooo/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://becca.ooo/projects/</guid>
+      <description>projects I C the Light, a distance-estimating ray marcher (image output gallery)
+mandelbrot.becca.ooo, an interactive Mandelbrot set exploration tool with novel iteration visualization
+integral.becca.ooo, an interactive integral approximation visualization
+img glitcher, an in-browser procedural databending app
+snell&amp;rsquo;s law simulator
+population dynamics simulator
+random #hashtag generator
+#wrap, a Chrome extension to modify Tumblr’s user interface by adding line-wrapping for post tags. Peaked at ≈35,000 users.
+ twitter bots @goodwordsbot &amp;mdash; real-sounding fake words based on latin and greek roots</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://becca.ooo/reel/hq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://becca.ooo/reel/hq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://becca.ooo/reel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://becca.ooo/reel/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
