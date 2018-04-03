@@ -1,16 +1,20 @@
 {{partial "header.html" .}}
+{{block "default includes" .}}
 <link rel="stylesheet" type="text/css" href="/css/main.css"></style>
+{{end}}
 {{block "includes" .}}{{end}}
 {{block "body tag" .}}{{end}}
 <div id="container">
-{{block "title" .}}
-<div id="head"><a href="/">rebecca turner</a></div>
-	{{block "nav" .}}
-	<div class="rule"></div>
-	<p><a href="/about">about</a> /
-	<a href="/projects">projects</a> /
-	<a href="/art">art</a> /
-	<a href="/contact">contact</a>
-	<div class="rule"></div>
+	{{block "title" .}}
+	<div id="head"><a href="/">rebecca turner</a></div>
+		{{block "nav" .}}
+		<div class="rule"></div>
+		<p><a href="/about">about</a> /
+		<a href="/projects">projects</a> /
+		<a href="/art">art</a> /
+		<a href="/contact">contact</a>
+		<div class="rule"></div>
+		{{end}}
 	{{end}}
-{{end}}
+	<div {{block "body copy style" .}}id="body-copy"{{end}}>
+		<h2 {{block "title style" .}}class="center"{{end}}>{{.Title}}</h2>
