@@ -1,0 +1,19 @@
+.row {
+	display: flex;
+	margin-top: 1em;
+}
+
+a .row:hover {
+	background-color: #aff;
+}
+
+.cell {
+	width: 100%;
+	text-align: left;
+}
+
+.cell:first-child {
+	text-align: right;
+	margin-right: 0.25em;
+}
+

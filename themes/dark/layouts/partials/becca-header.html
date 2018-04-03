@@ -1,0 +1,16 @@
+{{partial "header.html" .}}
+{{% css main %}}
+{{block "includes" .}}{{end}}
+{{block "body tag" .}}{{end}}
+<div id="container">
+	{{block "title" .}}
+	<div id="head"><a href="/">rebecca turner</a></div>
+		{{block "nav" .}}
+		<div class="small-rule"></div>
+		<p><a href="/about">about</a> /
+		<a href="/projects">projects</a> /
+		<a href="/art">art</a> /
+		<a href="/contact">contact</a>
+		<div class="small-rule"></div>
+		{{end}}
+	{{end}}
