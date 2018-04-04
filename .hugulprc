@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "pipeline": [
+    "images",
+    "styles",
+    "html"
+  ],
+  "path": {
+    "styles": "css",
+    "images": "images",
+    "scripts": "js"
+  },
+  "watch": {
+    "source": "assets",
+    "target": "static"
+  },
+  "build": {
+    "source": "public",
+    "target": "public"
+  },
+  "autoprefixer": { "browsers": ["last 2 versions"] },
+  "cleancss": { "advanced": false },
+  "htmlmin": { "collapseWhitespace": true },
+  "gifsicle": { "interlaced": true },
+  "jpegtran": { "progressive": true },
+  "optipng": { "optimizationLevel": 5 },
+  "svgo": { "plugins": [{ "removeViewBox": true }, { "cleanupIDs": false }] }
+}
