@@ -1,2 +1,3 @@
-public/**
-static/css/**
+public
+static/css
+static/img
