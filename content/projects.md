@@ -6,21 +6,21 @@ title="projects"
 distance-estimating ray marcher ([image output
 gallery](/i-c-the-light/gallery))
 
-[mandelbrot.becca.ooo](https://mandelbrot.becca.ooo/), an interactive
+[/mandelbrot](/mandelbrot), an interactive
 [Mandelbrot set](https://en.m.wikipedia.org/wiki/Mandelbrot_set)
 exploration tool with novel iteration visualization
 
-[integral.becca.ooo](https://integral.becca.ooo/), an interactive
+[/integral](/integral), an interactive
 integral approximation visualization
 
-[img glitcher](https://glitcher.9999yea.rs/), an in-browser procedural
+[img glitcher](/glitcher), an in-browser procedural
 databending app
 
-[snell's law simulator](https://snell.9999yea.rs/)
+[snell's law simulator](/snell)
 
-[population dynamics simulator](https://fox.9999yea.rs/)
+[population dynamics simulator](/fox)
 
-[random #hashtag generator](https://unicode.9999yea.rs/hashtag/)
+[random #hashtag generator](/unicode/hashtag)
 
 [#wrap](https://chrome.google.com/webstore/detail/wrap/nbcgkdilbhnnoemimofnknocbkpldobi),
 a Chrome extension to modify Tumblr’s user interface by adding
@@ -47,8 +47,8 @@ from [pastebin.com](https://pastebin.com/). not guarenteed to be sfw
 
 # misc
 
-[unicode resources](https://unicode.9999yea.rs/)
+[unicode resources](/unicode)
 
-[ascii chart](https://becca.ooo/ascii)
+[ascii chart](/ascii)
 
 [other small projects at github.com/9999years](https://github.com/9999years)
