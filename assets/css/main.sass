@@ -27,33 +27,14 @@ h2
 p
   margin: 1em 0
 
-// better underline with gradients
-
 a
   color: $hi
-  text-decoration: none
-  position: relative
-  text-decoration: none
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba($hi, 0.8) 50%)
-  background-repeat: repeat-x
-  background-size: 2px 0.1em
-  background-position: 0 1.15em
-
-  &:visited
-    color: #abf
-    text-decoration: none
-    position: relative
-    text-decoration: none
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba($hi, 0.8) 50%)
-    background-repeat: repeat-x
-    background-size: 2px 0.1em
-    background-position: 0 1.15em
+  text-decoration: underline
+  text-underline-position: under
 
   &:hover
     color: $bg
-    background-image: none
     background-color: $txt
-    text-decoration: none
 
 .center
   text-align: center
@@ -92,6 +73,7 @@ a
   a
     color: #aff
     background-image: none
+    text-decoration: none
 
     &:hover
       color: $bg
