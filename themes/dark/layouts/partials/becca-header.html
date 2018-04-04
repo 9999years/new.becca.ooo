@@ -1,9 +1,12 @@
 {{partial "header.html" .}}
-{{block "default includes" .}}
+{{if not (.Param "no_default_includes")}}
 <link rel="stylesheet" type="text/css" href="/css/main.css"></style>
 {{end}}
+{{range .Param "css"}}
+<link rel="stylesheet" type="text/css" href="/css/{{.}}.css"></style>
+{{end}}
 {{block "includes" .}}{{end}}
-{{block "body tag" .}}{{end}}
+{{with .Param "onload"}}<body onload="{{.}}">{{end}}
 <div id="container">
 	{{block "title" .}}
 	<div id="head"><a href="/">rebecca turner</a></div>
