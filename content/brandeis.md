@@ -3,7 +3,7 @@ title="brandeis related links that are sometimes hard to find"
 css=["brandeis"]
 +++
 
-[library OneSearch] ([available journals])
+[library OneSearch] \([available journals])
 
 [myhousing] --- housing and meal plans
 

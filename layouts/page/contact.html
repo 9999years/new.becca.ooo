@@ -1,12 +1,9 @@
-{{define "includes"}}
-{{partial "css.html" .}}
-{{end}}
 {{partial "becca-header.html" .}}
 <div class="text-block contacts">
 {{range .Site.Data.contact.contact}}
-{{with .link}}<a href="{{.}}">{{end}}
-	<div><div>{{.label}}:</div><div>{{.val}}</div></div>
-{{with .link}}</a>{{end}}
+	{{with .link}}<a href="{{. | safeURL}}">{{end}}
+		<div><div>{{.label}}:</div><div>{{.val}}</div></div>
+	{{with .link}}</a>{{end}}
 {{end}}
 </div>
-{{partial "becca-footer.html"}}
+{{partial "becca-footer.html" .}}

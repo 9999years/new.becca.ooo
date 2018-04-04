@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="/css/{{.}}.css"></style>
 {{end}}
 {{block "includes" .}}{{end}}
-{{with .Param "onload"}}<body onload="{{.}}">{{end}}
+{{with .Param "onload"}}<body onload="{{. | safeJS}}">{{end}}
 <div id="container">
 	{{block "title" .}}
 	<div id="head"><a href="/">rebecca turner</a></div>
@@ -19,5 +19,5 @@
 		<div class="rule"></div>
 		{{end}}
 	{{end}}
-	<div {{block "body copy style" .}}id="body-copy"{{end}}>
-		<h2 {{block "title style" .}}class="center"{{end}}>{{.Title}}</h2>
+	<div {{block "body-copy-style" .}}id="body-copy"{{end}}>
+		{{with .Title}}<h2 {{block "title style" .}}class="center"{{end}}>{{.}}</h2>{{end}}
