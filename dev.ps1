@@ -4,13 +4,19 @@ Param(
 	$Sass="sass",
 	$SassDir="assets/css",
 	$CssDir="static/css",
-	[Switch]$Build,
+	[Switch]$Install,
+	[Switch]$NoBuild,
 	[Switch]$Server
 )
 
+If($Install) {
+	choco install sass -prerelease
+	choco install hugo
+}
+
 $sassDirs = "$SassDir`:$CssDir"
 
-If($Build) {
+If(!$NoBuild) {
 	& $Sass --update $sassDirs
 	& $Hugo
 }

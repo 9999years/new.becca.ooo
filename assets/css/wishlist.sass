@@ -1,0 +1,135 @@
+body, html
+  background-color: #fff
+  margin: 0
+  padding: 0
+  font-family: "Segoe UI", "San Francisco", -apple-system, "Geneva", "Futura", "Helvetica", "Arial", "Noto Sans", sans-serif
+  font-size: 22px
+
+\::selection
+  background-color: #33f
+  color: #fff
+
+#header, #footer
+  display: none
+
+#contents
+  max-width: 640px
+  margin: auto
+
+#container
+  margin: 20px 30px 150px 30px
+
+a
+  text-decoration: none
+  color: #00e
+
+  &:hover
+    background-color: #33f
+    color: #fff
+
+.title
+  a:hover
+    background-color: initial
+    color: inherit
+
+  > div
+    margin-bottom: 25px
+    display: inline-block
+    border-bottom: 1px solid #33f
+    text-indent: -5px
+
+  &:hover > div
+    border-bottom-width: 2px
+    margin-bottom: 24px
+
+  color: #33f
+  font-weight: 100
+  font-size: 100px
+  display: inline
+  position: relative
+  top: -5px
+
+.subtitle
+  font-size: 18px
+  position: relative
+  top: -15px
+  font-weight: 700
+
+.vague
+  opacity: 0.5
+
+.hide
+  display: none
+
+.highlight
+  background-color: #ff9
+
+  *
+    background-color: #ff9
+
+.items > div
+  position: relative
+  display: table
+  margin: 8px 0
+
+div:hover > .photo
+  display: flex
+
+.photo
+  position: absolute
+  top: 20px
+  left: 100%
+  display: none
+  z-index: 10
+  transform: translateY(-50%)
+  border: 2px solid #000
+  margin-left: 35px
+
+.triangle
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 7.5px 10px 7.5px 0
+  border-color: transparent #000 transparent transparent
+  position: absolute
+  left: -12px
+  top: 50%
+  transform: translateY(-12px)
+
+@media all and (max-width: 640px)
+  body
+    font-size: 18px
+
+  .subtitle, .small
+    font-size: 12px
+
+  .hover-info
+    display: none
+
+  #contents
+    margin-bottom: 20px
+
+  div:hover > .photo
+    display: none
+
+@media all and (max-width: 410px)
+  #contents
+    padding: 15px
+    margin: auto
+
+  .title
+    font-size: 75px
+
+@media all and (max-width: 313px)
+  .title
+    font-size: 50px
+
+@media all and (max-width: 215px)
+  body
+    font-size: 13px
+
+  .subtitle
+    top: -8px
+
+  .title
+    font-size: 25px
