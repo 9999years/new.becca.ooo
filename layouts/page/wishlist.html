@@ -1,16 +1,16 @@
 {{partial "becca-header.html" .}}
 {{define "photo"}}<div class="photo">
 	<div class="triangle"></div>
-	<img src="img/{{.}}">
+	<img src="/img/wishlist/{{.}}">
 </div>{{end}}
-<div class="text-block contacts">
+<div class="text-block items">
 {{range .Site.Data.wishlist.items}}
-	{{with .url}}<a href="{{. | safeURL}}">{{end}}
+	<div>{{with .url}}<a href="{{. | safeURL}}">{{end}}
 		{{with .name}}{{.}}{{end}}
 	{{with .url}}</a>{{end}}
 	{{with .features}}({{.}}){{end}}
 	{{with .price}} — {{.}}{{end}}
-	{{with .photo}}{{template "photo" .}}{{end}}
+	{{with .photo}}{{template "photo" .}}{{end}}</div>
 {{end}}
 </div>
 {{partial "becca-footer.html" .}}
