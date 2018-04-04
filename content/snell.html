@@ -1,0 +1,685 @@
+<!doctype html>
+<title>Snell's Law</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html,body,input,select {
+  font-family: "Segoe UI", -apple-system, "Geneva", "Helvetica", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Sans", "Noto Serif", "Code2001", "Code2000", "HanaMinA", "HanaMinB", "BabelStone Han", "DejaVu Sans", "DejaVu Serif", "DejaVu Sans Mono", "UniDings", "Helvetica Neue", "Helvetica", "Arial", sans-serif, monospace;
+}
+
+html,body {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	overflow:hidden;
+}
+
+canvas {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 16px;
+	background: #dbdbf5
+}
+
+a, a:visited {
+	color:#000;
+}
+
+a:hover {
+	color:#00f;
+}
+
+canvas {
+	z-index: -1
+}
+
+input: {
+	z-index: 1
+}
+
+canvas:active {
+	cursor: hand
+}
+
+.inner {
+	display: inline-block
+}
+
+.top {
+	position: absolute;
+	top: 10px;
+	left: 10px
+}
+
+.bottom {
+	position: absolute;
+	bottom: 10px;
+	right: 10px
+}
+
+.sliderRow {
+	font-size: 25px;
+	margin: auto;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	max-width: 800px
+}
+
+.sliderRow > div {
+	flex-grow: 1
+}
+
+.sliderRow > input[type=number] {
+	flex-grow: 2
+}
+
+.sliderRow > input[type=range] {
+	flex-grow: 3
+}
+
+.label,.sliderRow > .inner {
+	position: relative;
+	top: 3px
+}
+
+#nsubiContainer .angle, #nsubiContainer .label {
+	color:#f00;
+}  
+
+#nsubrContainer .angle, #nsubrContainer .label {
+	color:#00f;
+}
+
+.angle {
+	width: 150px;
+	display: inherit;
+	overflow: hidden;
+	margin-left: 5px;
+	position: relative;
+	top: 5px
+}
+
+sub {
+	position: relative;
+	top: 10px;
+	vertical-align: top;
+}
+
+input {
+	display: inline-block;
+}
+
+select {
+	background-color: #dbdbf5;
+	border: 1px solid #050513;
+	height: 32px;
+	margin: 0 5px;
+}
+
+input[type=number] {
+	width: 60px;
+	height: 30px;
+	text-align: center;
+	padding: 0;
+	-webkit-appearance: none;
+	background-color: #dbdbf5;
+	border: 1px solid #050513
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	height: 30px;
+	margin: 0 0 0 5px;
+	border: 1px solid #050513
+}
+
+input:focus, select:focuss {
+	outline: none
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	cursor: pointer;
+	background: #dbdbf5
+}
+
+input[type=range]::-webkit-slider-thumb {
+	height: 30px;
+	width: 12px;
+	background: #050513;
+	cursor: pointer;
+	-webkit-appearance: none
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 30px;
+	cursor: pointer;
+	background: #dbdbf5;
+	border-radius: 0;
+	border: 1px solid #050513
+}
+
+input[type=range]::-moz-range-thumb {
+	height: 30px;
+	width: 12px;
+	background: #050513;
+	cursor: pointer;
+	border-radius: 0
+}
+
+.button {
+	cursor: pointer;
+	color: #000;
+	text-align: center;
+	background-color: #dbdbf5;
+	margin-right: 5px;
+	height: 30px
+}
+
+.button .inner {
+	margin-top: 7px
+}
+
+.sliderRow > .button:last-child {
+	margin: 0
+}
+
+.button:hover {
+	color: #dbdbf5;
+	background-color: #000
+}
+
+#about {
+	display:none;
+	position:absolute;
+	z-index:2;
+	width:100%;
+	height:100%;
+	background-color: #dbdbf5;
+}
+
+#about > .inner {
+	margin:200px auto;
+	max-width:600px;
+	display:block;
+}
+
+#aboutLabel {
+	position:absolute;
+	bottom:10px;
+	left:10px;
+	z-index:3;
+}
+
+#aboutLabel .inner{
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+.equation {
+	margin: 10px auto;
+	text-align:center;
+}
+
+.equation .inner {
+	margin:auto;
+}
+
+@media only screen and (max-height: 500px) {
+	#about .inner {
+		margin:100px auto;
+	}
+}
+
+@media only screen and (max-width: 715px) {
+	#about .inner{
+		margin: 25px;
+	}
+}
+
+@media only screen and (max-width: 740px) {
+	#aboutLabel {
+		bottom:60px;
+	}
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/js/jcanvas.js"></script>
+<script>
+var canvas;
+var context;
+var width = window.innerWidth;
+var height = window.innerHeight;
+var incidentAngle = 0;
+var refractedAngle = 0;
+var nsubi = 1;
+var nsubr = 2;
+var textRadius = 120;
+var aboutShown = false;
+
+/*var refractiveIndicies = {
+  "Vacuum": 1,
+  "Air": 1.0003,
+  "Water": 1.333,
+  "Ethanol": 1.361,
+  "Diamond": 2.419,
+  "Amber": 1.55,
+  "Ice": 1.31,
+  "Acetone": 1.36,
+  "Glycerol": 1.4729,
+  "Bromine": 1.661,
+  "Acrylic glass": 1.491,
+  "Kerosene": 1.39,
+  "Crown glass": 1.52,
+  "Flint glass": 1.61,
+  "Pyrex": 1.47,
+  "Rock salt": 1.516,
+  "Sapphire": 1.764,
+  "Cubic zirconia": 2.17,
+  "Potassium niobate": 2.28,
+  "Silicon carbide": 2.67,
+  "Cinnabar (Mercury sulfide)": 3.02,
+  "Gallium(III) phosphide": 3.5,
+  "Gallium(III) arsenide": 3.927,
+  "Zinc Oxide": 2.4,
+  "Germanium": 4.03,
+  "Silicon": 3.45,
+  "Unknown I": 1.223,
+  "Unknown II": 1.67,
+  "Unknown III": 3.441,
+  "Unknown IV": 2.414,
+  "Unknown V": 1.798
+  };*/
+$(document).ready(function() {
+	canvas = document.getElementById("main");
+	context = canvas.getContext("2d");
+	context.canvas.width = width = window.innerWidth;
+	context.canvas.height = height = window.innerHeight;
+	run();
+});
+$(window).resize(function() {
+	context.canvas.width = width = window.innerWidth;
+	context.canvas.height = height = window.innerHeight;
+	textRadius = height < 330 ? height/4 : 120;
+	$('canvas').setLayer('boundryLine', {
+		y1: Math.round(height / 2) + 0.5,
+		y2: Math.round(height / 2) + 0.5,
+		x2: width
+	}).setLayer('ray', {
+		x2: width / 2,
+		y2: Math.round(height / 2) + 0.5
+	}).setLayer('reflectedRay', {
+		x1: width / 2,
+		y1: Math.round(height / 2) + 0.5
+	}).setLayer('incidentArc', {
+		x:width/2,
+		y:Math.round(height/2)+0.5,
+		radius: height < 400 ? height/4 : 100
+	}).setLayer('refractedArc', {
+		x:width/2,
+		y:Math.round(height/2)+0.5,
+		radius: height < 400 ? height/4 : 100
+	}).setLayer('normal',{
+		x1: Math.round(width/2)+0.5, y1: height/4,
+		x2: Math.round(width/2)+0.5, y2: 3*height/4});
+	updateRay();
+	$('canvas').drawLayers();
+});
+
+function updateRay() {
+	var circle = $('canvas').getLayer('dragCircle');
+	if(circle.y > height/2) {
+		$("#nsubiContainer").removeClass("top").addClass("bottom");
+		$("#nsubrContainer").removeClass("bottom").addClass("top");
+	} else {
+		$("#nsubiContainer").removeClass("bottom").addClass("top");
+		$("#nsubrContainer").removeClass("top").addClass("bottom");
+	}
+	incidentAngle = Math.atan((circle.x - width / 2) / (circle.y - height / 2));
+	var adjacent = height / 2;
+	var opposite = height * Math.tan(incidentAngle) / 2;
+	if (opposite > width / 2) {
+		opposite = width / 2;
+		adjacent = width / (2 * Math.tan(incidentAngle));
+	}
+	if (circle.y < height / 2) {
+		adjacent *= -1;
+		opposite *= -1;
+	}
+	$('#incidentAngleLabel').html(Math.abs(Math.round(incidentAngle * (180 / Math.PI) * 100) / 100) + "&#176;");
+	$('canvas').setLayer('ray', {
+		x1: width / 2 + opposite,
+		y1: height / 2 + adjacent
+	});
+	$('canvas').setLayer('reflectedRay', {
+		x2: width / 2 - opposite,
+		y2: height / 2 + adjacent
+	});
+	refractedAngle = Math.asin((nsubi * Math.sin(incidentAngle)) / nsubr);
+	if (circle.y > height / 2) refractedAngle = Math.asin((nsubr * Math.sin(incidentAngle)) / nsubi);
+	adjacent = height / 2;
+	opposite = height * Math.tan(refractedAngle) / 2;
+	if (opposite > width / 2) {
+		opposite = width / 2;
+		adjacent = width / (2 * Math.tan(refractedAngle));
+	}
+	if (circle.y > height / 2) {
+		adjacent *= -1;
+		opposite *= -1;
+	}
+	$('canvas').setLayer('ray', {
+		x3: width / 2 + opposite,
+		y3: height / 2 + adjacent
+	}).drawLayers();
+	if (isNaN(refractedAngle)) {
+		refractedAngle = "TIR";
+		$('canvas').setLayer('reflectedRay', {
+			strokeStyle: 'rgba(255,0,0,1)'
+		});
+	} else {
+		$('canvas').setLayer('reflectedRay', {
+			strokeStyle: 'rgba(255,0,0,0.4)'
+		});
+	}
+	var incidentArcStart = 0;
+	var incidentArcEnd = 0;
+	var refractedArcStart = 0;
+	var refractedArcEnd = 0;
+	var incidentAngleArc = Math.abs((incidentAngle * (180 / Math.PI))%180);
+	var refractedAngleArc = Math.abs((refractedAngle * (180 / Math.PI))%180);
+	if(circle.x > width/2 && circle.y < height/2) { //quadrant 1
+		incidentArcStart = incidentAngleArc;
+		incidentArcEnd = 0;
+		refractedArcStart = refractedAngleArc+180;
+		refractedArcEnd = 180;
+	} else if(circle.x > width/2 && circle.y > height/2) { //quadrant 2
+		incidentArcStart = 180;
+		incidentArcEnd = -incidentAngleArc+180;
+		refractedArcStart = 0;
+		refractedArcEnd = -refractedAngleArc;
+	} else if(circle.x < width/2 && circle.y > height/2) { //quadrant 3
+		incidentArcStart = incidentAngleArc+180;
+		incidentArcEnd = 180;
+		refractedArcStart = refractedAngleArc;
+		refractedArcEnd = 0;
+	} else if(circle.x < width/2 && circle.y < height/2){ //quadrant 4
+		incidentArcStart = 0;
+		incidentArcEnd = -incidentAngleArc;
+		refractedArcStart = 180;
+		refractedArcEnd = -refractedAngleArc+180;
+	}
+	$('canvas').setLayer('incidentArc', {
+		start: incidentArcStart,
+		end: incidentArcEnd
+	}).setLayer('refractedArc', {
+		start: refractedArcStart,
+		end: refractedArcEnd,
+	}).setLayer('incidentAngleTextShadow',{
+		x:(circle.y > height/2 ? 1 : -1)*Math.sin(incidentAngle/2)*textRadius+width/2,
+		y:(circle.y > height/2 ? 1 : -1)*Math.cos(incidentAngle/2)*textRadius+height/2,
+		text: "\u03f4\u1d62 = " + Math.abs(Math.round(incidentAngle * (180 / Math.PI) * 100) / 100) + "\u00B0"}).setLayer('refractedAngleTextShadow',{
+		x:(circle.y > height/2 ? -1 : 1)*Math.sin(refractedAngle/2)*textRadius+width/2,
+		y:(circle.y > height/2 ? -1 : 1)*Math.cos(refractedAngle/2)*textRadius+height/2,
+		text: "\u03f4\u1d63 = " + Math.abs(Math.round(refractedAngle * (180 / Math.PI) * 100) / 100) + "\u00B0"}).setLayer('incidentAngleText',{
+			x:(circle.y > height/2 ? 1 : -1)*Math.sin(incidentAngle/2)*textRadius+width/2,
+			y:(circle.y > height/2 ? 1 : -1)*Math.cos(incidentAngle/2)*textRadius+height/2,
+			text: "\u03f4\u1d62 = " + Math.abs(Math.round(incidentAngle * (180 / Math.PI) * 100) / 100) + "\u00B0"}).setLayer('refractedAngleText',{
+			x:(circle.y > height/2 ? -1 : 1)*Math.sin(refractedAngle/2)*textRadius+width/2,
+			y:(circle.y > height/2 ? -1 : 1)*Math.cos(refractedAngle/2)*textRadius+height/2,
+			text: "\u03f4\u1d63 = " + Math.abs(Math.round(refractedAngle * (180 / Math.PI) * 100) / 100) + "\u00B0"});
+	var refractedAngleArc = Math.abs((refractedAngle * (180 / Math.PI))%180);
+	if(!isNaN(refractedAngle)) {
+		$('#refractedAngleLabel').html(Math.abs(Math.round(refractedAngle * (180 / Math.PI) * 100) / 100) + "&#176;");
+	} else {
+		$('#refractedAngleLabel').html("TIR");
+	}
+}
+
+function run() {
+	$('canvas').addLayer({
+		type: 'ellipse',
+		layer: true,
+		name: 'dragCircle',
+		strokeStyle: '#000',
+		draggable: true,
+		x: width / 3,
+		y: height / 4,
+		width: 50,
+		height: 50,
+		mouseover: function(layer) {
+			$("canvas").css("cursor", "pointer")
+		},
+		drag: updateRay
+	}).addLayer({
+		layer: true,
+		type: 'line',
+		name: 'boundryLine',
+		strokeStyle: '#000',
+		x1: 0,
+		y1: Math.round(height / 2) + 0.5,
+		x2: width,
+		y2: Math.round(height / 2) + 0.5
+	}).addLayer({
+		layer: true,
+		type: 'line',
+		name: 'normal',
+		strokeStyle: 'rgba(0,0,0,0.4)',
+		strokeDash: [5],
+		x1: Math.round(width/2)+0.5, y1: height/4,
+		x2: Math.round(width/2)+0.5, y2: 3*height/4
+	}).addLayer({
+		layer: true,
+		type: 'line',
+		name: 'ray',
+		strokeStyle: "rgba(255,0,0,1)",
+		x1: 0,
+		y1: 0,
+		x2: width / 2,
+		y2: Math.round(height / 2) + 0.5,
+		x3: width,
+		y3: width
+	}).addLayer({
+		layer: true,
+		type: 'line',
+		name: 'reflectedRay',
+		strokeStyle: 'rgba(255,0,0,0.5)',
+		x1: width / 2,
+		y1: Math.round(height / 2) + 0.5,
+		x2: width,
+		y2: 0
+	}).addLayer({
+		layer: true,
+		type: 'arc',
+		name: 'incidentArc',
+		strokeStyle: 'rgba(255,0,0,0.5)',
+		radius: height < 400 ? height/4 : 100,
+		x: width / 2,
+		y: Math.round(height / 2) + 0.5,
+		start: 0,
+		end: 0,
+		ccw: true
+	}).addLayer({
+		layer: true,
+		type: 'arc',
+		name: 'refractedArc',
+		strokeStyle: 'rgba(0,0,255,0.5)',
+		radius: height < 400 ? height/4 : 100,
+		x: width / 2,
+		y: Math.round(height / 2) + 0.5,
+		start: 0,
+		end: 0,
+		ccw: true
+	}).addLayer({
+		layer: true,
+		type: 'text',
+		name: 'incidentAngleTextShadow',
+		strokeStyle: '#dbdbf5',
+		strokeWidth:2,
+		x: width/2, y: height/2,
+		fontSize: 12,
+		fontFamily:'InputSans, sans-serif',
+		text:'48.62'
+	}).addLayer({
+		layer: true,
+		type: 'text',
+		name: 'refractedAngleTextShadow',
+		x: width/2, y: height/2,
+		strokeStyle: '#dbdbf5',
+		strokeWidth:2,
+		fontSize: 12,
+		fontFamily:'InputSans, sans-serif',
+		text:'17.84'
+	}).addLayer({
+		layer: true,
+		type: 'text',
+		name: 'incidentAngleText',
+		fillStyle: 'rgba(255,0,0,1)',
+		x: width/2, y: height/2,
+		fontSize: 12,
+		fontFamily:'InputSans, sans-serif',
+		text:'48.62'
+	}).addLayer({
+		layer: true,
+		type: 'text',
+		name: 'refractedAngleText',
+		fillStyle: 'rgba(0,0,255,1)',
+		x: width/2, y: height/2,
+		fontSize: 12,
+		fontFamily:'InputSans, sans-serif',
+		text:'17.84'
+	}).drawLayers();
+	updateRay();
+}
+</script>
+<div id="aboutLabel" class="button">
+	<div class="inner">
+		about
+	</div>
+</div>
+<div id="about">
+	<div class="inner">
+		<a href="https://en.wikipedia.org/wiki/Snell%27s_law">Snell&#8217;s law</a>, proved by <a href="https://en.wikipedia.org/wiki/Willebrord_Snellius">Willebrord Snellius</a> states that the ratio of the sines of the angles of incidence and refraction is equivalent to the ratio of the indicies of refraction.
+		<div class="equation">
+			<div class="inner">
+				n<sub>i</sub>sin(&#1012;<sub>i</sub>) = n<sub>r</sub>sin(&#1012;<sub>r</sub>)
+			</div>
+		</div>
+
+		<p>Drag around the circle (or double-click anywhere) to change the angle of the incident ray, and watch how the refracted ray reacts.
+		<p>Change the indicies of refraction with the sliders, number input boxes, or drop-down menus. Five &ldquo;unknown&rdquo; values are included&mdash;substitute the known values into Snell&#8217;s law to find them!
+	</div>
+</div>
+<div class="sliderRow top" id="nsubiContainer">
+	<div class="label">
+		n<sub>i</sub>:
+	</div>
+	<select id="selectnsubi" value="1">
+		<option value="1" selected="selected">Vacuum</option><option value="1.0003">Air</option><option value="1.333">Water</option><option value="1.361">Ethanol</option><option value="2.419">Diamond</option><option value="1.55">Amber</option><option value="1.31">Ice</option><option value="1.36">Acetone</option><option value="1.4729">Glycerol</option><option value="1.661">Bromine</option><option value="1.39">Kerosene</option><option value="1.491">Acrylic glass</option><option value="1.52">Crown glass</option><option value="1.61">Flint glass</option><option value="1.47">Pyrex</option><option value="1.516">Rock salt</option><option value="1.764">Sapphire</option><option value="2.17">Cubic zirconia</option><option value="2.28">Potassium niobate</option><option value="2.67">Silicon carbide</option><option value="3.02">Cinnabar (Mercury sulfide)</option><option value="3.5">Gallium(III) phosphide</option><option value="3.927">Gallium(III) arsenide</option><option value="2.4">Zinc Oxide</option><option value="4.03">Germanium</option><option value="3.45">Silicon</option><option value="1.223">Unknown I</option><option value="1.67">Unknown II</option><option value="3.441">Unknown III</option><option value="2.414">Unknown IV</option><option value="1.798">Unknown V</option><option value="???" hidden="true">???</option>
+	</select> <input id="nsubi" min="1" step="0.05" type="number" value="1"> <input id="nsubiRange" max="4" min="1" step="0.0001" type="range" value="1">
+	<div class="inner angle">
+		&#1012;<sub>i</sub>:
+		<div class="inner" id="incidentAngleLabel"></div>
+	</div>
+</div>
+<div class="sliderRow bottom" id="nsubrContainer">
+	<div class="label">
+		n<sub>r</sub>:
+	</div>
+	<select id="selectnsubr" value="1.61">
+		<option value="1">Vacuum</option><option value="1.0003">Air</option><option value="1.333">Water</option><option value="1.361">Ethanol</option><option value="2.419">Diamond</option><option value="1.55">Amber</option><option value="1.31">Ice</option><option value="1.36">Acetone</option><option value="1.4729">Glycerol</option><option value="1.661">Bromine</option><option value="1.39">Kerosene</option><option value="1.491">Acrylic glass</option><option value="1.52">Crown glass</option><option value="1.61" selected="selected">Flint glass</option><option value="1.47">Pyrex</option><option value="1.516">Rock salt</option><option value="1.764">Sapphire</option><option value="2.17">Cubic zirconia</option><option value="2.28">Potassium niobate</option><option value="2.67">Silicon carbide</option><option value="3.02">Cinnabar (Mercury sulfide)</option><option value="3.5">Gallium(III) phosphide</option><option value="3.927">Gallium(III) arsenide</option><option value="2.4">Zinc Oxide</option><option value="4.03">Germanium</option><option value="3.45">Silicon</option><option value="1.223">Unknown I</option><option value="1.67">Unknown II</option><option value="3.441">Unknown III</option><option value="2.414">Unknown IV</option><option value="1.798">Unknown V</option><option value="???" hidden="true">???</option>
+	</select> <input id="nsubr" min="1" step="0.05" type="number" value="1.61"> <input id="nsubrRange" max="4" min="1" step="0.0001" type="range" value="1.61">
+	<div class="inner angle">
+		&#1012;<sub>r</sub>:
+		<div class="inner" id="refractedAngleLabel"></div>
+	</div>
+</div>
+<canvas id="main">
+	<script>
+$("#nsubi").bind("change keyup input", function() {
+	$('#nsubiRange').val($(this).val());
+	$('#selectnsubi').val($(this).val());
+	nsubi = parseFloat($(this).val());
+	updateRay();
+});
+
+$("#nsubiRange").bind("change keyup input", function() {
+	$('#nsubi').val($(this).val());
+	$('#selectnsubi').val($(this).val());
+	nsubi = parseFloat($(this).val());
+	updateRay();
+});
+
+$("#selectnsubi").bind("change keyup input", function() {
+	if($("#selectnsubi option:selected").text().substr(0,7) == "Unknown") {
+		nsubi = parseFloat($(this).val());
+		$('#nsubi').val("?");
+		$('#nsubiRange').val(1);
+		updateRay();
+		return;
+	}
+	$('#nsubi').val($(this).val());
+	$('#nsubiRange').val($(this).val());
+	nsubi = parseFloat($(this).val());
+	updateRay();
+});
+
+$("#nsubr").bind("change keyup input", function() {
+	$('#nsubrRange').val($(this).val());
+	$('#selectnsubr').val($(this).val());
+	nsubr = parseFloat($(this).val());
+	updateRay();
+});
+
+$("#nsubrRange").bind("change keyup input", function() {
+	$('#nsubr').val($(this).val());
+	$('#selectnsubr').val($(this).val());
+	nsubr = parseFloat($(this).val());
+	updateRay();
+});
+
+$("#selectnsubr").bind("change keyup input", function() {
+	if($("#selectnsubr option:selected").text().substr(0,7) == "Unknown") {
+		nsubr = parseFloat($(this).val());
+		$('#nsubr').val("?");
+		$('#nsubrRange').val(1);
+		updateRay();
+		return;
+	}
+	$('#nsubr').val($(this).val());
+	$('#nsubrRange').val($(this).val());
+	nsubr = parseFloat($(this).val());
+	updateRay();
+});
+
+$("#aboutLabel").click(function() {
+	if(aboutShown) {
+		$("#about").hide();
+		$("#aboutLabel .inner").html("about");
+		aboutShown = false;
+	} else {
+		$("#about").show();
+		$("#aboutLabel .inner").html("close");
+		aboutShown = true;
+	}
+})
+
+$('canvas').dblclick(function(e) {
+	$('canvas').setLayer('dragCircle',{x:e.pageX,y:e.pageY});
+	updateRay();
+});
+	</script>
+</canvas>

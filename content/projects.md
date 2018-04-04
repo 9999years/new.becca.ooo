@@ -2,48 +2,48 @@
 title="projects"
 +++
 
-[I C the Light](https://github.com/9999years/i-c-the-light), a
-distance-estimating ray marcher ([image output
-gallery](/i-c-the-light/gallery))
+[I C the Light](/i-c-the-light), a distance-estimating ray marcher ([image
+output gallery](/i-c-the-light/gallery))
 
-[/mandelbrot](/mandelbrot), an interactive
-[Mandelbrot set](https://en.m.wikipedia.org/wiki/Mandelbrot_set)
-exploration tool with novel iteration visualization
+[/distance](/distance), an in-browser distance estimation simulation
 
-[/integral](/integral), an interactive
-integral approximation visualization
+[/mandelbrot](/mandelbrot), an interactive [Mandelbrot
+set](https://en.m.wikipedia.org/wiki/Mandelbrot_set) exploration tool with novel
+iteration visualization
 
-[img glitcher](/glitcher), an in-browser procedural
-databending app
+[/integral](/integral), an interactive integral approximation visualization
 
-[snell's law simulator](/snell)
+[/differential](/differential), an interactive first-order differential equation
+approximation visualization
 
-[population dynamics simulator](/fox)
+[/glitcher](/glitcher), an in-browser procedural databending app
+
+[/snell](/snell), an interactive visualization of [Snell’s law]
+
+[/fox](/fox), a population dynamics simulator ([old version](/fox-old))
 
 [random #hashtag generator](/unicode/hashtag)
 
 [#wrap](https://chrome.google.com/webstore/detail/wrap/nbcgkdilbhnnoemimofnknocbkpldobi),
-a Chrome extension to modify Tumblr’s user interface by adding
-line-wrapping for post tags. Peaked at ≈35,000 users.
+a Chrome extension to modify Tumblr’s user interface by adding line-wrapping for
+post tags. Peaked at ≈35,000 users.
 
 # twitter bots
 
-[@goodwordsbot](https://twitter.com/goodwordsbot) --- real-sounding
-fake words based on latin and greek roots
+[@goodwordsbot](https://twitter.com/goodwordsbot) --- real-sounding fake words
+based on latin and greek roots
 
-[@bestknuckletats](https://twitter.com/bestknuckletats) --- knuckle tat
-ideas
+[@bestknuckletats](https://twitter.com/bestknuckletats) --- knuckle tat ideas
 
 [@gardensbot](https://twitter.com/gardensbot) --- emoji gardens
 
-[@bestinvestings](https://twitter.com/bestinvestings) --- bad
-investment advice
+[@bestinvestings](https://twitter.com/bestinvestings) --- bad investment advice
 
-[@sorryimsadsorry](https://twitter.com/sorryimsadsorry) --- a very
-upset bot. currently on hiatus
+[@sorryimsadsorry](https://twitter.com/sorryimsadsorry) --- a very upset bot.
+currently on hiatus
 
-[@pastebinrecent](https://twitter.com/pastebinrecent) --- recent text
-from [pastebin.com](https://pastebin.com/). not guarenteed to be sfw
+[@pastebinrecent](https://twitter.com/pastebinrecent) --- recent text from
+[pastebin.com](https://pastebin.com/). not guarenteed to be sfw
 
 # misc
 
@@ -52,3 +52,5 @@ from [pastebin.com](https://pastebin.com/). not guarenteed to be sfw
 [ascii chart](/ascii)
 
 [other small projects at github.com/9999years](https://github.com/9999years)
+
+[Snell’s law]: https://en.m.wikipedia.org/wiki/Snell%27s_law

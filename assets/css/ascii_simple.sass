@@ -1,0 +1,21 @@
+@import "vars"
+
+$border-width: 1px
+
+table
+  border-collapse: collapse
+  display: inline-block
+  vertical-align: top
+  border: $border-width solid rgba($txt, 0.5)
+  border-width: 0 0 0 $border-width
+
+  &:last-child
+    border-right-width: $border-width
+
+thead
+  display: none
+
+td
+  padding: 0 0.25em
+  &:last-child
+    padding-right: 0

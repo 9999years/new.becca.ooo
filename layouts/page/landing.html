@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/icon-196.png" sizes="any" type="image/png">
+<title>landing</title>
+<style>
+body, html {
+	font-family: "Segoe UI", -apple-system, "Geneva", "Helvetica", "Noto Sans", sans-serif;
+	background-color: #05051a;
+	color: #fff;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-size: 24px;
+}
+
+a {
+	color: #3fb;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff3366;
+}
+
+#container {
+	margin: 100px auto;
+	max-width: 800px;
+	text-align: center;
+}
+.links > a > div {
+	display: inline-block;
+	margin: 15px auto;
+	width: 100px;
+}
+
+ .long {
+	display: none;
+}
+
+a:hover .short {
+	display: none;
+}
+
+a:hover .long {
+	display: initial;
+}
+</style>
+<div id="container">
+<div class="links">
+{{range .Site.Data.landing.link}}
+<a href="{{.href | safeURL}}"><div>
+{{if .long}}
+	<span class="short">{{.short}}</span>
+	<span class="long">{{.long}}</span>
+{{else}}
+	{{.short}}
+{{end}}
+</div></a>
+{{end}}
+</div>
+<div>
