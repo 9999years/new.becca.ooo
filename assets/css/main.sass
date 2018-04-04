@@ -11,13 +11,18 @@ body, html
   border: 0
 
 h1, h2, h3, h4, h5, h6
-  margin: 2em 0 1em 0
+  margin: 1em 0 0.5em 0
+  text-align: center
+  font-weight: lighter
+
+  &:first-child
+    margin-top: 0.5em
 
 h1
-  font-size: $font-size * 1.5
+  font-size: $font-size * 2
 
 h2
-  font-size: $font-size
+  font-size: $font-size * 1.5
 
 p
   margin: 1em 0
@@ -79,8 +84,10 @@ a
   text-align: left
 
 #head
-  font-size: $font-size * 2
-  margin: 0.75em 0
+  font:
+    size: $font-size * 3
+    weight: lighter
+  margin: $margin 0
 
   a
     color: #aff

@@ -19,4 +19,4 @@
 		{{end}}
 	{{end}}
 	{{if not (.Param "hide_body_copy_tag")}}<div{{with .Param "body_copy_id" | default "body-copy"}} id="{{.}}"{{end}}{{with .Param "body_copy_classes"}} class="{{.}}"{{end}}>{{end}}
-		{{with .Title}}<h2 {{block "title style" .}}class="center"{{end}}>{{.}}</h2>{{end}}
+		{{with .Title}}<h1>{{.}}</h1>{{end}}

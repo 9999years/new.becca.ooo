@@ -1,0 +1,20 @@
+.contacts >
+  a > div, div
+    display: flex
+
+  a > div
+    &:hover
+      background-color: #aff
+
+    > div
+      width: 100%
+      text-align: left
+      margin: 0.25em
+
+  div > div
+    width: 100%
+    text-align: left
+    margin: 0.25em
+
+  a > div > div:first-child, div > div:first-child
+    text-align: right

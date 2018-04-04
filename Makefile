@@ -1,2 +1,5 @@
+# ugh
+SASS="sass.bat"
+
 sass:
-	sass --update assets/css:static/css
+	$(SASS) --update assets/css:static/css

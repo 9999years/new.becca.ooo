@@ -13,7 +13,7 @@ character sets used and supported by [just about everyone] and [all their
 software]. [Get into the details on Stack Overflow] or see some of the [Unicode
 encodings] on Wikipedia.
 
-## Charts and character data
+# Charts and character data
 
 {{< bullet >}} [PDF charts on unicode.org] --- The only complete and perpetually
 up-to-date reference.
@@ -39,7 +39,7 @@ alternate forms.
 [Unicode planes reference] --- Confused about what "BMP" means? Check
 here.
 
-## String analysis
+# String analysis
 
 {{< bullet >}} [Unicode Inspector] --- By [@timwhitlock], displays the
 codepoint, byte breakdown, block, symbol, name, and surrogates for each
@@ -52,7 +52,7 @@ Displays binary/hex breakdown of strings of text.
 
 [What Unicode character is this?] --- By [BabelStone].
 
-## Search
+# Search
 
 [Scarfboy search and string analysis]
 
@@ -64,7 +64,7 @@ Displays binary/hex breakdown of strings of text.
 
 [charcod.es]
 
-## Shape recognition
+# Shape recognition
 
 {{< bullet >}} [shapecatcher] --- Recognizes Unicode characters through a
 drawing field.
@@ -78,7 +78,7 @@ shape recognition.
 
 [Mouse input for Chinese characters]
 
-## Conversion (programming)
+# Conversion (programming)
 
 {{< bullet >}} [Xem's EscApe utility on Github] --- By [Maxime Euzière].
 Converts any Unicode string to 33 different escape sequences. New: [v2 beta]!
@@ -88,7 +88,7 @@ base64, ASCII85, and decimal ASCII. Also calculates various hashes!
 
 [Guide to converting to UTF-8 in vasious programming languages]
 
-## Conversion (decorative or linguistic)
+# Conversion (decorative or linguistic)
 
 {{< bullet >}} [Unicate] --- Aconverts to various latin Unicode alphabets (e.g.
 fullwidth, math scripts, etc.).
@@ -118,7 +118,7 @@ mention.
 
 [Braille converter]
 
-## Coverage: fonts & support
+# Coverage: fonts & support
 
 {{< bullet >}} [Alan Wood's Unicode font list] --- Probably the most complete
 list of high-coverage fonts.
@@ -147,7 +147,7 @@ languages (as of April 2016), with about 50% glyph coverage.
 
 [Code2000 font]
 
-## Emoji
+# Emoji
 
 {{< bullet >}} [Full Emoji Charts] --- all emoji with comparison pictures of
 implementations on various platforms.
@@ -165,7 +165,7 @@ and blame lies entirely with the third parties involved.
 [Text vs Emoji reference on unicode.org] --- Shows which characters
 (should) render as emoji or text.
 
-## ASCII/Unicode art & Kaomoji
+# ASCII/Unicode art & Kaomoji
 
 {{< bullet >}} [cutekaomoji.com]
 
@@ -179,7 +179,7 @@ and blame lies entirely with the third parties involved.
 
 [ASCII text art generator]
 
-## Inserting characters
+# Inserting characters
 
 [Vim] --- Insert mode: `<C-v>uxxxx`
 
@@ -191,7 +191,7 @@ and blame lies entirely with the third parties involved.
 
 [Unix in GTK applications] --- `<C-S-uxxxx>`
 
-## Misc.
+# Misc.
 
 {{< bullet >}} [Random Unicode character generator on jsfiddle] --- By
 [@FakeUnicode] on Twitter.
