@@ -1,0 +1,15 @@
+<!doctype html>
+<script>
+let randChar = () => String.fromCodePoint(Math.floor(Math.random() * 0x2c00))
+
+function randChars(len) {
+	ret = []
+	for(i = 0; i < len; i++) {
+		ret.push(randChar())
+	}
+	return ret.join('')
+}
+
+let fillBody = len => document.body.innerHTML = randChars(len)
+</script>
+<body onload="fillBody(140)">

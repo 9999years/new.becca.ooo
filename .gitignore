@@ -1,4 +1,5 @@
 public
 static/css
 static/img
-static/i-c-the-light/output
+static/i-c-the-light/**
+static/chomp/**

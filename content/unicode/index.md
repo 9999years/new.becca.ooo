@@ -13,8 +13,6 @@ title="unicode utils"
 
 [cycling letter grid maker]
 
-[random hashtag generator]
-
 [many random hearts]
 
 [assorted random characters, fresh from the oven]
@@ -24,11 +22,10 @@ title="unicode utils"
 [crytyper]
 
 [abbreviator]: ../abbreviate
-[ascii charts]: ../ascii
+[ascii charts]: /ascii
 [carrie fischer converter]: ../carrie
 [corrupter]: ../corrupter
 [cycling letter grid maker]: ../grid
-[random hashtag generator]: ../hashtag
 [many random hearts]: ../hearts
 [assorted random characters, fresh from the oven]: ../random
 [arrows]: /arrows
