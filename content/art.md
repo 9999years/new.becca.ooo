@@ -1,5 +1,6 @@
 +++
 title="art around the web"
+hide_body_copy_tag=true
 +++
 
 [9999yea.rs](http://9999yea.rs/), gif art

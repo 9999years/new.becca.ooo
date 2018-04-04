@@ -1,4 +1,4 @@
-	</div>
+	{{if not (.Param "hide_body_copy_tag")}}</div>{{end}}
 </div>
 {{range .Param "js"}}
 <script src="/js/{{.}}.js"></script>

@@ -1,8 +1,6 @@
 +++
-layout="text"
+title="projects"
 +++
-
-## projects
 
 [I C the Light](https://github.com/9999years/i-c-the-light), a
 distance-estimating ray marcher ([image output

@@ -1,6 +1,6 @@
 +++
 title="abt"
-layout="justified"
+body_copy_classes="justified"
 +++
 
 i like typography, fountain pens, sunglasses, computers, math, physics (which i

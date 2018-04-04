@@ -5,13 +5,12 @@
 {{range .Param "css"}}
 <link rel="stylesheet" type="text/css" href="/css/{{.}}.css"></style>
 {{end}}
-{{block "includes" .}}{{end}}
 {{with .Param "onload"}}<body onload="{{. | safeJS}}">{{end}}
 <div id="container">
 	{{block "title" .}}
 	<div id="head"><a href="/">rebecca turner</a></div>
-		{{block "nav" .}}
 		<div class="rule"></div>
+		{{if not (.Param "hide_nav")}}
 		<p><a href="/about">about</a> /
 		<a href="/projects">projects</a> /
 		<a href="/art">art</a> /
@@ -19,5 +18,5 @@
 		<div class="rule"></div>
 		{{end}}
 	{{end}}
-	<div {{block "body-copy-style" .}}id="body-copy"{{end}}>
+	{{if not (.Param "hide_body_copy_tag")}}<div{{with .Param "body_copy_id" | default "body-copy"}} id="{{.}}"{{end}}{{with .Param "body_copy_classes"}} class="{{.}}"{{end}}>{{end}}
 		{{with .Title}}<h2 {{block "title style" .}}class="center"{{end}}>{{.}}</h2>{{end}}
