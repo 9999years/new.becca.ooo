@@ -1,17 +1,15 @@
-#body-copy {
-	max-width: 600px;
-}
+@import "vars"
 
-table td {
-	white-space: nowrap;
-	vertical-align: top;
-	padding-bottom: 0.25em;
-}
+#body-copy
+  max-width: $body-width
 
-table td:first-child {
-	padding-right: 0.5em;
-}
+table td
+  white-space: nowrap
+  vertical-align: top
+  padding-bottom: 0.25em
 
-table td:last-child {
-	white-space: normal;
-}
+  &:first-child
+    padding-right: 0.5em
+
+  &:last-child
+    white-space: normal

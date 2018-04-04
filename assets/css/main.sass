@@ -1,127 +1,116 @@
-body, html {
-	font-family: "Segoe UI", -apple-system, "Geneva", "Helvetica", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Sans", "Noto Serif", "Code2001", "Code2000", "HanaMinA", "HanaMinB", "BabelStone Han", "DejaVu Sans", "DejaVu Serif", "DejaVu Sans Mono", "UniDings", "Helvetica Neue", "Helvetica", "Arial", sans-serif, monospace;
-	text-align: center;
-	background-color: #012;
-	color: #aff;
-	font-size: 18px;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+@import vars
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 2em 0 1em 0;
-}
+body, html
+  font-family: "Segoe UI", -apple-system, "Geneva", "Helvetica", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Sans", "Noto Serif", "Code2001", "Code2000", "HanaMinA", "HanaMinB", "BabelStone Han", "DejaVu Sans", "DejaVu Serif", "DejaVu Sans Mono", "UniDings", "Helvetica Neue", "Helvetica", "Arial", sans-serif, monospace
+  text-align: center
+  background-color: $bg
+  color: $txt
+  font-size: $font-size
+  margin: 0
+  padding: 0
+  border: 0
 
-h1 {
-	font-size: 28px;
-}
+h1, h2, h3, h4, h5, h6
+  margin: 2em 0 1em 0
 
-h2 {
-	font-size: 18px;
-}
+h1
+  font-size: $font-size * 1.5
 
-p {
-	margin: 1em 0;
-}
+h2
+  font-size: $font-size
 
-/* better underline with gradients */
-a, a:visited {
-	color: #abf;
-	text-decoration: none;
-	position: relative;
-	text-decoration: none;
-	background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(170,187,255,0.8) 50%);
-	background-repeat: repeat-x;
-	background-size: 2px 0.1em;
-	background-position: 0 1.15em;
-}
+p
+  margin: 1em 0
 
-a:hover {
-	color: #012;
-	background-image: none;
-	background-color: #aff;
-	text-decoration: none;
-}
+// better underline with gradients
 
-.center {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
+a
+  color: $hi
+  text-decoration: none
+  position: relative
+  text-decoration: none
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba($hi, 0.8) 50%)
+  background-repeat: repeat-x
+  background-size: 2px 0.1em
+  background-position: 0 1.15em
 
-.full-rule {
-	border-top: 1px solid #aff;
-	margin: 0.5em auto;
-	width: 100%;
-	height: 0;
-}
+  &:visited
+    color: #abf
+    text-decoration: none
+    position: relative
+    text-decoration: none
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba($hi, 0.8) 50%)
+    background-repeat: repeat-x
+    background-size: 2px 0.1em
+    background-position: 0 1.15em
 
-.rule {
-	border-top: 1px solid #aff;
-	margin: 0.5em auto;
-	width: 50px;
-	height: 0;
-}
+  &:hover
+    color: $bg
+    background-image: none
+    background-color: $txt
+    text-decoration: none
 
-.justify {
-	text-align: justify;
-}
+.center
+  text-align: center
+  margin-left: auto
+  margin-right: auto
 
-#container {
-	margin: 25px;
-}
+.full-rule
+  border-top: 1px solid $txt
+  margin: 0.5em auto
+  width: 100%
+  height: 0
 
-#body-copy {
-	margin: auto;
-	max-width: 400px;
-	text-align: left;
-}
+.rule
+  border-top: 1px solid $txt
+  margin: 0.5em auto
+  width: 50px
+  height: 0
 
-#head {
-	font-size: 36px;
-	margin: 0.75em 0;
-}
+.justify
+  text-align: justify
 
-#head a {
-	color: #aff;
-	background-image: none;
-}
+#container
+  margin: $margin
 
-#head a:hover {
-	color: #012;
-}
+#body-copy
+  margin: auto
+  max-width: $body-width
+  text-align: left
 
+#head
+  font-size: $font-size * 2
+  margin: 0.75em 0
 
-p {
-	margin: 0 0 1em 0;
-}
+  a
+    color: #aff
+    background-image: none
 
-blockquote {
-	margin: 0;
-	position: relative;
-	font-style: italic;
-}
+    &:hover
+      color: $bg
 
-blockquote:after {
-	content: "";
-	border-left: 1px solid #222;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: -1em;
-}
+p
+  margin: 0 0 1em 0
 
-ol {
-	text-align: left;
-}
+blockquote
+  margin: 0
+  position: relative
+  font-style: italic
 
-ol > li {
-	padding-left: 0.25em;
-}
+  &:after
+    content: ""
+    border-left: 1px solid $txt
+    height: 100%
+    position: absolute
+    top: 0
+    left: -1em
 
-@media (max-width: 650px) {
-	blockquote {
-		margin-left: 1em;
-	}
-}
+ol
+  text-align: left
+
+  > li
+    padding-left: 0.25em
+
+@media (max-width: $body-width + 2 * $margin)
+  blockquote
+    margin-left: 1em

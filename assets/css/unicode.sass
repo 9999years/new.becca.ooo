@@ -1,33 +1,25 @@
-#body-copy {
-	max-width: 600px;
-}
+@import "vars"
 
-.bullet {
-	height: 0;
-	position: relative;
-	left: -1.5em;
-}
+#body-copy
+  max-width: 600px
 
-.bullet:before {
-	content:"\2192";
-	position: relative;
-	top: -1.5px;
-}
+.bullet
+  height: 0
+  position: relative
+  left: -1.5em
 
-@media (max-width: 680px) {
-	#body-copy {
-		margin: 25px 15px;
-		max-width: 100%;
-	}
-	
-	.bullet {
-		height: initial;
-		position: initial;
-		display: inline-block;
-		margin: 0 0.5em 0 0;
-		padding: 0 4px;
-		font-weight: bold;
-		background-color: #aff;
-		color: #012;
-	}
-}
+  &:before
+    content: "\2192"
+    position: relative
+    top: -1.5px
+
+@media (max-width: 680px)
+  .bullet
+    height: initial
+    position: initial
+    display: inline-block
+    margin: 0 0.5em 0 0
+    padding: 0 4px
+    font-weight: bold
+    background-color: #aff
+    color: #012
