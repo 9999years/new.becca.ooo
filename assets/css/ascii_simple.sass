@@ -1,15 +1,24 @@
-@import "vars"
+@import vars
+@import ascii_common
 
 $border-width: 1px
+$inter-column-margin: 0.5em
 
 table
-  border-collapse: collapse
+  @extend %ascii-table
+  font-family: monospace
   display: inline-block
   vertical-align: top
   border: $border-width solid rgba($txt, 0.5)
   border-width: 0 0 0 $border-width
+  padding-left: $inter-column-margin / 2
+  margin-left: $inter-column-margin / 2
 
-  &:last-child
+  &:first-of-type
+    margin-left: 0
+
+  &:last-of-type
+    padding-right: $inter-column-margin
     border-right-width: $border-width
 
 thead

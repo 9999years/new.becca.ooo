@@ -9,7 +9,7 @@ css=["ascii"]
 
 [Or as a simple version with just the character and hex code!](simple)
 
-[Char](https://en.wikipedia.org/wiki/ASCII#Character_groups)  | [Dec](https://en.wikipedia.org/wiki/Decimal) | [Oct](https://en.wikipedia.org/wiki/Octal)  | [Hex](https://en.wikipedia.org/wiki/Hexadecimal)  | [Bin](https://en.wikipedia.org/wiki/Binary_number#Representation)      | [C0](https://en.wikipedia.org/wiki/C0_and_C1_control_codes#C0_.28ASCII_and_derivatives.29) |  [C](https://en.wikipedia.org/wiki/Escape_sequences_in_C#Table_of_escape_sequences)  | [U](https://en.wikipedia.org/wiki/Control_Pictures) | [Name](https://en.wikipedia.org/wiki/Basic_Latin_\(Unicode_block\))
+[Char]|[Dec]|[Oct] |[Hex] | [Bin]    |[C0]| [C] |[U]| [Name]
 ------|-----|------|------|----------|----|-----|---|-------------
 (nul) |   0 | 0000 | 0x00 | 00000000 | ^@ | \\0 | ␀ | Null
 (soh) |   1 | 0001 | 0x01 | 00000001 | ^A |     | ␁ | Start of Heading
@@ -146,3 +146,13 @@ z     | 122 | 0172 | 0x7a | 01111010 |    |     |   | Latin small letter z
 
 [Detailed historical
 information about ASCII and control characters](http://www.aivosto.com/vbtips/control-characters.html)
+
+[Char]: https://en.wikipedia.org/wiki/ASCII#Character_groups
+[Dec]: https://en.wikipedia.org/wiki/Decimal
+[Oct]: https://en.wikipedia.org/wiki/Octal
+[Hex]: https://en.wikipedia.org/wiki/Hexadecimal
+[Bin]: https://en.wikipedia.org/wiki/Binary_number#Representation
+[C0]: https://en.wikipedia.org/wiki/C0_and_C1_control_codes#C0_.28ASCII_and_derivatives.29
+[C]: https://en.wikipedia.org/wiki/Escape_sequences_in_C#Table_of_escape_sequences
+[U]: https://en.wikipedia.org/wiki/Control_Pictures
+[Name]: https://en.wikipedia.org/wiki/Basic_Latin_\(Unicode_block\)

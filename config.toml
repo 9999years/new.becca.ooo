@@ -1,3 +1,5 @@
 baseURL="https://becca.ooo/"
 title="rebecca t"
 ignoreFiles=["static/(img/reel|i-c-the-light|chomp|juniorportfolio)"]
+disableRSS=true
+DefaultContentLanguage="en"

@@ -1,4 +1,4 @@
 {{define "body-copy-style"}}{{end}}
-{{partial "becca-header.html" .}}
+{{partialCached "becca-header.html" . $.File.Path}}
 <span id="flavor">:)</span>
-{{partial "becca-footer.html" .}}
+{{partialCached "becca-footer.html" . $.File.Path}}

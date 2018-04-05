@@ -14,22 +14,39 @@ Param(
 	$Sass="sass",
 	$SassDir="assets/css",
 	$CssDir="static/css",
+	[Parameter(ParameterSetName="Install")]
 	[Switch]$Install,
+	[Parameter(ParameterSetName="Build")]
 	[Switch]$Build,
-	[Switch]$Server
+	[Parameter(ParameterSetName="Server")]
+	[Switch]$Server,
+	[Parameter(ParameterSetName="Diagnostic")]
+	[Switch]$Diagnostic
 )
 
-If($Install) {
-	choco install sass -prerelease
-	choco install hugo
-}
-
 $sassDirs = "$SassDir`:$CssDir"
+$Watch = If($Server) {
+	"watch"
+} Else {
+	"update"
+}
+$sassArgs = ("--unix-newlines", "--sourcemap=none", "--$Watch", $sassDirs)
 
-If($Build) {
-	& $Sass --update $sassDirs
-	& $Hugo
-} Else If($Server) {
-	Start-Process $Sass ("--sourcemap=none", "--watch", $sassDirs)
-	Start-Process $Hugo ("server", "-D")
+Switch($PSCmdlet.ParameterSetName) {
+	"Install" {
+		choco install sass -prerelease
+		choco install hugo
+	}
+	"Diagnostic" {
+		& $Sass $sassArgs
+		& $Hugo ("--templateMetrics", "--templateMetricsHints", "--verbose")
+	}
+	"Build" {
+		& $Sass $sassArgs
+		& $Hugo
+	}
+	"Server" {
+		Start-Process $Sass $sassArgs
+		Start-Process $Hugo ("server", "-D")
+	}
 }

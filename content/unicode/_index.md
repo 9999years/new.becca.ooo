@@ -1,6 +1,7 @@
 +++
 title="Unicode Resources"
 css=["unicode"]
+url="/unicode"
 +++
 
 Created by [rebecca] with major help from [@FakeUnicode]

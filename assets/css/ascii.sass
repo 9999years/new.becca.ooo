@@ -1,7 +1,8 @@
-@import "vars"
+@import vars
+@import ascii_common
 
 table
-  border-collapse: collapse
+  @extend %ascii-table
   margin-bottom: 1em
 
 td
@@ -9,7 +10,3 @@ td
 
   &:last-child
     padding-right: 0
-
-tr
-  &:nth-child(even)
-    background-color: rgba($hi, 0.1)

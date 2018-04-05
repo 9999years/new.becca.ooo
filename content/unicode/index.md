@@ -1,6 +1,6 @@
 +++
-url="unicode/index"
 title="unicode utils"
+url="/unicode/index"
 +++
 
 [abbreviator]
