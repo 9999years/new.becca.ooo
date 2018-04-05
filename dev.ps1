@@ -1,3 +1,13 @@
+<#
+.PARAM Build
+build the site to public; mutually exclusive with -Server
+
+.PARAM Server
+start a development server for sass and hugo; mutually exclusive with -Build
+
+.PARAM Install
+Install hugo and sass; windows only
+#>
 [CmdletBinding()]
 Param(
 	$Hugo="hugo",
@@ -5,7 +15,7 @@ Param(
 	$SassDir="assets/css",
 	$CssDir="static/css",
 	[Switch]$Install,
-	[Switch]$NoBuild,
+	[Switch]$Build,
 	[Switch]$Server
 )
 
@@ -16,12 +26,10 @@ If($Install) {
 
 $sassDirs = "$SassDir`:$CssDir"
 
-If(!$NoBuild) {
+If($Build) {
 	& $Sass --update $sassDirs
 	& $Hugo
-}
-
-If($Server) {
-	Start-Process $Sass ("--watch", $sassDirs)
+} Else If($Server) {
+	Start-Process $Sass ("--sourcemap=none", "--watch", $sassDirs)
 	Start-Process $Hugo ("server", "-D")
 }

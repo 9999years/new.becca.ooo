@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sass --update assets/css:static/css
+sass --sourcemap=none --update assets/css:static/css
 hugo
