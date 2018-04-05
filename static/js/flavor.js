@@ -12,7 +12,7 @@ flavors = [
 "new markup, same great taste!",
 "now with 20% less hypertext per page!",
 "welcome to my web page",
-"bcrypt()ed",
+"<code>bcrypt()</code>ed",
 "woof!",
 "like bad, but worse",
 "i’m doing very well these ways",
