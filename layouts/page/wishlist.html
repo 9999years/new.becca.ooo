@@ -6,11 +6,20 @@
 <div class="text-block items">
 	<div><div>item</div><div>usd</div></div>
 {{range .Site.Data.wishlist.items}}
-	<div><div>{{with .url}}<a href="{{. | safeURL}}">{{end}}
+	<!-- link if applicable; mark url as trusted -->
+	<div>
+		<div>{{with .url}}<a href="{{. | safeURL}}">{{end}}
 		{{with .name}}{{.}}{{end}}{{with .url}}</a>{{end}}
-	{{with .features}}({{.}}){{end}}</div>
-	<div>{{.price}}</div>
-	{{with .photo}}{{template "photo" .}}{{end}}</div>
+		<!-- put features in parens, and a linebreak before them if the
+		features + the title is > 40 chars -->
+		{{if .features}}
+			{{if gt (add (len .name) (len .features)) 40}}<br>{{end}}
+			({{.features}})
+		{{end}}
+		</div>
+		<div>{{.price}}</div>
+		{{with .photo}}{{template "photo" .}}{{end}}
+	</div>
 {{end}}
 </div>
 {{partial "becca-footer.html" .}}
