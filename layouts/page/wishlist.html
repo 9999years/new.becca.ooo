@@ -6,6 +6,14 @@
 <div class="text-block items">
 	<div><div>item</div><div>usd</div></div>
 {{range .Site.Data.wishlist.items}}
+	<!--
+	structure:
+	.items > div = item
+		first child div = link
+		2nd child div is price
+		3rd child div (if applicable) is .photo
+		.photo = div.triangle & img
+	-->
 	<!-- link if applicable; mark url as trusted -->
 	<div>
 		<div>{{with .url}}<a href="{{. | safeURL}}">{{end}}
