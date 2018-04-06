@@ -18,7 +18,6 @@ done < "$1"
 if [[ errors -eq 0 ]]
 then
 	echo "all files exist :-)"
-	exit 0
 else
 	>&2 echo "$errors files were not found"
 	exit -1
