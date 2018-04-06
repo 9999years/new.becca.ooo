@@ -3,14 +3,14 @@
 [![Travis CI — Let’s hope it builds because it’s going live in at most an hour](https://travis-ci.org/9999years/becca.ooo.svg?branch=master)](https://travis-ci.org/9999years/becca.ooo)
 
 This is the source code for my personal website, [becca.ooo]. It’s been newly
-converted to a [SASS] / [Hugo] / [Markdown][bf] stack (with my server running
-[Caddy] and, regrettably, PHP 7 — hopefully PHP will be phased out in the near
-future, but that requires reading / translating very old very gross code as well
-as setting up a Ruby or Python fast CGI proxy and that’s just a big hassle).
-There’s also some Javascript — for the flavor text on the [homepage][becca.ooo]
-as well as for the interactive web-app style things (see the [projects] page for
-examples / details). As a general rule, Javascript is a last-resort — it’s as
-minimal as possible and only used where strictly needed.
+(April 2018) converted to a [SASS] / [Hugo] / [Markdown][bf] stack (with my
+server running [Caddy] and, regrettably, PHP 7 — hopefully PHP will be phased
+out in the near future, but that requires reading / translating very old very
+gross code as well as setting up a Ruby or Python fast CGI proxy and that’s just
+a big hassle).  There’s also some Javascript — for the flavor text on the
+[homepage][becca.ooo] as well as for the interactive web-app style things (see
+the [projects] page for examples / details). As a general rule, Javascript is a
+last-resort — it’s as minimal as possible and only used where strictly needed.
 
 ## Ideology
 
