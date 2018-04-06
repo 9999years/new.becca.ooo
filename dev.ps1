@@ -42,8 +42,7 @@ Switch($PSCmdlet.ParameterSetName) {
 		& $Hugo ("--templateMetrics", "--templateMetricsHints", "--verbose")
 	}
 	"Build" {
-		& $Sass $sassArgs
-		& $Hugo
+		sh "./post-merge.sh"
 	}
 	"Server" {
 		Start-Process $Sass $sassArgs

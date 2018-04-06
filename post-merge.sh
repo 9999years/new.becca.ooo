@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sass --sourcemap=none --update assets/css:static/css
-hugo
+sass --unix-newlines --sourcemap=none --update assets/css:static/css
+hugo --verbose
