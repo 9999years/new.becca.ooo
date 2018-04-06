@@ -1,5 +1,7 @@
 # [becca.ooo]
 
+[![Travis CI — Let’s hope it builds because it’s going live in at most an hour](https://travis-ci.org/9999years/becca.ooo.svg?branch=master)](https://travis-ci.org/9999years/becca.ooo)
+
 This is the source code for my personal website, [becca.ooo]. It’s been newly
 converted to a [SASS] / [Hugo] / [Markdown][bf] stack (with my server running
 [Caddy] and, regrettably, PHP 7 — hopefully PHP will be phased out in the near
