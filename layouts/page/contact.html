@@ -1,4 +1,4 @@
-{{partialCached "becca-header.html" . .File.Path}}
+{{partial "becca-header.html" .}}
 <div class="text-block contacts">
 {{range .Site.Data.contact.contact}}
 	{{with .link}}<a href="{{. | safeURL}}">{{end}}
