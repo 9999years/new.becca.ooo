@@ -1,19 +1,22 @@
 @import vars
 
 body, html
-  font-family: "Segoe UI", -apple-system, "San Francisco" "Helvetica", "Noto Sans", "Geneva", "Helvetica Neue", "Helvetica", "Helvetica Neue LT", "Arial", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Serif", "Code2001", "Code2000", "HanaMinA", "HanaMinB", "BabelStone Han", "DejaVu Sans", "DejaVu Serif", "DejaVu Sans Mono", "UniDings"
+  font:
+    size: $font-size
+    family: "Segoe UI", -apple-system, "San Francisco", "Helvetica", "Noto Sans", "Geneva", "Helvetica Neue", "Helvetica", "Helvetica Neue LT", "Arial", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Serif", "Code2001", "Code2000", "HanaMinA", "HanaMinB", "BabelStone Han", "DejaVu Sans", "DejaVu Serif", "DejaVu Sans Mono", "UniDings"
   text-align: center
   background-color: $bg
   color: $txt
-  font-size: $font-size
   margin: 0
   padding: 0
   border: 0
 
 h1, h2, h3, h4, h5, h6
+  font:
+    size: $font-size
+    weight: 300
   margin: 1em 0 0.5em 0
   text-align: center
-  font-weight: 300
 
   &:first-child
     margin-top: 0.5em
@@ -23,6 +26,9 @@ h1
 
 h2
   font-size: $font-size * 1.5
+
+h3, h4, h5, h6
+  font-weight: initial
 
 p
   margin: 1em 0
@@ -66,7 +72,6 @@ a
   & > img, & > p > img
     max-width: 100%
 
-
 #head
   font:
     size: $font-size * 3
@@ -106,3 +111,19 @@ ol
 @media (max-width: $body-width + 2 * $margin)
   blockquote
     margin-left: 1em
+
+@media (max-width: 380px)
+  #container
+    margin: $margin / 2
+
+  #head
+    font-size: $font-size * 2
+    font-weight: 300
+
+  h1
+    font-size: $font-size * 1.5
+
+  h2
+    font:
+      size: $font-size
+      weight: initial

@@ -4,12 +4,12 @@
 	<img src="/img/wishlist/{{.}}">
 </div>{{end}}
 <div class="text-block items">
+	<div><div>item</div><div>usd</div></div>
 {{range .Site.Data.wishlist.items}}
-	<div>{{with .url}}<a href="{{. | safeURL}}">{{end}}
-		{{with .name}}{{.}}{{end}}
-	{{with .url}}</a>{{end}}
-	{{with .features}}({{.}}){{end}}
-	{{with .price}} — {{.}}{{end}}
+	<div><div>{{with .url}}<a href="{{. | safeURL}}">{{end}}
+		{{with .name}}{{.}}{{end}}{{with .url}}</a>{{end}}
+	{{with .features}}({{.}}){{end}}</div>
+	<div>{{.price}}</div>
 	{{with .photo}}{{template "photo" .}}{{end}}</div>
 {{end}}
 </div>

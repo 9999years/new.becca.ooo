@@ -45,9 +45,9 @@ My goals with my website are:
 3. Centralize my contact and personal information
 
 I’m pretty proud that [becca.ooo] loads in three requests at 4.1 KB, which is
-about 1/500th the size and 3/100ths the requests of [the average page] (in
-2018). All the content pages will load in a maximum of four requests, most in
-two or three:
+about 1/500th the size and 3/100ths the requests of [the average page] (in 2018;
+2MB & 100 req.s). All the content pages will load in a maximum of four requests,
+most in two or three:
 
 1. Main page HTML
 2. (Possibly) a favicon (see below)
@@ -58,6 +58,14 @@ The favicon is only loaded if a bigger image than the inlined 404-byte 32×32 PN
 is required, and I’ll probably inline the SVG version once SVG favicons become
 more widely supported. Caching essentially eliminates the favicon and CSS after
 the first load, too.
+
+The content pages are mostly CSS (about half, by weight). That’s something to
+work on! A fair amount of even `main.css` is pretty niche; there’s support for
+justified text, block quotes, lists, and screens below 380px wide. (That’s
+certainly an extreme — desktop Tumblr can’t handle a window less than 1000px
+wide. Sucks for you if you wanted to, I don’t know, browse Tumblr on *half* of a
+1080p monitor and do something else like uh, talk to a friend on the other
+half.)
 
 ## The scripts
 
