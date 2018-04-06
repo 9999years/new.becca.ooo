@@ -30,10 +30,9 @@ place hard *and* it’s the reason the Tumblr app consistently crashes with OOM
 errors.
 
 I don’t like a lot of modern web development; I think it’s too hefty and too
-complicated. Simple is better. Who needs AMP or Node or any of those standards?
-Open a news site and see how many ads and animations are flying around, for
-static content! Newspapers managed to sit still on a page with no Javascript for
-centuries.
+complicated. Simple is better. Who needs AMP or Node or anything?  Open a news
+site and see how many animations are flying around on static content!
+Newspapers managed to sit still on a page with no Javascript for centuries.
 
 My goals with my website are:
 
@@ -43,7 +42,7 @@ My goals with my website are:
    [Noto], every device comes with a beautiful (or at least adequate in Noto’s
    case) sans-serif in a plethora of weights and styles at *zero cost* to you.
    Utilise them!
-3. Centralize my contact and personal information.
+3. Centralize my contact and personal information
 
 I’m pretty proud that [becca.ooo] loads in three requests at 4.1 KB, which is
 about 1/500th the size and 3/100ths the requests of [the average page] (in
