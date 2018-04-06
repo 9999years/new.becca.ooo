@@ -3,6 +3,7 @@ language: ruby
 install:
   - gem install sass
     # lol
+  - echo "downloading hugo! sorry travis' bandwidth"
   - curl https://github.com/gohugoio/hugo/releases/download/v0.38.1/hugo_0.38.1_Linux-64bit.tar.gz -L -o hugo.tar.gz
     # lol??
   - tar -xf hugo.tar.gz
