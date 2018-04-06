@@ -1,5 +1,15 @@
 baseURL="https://becca.ooo/"
 title="rebecca t"
 ignoreFiles=["static/(img/reel|i-c-the-light|chomp|juniorportfolio)"]
-disableRSS=true
+
 DefaultContentLanguage="en"
+disableKinds=[
+	"taxonomy",
+	"taxonomyTerm",
+	"RSS",
+	"section",
+	"404"
+]
+
+# delete taxonomies
+[taxonomies]
