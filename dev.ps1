@@ -50,8 +50,8 @@ $sassArgs = ("--unix-newlines", "--sourcemap=none", "--$Watch", $sassDirs)
 
 Switch($PSCmdlet.ParameterSetName) {
 	"Install" {
-		choco install sass -prerelease
-		choco install hugo
+		choco install ruby hugo
+		choco install sass --source=ruby
 	}
 	"Diagnostic" {
 		& $Sass $sassArgs
