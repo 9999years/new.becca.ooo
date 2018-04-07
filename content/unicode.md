@@ -287,4 +287,4 @@ and blame lies entirely with the third parties involved.
 [@fabrizioschiavi]: https://twitter.com/fabrizioschiavi
 [Emoji allowed in Twitter usernames]: http://getemoji.com/#twitter
 [Character/byte counter]: https://mothereff.in/byte-counter
-[my unicode toys]: /index/
+[my unicode toys]: index
