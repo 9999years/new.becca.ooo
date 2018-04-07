@@ -3,7 +3,6 @@
 {{range .Site.Data.landing.link}}
 	<a href="{{.href | safeURL}}"><div><div class="in">
 	{{if .long}}
-		<span></span>
 		<span class="short">{{.short}}</span>
 		<span class="long">{{.long}}</span>
 	{{else}}

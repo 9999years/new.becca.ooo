@@ -1,6 +1,7 @@
 @import vars
 
 $margin-size: 0.25em
+$border-width: 0.05em
 
 #container
   font-size: 1.5 * $font-size
@@ -12,6 +13,7 @@ $margin-size: 0.25em
     display: inline-block
     border-radius: $margin-size
     text-decoration: none
+    margin: $border-width $margin-size $border-width $border-width
     margin-right: $margin-size
 
   div
@@ -32,6 +34,11 @@ $margin-size: 0.25em
   opacity: 0
 
 a:hover
+  background-color: initial
+  border: $border-width solid $txt
+  color: $txt
+  margin: 0 $margin-size - $border-width 0 0
+
   .short
     opacity: 0
 
