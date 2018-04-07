@@ -21,7 +21,7 @@ Param(
 	$UseDiff="diff.exe", # lol
 	$NotableExtensions=('html', 'css', 'js', 'php'),
 	$ShouldExistFileName="should-exist.txt",
-	$ExcludeClean=("chomp", "css", "i-c-the-light", "img"),
+	$ExcludeClean=("chomp", "i-c-the-light", "img", "juniorportfolio", "pdf"),
 	[Parameter(ParameterSetName="Install")]
 	[Switch]$Install,
 	[Parameter(ParameterSetName="Build")]

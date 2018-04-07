@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mountain</title>
+<style>
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html, body, input {
+	font-family: "Segoe UI", -apple-system, "Helvetica", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Sans",  "FreeSans", "Code2001", "Code2000", "DejaVu Sans",  sans-serif;
+	color: #222;
+	font-size: 18px;
+}
+
+input {
+	font-size: 16px;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+code {
+	font-family: monospace;
+	background-color: #ddd;
+}
+
+/* better underline with gradients */
+a, a:visited {
+	color: #226;
+	text-decoration: none;
+	position: relative;
+	background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(34,34,102,0.8) 50%);
+	background-repeat: repeat-x;
+	background-size: 2px 0.1em;
+	background-position: 0 1.15em;
+}
+
+a:hover {
+	color: #b26;
+	background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(187,34,102,0.8) 50%);
+}
+
+#container {
+	margin: 50px auto;
+	max-width: 1200px;
+}
+
+canvas {
+	cursor: pointer;
+	display: block;
+	margin: auto;
+}
+
+#controls {
+	max-width: 600px;
+	margin: auto;
+}
+
+#formula-input {
+	width: 80%;
+	float: right;
+}
+
+input[type="range"] {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 100%;
+	position: relative;
+	top: 6px;
+}
+
+input[type="number"] {
+	width: 25%;
+	max-width: 50px;
+	float: right;
+}
+
+#formula-note {
+	display: none;
+	margin-bottom: 1em;
+	padding: 1em;
+	border: 1px solid #999;
+}
+
+#formula-note > p:last-child {
+	margin-bottom: 0;
+}
+
+@media (min-width: 1000px) {
+	#container {
+		max-width: 1000px;
+	}
+
+	canvas, #controls {
+		display: inline-block;
+	}
+
+	#controls {
+		max-width: 445px;
+		margin-left: 50px;
+		vertical-align: top;
+		width: 100%;
+	}
+}
+
+@media (max-width: 600px) {
+	#container {
+		margin: 20px;
+	}
+
+	canvas {
+		margin-bottom: 1em;
+		max-width: 100%;
+		height: auto!important;
+	}
+}
+
+</style>
+<body onload="init()">
+<div id="container">
+	<canvas id="main-canvas"></canvas>
+</div>
+<script>
+//jquery lite™
+//sorry
+function $(id) { return document.getElementById(id); }
+
+//globals
+var background,
+    frame,
+    screen,
+    pixelScale,
+    graph,
+    step,
+    scene,
+    lastRender;
+
+function colorToRgba(color) {
+	return 'rgba('
+		+ color[0] + ','
+		+ color[1] + ','
+		+ color[2] + ','
+		+ color[3] + ')';
+}
+
+function randf(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+function drawLine(x, y, endx, endy, color) {
+	ctx.beginPath();
+	ctx.moveTo(x, y);
+	ctx.lineTo(endx, endy);
+	ctx.strokeStyle = colorToRgba(color);
+	ctx.stroke();
+	return;
+}
+
+function drawSharpLine(x, y, endx, endy, color) {
+	drawLine(
+		Math.floor(x) + 0.5,
+		Math.floor(y) + 0.5,
+		Math.floor(endx) + 0.5,
+		Math.floor(endy) + 0.5,
+		color
+	);
+	return;
+}
+
+function lerp(a, b, f) {
+	return (a * (1 - f) + b * f) / 2;
+}
+
+function sinterp(a, b, f) {
+	return (b - a)
+		* (1 - Math.cos(
+			Math.PI * f
+		)) / 2 + a;
+}
+
+function pyramid(slope, x, y, pos) {
+	return slope * Math.abs(pos - x) + y;
+}
+
+// i in [0, 1]
+function getY(x) {
+	//return pyramid(2, ctx.x/2, ctx.y/2, i * ctx.x);
+	//return sinterp(0, 0, ctx.y, ctx.x, i);
+	var dex = 0;
+	for(var i = 0; i < scene.mountains.length - 1; i++) {
+		if(
+			(x > scene.mountains[i].x) &&
+			(x < scene.mountains[i + 1].x)
+		) {
+			return lerp(
+				scene.mountains[i].y,
+				scene.mountains[i + 1].y,
+				(x - scene.mountains[i].x) /
+				(scene.mountains[i + 1].x
+				- scene.mountains[i].x)
+			);
+		}
+	}
+}
+
+function render(time) {
+	//gen scene
+	//rough jags
+	//very bad technique do not use in real life
+	scene.mountains = [];
+	var mountains_count = 15;
+	for(var i = 0; i < mountains_count; i++) {
+		scene.mountains.push({
+			x: randf(0, ctx.x),
+			y: 0
+		});
+	}
+	scene.mountains.push({ x: 0, y: 0 });
+	scene.mountains.push({ x: ctx.x, y: 0 });
+	mountains_count += 2;
+	scene.mountains =
+		scene.mountains.sort((k, l) => {return k.x < l.x ? -1 : 1});
+	var yprev = ctx.y / 2;
+	for(var i = 0; i < mountains_count; i++) {
+		yprev = randf(yprev - ctx.y / 6, yprev + ctx.y / 6);
+		scene.mountains[i].y = yprev;
+	}
+
+	var graphColor = colorToRgba([0, 0, 0, 1]);
+	var x, y, ofs = 0;
+	ctx.clearRect(0, 0, ctx.x, ctx.y);
+	//graph
+	ctx.beginPath();
+	ctx.moveTo(0, getY(0));
+	for(var i = step; i < ctx.x + step; i += step) {
+		//ofs += randf(-4, 4);
+		y = getY(i);
+		//console.log("(" + i + ", " + y + ")");
+		ctx.lineTo(i, y + ofs);
+	}
+	ctx.strokeStyle = graphColor;
+	ctx.stroke();
+	//window.requestAnimationFrame(render);
+	return;
+}
+
+function init() {
+	//initialize cvs, ctx, etc
+	var frameWidth, frameHeight;
+	pixelScale = window.devicePixelRatio;
+	var maxWidth = document.body.clientwidth * pixelScale;
+	if(maxWidth < 500) {
+		frameWidth = maxWidth * pixelScale;
+	} else {
+		frameWidth  = 500 * pixelScale;
+	}
+	frameHeight = frameWidth;
+	frame = 0;
+	step = 2;
+	scene = {};
+	cvs = $('main-canvas');
+	cvs.setAttribute('height', frameHeight + 'px');
+	cvs.setAttribute('width',  frameWidth + 'px');
+	ctx = cvs.getContext('2d')
+	ctx.width  = frameWidth;
+	ctx.height = frameWidth;
+	ctx.x = frameWidth;
+	ctx.y = frameHeight;
+	cvs.style.height = frameHeight / pixelScale + 'px';
+	cvs.style.width =  frameWidth / pixelScale + 'px';
+	ctx.lineWidth = pixelScale;
+	window.requestAnimationFrame(render);
+	cvs.onclick = e => {
+		window.requestAnimationFrame(render);
+	};
+};
+
+</script>
