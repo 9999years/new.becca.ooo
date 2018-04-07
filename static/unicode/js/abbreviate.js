@@ -185,3 +185,93 @@ var replacements = {
 	,"xii":"\u217b"
 	,"...":"\u2026"
 }
+
+let $                  = id => document.getElementById(id)
+let textIn             = $("in")
+let textOut            = $("out")
+let textRatio          = $("compression_ratio")
+let charsIn            = $("chars_in")
+let charsOut           = $("chars_out")
+
+let textFiltered       = ""
+let textRaw            = ""
+let compressionRatio   = 1
+
+let regexAstralSymbols = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g
+
+//this function is from here
+// https://mathiasbynens.be/notes/javascript-unicode
+//(thanks mathias)
+// replace every surrogate pair with a bmp symbol to acct for 5 or 6 byte
+// unicode symbols
+// then get the length
+let symbols = s => s.replace(regexAstralSymbols, '.').length
+
+// function to select text when the text boxes are clicked
+// browsers are weird about this (it doesnt work w/o a delay)
+// can you believe there's a function containing 'exec' that isn't a huge
+// security hole?
+let selectAll = () => window.setTimeout(
+	() => document.execCommand("selectAll", false, null), 1)
+
+//takes a string and an object with pairs to replace
+function filter(text, pairs) {
+	var result = []
+
+	// if the next delta characters exist in `pairs`, replace them in
+	// `replace`
+	// i actually considered putting this whole thing in a ternery, lol
+	// i really tried to not put those braces in too smh
+	let repl = delta => {
+		if(pairs[text.substring(i, i + delta)]) {
+			result.push(pairs[text.substring(i, i + delta)])
+			i += delta
+			true
+		} else {
+			false
+		}
+	}
+
+
+	for(var i = 0; i < text.length; i++) {
+		// if the current n chars exist as a pair, replace
+		for(n = 4; n > 1; n--) {
+			if(repl(n)) {
+				break
+			}
+		}
+
+		if(n == 1) {
+			// we didn't replace anything; add the current char
+			// plain
+			result.push(text[i])
+		}
+	}
+
+	return result.join("")
+}
+
+
+// when text is input (covers pastes as well as keys)
+textIn.addEventListener("input", function(e) {
+	// refresh textFiltered and output
+	let textRaw = textIn.value
+	textOut.value = textFiltered = filter(textRaw, replacements)
+	textRatio.innerHTML = compressionRatio
+		= Math.round(
+			(symbols(textRaw) / symbols(textFiltered))
+			* 1000
+		) / 1000
+	// output comp. ratio and add the stats
+	textRatio.innerHTML += ":1, "
+		+ (symbols(textRaw)
+		- symbols(textFiltered))
+		+ " characters saved"
+	// update character counters
+	charsIn.innerHTML  = symbols(textRaw)
+	charsOut.innerHTML = symbols(textFiltered)
+}, false)
+
+// select all text when focused
+textIn.addEventListener("focus", selectAll, false)
+textOut.addEventListener("focus", selectAll, false)

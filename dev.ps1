@@ -21,6 +21,7 @@ Param(
 	$UseDiff="diff.exe", # lol
 	$NotableExtensions=('html', 'css', 'js', 'php'),
 	$ShouldExistFileName="should-exist.txt",
+	$ExcludeClean=("chomp", "css", "i-c-the-light", "img"),
 	[Parameter(ParameterSetName="Install")]
 	[Switch]$Install,
 	[Parameter(ParameterSetName="Build")]
@@ -34,7 +35,9 @@ Param(
 	[Parameter(ParameterSetName="GenerateShouldExist")]
 	[Switch]$Overwrite,
 	[Parameter(ParameterSetName="DiffShouldExist")]
-	[Switch]$DiffShouldExist
+	[Switch]$DiffShouldExist,
+	[Parameter(ParameterSetName="Clean")]
+	[Switch]$Clean
 )
 
 $sassDirs = "$SassDir`:$CssDir"
@@ -82,5 +85,9 @@ Switch($PSCmdlet.ParameterSetName) {
 	"DiffShouldExist" {
 		./dev.ps1 -GenerateShouldExist | `
 		& $UseDiff $ShouldExistFileName - $UseDiffArgs
+	}
+	"Clean" {
+		Get-ChildItem "public" -Exclude $ExcludeClean |
+		Remove-Item -Recurse
 	}
 }
