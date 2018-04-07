@@ -1,4 +1,3 @@
-# generated with (essentially) ls .\public\* -include ('*.html','*.js','*.css') -re | %{ $_.FullName.Substring((pwd).ToString().Length + 1) -replace '\\', '/' }
 public/404/index.html
 public/500/index.html
 public/about/index.html
@@ -14,6 +13,7 @@ public/css/ascii_common.css
 public/css/ascii_simple.css
 public/css/brandeis.css
 public/css/contact.css
+public/css/landing.css
 public/css/main.css
 public/css/reel.css
 public/css/unicode.css
@@ -35,17 +35,19 @@ public/projects/index.html
 public/reel/hq/index.html
 public/reel/index.html
 public/snell/index.html
+public/test/index.html
 public/trans/index.html
+public/unicode/index/index.html
+public/unicode/js/abbreviate.js
+public/unicode/js/carrie.js
 public/unicode/abbreviate.html
 public/unicode/carrie.html
 public/unicode/corrupter.html
 public/unicode/grid.html
 public/unicode/hearts.html
-public/unicode/index/index.html
-public/unicode/js/abbreviate.js
-public/unicode/js/carrie.js
-public/unicode/random.html
 public/unicode/index.html
+public/unicode/random.html
 public/wishlist/index.html
 public/xmpp/index.html
+public/bathtub.php
 public/index.html

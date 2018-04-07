@@ -82,13 +82,18 @@ with something like `ln .git/hooks/post-merge post-merge.sh`, but I forget if
 that’ll actually work or not. You’ll also need to `chmod +x` the thing. Either
 the link or the executable. I don’t remember.
 
-`dev.ps [-Build|-Install|-Server|-Diagnostic]` performs several tasks.
+`dev.ps1
+[-Build|-Install|-Server|-Diagnostic|-DiffShouldExist|-GenerateShouldExist]` performs several tasks.
 
 * `-Build` builds the site normally with `./post-merge.sh`; this requires `sh`
   to be installed.
 * `-Diagnostic` builds the site and prints Hugo’s “template metric hints”.
 * `-Install` installs SASS and Hugo with Chocolatey.
 * `-Server` starts a development server for both SASS and Hugo.
+* `-DiffShouldExist` diffs the current `public` directory with the local
+  `should-exist.txt`.
+* `-GenerateShouldExist` generates a new `should-exist.txt` from the `public`
+  directory; use `-Overwrite` to write the result to a new `should-exist.txt`
 
 ## Other files
 
@@ -125,6 +130,15 @@ Also I dislike the syntax of XML.
 
 `static` — stuff copied to public directly. Includes processed CSS, some PDFs,
 some Javascript, etc. Some stuff is actually only on my server! Beware.
+
+## Deleting `public`
+
+Stuff to not delete, because it has binary data not in the repo in it:
+
+* `chomp`
+* `css`
+* `i-c-the-light`
+* `img`
 
 ## License
 
