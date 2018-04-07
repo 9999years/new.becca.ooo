@@ -12,5 +12,16 @@ install:
   - rm -rf public || exit 0
 
 script:
-    - ./post-merge.sh
-    - ./check-exists.sh should-exist.txt
+  - ./post-merge.sh
+  - ./check-exists.sh should-exist.txt
+
+notifications:
+    webhooks:
+        urls:
+            - https://becca.ooo/__travis_webhook__
+        # this is used for deploying the site; we don't want failures to build
+        on_success: always # default: always
+        on_failure: never # default: always
+        on_start: never   # default: never
+        on_cancel: never  # default: always
+        on_error: never   # default: always
