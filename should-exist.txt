@@ -1,4 +1,3 @@
-# generated with (essentially) ls .\public\* -include ('*.html','*.js','*.css') -re | %{ $_.FullName.Substring((pwd).ToString().Length + 1) -replace '\\', '/' }
 public/404/index.html
 public/500/index.html
 public/about/index.html
