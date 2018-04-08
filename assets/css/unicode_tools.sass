@@ -1,8 +1,14 @@
 @import vars
 
+button
+  cursor: pointer
+
+input, textarea, button
+  @extend %standard
+  padding: 0.25em
+  border: 1px $txt solid
+
 textarea
   width: 100%
-  @extend %standard
-  border: 1px $txt solid
   margin: $font-size 0
   padding: $font-size
