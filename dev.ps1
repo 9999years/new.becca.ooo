@@ -37,7 +37,9 @@ Param(
 	[Parameter(ParameterSetName="DiffShouldExist")]
 	[Switch]$DiffShouldExist,
 	[Parameter(ParameterSetName="Clean")]
-	[Switch]$Clean
+	[Switch]$Clean,
+	[Parameter(ParameterSetName="Test")]
+	[Switch]$Test
 )
 
 $sassDirs = "$SassDir`:$CssDir"
@@ -94,5 +96,8 @@ Switch($PSCmdlet.ParameterSetName) {
 	"Clean" {
 		Get-ChildItem "public" -Exclude $ExcludeClean |
 		Remove-Item -Recurse
+	}
+	"Test" {
+		bash "./check-exists.sh" "./should-exist.txt"
 	}
 }

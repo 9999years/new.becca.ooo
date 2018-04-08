@@ -1,7 +1,7 @@
 +++
 title="grid"
 js=["unicode/grid"]
-css=["unicode_tools"]
+css=["unicode/tools"]
 +++
 
 Type here: <input id="in" value="Hello">

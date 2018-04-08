@@ -1,10 +1,9 @@
 +++
 title="Simple ASCII table"
-url="ascii/simple"
-css=["ascii_simple"]
+css=["ascii/simple"]
 +++
 
-[Also available as a .txt file that fits in an 80×24 terminal!](/ascii_simple.txt)
+[Also available as a .txt file that fits in an 80×24 terminal!](/ascii/simple.txt)
 
 [Also available with more details!](../)
 

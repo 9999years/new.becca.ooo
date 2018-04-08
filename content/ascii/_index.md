@@ -1,11 +1,11 @@
 +++
 title="ASCII table"
-css=["ascii"]
+css=["ascii/ascii"]
 +++
 
 ## UTF-8 compatible!
 
-[Available as a terminal-friendly .txt!](/ascii.txt)
+[Available as a terminal-friendly .txt!](ascii.txt)
 
 [Or as a simple version with just the character and hex code!](simple)
 
