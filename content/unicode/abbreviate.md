@@ -2,7 +2,7 @@
 title="abbreviate"
 description="save characters in Tweets in dubiously useful ways"
 js=["unicode/abbreviate"]
-css=["unicode_tools"]
+css=["unicode/tools"]
 +++
 
 Type here: <span id="chars_in">60</span> chars

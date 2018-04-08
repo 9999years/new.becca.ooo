@@ -1,9 +1,13 @@
 #!/bin/bash
 
+RED="\e[32m"
+GREEN="\e[32m"
+NC="\e[0m"
+
 echo_err() {
-	echo -e -n "\033[0;31m"
+	echo -e -n "$RED"
 	echo $1
-	echo -e -n "\033[0m"
+	echo -e -n "$NC"
 }
 
 errors=0
@@ -24,6 +28,6 @@ if [[ errors -eq 0 ]]
 then
 	echo "all files exist :-)"
 else
-	echo_err "$errors files were not found"
+	echo_err "$GREEN$errors files were not found$NC"
 	exit 1
 fi

@@ -1,7 +1,7 @@
 +++
 title="unicode utils"
 url="/unicode/index"
-hide_body_copy_tag=true
+center=true
 +++
 
 [abbreviator]

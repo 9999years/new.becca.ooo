@@ -7,7 +7,6 @@ disableKinds=[
 	"taxonomy",
 	"taxonomyTerm",
 	"RSS",
-	"section",
 	"404"
 ]
 

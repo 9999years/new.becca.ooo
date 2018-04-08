@@ -1,5 +1,5 @@
 {{partial "header.html" .}}
-{{if not (.Param "no_default_includes")}}
+{{if not (.Param "no-default-includes")}}
 <link rel="stylesheet" type="text/css" href="/css/main.css"></style>
 {{end}}
 {{range .Param "css"}}
@@ -7,16 +7,15 @@
 {{end}}
 {{with .Param "onload"}}<body onload="{{. | safeJS}}">{{end}}
 <div id="container">
-	{{if not (.Param "hide_title")}}
-		<div id="head"><a href="/">rebecca turner</a></div>
-		<div class="rule"></div>
+	{{template "title" .}}
+	{{template "nav" .}}
+	{{if not (.Param "hide-body-copy-tag")}}
+		<div {{ with .Param "body-copy-id" | default "body-copy" -}}
+			id="{{.}}"
+		{{- end -}}
+		{{- with .Param "body-copy-classes"}} class="{{.}}"{{end -}}
+		{{- if (or (.Param "body-copy-style") (.Param "center"))}} style="{{if .Param "center" -}}
+			text-align: center;{{end -}}
+		{{.Param "body-copy-style"}}"{{end}}>
 	{{end}}
-	{{if not (.Param "hide_nav")}}
-		<p><a href="/about">about</a> /
-		<a href="/projects">projects</a> /
-		<a href="/art">art</a> /
-		<a href="/contact">contact</a>
-		<div class="rule"></div>
-	{{end}}
-	{{if not (.Param "hide_body_copy_tag")}}<div{{with .Param "body_copy_id" | default "body-copy"}} id="{{.}}"{{end}}{{with .Param "body_copy_classes"}} class="{{.}}"{{end}}>{{end}}
 		{{with .Title}}<h1>{{.}}</h1>{{end}}

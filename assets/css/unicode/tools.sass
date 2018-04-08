@@ -1,4 +1,4 @@
-@import vars
+@import ../vars
 
 button
   cursor: pointer
@@ -12,3 +12,8 @@ textarea
   width: 100%
   margin: $font-size 0
   padding: $font-size
+  max-width: $body-width - $font-size * 2
+
+@media (max-width: $body-width + $margin * 2)
+  textarea
+    padding: 0

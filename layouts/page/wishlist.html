@@ -1,10 +1,10 @@
-{{partial "becca-header.html" .}}
 {{define "photo"}}<div class="photo">
 	<div class="triangle"></div>
 	<img src="/img/wishlist/{{.}}">
 </div>{{end}}
-<div class="text-block items">
-	<div><div>item</div><div>usd</div></div>
+
+{{partial "becca-header.html" .}}
+<div><div>item</div><div>usd</div></div>
 {{range .Site.Data.wishlist.items}}
 	<!--
 	structure:
@@ -29,5 +29,4 @@
 		{{with .photo}}{{template "photo" .}}{{end}}
 	</div>
 {{end}}
-</div>
 {{partial "becca-footer.html" .}}
