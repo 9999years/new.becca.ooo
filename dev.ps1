@@ -19,7 +19,7 @@ Param(
 	$CssDir="static/css",
 	$UseDiffArgs=("-d", "--color=always", "--ignore-all-space", "--strip-trailing-cr"),
 	$UseDiff="diff.exe", # lol
-	$NotableExtensions=('html', 'css', 'js', 'php'),
+	$NotableExtensions=('html', 'css', 'js', 'php', 'txt'),
 	$ShouldExistFileName="should-exist.txt",
 	$ExcludeClean=("chomp", "i-c-the-light", "img", "juniorportfolio", "pdf"),
 	[Parameter(ParameterSetName="Install")]
@@ -66,14 +66,19 @@ Switch($PSCmdlet.ParameterSetName) {
 		Start-Process $Hugo ("server", "-D")
 	}
 	"GenerateShouldExist" {
-		$len = (Get-Location).ToString().Length + 1
-
 		# html, css -> *.html, *.css
 		$exts = $NotableExtensions | %{ "*.$_" }
 
-		$shouldExist = Get-ChildItem "public/*" -Include $exts -Recurse | %{
+		Push-Location
+		Set-Location public
+
+		$len = (Get-Location).ToString().Length + 1
+
+		$shouldExist = Get-ChildItem "*" -Include $exts -Recurse | %{
 			$_.FullName.Substring($len) -replace '\\', '/'
 		}
+
+		Pop-Location
 
 		$shouldExist | Write-Output
 
