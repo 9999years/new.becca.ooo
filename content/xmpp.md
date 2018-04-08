@@ -1,9 +1,10 @@
 +++
 title="xmpp info"
+css=["xmpp"]
 +++
 
-|       |  
-|-------|---------------------
+|       |            |
+|-------|------------|
 |[xmpp] | [637275@dukgo.com][xmpp_addr]
 |[otr] fingerprint | `4d373402 05ca7bf8 f7807ec3 7f45710d acb2ffd5`
 
