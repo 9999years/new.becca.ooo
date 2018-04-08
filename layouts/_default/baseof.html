@@ -1,3 +1,15 @@
-{{partial "header.html" .}}
-
-This is a base page.
+{{block "title" .}}
+	{{if not (.Param "hide-title")}}
+		<div id="head"><a href="/">rebecca turner</a></div>
+		<div class="rule"></div>
+	{{end}}
+{{end}}
+{{block "nav" .}}
+	{{if not (.Param "hide-nav")}}
+		<p><a href="/about">about</a> /
+		<a href="/projects">projects</a> /
+		<a href="/art">art</a> /
+		<a href="/contact">contact</a>
+		<div class="rule"></div>
+	{{end}}
+{{end}}

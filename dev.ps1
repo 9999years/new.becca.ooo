@@ -98,6 +98,10 @@ Switch($PSCmdlet.ParameterSetName) {
 		Remove-Item -Recurse
 	}
 	"Test" {
+		"[INFO] Cleaning"
+		./dev.ps1 -Clean
+		"[INFO] Building"
+		./dev.ps1 -Build
 		bash "./check-exists.sh" "./should-exist.txt"
 	}
 }

@@ -1,5 +1,4 @@
 {{partial "becca-header.html" .}}
-<div class="links">
 {{range .Site.Data.landing.link}}
 	<a href="{{.href | safeURL}}"><div><div class="in">
 	{{if .long}}
@@ -10,5 +9,4 @@
 	{{end}}
 	</div></div></a>
 {{end}}
-</div>
 {{partial "becca-footer.html" .}}
