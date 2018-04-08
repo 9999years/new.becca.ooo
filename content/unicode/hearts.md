@@ -1,7 +1,7 @@
 +++
 title="i love u!"
 onload="outputHearts(140)"
-js=["../unicode/js/hearts"]
+js=["unicode/hearts"]
 +++
 
 <span id="hearts">

@@ -1,5 +1,9 @@
 	{{if not (.Param "hide_body_copy_tag")}}</div>{{end}}
 </div>
 {{range .Param "js"}}
-<script src="{{printf "/js/%v.js" . | relURL}}"></script>
+	{{if eq (substr . 0 1) "/"}}
+		<script src="{{printf "%v.js" .}}"></script>
+	{{else}}
+		<script src="{{printf "/js/%v.js" .}}"></script>
+	{{end}}
 {{end}}
