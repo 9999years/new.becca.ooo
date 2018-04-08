@@ -1,9 +1,9 @@
-{{partialCached "header.html" .}}
+{{partial "header.html" .}}
 {{if not (.Param "no_default_includes")}}
 <link rel="stylesheet" type="text/css" href="/css/main.css"></style>
 {{end}}
 {{range .Param "css"}}
-<link rel="stylesheet" type="text/css" href="/css/{{.}}.css"></style>
+<link rel="stylesheet" type="text/css" href="{{printf "/css/%v.css" . | relURL}}"></style>
 {{end}}
 {{with .Param "onload"}}<body onload="{{. | safeJS}}">{{end}}
 <div id="container">

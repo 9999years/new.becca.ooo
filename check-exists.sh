@@ -11,7 +11,7 @@ errors=0
 while read -r line || [[ -n "$line" ]]; do
 	# skip comments
 	if [[ "$line" == \#* ]]; then continue; fi
-	if [[ ! -f "$line" ]]
+	if [[ ! -f "public/$line" ]]
 	then
 		echo_err "☒ \`$line\` should exist but doesn't!"
 		let "errors += 1"

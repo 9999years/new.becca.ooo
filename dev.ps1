@@ -19,8 +19,9 @@ Param(
 	$CssDir="static/css",
 	$UseDiffArgs=("-d", "--color=always", "--ignore-all-space", "--strip-trailing-cr"),
 	$UseDiff="diff.exe", # lol
-	$NotableExtensions=('html', 'css', 'js', 'php'),
+	$NotableExtensions=('html', 'css', 'js', 'php', 'txt'),
 	$ShouldExistFileName="should-exist.txt",
+	$ExcludeClean=("chomp", "i-c-the-light", "img", "juniorportfolio", "pdf"),
 	[Parameter(ParameterSetName="Install")]
 	[Switch]$Install,
 	[Parameter(ParameterSetName="Build")]
@@ -34,7 +35,9 @@ Param(
 	[Parameter(ParameterSetName="GenerateShouldExist")]
 	[Switch]$Overwrite,
 	[Parameter(ParameterSetName="DiffShouldExist")]
-	[Switch]$DiffShouldExist
+	[Switch]$DiffShouldExist,
+	[Parameter(ParameterSetName="Clean")]
+	[Switch]$Clean
 )
 
 $sassDirs = "$SassDir`:$CssDir"
@@ -47,8 +50,8 @@ $sassArgs = ("--unix-newlines", "--sourcemap=none", "--$Watch", $sassDirs)
 
 Switch($PSCmdlet.ParameterSetName) {
 	"Install" {
-		choco install sass -prerelease
-		choco install hugo
+		choco install ruby hugo
+		choco install sass --source=ruby
 	}
 	"Diagnostic" {
 		& $Sass $sassArgs
@@ -63,14 +66,19 @@ Switch($PSCmdlet.ParameterSetName) {
 		Start-Process $Hugo ("server", "-D")
 	}
 	"GenerateShouldExist" {
-		$len = (Get-Location).ToString().Length + 1
-
 		# html, css -> *.html, *.css
 		$exts = $NotableExtensions | %{ "*.$_" }
 
-		$shouldExist = Get-ChildItem "public/*" -Include $exts -Recurse | %{
+		Push-Location
+		Set-Location public
+
+		$len = (Get-Location).ToString().Length + 1
+
+		$shouldExist = Get-ChildItem "*" -Include $exts -Recurse | %{
 			$_.FullName.Substring($len) -replace '\\', '/'
 		}
+
+		Pop-Location
 
 		$shouldExist | Write-Output
 
@@ -82,5 +90,9 @@ Switch($PSCmdlet.ParameterSetName) {
 	"DiffShouldExist" {
 		./dev.ps1 -GenerateShouldExist | `
 		& $UseDiff $ShouldExistFileName - $UseDiffArgs
+	}
+	"Clean" {
+		Get-ChildItem "public" -Exclude $ExcludeClean |
+		Remove-Item -Recurse
 	}
 }

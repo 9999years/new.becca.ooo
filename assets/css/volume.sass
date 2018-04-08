@@ -1,0 +1,40 @@
+@import vars
+
+input
+  @extend %standard
+  border: 1px solid $txt
+  padding: 0.25em
+
+.red
+  color: #d00
+
+#formula-input
+  width: 60%
+  max-width: 200px
+  margin-right: 0.5em
+
+#volume-input
+  margin: 3em 0
+
+#int
+  position: relative
+  font-size: 2 * $font-size
+
+#bottom-limit-value, #top-limit-value
+  position: absolute
+  left: 0
+  width: 4em
+
+#int >
+  #bottom-limit-value
+    top: 3em
+
+  #top-limit-value
+    top: -1.5em
+
+@media (max-width: 600px)
+  #container
+    margin: 20px
+
+  #formula-input
+    width: 30%

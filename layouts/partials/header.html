@@ -1,7 +1,8 @@
 <!doctype html>
 <meta charset="utf-8">
+<title>{{.Site.Title}}{{with .Title}} → {{.}}{{end}}</title>
+{{with .Description}}<meta name="description" content="{{.}}">{{end}}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNpiZGAQYqAlYGKgMRi1gCBgwS+t62Jfu3sdskgYozCEYRnqbxHqr+dizy0o8PLeg3tnL/aHJZFsAVYANLFo1Tyg3XARcSWFr+8/kuMDrKYD/aRkrI8mfu/sBerE AdDtmKYDwct7D6ljAXLIfH3/4fKeg8DQx+MDFvLSBtDoWelFx1dvhMcBMJ6pZgHQ9GbXIIjDYeHzgJr5YGlFE7LpVM5oQMfumbWQhjn5BCzcaWUB8YFDfhANcR+MVjijFoxaQDpgHG06Dn8LAAIMACsIS+qHle+XAAAAAElFTkSuQmCC" sizes="32x32" type="image/png">
 <link rel="icon" href="/img/icon-196.png" sizes="any" type="image/png">
 <link rel="icon" href="/img/icon.svg" sizes="any" type="image/svg+xml">
-<title>{{.Site.Title}}{{with .Title}} → {{.}}{{end}}</title>

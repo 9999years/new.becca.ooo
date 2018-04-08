@@ -94,6 +94,7 @@ the link or the executable. I don’t remember.
   `should-exist.txt`.
 * `-GenerateShouldExist` generates a new `should-exist.txt` from the `public`
   directory; use `-Overwrite` to write the result to a new `should-exist.txt`
+* `-Clean` cleans everything safe to delete (i.e. not images etc.) from `public`
 
 ## Other files
 
@@ -133,12 +134,8 @@ some Javascript, etc. Some stuff is actually only on my server! Beware.
 
 ## Deleting `public`
 
-Stuff to not delete, because it has binary data not in the repo in it:
-
-* `chomp`
-* `css`
-* `i-c-the-light`
-* `img`
+Use `./dev.ps1 -Clean` because otherwise you might delete binary data in
+`public/` not stored in `static/`.
 
 ## License
 
