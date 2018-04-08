@@ -178,7 +178,7 @@ function render(time) {
 function init() {
 	//initialize cvs, ctx, etc
 	cvs = $("main-canvas")
-	var maxWidth = cvs.parentElement.clientWidth * pixelScale
+	var maxWidth = cvs.parentElement.clientWidth
 	var frameWidth = maxWidth * pixelScale
 	var frameHeight = frameWidth
 	frame = 0
@@ -191,7 +191,7 @@ function init() {
 	ctx.x = frameWidth
 	ctx.y = frameHeight
 	cvs.style.height = frameHeight / pixelScale + "px"
-	cvs.style.width =  frameWidth / pixelScale + "px"
+	cvs.style.width =  frameWidth  / pixelScale + "px"
 	ctx.lineWidth = pixelScale
 
 	screen = ctx.createImageData(frameWidth, frameHeight)
