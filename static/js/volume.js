@@ -110,10 +110,6 @@ function onYouTubeIframeAPIReady(v) {
 			'onStateChange': e => console.log(e)
 		}
 	})
-
-	function onPlayerReady(e) {
-		e.target.playVideo();
-	}
 }
 
 (() => {

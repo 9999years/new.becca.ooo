@@ -4,6 +4,11 @@ css=["volume"]
 js=["volume"]
 +++
 
+Non-working while I figure out what I want to do with this. I don’t want to use
+3rd party videos (tracking is creepy) or host my own audio (I don’t like messing
+with binaries and I’ll probably delete it earlier than is sensible), which
+leaves me at kind of an impasse.
+
 <div id="volume-input">
 Volume = <span id="int">∫
 <input type="number" id="bottom-limit-value" value="0">
