@@ -19,11 +19,11 @@ price    = "60"
 url      = "https://www.amazon.com/Sandisk-Ultra-200GB-Micro-Adapter/dp/B073JY5T7T"
 
 [[items]]
-name     = "Jowo 1.1mm stub #5 nib"
-price    = "8"
-features = "nib only"
+name     = "Jowo #5 nib"
+price    = "15"
+features = "M tip, nib only"
 photo    = "jowo_5.jpg"
-url      = "https://www.fpnibs.com/standard/209-9052-11-tip-size-5-jowo-steel-nib-unit.html/"
+url      = "https://www.fpnibs.com/standard/205-9038-jowo-size-5-steel-nib-unit-m-tip.html"
 
 [[items]]
 name     = "Klein 8″ scissors"
