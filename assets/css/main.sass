@@ -32,10 +32,10 @@ p
 a
   color: $hi
   text-decoration: underline
-  text-underline-position: under
 
   &:hover
     color: $bg
+    text-decoration: none
     background-color: $txt
 
 .center
@@ -43,17 +43,14 @@ a
   margin-left: auto
   margin-right: auto
 
-.full-rule
-  border-top: 1px solid $txt
-  margin: 0.5em auto
-  width: 100%
+.rule, .full-rule
+  border-top: 1.5pt solid $txt
+  margin: 1em auto
+  max-width: 3 * $font-size
   height: 0
 
-.rule
-  border-top: 1px solid $txt
-  margin: 0.5em auto
-  max-width: 50px
-  height: 0
+.full-rule
+  width: 100%
 
 .justify
   text-align: justify

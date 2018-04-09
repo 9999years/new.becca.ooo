@@ -1,22 +1,19 @@
 @import vars
 
 .contacts >
+  a:hover > div > div > span
+    background-color: $txt
+    color: $bg
+
+  // item-wrapping div
   a > div, div
     display: flex
 
-  a > div
-    &:hover
-      background-color: $txt
-
-    > div
+    // label or val-wrapping div
+    & > div
       width: 100%
       text-align: left
       margin: 0.25em
 
-  div > div
-    width: 100%
-    text-align: left
-    margin: 0.25em
-
-  a > div > div:first-child, div > div:first-child
-    text-align: right
+      &:first-child
+        text-align: right
