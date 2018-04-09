@@ -1,7 +1,18 @@
 {{partial "becca-header.html" .}}
-{{range .Site.Data.contact.contact}}
+{{define "link-start"}}
 	{{with .link}}<a href="{{. | safeURL}}">{{end}}
-		<div><div>{{.label}}:</div><div>{{.val}}</div></div>
+{{end}}
+{{define "link-end"}}
 	{{with .link}}</a>{{end}}
+{{end}}
+{{range .Site.Data.contact.contact}}
+{{template "link-start" .}}
+	<!-- item-wrapping div -->
+	<div>
+		<!-- label- or value-wrapping div -->
+		<div><span>{{.label}}</span></div>
+		<div><span>{{.val}}</span></div>
+	</div>
+{{template "link-end" .}}
 {{end}}
 {{partial "becca-footer.html" .}}
