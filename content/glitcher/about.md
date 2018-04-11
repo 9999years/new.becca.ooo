@@ -6,7 +6,7 @@ description="about"
 # about
 
 img glitcher is an in-browser procedural data bending application developed by
-[rebecca turner], known previously as [9999years9999 years]
+[rebecca turner], known previously as [9999years]
 
 it simply loads the image data as raw binary into an image on the page. then,
 the buttons will modify the data randomly --- as with manual data bending,
@@ -34,7 +34,7 @@ display in browsers
 firefox support is not planned due to the way firefox renders images. sorry! in
 fact, as time goes on, this might break in other browsers as well
 
-#### privacy policy:
+## privacy policy
 
 all images uploaded are kept on the server (for image linking features).
 additionally, to conserve requests to the google images search api (for the
@@ -45,8 +45,8 @@ don’t want it
 bug reports, comments, questions, and suggestions are extremely appreciated!
 [send me an ask] or [contact] me!
 
-[return to the glitcher][..]
+[return to the glitcher](..)
 
 [rebecca turner]: /
-[9999 years]: http://9999years.tumblr.com/
+[9999years]: http://9999years.tumblr.com/
 [contact]: /contact
