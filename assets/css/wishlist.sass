@@ -12,57 +12,57 @@ $max-photo-height: 250px
   border-width: $horiz-size $size $horiz-size 0
   border-color: transparent $color transparent transparent
 
-.items
+#body-copy
   margin-bottom: $max-photo-height / 2 + $font-size
 
-  & > div
-    // so photos are positioned relative to the item
-    position: relative
-    // photos at left of item not left of the whole body text block
-    //display: table
-    margin: $font-size / 2 0
-
-.items >
-  div
+  div:hover > .photo
     display: flex
-    text-align: right
 
-  div > div
-    width: 2em
-    margin: 0 0.25em
+  .photo
+    position: absolute
+    top: 20px
+    left: 70%
+    display: none
+    z-index: 10
+    transform: translateY(-50%)
+    border: $photo-border-width solid $photo-border
+    margin-left: 1.5em
+    width: unset
 
-  div > div:first-child
-    width: 60%
+    & > img
+      overflow: hidden
 
-div:hover > .photo
-  display: flex
+    .triangle
+      $size: 10px
+      @include triangle-left($size, $photo-border)
+      position: absolute
+      left: -$size - $photo-border-width
+      top: 50%
+      transform: translateY(-0.75em)
 
-.items .photo
-  position: absolute
-  top: 20px
-  left: 70%
-  display: none
-  z-index: 10
-  transform: translateY(-50%)
-  border: $photo-border-width solid $photo-border
-  margin-left: 1.5em
-  width: unset
+  & >
+    div
+      // so photos are positioned relative to the item
+      position: relative
+      // photos at left of item not left of the whole body text block
+      //display: table
+      margin: $font-size / 2 0
 
-  & > img
-    overflow: hidden
+    div
+      display: flex
+      text-align: right
 
-.triangle
-  $size: 10px
-  @include triangle-left($size, $photo-border)
-  position: absolute
-  left: -$size - $photo-border-width
-  top: 50%
-  transform: translateY(-0.75em)
+    div > div
+      width: 2em
+      margin: 0 0.25em
+
+    div > div:first-child
+      width: 60%
 
 @media all and (max-width: 640px)
   div:hover > .photo
     display: none
 
 @media all and (max-width: 600px)
-  .items > div > div:first-child
+  #body-copy > div > div:first-child
     width: 80%
