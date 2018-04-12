@@ -39,7 +39,7 @@
 	href="http://facebook.com/messages"
 	short="fb msgs"
 [[link]]
-	href="http://archiveofourown.org/works/search?edit_search=true&utf8=%E2%9C%93&work_search%5Bquery%5D=&work_search%5Bshow_restricted%5D=false"
+	href="https://archiveofourown.org/works/search?utf8=%E2%9C%93&work_search%5Bquery%5D=&work_search%5Btitle%5D=&work_search%5Bcreator%5D=&work_search%5Brevised_at%5D=&work_search%5Bcomplete%5D=0&work_search%5Bsingle_chapter%5D=0&work_search%5Bword_count%5D=&work_search%5Blanguage_id%5D=&work_search%5Bfandom_names%5D=&work_search%5Brating_ids%5D=13&work_search%5Bcategory_ids%5D%5B%5D=116&work_search%5Bcharacter_names%5D=&work_search%5Brelationship_names%5D=Jade+Harley%2FRose+Lalonde&work_search%5Bfreeform_names%5D=&work_search%5Bhits%5D=&work_search%5Bkudos_count%5D=&work_search%5Bcomments_count%5D=&work_search%5Bbookmarks_count%5D=&work_search%5Bsort_column%5D=revised_at&work_search%5Bsort_direction%5D=desc&commit=Search"
 	short="ao3"
 [[link]]
 	href="https://finance.yahoo.com/my-quotes-news/"
@@ -49,10 +49,10 @@
 	href="https://moodle2.brandeis.edu/my/"
 	short="latte"
 [[link]]
-	href="https://becca.ooo/brandeis/"
+	href="/brandeis/"
 	short="deis"
 [[link]]
-	href="http://unicode.9999yea.rs/"
+	href="/unicode/"
 	short="unicode"
 [[link]]
 	href="https://drive.google.com/drive/u/1/"
