@@ -83,8 +83,9 @@ p
   margin: 0 0 1em 0
 
 blockquote
-  margin: 0
+  margin: 0 0 0 1em
   position: relative
+  left: -1em
   font-style: italic
 
   &:after
@@ -95,15 +96,45 @@ blockquote
     top: 0
     left: -1em
 
+  > blockquote
+    // ¯\_(ツ)_/¯
+    left: 0em
+
 ol
   text-align: left
+  padding: 0
 
   > li
     padding-left: 0.25em
 
+ul
+  list-style: none
+  padding: 0
+
+  > li
+    position: relative
+
+    &:before
+      position: absolute
+      content: "—"
+      left: -1.5em
+
+table
+  margin-bottom: 1em
+
+td
+  vertical-align: top
+
+  &:not(:last-child)
+    padding-right: 0.5em
+
 @media (max-width: $body-width + 2 * $margin)
+  ol, ul
+    padding-left: 2em
+
   blockquote
     margin-left: 1em
+    left: 0
 
 @media (max-width: 380px)
   #container

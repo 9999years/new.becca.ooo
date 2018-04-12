@@ -11,7 +11,7 @@ img glitcher is an in-browser procedural data bending application developed by
 it simply loads the image data as raw binary into an image on the page. then,
 the buttons will modify the data randomly --- as with manual data bending,
 corruption and image breaking is to be expected, just undo and try again! some
-images just won’t glitch well and gifs in particular are very volatile?try
+images just won’t glitch well and gifs in particular are very volatile? try
 converting the image to a different format!
 
 ## functions
