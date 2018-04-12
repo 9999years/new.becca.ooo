@@ -1,6 +1,10 @@
+{{define "sources" -}}
+src="/img/wishlist/{{.}}-1x.jpg" srcset="/img/wishlist/{{.}}-1x.jpg 1x,/img/wishlist/{{.}}-2x.jpg 2x,/img/wishlist/{{.}}-3x.jpg 3x"
+{{- end}}
+
 {{define "photo"}}<div class="photo">
 	<div class="triangle"></div>
-	<img src="/img/wishlist/{{.}}">
+	<img {{template "sources" .}}>
 </div>{{end}}
 
 {{partial "becca-header.html" .}}
