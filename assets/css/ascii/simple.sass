@@ -2,17 +2,15 @@
 @import common
 
 $border-width: 1px
-$inter-column-margin: 0.5em
+$inter-column-margin: 0.25em
 
 table
-  @extend %ascii-table
   font-family: monospace
   display: inline-block
   vertical-align: top
   border: $border-width solid rgba($txt, 0.5)
   border-width: 0 0 0 $border-width
-  padding-left: $inter-column-margin / 2
-  margin-left: $inter-column-margin / 2
+  padding-left: $inter-column-margin
 
   &:first-of-type
     margin-left: 0
@@ -23,8 +21,3 @@ table
 
 thead
   display: none
-
-td
-  padding: 0 0.25em
-  &:last-child
-    padding-right: 0

@@ -1,11 +1,22 @@
 @import ../vars
 
+$body-width: 800px
+
 @mixin striped-tr($color)
   &:nth-child(even)
     background-color: rgba($color, 0.1)
 
-%ascii-table
+table
   border-collapse: collapse
 
   & tr
     @include striped-tr($hi)
+
+#body-copy
+  max-width: $body-width
+
+@media (max-width: $body-width + 2 * $margin)
+  td, th
+    //      binary        C escape        unicode
+    &:nth-child(5), &:nth-child(7), &:nth-child(8)
+      display: none
