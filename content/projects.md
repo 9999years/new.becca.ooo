@@ -16,7 +16,7 @@ iteration visualization
 [/differential](/differential), an interactive first-order differential equation
 approximation visualization
 
-[/glitcher](/glitcher), an in-browser procedural databending app
+[glitcher], an in-browser procedural databending app
 
 [/snell](/snell), an interactive visualization of [Snell’s law]
 
@@ -54,3 +54,5 @@ currently on hiatus
 [other small projects at github.com/9999years](https://github.com/9999years)
 
 [Snell’s law]: https://en.m.wikipedia.org/wiki/Snell%27s_law
+
+[glitcher]: https://glitcher.becca.ooo/
