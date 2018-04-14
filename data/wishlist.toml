@@ -8,13 +8,13 @@
 [[items]]
 name     = "Samsung Galaxy S9+"
 features = "black"
-photo    = "galaxy_s9_plus"
+photo    = "galaxy-s9-plus"
 url      = "https://www.verizonwireless.com/smartphones/samsung-galaxy-s9-plus/"
 
 [[items]]
 name     = "MicroSD card"
 features = "200 GB"
-photo    = "microsd_200gb"
+photo    = "microsd-200gb"
 price    = "60"
 url      = "https://www.amazon.com/Sandisk-Ultra-200GB-Micro-Adapter/dp/B073JY5T7T"
 
@@ -22,37 +22,37 @@ url      = "https://www.amazon.com/Sandisk-Ultra-200GB-Micro-Adapter/dp/B073JY5T
 name     = "Jowo #5 nib"
 price    = "15"
 features = "M tip, nib only"
-photo    = "jowo_5"
+photo    = "jowo-5"
 url      = "https://www.fpnibs.com/standard/205-9038-jowo-size-5-steel-nib-unit-m-tip.html"
 
 [[items]]
 name     = "Klein 8″ scissors"
 price    = "30"
-photo    = "klein_8in"
+photo    = "klein-8in"
 url      = "https://www.amazon.com/dp/B001408NBS/"
 
 [[items]]
 name     = "Chup socks"
 price    = "35"
-photo    = "chup_fuar"
+photo    = "chup-fuar"
 url      = "https://chupsocks.com/"
 
 [[items]]
 name     = "Klein electrician’s scissors"
 price    = "16"
-photo    = "klein_electrician"
+photo    = "klein-electrician"
 url      = "https://www.amazon.com/dp/B000VL03NC/"
 
 [[items]]
 name     = "Etymotic cable"
 price    = "50"
-photo    = "er4_cable"
+photo    = "er4-cable"
 url      = "https://www.amazon.com/dp/B004I62GXQ/"
 
 [[items]]
 name     = "Replacement headphone earpads"
 price    = "28"
-photo    = "ath_earpads"
+photo    = "ath-earpads"
 features = "black"
 url      = "https://www.amazon.com/dp/B00ZY8PGJI/"
 
@@ -60,39 +60,39 @@ url      = "https://www.amazon.com/dp/B00ZY8PGJI/"
 name     = "Round shoelaces"
 features = "black, 36″"
 price    = 9
-photo    = "round_laces"
+photo    = "round-laces"
 url      = "https://www.amazon.com/OrthoStep-Round-Athletic-Black-Shoelaces/dp/B00L89LOV6/?th = 1&psc = 1"
 
 [[items]]
 name     = "Wire stripper / cutters"
 price    = "14"
-photo    = "irwin_strippers"
+photo    = "irwin-strippers"
 url      = "https://www.amazon.com/dp/B000JNNWQ2/"
 
 #[[items]]
 #name    = "Ankle socks"
 #price   = "6–10"
-#photo   = "ankle_socks"
+#photo   = "ankle-socks"
 #url     = "http://www.gap.com/products/mens-ankle-socks.jsp"
 
 [[items]]
 name     = "Tri Mini Falcon spinner"
 features = "Stainless steel"
 price    = "63"
-photo    = "tri_mini_falcon"
+photo    = "tri-mini-falcon"
 url      = "https://flyaway-toys.myshopify.com/products/tri-mini-falcon-stainless"
 
 [[items]]
 name     = "Higonokami by Nagao Seisakusho"
 url      = "https://www.amazon.com/dp/B00EU8MLQY"
 price    = "25"
-photo    = "nagao_higonokami"
+photo    = "nagao-higonokami"
 
 #[[items]]
 #name    = "Unicorn jacket"
 #price   = "22"
 #url     = "https://www.aliexpress.com/item/Free-Shipping-Spring-and-autumn-embroidery-sunscreen-outerwear-bf-HARAJUKU-casual-lovers-baseball-uniform-preppy-style/32772143879.html"
-#photo   = "unicorn_jacket"
+#photo   = "unicorn-jacket"
 
 #[[items]]
 #name    = "TWSBI ECO fountain pen"
@@ -106,21 +106,21 @@ photo    = "nagao_higonokami"
 #url     = "http://www.amazon.com/gp/product/B00004TWLZ/"
 #features= "35mm film"
 #price   = "18"
-#photo   = "fuji_superia_400"
+#photo   = "fuji-superia-400"
 
 #[[items]]
 #name     = "Zoe Strap"
 #url      = "https://gordyscamerastraps.com/products/zoe-combination-strap"
 #features = "30″, light brown, red wrapping, burgundy neck pad, burgundy octagonal bumpers"
 #price    = "62"
-#photo    = "zoe_strap"
+#photo    = "zoe-strap"
 
 #[[items]]
 #name    = "Pilot Namiki Falcon fountain pen"
 #url     = "http://www.amazon.com/dp/B00063NUW6/"
 #features= "soft fine nib"
 #price   = "130"
-#photo   = "pilot_namiki"
+#photo   = "pilot-namiki"
 
 #[[items]]
 #name    = "Money to Buy a Balisong"
@@ -131,23 +131,24 @@ photo    = "nagao_higonokami"
 #name    = "Stainless steel comb"
 #url     = "http://www.amazon.com/dp/B00L2AWTOM/"
 #price   = "36"
-#photo   = "stainless_steel_comb"
+#photo   = "stainless-steel-comb"
 
 #[[items]]
 #name    = "Concrete icosahedron necklace"
 #url     = "https://www.etsy.com/listing/225468743/platonic-necklaces-icosahedron-concrete"
 #price   = "40"
-#photo   = "concrete_icosahedron_necklace"
+#photo   = "concrete-icosahedron-necklace"
 
 [[items]]
 name     = "DSPTCH camera wrist strap"
 features = "red / matte black"
 price    = "32"
 url      = "https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black"
-photo    = "dsptch_strap"
+photo    = "dsptch-strap"
 
 [[items]]
 name     = "UE Boom bluetooth speaker"
 features = "refurbished"
 price    = 63
 url      = "https://www.amazon.com/Wireless-Speaker-Black-Certified-Refurbished/dp/B00U8FJUDU/"
+photo    = "ue-boom"
