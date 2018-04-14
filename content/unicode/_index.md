@@ -198,7 +198,7 @@ and blame lies entirely with the third parties involved.
 [@FakeUnicode] on Twitter.
 
 [List of Unicode arrows] --- Courtesy of [@fabrizioschiavi] of
-[Pragmata Pro][PragmataPro] fame (see above).
+[Pragmata Pro][PragmataPro] fame.
 
 [Emoji allowed in Twitter usernames]
 
@@ -206,7 +206,7 @@ and blame lies entirely with the third parties involved.
 
 [my unicode toys] --- by rebecca
 
-[rebecca]: https://becca.ooo/
+[rebecca]: /
 [@FakeUnicode]: https://twitter.com/FakeUnicode
 [Unicode]: https://en.wikipedia.org/wiki/Unicode
 [Unicode encodings]: https://en.m.wikipedia.org/wiki/Unicode#Unicode_Transformation_Format_and_Universal_Coded_Character_Set
@@ -284,7 +284,7 @@ and blame lies entirely with the third parties involved.
 [Windows]: https://en.wikipedia.org/wiki/Unicode_input#In_Microsoft_Windows
 [Unix in GTK applications]: https://en.wikipedia.org/wiki/Unicode_input#In_X11_.28Linux_and_other_Unix_variants.29
 [Random Unicode character generator on jsfiddle]: https://jsfiddle.net/SaqVU/4/
-[List of Unicode arrows]: https://becca.ooo/pragmata/arrows/
+[List of Unicode arrows]: /arrows
 [@fabrizioschiavi]: https://twitter.com/fabrizioschiavi
 [Emoji allowed in Twitter usernames]: http://getemoji.com/#twitter
 [Character/byte counter]: https://mothereff.in/byte-counter
