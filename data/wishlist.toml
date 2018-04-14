@@ -57,6 +57,13 @@ features = "black"
 url      = "https://www.amazon.com/dp/B00ZY8PGJI/"
 
 [[items]]
+name     = "Round shoelaces"
+features = "black, 36″"
+price    = 9
+photo    = "round_laces"
+url      = "https://www.amazon.com/OrthoStep-Round-Athletic-Black-Shoelaces/dp/B00L89LOV6/?th = 1&psc = 1"
+
+[[items]]
 name     = "Wire stripper / cutters"
 price    = "14"
 photo    = "irwin_strippers"
@@ -133,8 +140,14 @@ photo    = "nagao_higonokami"
 #photo   = "concrete_icosahedron_necklace"
 
 [[items]]
-name="DSPTCH camera wrist strap"
-features="red / matte black"
-price="32"
-url="https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black"
-photo="dsptch_strap"
+name     = "DSPTCH camera wrist strap"
+features = "red / matte black"
+price    = "32"
+url      = "https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black"
+photo    = "dsptch_strap"
+
+[[items]]
+name     = "UE Boom bluetooth speaker"
+features = "refurbished"
+price    = 63
+url      = "https://www.amazon.com/Wireless-Speaker-Black-Certified-Refurbished/dp/B00U8FJUDU/"
