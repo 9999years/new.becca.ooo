@@ -46,10 +46,10 @@ My goals with my website are:
    Utilise them!
 3. Centralize my contact and personal information
 
-I’m pretty proud that [becca.ooo] loads in three requests at 4.1 KB, which is
-about 1/500th the size and 3/100ths the requests of [the average page] (in 2018;
-2MB & 100 req.s). All the content pages will load in a maximum of four requests,
-most in two or three:
+I’m pretty proud that [becca.ooo] loads in three requests at about 6 KB, which
+is about 1/300th the size and 3/100ths the requests of [the average page] (in
+2018; 2MB & 100 req.s). All the content pages will load in a maximum of four
+requests, most in two or three:
 
 1. Main page HTML
 2. (Possibly) a favicon (see below)
@@ -58,8 +58,8 @@ most in two or three:
 
 The favicon is only loaded if a bigger image than the inlined 404-byte 32×32 PNG
 is required, and I’ll probably inline the SVG version once SVG favicons become
-more widely supported. Caching essentially eliminates the favicon and CSS after
-the first load, too.
+[more widely supported][svg favicon support]. Caching essentially eliminates the
+favicon and CSS after the first load, too.
 
 The content pages are mostly CSS (about half, by weight). That’s something to
 work on! A fair amount of even `main.css` is pretty niche; there’s support for
@@ -157,3 +157,4 @@ In short: fork the code, but not my writing.
 [Segoe]: https://en.m.wikipedia.org/wiki/Segoe
 [San Francisco]: https://en.m.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface)
 [Noto]: https://en.m.wikipedia.org/wiki/Noto_fonts
+[svg favicon support]: https://caniuse.com/#feat=link-icon-svg

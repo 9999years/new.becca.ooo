@@ -51,6 +51,8 @@ currently on hiatus
 
 [ascii chart](/ascii)
 
+[brandeis links](/brandeis)
+
 [other small projects at github.com/9999years](https://github.com/9999years)
 
 [Snell’s law]: https://en.m.wikipedia.org/wiki/Snell%27s_law
