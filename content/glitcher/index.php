@@ -1,9 +1,4 @@
-﻿<!doctype html>
-
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>img glitcher //// 9999 years</title>
+﻿	<title>img glitcher //// 9999 years</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<style>
