@@ -8,6 +8,7 @@ src="/img/wishlist/{{.}}-1x.jpg" srcset="/img/wishlist/{{.}}-1x.jpg 1x,/img/wish
 </div>{{end}}
 
 {{partial "becca-header.html" .}}
+{{.Content}}
 <div><div>item</div><div>usd</div></div>
 {{range .Site.Data.wishlist.items}}
 	<!--
