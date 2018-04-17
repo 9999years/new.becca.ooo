@@ -3,39 +3,25 @@ title="brandeis related links that are sometimes hard to find"
 css=["brandeis"]
 +++
 
-[library OneSearch] \([available journals])
-
-[myhousing] --- housing and meal plans
-
-[latte] --- digital course-work
-
-[sage] --- course management, finances, personal info, etc.
-
-[BranVan schedules] --- [current bus locations via TransLōc][transloc] or w/ [an
-app]. [campus / waltham BranVan website][branvan]. make sure to get the right
-schedule for the current day of the week and time of day!
-
-[WhoCash / meal swipe balance]
-
-[dining halls open now]
-
-[account management] --- email settings, password changes, shell access,
-etc.
-
-[map (pdf)] / [light / large map]
-
-[undergrad degree requirements]
-
-[course catalogue by subject], [by requirement] / [scheduling tool on
-schdl.net]
-
-[faculty guide (pictures and degrees)]
-
-[listserv] / [list of lists]
-
-[patient portal], [forms], [insurance]
-
-[deis connect] --- application status
+* [library OneSearch] \([available journals])
+* [myhousing] --- housing and meal plans
+* [latte] --- digital course-work
+* [sage] --- course management, finances, personal info, etc.
+* [BranVan schedules] --- [current bus locations via TransLōc][transloc] or w/
+  [an app]. [campus / waltham BranVan website][branvan]. make sure to get the
+  right schedule for the current day of the week and time of day!
+* [WhoCash / meal swipe balance]
+* [dining halls open now]
+* [account management] --- email settings, password changes, shell access,
+  etc.
+* [map (pdf)] / [light / large map]
+* [undergrad degree requirements]
+* [course catalogue by subject], [by requirement] / [scheduling tool on
+  schdl.net]
+* [faculty guide (pictures and degrees)]
+* [listserv] / [list of lists]
+* [patient portal], [forms], [insurance]
+* [deis connect] --- application status
 
                   |  
 ------------------|-------------------
