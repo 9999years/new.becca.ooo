@@ -26,30 +26,6 @@ photo    = "jowo-5"
 url      = "https://www.fpnibs.com/standard/205-9038-jowo-size-5-steel-nib-unit-m-tip.html"
 
 [[items]]
-name     = "Klein 8″ scissors"
-price    = 30
-photo    = "klein-8in"
-url      = "https://www.amazon.com/dp/B001408NBS/"
-
-[[items]]
-name     = "Chup socks"
-price    = 35
-photo    = "chup-fuar"
-url      = "https://chupsocks.com/"
-
-[[items]]
-name     = "Klein electrician’s scissors"
-price    = 16
-photo    = "klein-electrician"
-url      = "https://www.amazon.com/dp/B000VL03NC/"
-
-[[items]]
-name     = "Etymotic cable"
-price    = 50
-photo    = "er4-cable"
-url      = "https://www.amazon.com/dp/B004I62GXQ/"
-
-[[items]]
 name     = "Replacement headphone earpads"
 price    = 28
 photo    = "ath-earpads"
@@ -62,6 +38,37 @@ features = "black, 36″"
 price    = 9
 photo    = "round-laces"
 url      = "https://www.amazon.com/OrthoStep-Round-Athletic-Black-Shoelaces/dp/B00L89LOV6/?th = 1&psc = 1"
+
+[[items]]
+name     = "Chup socks"
+price    = 35
+photo    = "chup-fuar"
+url      = "https://chupsocks.com/"
+
+[[items]]
+name     = "UE Boom bluetooth speaker"
+features = "refurbished"
+price    = 63
+url      = "https://www.amazon.com/Wireless-Speaker-Black-Certified-Refurbished/dp/B00U8FJUDU/"
+photo    = "ue-boom"
+
+[[items]]
+name     = "Klein 8″ scissors"
+price    = 30
+photo    = "klein-8in"
+url      = "https://www.amazon.com/dp/B001408NBS/"
+
+[[items]]
+name     = "Klein electrician’s scissors"
+price    = 16
+photo    = "klein-electrician"
+url      = "https://www.amazon.com/dp/B000VL03NC/"
+
+[[items]]
+name     = "Etymotic cable"
+price    = 50
+photo    = "er4-cable"
+url      = "https://www.amazon.com/dp/B004I62GXQ/"
 
 [[items]]
 name     = "Wire stripper / cutters"
@@ -145,13 +152,6 @@ features = "red / matte black"
 price    = 32
 url      = "https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black"
 photo    = "dsptch-strap"
-
-[[items]]
-name     = "UE Boom bluetooth speaker"
-features = "refurbished"
-price    = 63
-url      = "https://www.amazon.com/Wireless-Speaker-Black-Certified-Refurbished/dp/B00U8FJUDU/"
-photo    = "ue-boom"
 
 [[items]]
 name     = "Objective 2 headphone amplifier"
