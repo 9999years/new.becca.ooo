@@ -83,6 +83,13 @@ url      = "https://www.amazon.com/dp/B000JNNWQ2/"
 #url     = "http://www.gap.com/products/mens-ankle-socks.jsp"
 
 [[items]]
+name     = "Balisong"
+features = "Atropos Demon"
+price    = 225
+url      = "http://atroposknife.ru/product/demon/"
+photo    = "atropos-demon"
+
+[[items]]
 name     = "Tri Mini Falcon spinner"
 features = "Stainless steel"
 price    = 63
