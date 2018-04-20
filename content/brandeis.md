@@ -1,5 +1,6 @@
 +++
-title="brandeis related links that are sometimes hard to find"
+title="brandeis links"
+description="brandeis-related links that are sometimes hard to find"
 css=["brandeis"]
 +++
 
