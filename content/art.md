@@ -7,8 +7,11 @@ center=true
 
 [mograph reel](/reel)
 
-[webprocess](https://webprocess.tumblr.com/) --- work in progress
-
 [techb@flickr](https://www.flickr.com/photos/techb/) --- 35mm
+
+[rebeccadigital@flickr](https://www.flickr.com/photos/rebeccadigital/)
+--- digital
+
+[webprocess](https://webprocess.tumblr.com/) --- work in progress
 
 [999flowers@tumblr](https://999flowers.tumblr.com/) --- still art
