@@ -46,7 +46,7 @@ css=["brandeis"]
 [an app]: http://translocrider.com/
 [branvan]: https://branvan.brandeis.edu/about.php
 [WhoCash / meal swipe balance]: https://get.cbord.com/whocash/full/login.php
-[dining halls open now]: https://brandeis.sodexomyway.com/dining-choices/opennow.html
+[dining halls open now]: https://brandeis.sodexomyway.com/dining-near-me/open-now
 [account management]: https://identity.brandeis.edu/identity-manage/
 [map (pdf)]: https://www.brandeis.edu/gradstudent/images/Campus%20Map%202015.pdf
 [light / large map]: http://necsi.edu/wiki/images/0/06/CampusMap.pdf

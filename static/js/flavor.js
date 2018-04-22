@@ -27,7 +27,7 @@ flavors = [
 "ask me about my business cards!",
 "that’s the stuff!",
 "flavorful!",
-"[[rə̆ˈbɛˌkʰə]]",
+"[[ɹə̆ˈbɛˌkʰə]]",
 "brutalist architecture liker",
 "live and die by the command line",
 "workers of the world, unite!",
