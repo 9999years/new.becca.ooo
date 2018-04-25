@@ -53,6 +53,12 @@ url      = "https://www.amazon.com/Wireless-Speaker-Black-Certified-Refurbished/
 photo    = "ue-boom"
 
 [[items]]
+name  = "Technics turntable ground wire"
+price = 10
+url   = "https://www.ebay.com/sch/i.html?&_nkw = technics+ground"
+photo = "technics-ground"
+
+[[items]]
 name     = "Klein 8″ scissors"
 price    = 30
 photo    = "klein-8in"
