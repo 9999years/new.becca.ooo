@@ -55,7 +55,7 @@ photo    = "ue-boom"
 [[items]]
 name  = "Technics turntable ground wire"
 price = 10
-url   = "https://www.ebay.com/sch/i.html?&_nkw = technics+ground"
+url   = "https://www.ebay.com/sch/i.html?&_nkw=technics+ground"
 photo = "technics-ground"
 
 [[items]]
