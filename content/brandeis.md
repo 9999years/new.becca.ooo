@@ -4,37 +4,37 @@ description="brandeis-related links that are sometimes hard to find"
 css=["brandeis"]
 +++
 
-* [library OneSearch] \([available journals])
-* [myhousing] --- housing and meal plans
 * [latte] --- digital course-work
 * [sage] --- course management, finances, personal info, etc.
 * [BranVan schedules] --- [current bus locations via TransLōc][transloc] or w/
   [an app]. [campus / waltham BranVan website][branvan]. make sure to get the
   right schedule for the current day of the week and time of day!
-* [WhoCash / meal swipe balance]
 * [dining halls open now]
+* [WhoCash / meal swipe balance]
+* [library OneSearch] \([available journals])
+* [course catalogue by subject], [by requirement] / [scheduling tool on
+  schdl.net]
+* [faculty guide (pictures and degrees)]
+* [myhousing] --- housing and meal plans
 * [account management] --- email settings, password changes, shell access,
   etc.
 * [map (pdf)] / [light / large map]
 * [undergrad degree requirements]
-* [course catalogue by subject], [by requirement] / [scheduling tool on
-  schdl.net]
-* [faculty guide (pictures and degrees)]
 * [listserv] / [list of lists]
 * [patient portal], [forms], [insurance]
 * [deis connect] --- application status
 
-                  |  
-------------------|-------------------
-(781) 736-3677    | [health ctr]
-(781) 736-4999 x1 | [branvan] --- 4pm--2:30am weekdays, 12pm--2:30am weekends. campus: 12pm--2:30am
-(781) 736-5000    | [public safety] --- facilities, BEMCo, cops, etc.
-(781) 736-3333    | emergencies --- cops / BEMCo
-(781) 736-8500    | [facilities (8am--5pm)]
-(781) 736-3370    | [rape crisis ctr]
-(781) 736-5060    | [dcl]
-(781) 736-3730    | [bcc]
-(781) 736-3785    | [bcc] hotline --- 24/7, operated by bcc staff
+               |  
+---------------|-------------------
+(781) 736-3677 | [health ctr]
+(781) 736-4999 | ext. 1. [branvan] --- 4pm--2:30am weekdays, 12pm--2:30am weekends. campus: 12pm--2:30am
+(781) 736-5000 | [public safety] --- facilities, BEMCo, cops, etc.
+(781) 736-3333 | emergencies --- cops / BEMCo
+(781) 736-8500 | [facilities (8am--5pm)]
+(781) 736-3370 | [rape crisis ctr]
+(781) 736-5060 | [dcl]
+(781) 736-3730 | [bcc]
+(781) 736-3785 | [bcc] hotline --- 24/7, operated by bcc staff
 
 [library OneSearch]: http://search.library.brandeis.edu/primo_library/libweb/action/search.do?vid=BRAND
 [available journals]: http://scholar.brandeis.edu/V?RN=827099071
