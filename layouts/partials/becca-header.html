@@ -10,7 +10,7 @@
 	{{template "title" .}}
 	{{template "nav" .}}
 	{{if not (.Param "hide-body-copy-tag")}}
-		<div {{ with .Param "body-copy-id" | default "body-copy" -}}
+		<div {{with .Param "body-copy-id" | default "body-copy" -}}
 			id="{{.}}"
 		{{- end -}}
 		{{- with .Param "body-copy-classes"}} class="{{.}}"{{end -}}

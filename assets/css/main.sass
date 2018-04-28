@@ -6,6 +6,7 @@ body, html
   margin: 0
   padding: 0
   border: 0
+  word-wrap: break-word
 
 ::selection
   background-color: $txt
@@ -131,6 +132,16 @@ td
 
   &:not(:last-child)
     padding-right: 0.5em
+
+pre
+  overflow-x: scroll
+
+pre, code
+  background-color: rgba($txt, 0.1)
+  padding: 1pt
+
+pre > code
+  background: none
 
 @media (max-width: $body-width + 2 * $margin)
   ol, ul

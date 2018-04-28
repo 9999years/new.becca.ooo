@@ -2,6 +2,8 @@ baseURL="https://becca.ooo/"
 title="rebecca t"
 ignoreFiles=["static/(img/reel|i-c-the-light|chomp|juniorportfolio)"]
 
+# disable i18n stuff & extra output i dont want
+# see also: i18n/en.toml
 DefaultContentLanguage="en"
 disableKinds=[
 	"taxonomy",
