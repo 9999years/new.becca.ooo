@@ -16,6 +16,9 @@ contrived overly-simplified hello worlds --- is critical to learning how to
 code][sandbox-src] is a great resource for seeing just about every Hugo feature
 mashed together and you may find the [Hugo example blog] enlightening as well.
 
+This is meant to be read somewhat in tandem with the [Hugo docs][hugo-docs], and
+links to relevant portions frequently.
+
 Please note that this guide is a work in progress; [hit me up] or open a
 pull-request / issue for [this guide on GitHub] if you’d like to help improve it!
 
@@ -197,23 +200,6 @@ written as `eq x y`, but it’s not very smart so something like `not eq x y`
 `not (eq x y)`. Even simple arithmetic requires a function: `add 1 2`, not `1 +
 2`.
 
-## What’s an actual template look like?
-
-Let’s check out [the index page of this website](/). I’ll link to the exact
-sources and show simpler components along the way.
-
-The index page starts in [`_index.md`][becca.ooo-index], which contains mostly
-data in the front matter.
-
-* `js=["flavor"]` tells my template to include `/js/flavor.js` in the page.
-* `onload="flavor()"` tells my template to insert `onload="flavor()"` in the
-  page’s `<body>` tag.
-* `center=true` tells my template to center the text.
-
-The smiley face in the body is wrapped in a `<span id="flavor">`, which is
-replaced with random flavor-text by the Javascript. That’s a key feature of
-Markdown --- it can include arbitrary HTML.
-
 ### Building blocks
 
 Templates are a bit more than just plain HTML. In particular, they are built
@@ -246,6 +232,8 @@ together with [a unique template][contact-template] and [a stub markdown
 file][content.md] to my [contact] page.
 
 # Deploying
+
+[Hugo docs on deployment] and on [asset pipelines].
 
 To-do:
 
@@ -302,7 +290,6 @@ Critically, here’s what I’m *not* doing:
 * I’m not writing a localized website, i.e. with support for multiple languages.
   This is because I don’t speak multiple languages.
 
-
 [Hugo]: https://gohugo.io/
 [hugo-docs]: https://gohugo.io/documentation/
 [Hugo sandbox]: https://hugo-sandbox.netlify.com/
@@ -353,3 +340,5 @@ Critically, here’s what I’m *not* doing:
 [namespace]: https://en.m.wikipedia.org/wiki/Namespace
 [introduction to templating]: https://gohugo.io/templates/introduction/
 [nulls]: https://en.m.wikipedia.org/wiki/Null_pointer#Dereferencing
+[Hugo docs on deployment]: https://gohugo.io/hosting-and-deployment/
+[asset pipelines]: https://gohugo.io/tools/starter-kits/
