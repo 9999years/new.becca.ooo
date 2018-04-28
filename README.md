@@ -98,9 +98,6 @@ the link or the executable. I don’t remember.
 
 ## Other files
 
-`webhook` is... something for Caddy’s Git plugin. I don’t think it actually
-works.
-
 `config.toml` is the site config. Almost empty; most things happen in the
 various `content/*.md` files and the `layouts/*.html` templates.
 

@@ -89,7 +89,8 @@ drawing field.
 [Handwritten kanji recognition] --- Like [shapecatcher] for kanji.
 
 [Google Translate] --- Click the pencil icon in the input area to enable
-shape recognition.
+shape recognition. Great for writing short bits of text in a language you don’t
+know.
 
 [Mouse input for Chinese characters]
 
