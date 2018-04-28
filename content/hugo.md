@@ -224,6 +224,15 @@ critically, <i>re</i>define with `{{define "int. templ. name" .}} (new content)
 {{end}}`. However, I’ve never gotten that redefinition feature to work properly,
 so your mileage may vary.
 
+### Partial templates
+
+*Most* HTML goes in partial templates so they’re not intrinsically tied to any
+specific layout. That usually includes, at least, a header and footer template.
+
+To-Do:
+
+* Include simple partial template examples
+
 ## Data templates
 
 Data templates allow you to create structured pages from data rather than
