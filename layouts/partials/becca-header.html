@@ -7,8 +7,10 @@
 {{end}}
 {{with .Param "onload"}}<body onload="{{. | safeJS}}">{{end}}
 <div id="container">
+	<header>
 	{{template "title" .}}
 	{{template "nav" .}}
+	</header>
 	{{if not (.Param "hide-body-copy-tag")}}
 		<main{{with .Param "body-copy-id"}} id="{{.}}"{{end -}}
 		{{- with .Param "body-copy-classes"}} class="{{.}}"{{end -}}

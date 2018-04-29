@@ -71,11 +71,12 @@ main
   & > img, & > p > img
     max-width: 100%
 
-header
-  font:
-    size: $font-size * 3
-    weight: 200
+header h1
+  display: inline-block
   margin: $margin 0
+  font-size: $font-size
+  font-weight: unset
+  margin: 0
 
   a
     color: #aff
@@ -84,6 +85,9 @@ header
 
     &:hover
       color: $bg
+
+nav
+  display: inline-block
 
 p
   margin: 0 0 1em 0
@@ -155,10 +159,6 @@ pre > code
 @media (max-width: 380px)
   #container
     margin: $margin / 2
-
-  header
-    font-size: $font-size * 2
-    font-weight: 300
 
   h1
     font-size: $font-size * 1.5

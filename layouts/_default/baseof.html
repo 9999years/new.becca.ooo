@@ -1,16 +1,13 @@
 {{block "title" .}}
 	{{if not (.Param "hide-title")}}
-		<header><a href="/">rebecca turner</a></header>
-		<hr />
+		<h1><a href="/">rebecca turner</a></h1>
 	{{end}}
 {{end}}
 {{block "nav" .}}
 	{{if not (.Param "hide-nav")}}
-		<nav>
-		{{range .Site.Data.nav.links}}
+		→ <nav>{{range .Site.Data.nav.links}}
 		<a href="{{if .url}}.url{{else}}/{{.txt}}{{end}}">{{.txt}}</a>
-		{{end}}
-		</nav>
+		{{end}}</nav>
 		<hr />
 	{{end}}
 {{end}}
