@@ -48,13 +48,14 @@ a
   margin-left: auto
   margin-right: auto
 
-.rule, .full-rule
+hr
+  border: none
   border-top: 1.5pt solid $txt
   margin: 1em auto
   max-width: 3 * $font-size
   height: 0
 
-.full-rule
+hr.full
   width: 100%
 
 .justify
@@ -63,14 +64,14 @@ a
 #container
   margin: $margin
 
-#body-copy
+main
   margin: auto
   max-width: $body-width
   text-align: left
   & > img, & > p > img
     max-width: 100%
 
-#head
+header
   font:
     size: $font-size * 3
     weight: 200
@@ -155,7 +156,7 @@ pre > code
   #container
     margin: $margin / 2
 
-  #head
+  header
     font-size: $font-size * 2
     font-weight: 300
 

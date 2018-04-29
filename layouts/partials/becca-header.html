@@ -10,12 +10,11 @@
 	{{template "title" .}}
 	{{template "nav" .}}
 	{{if not (.Param "hide-body-copy-tag")}}
-		<div {{with .Param "body-copy-id" | default "body-copy" -}}
-			id="{{.}}"
-		{{- end -}}
+		<main{{with .Param "body-copy-id"}} id="{{.}}"{{end -}}
 		{{- with .Param "body-copy-classes"}} class="{{.}}"{{end -}}
-		{{- if (or (.Param "body-copy-style") (.Param "center"))}} style="{{if .Param "center" -}}
+		{{- if (or (.Param "body-copy-style") (.Param "center"))}} style="
+		{{- if .Param "center" -}}
 			text-align: center;{{end -}}
-		{{.Param "body-copy-style"}}"{{end}}>
+		{{- .Param "body-copy-style"}}"{{end}}>
 	{{end}}
-		{{with .Title}}<h1>{{.}}</h1>{{end}}
+	{{with .Title}}<h1 id="{{urlize .}}">{{.}}</h1>{{end}}
