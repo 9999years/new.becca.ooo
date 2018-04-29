@@ -5,8 +5,8 @@
 {{end}}
 {{block "nav" .}}
 	{{if not (.Param "hide-nav")}}
-		→ <nav>{{range .Site.Data.nav.links}}
-		<a href="{{if .url}}.url{{else}}/{{.txt}}{{end}}">{{.txt}}</a>
+		<span class="sep">→</span> <nav>{{range .Site.Data.nav.links}}
+		<a href="{{with .url}}{{.}}{{else}}/{{.txt}}{{end}}">{{.txt}}</a>
 		{{end}}</nav>
 		<hr />
 	{{end}}
