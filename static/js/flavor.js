@@ -1,6 +1,6 @@
 flavors = [
 "Certified!™",
-"Now with <a href=\"mailto://becca@becca.ooo\">Electronic Mail!</a>",
+'Now with <a href="mailto://becca@becca.ooo">Electronic Mail!</a>',
 "better than ever!",
 "now on-line!",
 "now made with real pixels!",
@@ -13,7 +13,7 @@ flavors = [
 "now with 20% less hypertext per page!",
 "welcome to my web page",
 "<code>bcrypt()</code>ed",
-"woof!",
+//"woof!",
 "like bad, but worse",
 "i’m doing very well these ways",
 "the official mascot of pbkdf2!",
@@ -32,14 +32,13 @@ flavors = [
 "live and die by the command line",
 "workers of the world, unite!",
 "mood lighting aficionado",
-"favorite album: if you’re reading this it’s too late (drake, 2015, cash money records)",
+"favorite album: <i>if you’re reading this it’s too late</i> (drake, 2015, cash money records)",
 "extended becca-naur form",
 "ebnf lover",
 //"vim is good actually",
 //"vim is bad actually",
 //"look ma, i’m on the web!",
 ]
-
 
 let $ = id => document.getElementById(id)
 
