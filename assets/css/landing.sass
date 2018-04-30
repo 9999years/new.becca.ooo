@@ -4,28 +4,8 @@ $margin-size: 0.25em
 $border-width: 0.05em
 
 .links
-  text-align: center
   font-size: 1.5 * $font-size
-
-  h1
-    font-weight: initial
-
-  div
-    margin: $margin-size
-
-  div.in
-    margin: $margin-size auto
-    position: relative
-
-  .short
-    // allow .long to overlay on top of .short
-    // .long gives the width, short fills in on top with text-align: center-ed
-    // text
-    position: absolute
-    width: 100%
-
-  .long
-    opacity: 0
+  text-align: center
 
   a
     display: inline-block
@@ -34,14 +14,15 @@ $border-width: 0.05em
     margin: $border-width $margin-size $border-width $border-width
     margin-right: $margin-size
 
-  a:hover
-    background-color: initial
-    border: $border-width solid $txt
-    color: $txt
-    margin: 0 $margin-size - $border-width 0 0
+    &:hover
+      background-color: initial
+      border: $border-width solid $txt
+      color: $txt
+      margin: 0 $margin-size - $border-width 0 0
 
-    .short
-      opacity: 0
+  div
+    margin: $margin-size
 
-    .long
-      opacity: 1
+  div.in
+    margin: $margin-size auto
+    position: relative

@@ -1,12 +1,7 @@
 {{partial "becca-header.html" .}}
 {{range .Site.Data.landing.link}}
 	<a href="{{.href | safeURL}}"><div><div class="in">
-	{{if .long}}
-		<span class="short">{{.short}}</span>
-		<span class="long">{{.long}}</span>
-	{{else}}
-		{{.short}}
-	{{end}}
+	{{.text}}
 	</div></div></a>
 {{end}}
 {{partial "becca-footer.html" .}}
