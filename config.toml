@@ -1,5 +1,5 @@
 baseURL="https://becca.ooo/"
-title="rebecca t"
+title="rebecca turner"
 ignoreFiles=["static/(img/reel|i-c-the-light|chomp|juniorportfolio)"]
 
 # disable i18n stuff & extra output i dont want
