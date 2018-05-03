@@ -1,5 +1,5 @@
 +++
-title="abt"
+title="about"
 +++
 
 i was born in 1998 and i live near boston — i attend brandeis university in

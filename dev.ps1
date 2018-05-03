@@ -11,7 +11,7 @@ Install hugo and sass; windows only
 .PARAM NotableExtensions
 Extensions to include in should-exist.txt
 #>
-[CmdletBinding()]
+[CmdletBinding(DefaultParametersetname="Server")]
 Param(
 	$Hugo="hugo",
 	$Sass="sass",
@@ -26,8 +26,6 @@ Param(
 	[Switch]$Install,
 	[Parameter(ParameterSetName="Build")]
 	[Switch]$Build,
-	[Parameter(ParameterSetName="Server")]
-	[Switch]$Server,
 	[Parameter(ParameterSetName="Diagnostic")]
 	[Switch]$Diagnostic,
 	[Parameter(ParameterSetName="GenerateShouldExist")]
@@ -43,7 +41,7 @@ Param(
 )
 
 $sassDirs = "$SassDir`:$CssDir"
-$Watch = If($Server) {
+$Watch = If($PSCmdlet.ParameterSetName -eq "Server") {
 	"watch"
 } Else {
 	"update"
@@ -66,8 +64,12 @@ Switch($PSCmdlet.ParameterSetName) {
 		& $Hugo --verbose
 	}
 	"Server" {
-		Start-Process $Sass $sassArgs
-		Start-Process $Hugo ("server", "-D")
+		"Starting $Sass $sassArgs"
+		Start-Process $Sass $sassArgs -WindowStyle Minimized
+		$hugoArgs = ("server", "-D")
+		"Starting $Hugo $hugoArgs"
+		Start-Process $Hugo $hugoArgs -WindowStyle Minimized
+		Start-Process "http://localhost:1313/"
 	}
 	"GenerateShouldExist" {
 		# html, css -> *.html, *.css
