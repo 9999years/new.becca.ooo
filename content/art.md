@@ -1,6 +1,7 @@
 +++
 title="art around the web"
 center=true
+description="links to my art; mograph to photography"
 +++
 
 [9999yea.rs](http://9999yea.rs/) --- gif art

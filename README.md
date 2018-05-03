@@ -82,14 +82,14 @@ with something like `ln .git/hooks/post-merge post-merge.sh`, but I forget if
 that’ll actually work or not. You’ll also need to `chmod +x` the thing. Either
 the link or the executable. I don’t remember.
 
-`dev.ps1
-[-Build|-Install|-Server|-Diagnostic|-DiffShouldExist|-GenerateShouldExist]` performs several tasks.
+`dev.ps1 [-Build|-Install|-Diagnostic|-DiffShouldExist|-GenerateShouldExist]`
+performs several tasks.
 
+* By default, it starts a development server for both SASS and Hugo.
 * `-Build` builds the site normally with `./post-merge.sh`; this requires `sh`
   to be installed.
 * `-Diagnostic` builds the site and prints Hugo’s “template metric hints”.
 * `-Install` installs SASS and Hugo with Chocolatey.
-* `-Server` starts a development server for both SASS and Hugo.
 * `-DiffShouldExist` diffs the current `public` directory with the local
   `should-exist.txt`.
 * `-GenerateShouldExist` generates a new `should-exist.txt` from the `public`

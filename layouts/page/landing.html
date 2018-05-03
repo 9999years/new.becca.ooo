@@ -1,7 +1,5 @@
 {{partial "becca-header.html" .}}
 {{range .Site.Data.landing.link}}
-	<a href="{{.href | safeURL}}"><div><div class="in">
-	{{.text}}
-	</div></div></a>
+	<a href="{{.href | safeURL}}"><div>{{.text}}</div></a>
 {{end}}
 {{partial "becca-footer.html" .}}
