@@ -13,10 +13,9 @@
 	</header>
 	{{if not (.Param "hide-body-copy-tag")}}
 		<main{{with .Param "body-copy-id"}} id="{{.}}"{{end -}}
-		{{- with .Param "body-copy-classes"}} class="{{.}}"{{end -}}
-		{{- if (or (.Param "body-copy-style") (.Param "center"))}} style="
-		{{- if .Param "center" -}}
-			text-align: center;{{end -}}
-		{{- .Param "body-copy-style"}}"{{end}}>
+		{{- if or (.Param "body-copy-classes") (.Param "center")}} class="
+		{{- if .Param "center" -}}center {{end}}
+		{{- .Param "body-copy-classes"}}"{{end -}}
+		{{- with .Param "body-copy-style"}} style="{{.}}"{{end}}>
 	{{end}}
 	{{with .Title}}<h1 id="{{urlize .}}">{{.}}</h1>{{end}}
