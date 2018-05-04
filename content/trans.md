@@ -26,6 +26,9 @@ within the trans community:
   trans person can be simple or complex. See [support](#support) below for an
   incomplete list of things you can — and *should* do.
 
+More articles and links coming... at some point! [Hit me up] if you want to
+help out!
+
 # Scientific
 
 [Hormone therapy in transgender adults is safe with provider supervision; A
@@ -128,6 +131,7 @@ woman”][opiumhug] & related discussion.
 * Finally? **Leave us alone**. We’re tired of explaining ourselves. Don’t
   approach in public to say how supportive you are. Just... leave us be.
 
+[Hit me up]: /contact
 [S2214]: http://www.jctejournal.com/article/S2214-6237(15)00049-6/abstract
 [they/them]: http://my.pronoun.is/they/them
 [*Gender and Pleasure*]: https://lilbittydragon.tumblr.com/post/114260623008/gender-and-pleasure
