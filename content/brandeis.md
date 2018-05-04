@@ -8,7 +8,7 @@ css=["brandeis"]
 * [sage] --- course management, finances, personal info, etc.
 * [BranVan schedules] --- [current bus locations via TransLōc][transloc] or w/
   [an app]. [campus / waltham BranVan website][branvan]. make sure to get the
-  right schedule for the current day of the week and time of day!
+  right schedule for the current day of the week and time of day![^1]
 * [dining halls open now]
 * [WhoCash / meal swipe balance]
 * [library OneSearch] \([available journals])
@@ -18,7 +18,7 @@ css=["brandeis"]
 * [myhousing] --- housing and meal plans
 * [account management] --- email settings, password changes, shell access,
   etc.
-* [map (pdf)] / [light / large map]
+* [map (pdf)] / [light / large map] [^2]
 * [undergrad degree requirements]
 * [listserv] / [list of lists]
 * [patient portal], [forms], [insurance]
@@ -35,6 +35,9 @@ css=["brandeis"]
 (781) 736-5060 | [dcl]
 (781) 736-3730 | [bcc]
 (781) 736-3785 | [bcc] hotline --- 24/7, operated by bcc staff
+
+[^1]: The BranVan situation is a bit complicated. Colloquially, “BranVan” refers to all the… Brandeis vans and buses. But strictly speaking, the BranVan is *only* the intra-campus shuttle and the evening Waltham shuttle. The situation is a bit unclear, even from the official Brandeis pages, but the daytime Waltham and Campus shuttles as well as all Boston shuttles are run by Joseph’s transportation — although there appears to be both a daytime campus shuttle (with Joseph’s) and a daytime campus BranVan.
+[^2]: The light / large map *is* nicer but it’s also out of date, missing, among other things, the entire bio building. Beware!
 
 [library OneSearch]: http://search.library.brandeis.edu/primo_library/libweb/action/search.do?vid=BRAND
 [available journals]: http://scholar.brandeis.edu/V?RN=827099071

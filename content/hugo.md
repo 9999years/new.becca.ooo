@@ -1,5 +1,6 @@
 +++
 title="A Gentle Introduction to Hugo"
+description="Feel intimidated by Hugo? Start here, where the basics come first."
 +++
 
 This website is built with [Hugo], a “static site generator,” or a very

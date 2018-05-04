@@ -1,10 +1,14 @@
 +++
 title="markup test page"
+description="a page to demonstrate markup and take advantage of all the features
+of markdown"
 +++
 
 i don't ever actually use six titles. but here's a test page so i can figure out
 what theyd look like if i did. nothing differentiates titles 3--6. solution:
 don't use them.
+
+text from [lipsum.com]
 
 # 1: title
 
@@ -60,6 +64,11 @@ placerat tortor ex vitae urna.
 >> random text. It has roots in a piece of classical Latin literature from 45
 >> BC, making it over 2000 years old. 
 
+* This list has paragraph tags
+
+* This list has paragraph tags within the `<li>` tags.
+
+* Aawuefoufeououuu
 
 ##### 5: title
 
@@ -68,3 +77,5 @@ Filler
 ###### 6: paragraph
 
 Filler
+
+[lipsum.com]: https://www.lipsum.com/

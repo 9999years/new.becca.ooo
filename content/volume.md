@@ -1,5 +1,6 @@
 +++
 title="volume by integration"
+description="to set the volume, solve an integral"
 draft=true
 css=["volume"]
 js=["volume"]

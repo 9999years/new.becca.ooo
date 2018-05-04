@@ -1,5 +1,6 @@
 +++
 title="i c the light"
+description="resources and publications that i used writing i c the light, a distance-estimating ray marching renderer"
 url="i-c-the-light/reference-links"
 +++
 

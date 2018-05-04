@@ -1,5 +1,6 @@
 +++
 title="projects"
+description="code ive written, twitter bots i run, and resources i provide around the web"
 +++
 
 [I C the Light](/i-c-the-light), a distance-estimating ray marcher ([image

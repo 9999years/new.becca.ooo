@@ -1,6 +1,7 @@
 +++
 title="xmpp info"
 css=["xmpp"]
+description="once upon a time, i installed pidgin…"
 +++
 
 |       |            |

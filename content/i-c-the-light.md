@@ -1,5 +1,6 @@
 +++
 title="i c the light"
+description="a distance-estimating ray marcher for rendering quaternion julia set fractals"
 +++
 
 ## A distance-estimating ray marcher
