@@ -68,7 +68,7 @@ woman”][opiumhug] & related discussion.
 > poverty fighting loneliness and dysphoria and surrounded by people who think
 > you’re a disgusting, subhuman monster who should be locked away or put down?
 
-[How dysphoria manifests] by alice
+[How dysphoria manifests][trans-mom] by alice
 
 # Support
 
