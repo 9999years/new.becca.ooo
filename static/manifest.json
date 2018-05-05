@@ -1,0 +1,23 @@
+{
+	"lang": "en-US",
+	"dir": "ltr",
+	"name": "becca.ooo",
+	"description": "The digital home of Rebecca Turner aka 9999years",
+	"short_name": "becca.ooo",
+	"theme_color": "#aff",
+	"background_color": "#012",
+	"icons": [{
+			"src": "img/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},{
+			"src": "img/icon-196.png",
+			"sizes": "196x196",
+			"type": "image/png"
+		},{
+			"src": "img/icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		}
+	]
+}
