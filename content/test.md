@@ -1,7 +1,6 @@
 +++
 title="markup test page"
-description="a page to demonstrate markup and take advantage of all the features
-of markdown"
+description="a page to demonstrate markup and take advantage of all the features of markdown"
 +++
 
 i don't ever actually use six titles. but here's a test page so i can figure out
