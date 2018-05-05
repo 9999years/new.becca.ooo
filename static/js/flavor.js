@@ -45,3 +45,5 @@ let $ = id => document.getElementById(id)
 let arr_rand = arr => arr[Math.floor(Math.random() * arr.length)]
 
 let flavor = () => $("flavor").innerHTML = arr_rand(flavors)
+
+document.addEventListener('DOMContentLoaded', flavor, false)

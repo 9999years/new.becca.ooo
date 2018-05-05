@@ -1,6 +1,8 @@
 {{partial "header.html" .}}
 {{if not (.Param "no-default-includes")}}
-<link rel=stylesheet type=text/css href=/css/main.css></style>
+<style>
+{{readFile "/static/css/main.css" | safeCSS}}
+</style>
 {{end}}
 {{range .Param "css"}}
 <link rel=stylesheet type=text/css href="{{printf "/css/%v.css" . | relURL}}">
