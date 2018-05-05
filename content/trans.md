@@ -80,6 +80,11 @@ woman”][opiumhug] & related discussion.
   around people they are not out to, or they have asked you to use their old
   name around people they’re not out to.
 
+    * When you mess up pronouns — which *happens*, we get it, everyone’s human
+      — don’t make a big deal out of it. That’s the worst possible reaction.
+      Correct yourself and move on. **Don’t even say sorry.** Move on as
+      quickly as possible.
+
 * Similarly, **normalize transness**.
 
     * Ask people for their pronouns when you meet them.
@@ -128,6 +133,26 @@ woman”][opiumhug] & related discussion.
 
 * Specifically for your non-binary friends:
 
+    * Nonbinary people aren’t inherently “a mix of boy and girl” (although some
+      people do feel like a plain mix; this doesn’t apply to them). Nonbinary
+      people often exist outside of that spectrum entirely. Nonbinary people
+      can express masculinity and femininity without being “more of a boy” or
+      “more of a girl.” It’s critical that you learn to not attempt to view or
+      categorize your non-binary friends within the lens of boy/girl entirely.
+
+    * Don’t invalidate their genders; many non-binary people’s experience of
+      gender varies from day to day (some of these people identify with terms
+      like genderfluid). If they ask you to call them “she” or “he” for a day
+      or a week, understand that this doesn’t make them any less non-binary —
+      it makes them a genderfluid person using she/her pronouns, not a girl.
+
+    * Don’t be weird about [neopronouns], which are pronouns other than
+      he/she/they, like xe/xer or zi/zyr. They’re just pronouns. Take some time
+      to learn them. It’s not a big deal. It costs $0.
+
+* Don’t show us articles about trans people. It feels weird and patronizing,
+  and we read them 6 months ago.
+
 * Finally? **Leave us alone**. We’re tired of explaining ourselves. Don’t
   approach in public to say how supportive you are. Just... leave us be.
 
@@ -141,3 +166,4 @@ woman”][opiumhug] & related discussion.
 [opiumhug]: https://butimnotaloneanymore.tumblr.com/post/166916036549/thecuckoohaslanded-skinner0box
 [trans-mom]: http://trans-mom.tumblr.com/post/118233124022/people-dont-really-seem-to-understand-how
 [lesfeels]: https://butimnotaloneanymore.tumblr.com/post/127653425674/lesfeels-how-bout-instead-of-say-people-with
+[neopronouns]: https://www.xojane.com/issues/we-need-more-pronouns
