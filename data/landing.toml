@@ -44,6 +44,9 @@
 	href="https://moodle2.brandeis.edu/my/"
 	text="latte"
 [[link]]
+	href="https://sage.brandeis.edu/psp/CPROD90/EMPLOYEE/HRMS/s/WEBLIB_BR_SSO.ISCRIPT1.FieldFormula.iScript_redirectBRSSO"
+	text="sage"
+[[link]]
 	href="/brandeis/"
 	text="brandeis"
 [[link]]
