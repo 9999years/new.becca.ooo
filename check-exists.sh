@@ -4,9 +4,9 @@ RED="\e[31m"
 GREEN="\e[32m"
 NC="\e[0m"
 
-echo_err() {
-	echo -e -n "$RED"
-	echo $1
+echo_fmt() {
+	echo -e -n $1
+	echo $2
 	echo -e -n "$NC"
 }
 
@@ -17,7 +17,7 @@ while read -r line || [[ -n "$line" ]]; do
 	if [[ "$line" == \#* ]]; then continue; fi
 	if [[ ! -f "public/$line" ]]
 	then
-		echo_err "☒ \`$line\` should exist but doesn't!"
+		echo_fmt $RED "☒ \`$line\` should exist but doesn't!"
 		let "errors += 1"
 	else
 		echo "☑ \`$line\`"
@@ -26,8 +26,8 @@ done < "$1"
 
 if [[ errors -eq 0 ]]
 then
-	echo "all files exist :-)"
+	echo_fmt $GREEN "all files exist :-)"
 else
-	echo_err "$errors files were not found"
+	echo_fmt $RED "$errors files were not found"
 	exit 1
 fi
