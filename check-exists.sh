@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RED="\e[32m"
+RED="\e[31m"
 GREEN="\e[32m"
 NC="\e[0m"
 
@@ -28,6 +28,6 @@ if [[ errors -eq 0 ]]
 then
 	echo "all files exist :-)"
 else
-	echo_err "$GREEN$errors files were not found$NC"
+	echo_err "$errors files were not found"
 	exit 1
 fi

@@ -8,7 +8,6 @@ ascii/ascii.txt
 ascii/index.html
 ascii/simple.txt
 brandeis/index.html
-chomp/index.php
 contact/index.html
 crytyper/index.html
 css/ascii/ascii.css
@@ -22,7 +21,6 @@ css/crytyper.css
 css/landing.css
 css/main.css
 css/reel.css
-css/vars.css
 css/volume.css
 css/wishlist.css
 css/xmpp.css
@@ -39,12 +37,8 @@ glitcher/index.php
 glitcher/upload.php
 glitter/index.html
 hugo/index.html
-i-c-the-light/distance/index.html
 i-c-the-light/gallery/index.php
-i-c-the-light/presentation/index.php
 i-c-the-light/reference-links/index.html
-i-c-the-light/video/index.php
-i-c-the-light/dist_test.html
 i-c-the-light/index.html
 integral/index.html
 js/unicode/abbreviate.js
