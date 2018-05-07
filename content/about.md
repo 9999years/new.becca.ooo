@@ -17,4 +17,7 @@ and tea. i get a lot of nosebleeds and spend some of my free time gardening
 
 maybe you’d be more interested in some of my [projects](/projects)?
 
+now you know who i am, it’s important that you know [who i’m not]
+
 [she]: http://my.pronoun.is/she/her
+[who i’m not]: https://www.supertalk.fm/shows/goodthings/
