@@ -1,6 +1,5 @@
 +++
 title="i love u!"
-onload="outputHearts(140)"
 js=["unicode/hearts"]
 +++
 

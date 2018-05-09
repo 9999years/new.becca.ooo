@@ -30,6 +30,14 @@ function generateHearts(length) {
 	return ret.join("")
 }
 
-function outputHearts(length) {
+function outputHearts(length=140) {
 	heartsDiv.innerHTML = generateHearts(length)
 }
+
+document.addEventListener('DOMContentLoaded', e => outputHearts(), false)
+let main = document.getElementsByTagName('main')[0]
+
+let encore = document.createElement('a')
+encore.innerHTML = 'encore! more love!'
+encore.addEventListener('click', e => outputHearts(), false)
+main.appendChild(encore)
