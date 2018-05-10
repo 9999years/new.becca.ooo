@@ -89,6 +89,12 @@ url      = "https://www.amazon.com/dp/B000JNNWQ2/"
 #url     = "http://www.gap.com/products/mens-ankle-socks.jsp"
 
 [[items]]
+name  = "Filter swatchbook"
+price = 6
+url   = "https://www.amazon.com/dp/B0002ER2YG/"
+photo = "rosco-swatchbook"
+
+[[items]]
 name     = "Balisong"
 features = "Atropos Demon"
 price    = 225
@@ -107,6 +113,20 @@ name     = "Higonokami by Nagao Seisakusho"
 url      = "https://www.amazon.com/dp/B00EU8MLQY"
 price    = 25
 photo    = "nagao-higonokami"
+
+[[items]]
+name     = "Computer mouse"
+features = "Razer Basilisk"
+price    = 60
+photo    = "razer-basilisk"
+url      = "https://www.amazon.com/dp/B0752VK4XV/"
+
+[[items]]
+name     = "Soldering station"
+features = "Hakko FX888D"
+price    = 96
+photo    = "hakko-fx888d"
+url      = "https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M"
 
 #[[items]]
 #name    = "Unicorn jacket"
