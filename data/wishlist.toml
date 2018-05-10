@@ -71,6 +71,12 @@ photo    = "klein-electrician"
 url      = "https://www.amazon.com/dp/B000VL03NC/"
 
 [[items]]
+name  = "Helping hand"
+price = 7
+photo = "helping-hand"
+url   = "https://www.amazon.com/Neiko-01902-Adjustable-Magnifying-Alligator/dp/B000P42O3C/"
+
+[[items]]
 name     = "Etymotic cable"
 price    = 50
 photo    = "er4-cable"
