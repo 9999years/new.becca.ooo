@@ -12,45 +12,11 @@ photo    = "galaxy-s9-plus"
 url      = "https://www.verizonwireless.com/smartphones/samsung-galaxy-s9-plus/"
 
 [[items]]
-name     = "MicroSD card"
-features = "200 GB"
-photo    = "microsd-200gb"
-price    = 60
-url      = "https://www.amazon.com/Sandisk-Ultra-200GB-Micro-Adapter/dp/B073JY5T7T"
-
-[[items]]
-name     = "Jowo #5 nib"
-price    = 15
-features = "M tip, nib only"
-photo    = "jowo-5"
-url      = "https://www.fpnibs.com/standard/205-9038-jowo-size-5-steel-nib-unit-m-tip.html"
-
-[[items]]
-name     = "Replacement headphone earpads"
-price    = 28
-photo    = "ath-earpads"
-features = "black"
-url      = "https://www.amazon.com/dp/B00ZY8PGJI/"
-
-[[items]]
 name     = "Round shoelaces"
 features = "black, 36″"
 price    = 9
 photo    = "round-laces"
 url      = "https://www.amazon.com/OrthoStep-Round-Athletic-Black-Shoelaces/dp/B00L89LOV6/?th = 1&psc = 1"
-
-[[items]]
-name     = "Chup socks"
-price    = 35
-photo    = "chup-fuar"
-url      = "https://chupsocks.com/"
-
-[[items]]
-name     = "UE Boom bluetooth speaker"
-features = "refurbished"
-price    = 63
-url      = "https://www.amazon.com/Wireless-Speaker-Black-Certified-Refurbished/dp/B00U8FJUDU/"
-photo    = "ue-boom"
 
 [[items]]
 name  = "Technics turntable ground wire"
@@ -71,10 +37,10 @@ photo    = "klein-electrician"
 url      = "https://www.amazon.com/dp/B000VL03NC/"
 
 [[items]]
-name  = "Helping hand"
-price = 7
-photo = "helping-hand"
-url   = "https://www.amazon.com/Neiko-01902-Adjustable-Magnifying-Alligator/dp/B000P42O3C/"
+name     = "Helping hand"
+price    = 7
+photo    = "helping-hand"
+url      = "https://www.amazon.com/Neiko-01902-Adjustable-Magnifying-Alligator/dp/B000P42O3C/"
 
 [[items]]
 name     = "Etymotic cable"
@@ -126,6 +92,13 @@ features = "Razer Basilisk"
 price    = 60
 photo    = "razer-basilisk"
 url      = "https://www.amazon.com/dp/B0752VK4XV/"
+
+[[items]]
+name     = "Objective 2 headphone amplifier"
+features = "rear power jack"
+price    = 100
+url      = "https://www.jdslabs.com/products/167/objective2-headphone-amplifier-b-stock/"
+photo    = "jds-objective2"
 
 [[items]]
 name     = "Soldering station"
@@ -191,10 +164,3 @@ features = "red / matte black"
 price    = 32
 url      = "https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black"
 photo    = "dsptch-strap"
-
-[[items]]
-name     = "Objective 2 headphone amplifier"
-features = "rear power jack"
-price    = 100
-url      = "https://www.jdslabs.com/products/167/objective2-headphone-amplifier-b-stock/"
-photo    = "jds-objective2"
