@@ -13,14 +13,14 @@ there are many rebecca turners. i am not these ones
 * [actress rebecca turner][6]
 * [“wealth strategy advisor” rebecca turner][7]
 * [abc news journalist rebecca turner][8]
-* [senior research associate at the mrc clinical trials unit at ucl dr. rebecca
-  turner][9]
+* [senior research associate at the mrc clinical trials unit at ucl rebecca
+  turner, phd][9]
 * [executive coach / consultant dr. rebecca turner][10]
 * [vice president of education and professional development at the international association of amusement parks and attractions rebecca turner][11]
 * [kindergarten teacher at the san jose episcopal day school rebecca turner][12]
 * [lawyer and montgomery implementation coordinator at the campaign for the
   fair sentencing of youth rebecca turner][13]
-* [“family medicine doctor in missouri” dr. rebecca turner][14]
+* [“family medicine doctor in missouri” rebecca turner][14]
 * [australian property manager rebecca turner][15]
 
 
