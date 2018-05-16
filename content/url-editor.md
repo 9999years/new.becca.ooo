@@ -29,4 +29,7 @@ https://www.amazon.com/Cutter-Stripper-Stranded-Klein-Tools/dp/B00080DPNQ/ref=sr
 
 # to-do
 
-* add functionality to add components to the path and parameters
+* renaming a parameter *key* moves it to the end of the parameters in the url.
+  i’m not sure how to prevent this and also vaguely aware that some apps will
+  create de-facto lists in the parameters by specifying a key multiple times, so
+  this could fuck that. no clue though

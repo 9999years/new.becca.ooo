@@ -1,6 +1,4 @@
 // url_in, url_out
-//
-// URLSearchParams: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
 
 // a URL with an added .pathList, a list of strings with one per path-segment;
 // corresponds to .pathname. when you edit .pathList, call .updatePath as well
@@ -30,6 +28,9 @@ function make_field(value, opts={}) {
 			key.addEventListener('change', handler, false)
 			key.addEventListener('input', handler, false)
 		}
+		if(opts.placeholder) {
+			key.setAttribute('placeholder', opts.placeholder)
+		}
 	} else {
 		key = document.createElement('span')
 		key.innerText = value
@@ -47,12 +48,16 @@ let delete_func = fn => {
 	}
 }
 
-function make_delete_link(fn, txt='×') {
+function make_link(click, txt='×', link_class='del') {
 	let delete_link = document.createElement('a')
-	delete_link.addEventListener('click', fn)
+	delete_link.addEventListener('click', click)
 	delete_link.innerHTML = txt
-	delete_link.className = 'del'
+	delete_link.className = link_class
 	return delete_link
+}
+
+function make_add_link(click, txt='+', link_class='add') {
+	return make_link(click, txt, link_class)
 }
 
 // accepted keys in opts:
@@ -64,13 +69,14 @@ function make_delete_link(fn, txt='×') {
 // class: the returned div's class name
 // key:
 //     edit: bool (if key is editable)
-//     onchange: fn
+//     change: fn
+//     placeholder: str
 // val:
 //     (same as key)
 function make_row(key, val, opts={}) {
 	let new_row = document.createElement('div')
 	new_row.className = opts.class || 'row'
-	if(key) {
+	if(key !== undefined) {
 		if(opts.key === undefined) {
 			opts.key = {}
 		}
@@ -81,7 +87,7 @@ function make_row(key, val, opts={}) {
 		new_row.append(opts.delim || ': ')
 	}
 
-	if(val) {
+	if(val !== undefined) {
 		if(opts.val === undefined) {
 			opts.val = {}
 		}
@@ -92,7 +98,7 @@ function make_row(key, val, opts={}) {
 	}
 	if(opts.delete) {
 		// TODO icon?
-		new_row.append(make_delete_link(delete_func(opts.delete)))
+		new_row.append(make_link(delete_func(opts.delete)))
 	}
 	// TODO reordering code
 	return new_row
@@ -185,32 +191,58 @@ let get_val = row => row.getElementsByClassName('val')[0]
 let delete_param = row => {
 	url.searchParams.delete(get_key(row).value)
 	row.remove()
-	if(url.search.length <= 1) {
-		// delete the whole section
-		get_section('parameters').remove()
-	}
 }
 
 let delete_all_params = e => {
 	url.search = ''
-	get_section('parameters').remove()
 	display_url()
+	parse(url_in.value)
+}
+
+let set_param = e => {
+	let row = e.target.parentElement
+	if(e.target.className == "key") {
+		let new_key = e.target.value
+		url.searchParams.delete(e.target.getAttribute('data-old'))
+		e.target.setAttribute('data-old', new_key)
+		url.searchParams.set(new_key, get_val(row).value)
+	} else if(e.target.className = "val") {
+		url.searchParams.set(get_key(row).value, e.target.value)
+	}
+}
+
+let make_param = (k, v) => {
+	let row = make_row(k, v, {
+		delete: delete_param,
+		key: { edit: true, change: set_param },
+		val: { edit: true, change: set_param }
+	})
+	get_key(row).setAttribute('data-old', k)
+	return row
+}
+
+let add_param = e => {
+	get_section('parameters').insertBefore(
+		make_param('', ''),
+		e.target.parentElement)
 }
 
 // sets up the params portion of the page
 function parse_params(searchParams) {
 	let container = make_section('parameters')
 	let title = container.firstElementChild
-	title.append(make_delete_link(delete_all_params))
+	title.append(make_link(delete_all_params))
 
 	for(param of searchParams) {
-		add_row(param[0], param[1], {
-			delete: delete_param,
-			target: container,
-			key: { edit: true },
-			val: { edit: true }
-		})
+		container.append(make_param(param[0], param[1], container))
 	}
+
+	let add_link = document.createElement('div')
+	add_link.className = 'row'
+	add_link.append(make_add_link(add_param))
+
+	container.append(add_link)
+
 	url_out.append(container)
 }
 
@@ -232,18 +264,37 @@ let delete_path = row => {
 	inx = get_index(row)
 	url.pathList.splice(inx, 1)
 	url.updatePath()
-	if(url.pathList.length === 0) {
-		get_section('path').remove()
-	} else {
-		decrement_path_indicies_after(inx)
-		row.parentElement.remove()
-	}
+	decrement_path_indicies_after(inx)
+	row.parentElement.remove()
 }
 
 let change_path = e => {
 	row = e.target.parentElement
 	url.pathList[get_index(row)] = e.target.value
 	url.updatePath()
+}
+
+function make_path_li(dir, index) {
+	let li = document.createElement('li')
+	li.append(make_row(undefined, dir, {
+		delete: delete_path,
+		val: {
+			edit: true,
+			change: change_path,
+		}
+	}))
+	// first child is the div.row
+	li.firstElementChild.setAttribute('data-index', index)
+	return li
+}
+
+let add_path_part = e => {
+	li = e.target.parentElement
+	li.parentElement.insertBefore(make_path_li('', url.pathList.length), li)
+	// hack to make indexes work right when you add multiple empty path
+	// segments at once, bc blank segments are truncated causing
+	// pathList.length to misalign with the length of this list
+	url.pathList.push('')
 }
 
 // sets up the path portion of the page
@@ -253,19 +304,15 @@ function parse_path(pathname) {
 	let list = document.createElement('ul')
 	var i = 0
 	for(dir of dirs) {
-		let li = document.createElement('li')
-		li.append(make_row(undefined, dir, {
-			delete: delete_path,
-			val: {
-				edit: true,
-				change: change_path,
-			}
-		}))
-		// first child is the div.row
-		li.firstElementChild.setAttribute('data-index', i)
-		list.append(li)
+		list.append(make_path_li(dir, i))
 		i++
 	}
+
+	// add link
+	let li = document.createElement('li')
+	li.append(make_add_link(add_path_part))
+	list.append(li)
+
 	container.append(list)
 	url_out.append(container)
 }

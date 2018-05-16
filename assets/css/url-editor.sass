@@ -8,8 +8,12 @@
     display: flex
     margin-bottom: 0.2em
 
-  #section-path li:before
-    content: '/'
+  #section-path li
+    &:before
+      content: '/'
+
+    &:last-child:before
+      content: ''
 
   input
     width: 100%
