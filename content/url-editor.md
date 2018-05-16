@@ -2,7 +2,7 @@
 title="url editor"
 description="a live, interactive tool for editing urls and their parameters"
 js=["url-editor"]
-css=["unicode/tools"]
+css=["url-editor", "unicode/tools"]
 draft=true
 
 [blackfriday]

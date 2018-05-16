@@ -35,6 +35,7 @@ function make_field(value, opts={}) {
 // ondelete: fn
 // order: bool (if row is reorderable)
 // onreorder: fn
+// class: the returned div's class name
 // key:
 //     edit: bool (if key is editable)
 //     onchange: fn
@@ -42,16 +43,27 @@ function make_field(value, opts={}) {
 //     (same as key)
 function make_row(key, val, opts={}) {
 	let new_row = document.createElement('div')
-	let key_opts = {}
-	if(opts.key) {
-		opts.key.class = 'key'
+	new_row.className = opts.class || 'row'
+	if(key) {
+		if(opts.key === undefined) {
+			opts.key = {}
+		}
+		if(opts.key) {
+			opts.key.class = 'key'
+		}
+		new_row.append(make_field(key, opts.key))
+		new_row.append(opts.delim || ': ')
 	}
-	new_row.append(make_field(key, opts.key))
-	new_row.append(opts.delim || ': ')
-	if(opts.val) {
-		opts.val.class = 'val'
+
+	if(val) {
+		if(opts.val === undefined) {
+			opts.val = {}
+		}
+		if(opts.val) {
+			opts.val.class = 'val'
+		}
+		new_row.append(make_field(val, opts.val))
 	}
-	new_row.append(make_field(val, opts.val))
 	// TODO deletion code
 	// TODO reordering code
 	return new_row
@@ -117,17 +129,53 @@ function maybe_mutable_row(key, val, opts={}) {
 	}
 }
 
-function make_section() {
+function make_section(title) {
 	let ret = document.createElement('div')
-	ret.className = 'section'
+	ret.className = 'section section-' + title.replace(/ /g, '-')
+	if(title) {
+		let header = document.createElement('h2')
+		header.innerHTML = title
+		ret.append(header)
+	}
 	return ret
 }
 
 function parse_params(searchParams) {
-	let container = make_section()
+	let container = make_section('parameters')
 	for(param of searchParams) {
-		add_row(param[0], param[1])
+		add_row(param[0], param[1], {
+			target: container,
+			key: { edit: true },
+			val: { edit: true },
+		})
 	}
+	url_out.append(container)
+}
+
+function ul(items, func) {
+	let add_item = it => {
+		let li = document.createElement('li')
+		li.append(it)
+		list.append(li)
+	}
+	for(item of items) {
+		add_item(func(item))
+	}
+	return list
+}
+
+function parse_path(pathname) {
+	let container = make_section('path')
+	let dirs = display_path(pathname).split('/')
+	let list = document.createElement('ul')
+	for(dir of dirs) {
+		let li = document.createElement('li')
+		li.append(make_row(undefined, dir, {
+			val: { edit: true }
+		}))
+		list.append(li)
+	}
+	container.append(list)
 	url_out.append(container)
 }
 
@@ -141,7 +189,7 @@ function parse(url) {
 	maybe_mutable_row('password', url.password)
 	maybe_mutable_row('host', url.hostname)
 	maybe_mutable_row('port', url.port)
-	maybe_mutable_row('path', url.pathname, { val_fn: display_path })
+	parse_path(url.pathname)
 	maybe_mutable_row('#', url.hash)
 	parse_params(url.searchParams)
 }
