@@ -26,3 +26,7 @@ https://www.amazon.com/Cutter-Stripper-Stranded-Klein-Tools/dp/B00080DPNQ/ref=sr
 * you can click the × to delete a parameter or element of the path from the url
 * it needs a browser from about 2016 or later to work because of some
   javascript stuff
+
+# to-do
+
+* add functionality to add components to the path and parameters
