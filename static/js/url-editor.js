@@ -51,6 +51,7 @@ function make_delete_link(fn, txt='×') {
 	let delete_link = document.createElement('a')
 	delete_link.addEventListener('click', fn)
 	delete_link.innerHTML = txt
+	delete_link.className = 'del'
 	return delete_link
 }
 
@@ -231,8 +232,12 @@ let delete_path = row => {
 	inx = get_index(row)
 	url.pathList.splice(inx, 1)
 	url.updatePath()
-	decrement_path_indicies_after(inx)
-	row.parentElement.remove()
+	if(url.pathList.length === 0) {
+		get_section('path').remove()
+	} else {
+		decrement_path_indicies_after(inx)
+		row.parentElement.remove()
+	}
 }
 
 let change_path = e => {
