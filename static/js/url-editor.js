@@ -204,6 +204,7 @@ let set_param = e => {
 	if(e.target.className == "key") {
 		let new_key = e.target.value
 		url.searchParams.delete(e.target.getAttribute('data-old'))
+		// update the attribute for future renames
 		e.target.setAttribute('data-old', new_key)
 		url.searchParams.set(new_key, get_val(row).value)
 	} else if(e.target.className = "val") {
@@ -214,9 +215,12 @@ let set_param = e => {
 let make_param = (k, v) => {
 	let row = make_row(k, v, {
 		delete: delete_param,
+		delim: '=',
 		key: { edit: true, change: set_param },
 		val: { edit: true, change: set_param }
 	})
+	// store the key in an attribute so we know which key to edit in
+	// url.searchParams when we rename it
 	get_key(row).setAttribute('data-old', k)
 	return row
 }
