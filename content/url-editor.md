@@ -11,11 +11,11 @@ extensionsmask=["autolink"]
 a live, interactive tool for editing urls and their parameters. working beta
 
 url input:
-<textarea id="url_in">
+<textarea id=url_in>
 https://www.amazon.com/Cutter-Stripper-Stranded-Klein-Tools/dp/B00080DPNQ/ref=sr_1_6?s=power-hand-tools&ie=UTF8&qid=1526426148&sr=1-6&keywords=wire+strippers
 </textarea>
 
-<div id="url_out"></div>
+<div id=url_out></div>
 
 <noscript>nothing will happen without javascript</noscript>
 
@@ -34,3 +34,5 @@ https://www.amazon.com/Cutter-Stripper-Stranded-Klein-Tools/dp/B00080DPNQ/ref=sr
   i’m not sure how to prevent this and also vaguely aware that some apps will
   create de-facto lists in the parameters by specifying a key multiple times, so
   this could fuck that. no clue though
+
+[query string]: https://en.wikipedia.org/wiki/Query_string

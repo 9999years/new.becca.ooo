@@ -23,11 +23,14 @@ approximation visualization
 
 [/fox](/fox), a population dynamics simulator ([old version](/fox-old))
 
-[random #hashtag generator](/unicode/hashtag)
+[/url-editor](/url-editor), a tool for editing and viewing url parameters and
+components
 
 [#wrap](https://chrome.google.com/webstore/detail/wrap/nbcgkdilbhnnoemimofnknocbkpldobi),
 a Chrome extension to modify Tumblr’s user interface by adding line-wrapping for
 post tags. Peaked at ≈35,000 users.
+
+[random #hashtag generator](/unicode/hashtag)
 
 # twitter bots
 
