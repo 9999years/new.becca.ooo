@@ -173,15 +173,21 @@ function make_section(title) {
 let get_key = row => row.getElementsByClassName('key')[0]
 let get_val = row => row.getElementsByClassName('val')[0]
 
+let reparse = () => {
+	display_url()
+	parse_url_in()
+}
+
+let delete_param_abstract = (row, params) => params.delete(get_key(row).value)
+
 let delete_param = row => {
-	url.searchParams.delete(get_key(row).value)
+	delete_param_abstract(row, url.searchParams)
 	row.remove()
 }
 
 let delete_all_params = e => {
 	url.search = ''
-	display_url()
-	parse_url_in()
+	reparse()
 }
 
 function set_param_abstract(e, params) {
@@ -205,16 +211,14 @@ let set_hash_param = e => {
 }
 
 let delete_hash_param = row => {
-	url.hashParams.delete(get_key(row).value)
+	delete_param_abstract(row, url.hashParams)
 	url.updateHash()
 	row.remove()
-	display_url()
 }
 
 let delete_all_hash_params = e => {
 	url.hash = ''
-	display_url()
-	parse_url_in()
+	reparse()
 }
 
 function make_param(k, v, set_fn=set_param, delete_fn=delete_param) {
@@ -313,12 +317,14 @@ let add_path_part = e => {
 // sets up the path portion of the page
 function parse_path(pathname) {
 	let container = make_section('path')
-	let dirs = display_path(pathname).split('/')
 	let list = document.createElement('ul')
-	var i = 0
-	for(dir of dirs) {
-		list.append(make_path_li(dir, i))
-		i++
+	if(pathname !== '/') {
+		let dirs = display_path(pathname).split('/')
+		var i = 0
+		for(dir of dirs) {
+			list.append(make_path_li(dir, i))
+			i++
+		}
 	}
 
 	// add link
