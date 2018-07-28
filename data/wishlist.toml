@@ -6,31 +6,6 @@
 #photo   = "scd-4-gyuto"
 
 [[items]]
-name     = "Samsung Galaxy S9+"
-features = "black"
-photo    = "galaxy-s9-plus"
-url      = "https://www.verizonwireless.com/smartphones/samsung-galaxy-s9-plus/"
-
-[[items]]
-name     = "Round shoelaces"
-features = "black, 36″"
-price    = 9
-photo    = "round-laces"
-url      = "https://www.amazon.com/OrthoStep-Round-Athletic-Black-Shoelaces/dp/B00L89LOV6/?th = 1&psc = 1"
-
-[[items]]
-name  = "Technics turntable ground wire"
-price = 10
-url   = "https://www.ebay.com/sch/i.html?&_nkw=technics+ground"
-photo = "technics-ground"
-
-[[items]]
-name     = "Klein 8″ scissors"
-price    = 30
-photo    = "klein-8in"
-url      = "https://www.amazon.com/dp/B001408NBS/"
-
-[[items]]
 name     = "Klein electrician’s scissors"
 price    = 16
 photo    = "klein-electrician"
@@ -59,12 +34,6 @@ url      = "https://www.amazon.com/dp/B000JNNWQ2/"
 #price   = "6–10"
 #photo   = "ankle-socks"
 #url     = "http://www.gap.com/products/mens-ankle-socks.jsp"
-
-[[items]]
-name  = "Filter swatchbook"
-price = 6
-url   = "https://www.amazon.com/dp/B0002ER2YG/"
-photo = "rosco-swatchbook"
 
 [[items]]
 name     = "Balisong"
