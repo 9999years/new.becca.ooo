@@ -10,7 +10,7 @@ waltham — or sometimes washington dc, where my parents live. my pronouns are
 i like typography, fountain pens, sunglasses, computers, math, physics (which i
 am terrible at), linguistics, modern art, film, and plants. within computers, i
 like networks, clever data structures, unconventional rendering techniques,
-compilers, static analysis expressive syntax, unit testing, and cryptography
+compilers, static analysis, expressive syntax, unit testing, and cryptography
 
 i make many different kinds of [art](/art) in my free time. i enjoy both coffee
 and tea. i get a lot of nosebleeds and spend some of my free time gardening

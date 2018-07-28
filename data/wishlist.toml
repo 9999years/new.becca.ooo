@@ -111,11 +111,6 @@ url      = "https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/d
 #photo   = "pilot-namiki"
 
 #[[items]]
-#name    = "Money to Buy a Balisong"
-#price   = 250
-#photo   = "bb"
-
-#[[items]]
 #name    = "Stainless steel comb"
 #url     = "http://www.amazon.com/dp/B00L2AWTOM/"
 #price   = 36

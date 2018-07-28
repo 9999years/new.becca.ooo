@@ -168,9 +168,10 @@ languages (as of April 2016), with about 50% glyph coverage.
 {{< bullet >}} [Full Emoji Charts] --- all emoji with comparison pictures of
 implementations on various platforms.
 
-[Emoji Symbols: Background Data on unicode.org] --- Japanese carrier
-background data for the original emoji import (mostly historic value).
-Also available as a [PDF].
+[Emoji Symbols: Background Data on unicode.org], a.k.a. (L2/09-027) --- Japanese
+carrier background data for the original emoji import (mostly historic value).
+
+[List of proposals and their associated codepoints on Wikipedia][emoji_history]
 
 [Possible upcoming emoji on unicode.org]
 
@@ -282,8 +283,7 @@ and blame lies entirely with the third parties involved.
 [Hanazono font]: http://fonts.jp/hanazono/
 [Code2000 font]: https://en.wikipedia.org/wiki/Code2000
 [Full Emoji Charts]: http://unicode.org/emoji/charts/full-emoji-list.html
-[Emoji Symbols: Background Data on unicode.org]: http://www.unicode.org/~scherer/emoji4unicode/snapshot/utc.html
-[PDF]: http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3681.pdf
+[Emoji Symbols: Background Data on unicode.org]: https://www.unicode.org/L2/L2009/09027-emoji-backgrnd.pdf
 [Possible upcoming emoji on unicode.org]: http://www.unicode.org/emoji/charts/emoji-candidates.html
 [List of emoji ZWJ ligatures on unicode.org]: http://www.unicode.org/emoji/charts/emoji-zwj-sequences.html
 [Text vs Emoji reference on unicode.org]: http://www.unicode.org/emoji/charts/text-style.html
@@ -304,3 +304,4 @@ and blame lies entirely with the third parties involved.
 [Emoji allowed in Twitter usernames]: http://getemoji.com/#twitter
 [Character/byte counter]: https://mothereff.in/byte-counter
 [my unicode toys]: index/
+[emoji_history]: https://en.wikipedia.org/wiki/Miscellaneous_Symbols_and_Pictographs#History
