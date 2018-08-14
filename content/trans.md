@@ -47,6 +47,33 @@ Abuse][utx2]; The University of Texas at Austin
 > engage in substance use. Depression and school-based victimization factored
 > heavily into the disparities in both cases.
 
+[Endocrine Society treatment recommendations][end]
+
+[American Psychiatric Association Expert Q&A: Gender Dysphoria][apa]
+
+> Is there a general age that people realize they are transgender or experience
+> gender dysphoria? Can it happen late in life?
+>
+> Not all transgender people suffer from gender dysphoria and that distinction
+> is important to keep in mind. Gender dysphoria and/or coming out as
+> transgender can occur at any age.
+>
+> The DSM-5 distinguishes between Gender Dysphoria in Childhood for those who
+> experience GD before puberty. The diagnosis of Gender Dysphoria in Adolescents
+> and Adults can occur at any age. For those who experience gender dysphoria
+> later in life, they often report having secretly hidden their gender dysphoric
+> feelings from others when they were younger.
+
+[AMA takes several actions supporting transgender patients][ama]
+
+> The [AMA House of Delegates] also adopted policy opposing any efforts that
+> would prevent a transgender person from “accessing basic human services and
+> public facilities in line with one’s gender identity.” Transgender people who
+> live in states with discriminatory policies have “statistically significant
+> increases in mental health and psychiatric diagnoses,” according to the
+> resolution delegates adopted.
+
+
 # Articles
 
 [Hot Allostatic Load] by Porpentine. An article about being a trans woman and
@@ -167,3 +194,6 @@ woman”][opiumhug] & related discussion.
 [trans-mom]: http://trans-mom.tumblr.com/post/118233124022/people-dont-really-seem-to-understand-how
 [lesfeels]: https://butimnotaloneanymore.tumblr.com/post/127653425674/lesfeels-how-bout-instead-of-say-people-with
 [neopronouns]: https://www.xojane.com/issues/we-need-more-pronouns
+[end]: https://www.endocrine.org/news-room/current-press-releases/experts-issue-recommendations-for-gender-affirmation-treatment-for-transgender-individuals
+[apa]: https://www.psychiatry.org/patients-families/gender-dysphoria/expert-qa
+[ama]: https://wire.ama-assn.org/ama-news/ama-takes-several-actions-supporting-transgender-patients
