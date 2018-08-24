@@ -224,7 +224,7 @@ blocks in your base templates with `{{block "int. templ. name" .}} (content)
 critically, <i>re</i>define with `{{define "int. templ. name" .}} (new content)
 {{end}}`. However, I’ve never gotten that redefinition feature to work properly,
 so your mileage may vary. If you know how it’s supposed to work and can give an
-example, pleas [let me know][contact]!
+example, please [let me know][contact]!
 
 ### Partial templates
 
