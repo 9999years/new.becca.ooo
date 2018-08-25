@@ -1,5 +1,5 @@
 {{partial "header.html" .}}
-{{if not (.Param "no-default-includes")}}
+{{if not (.Param "no_default_includes")}}
 <style>
 {{readFile "/static/css/main.css" | safeCSS}}
 </style>

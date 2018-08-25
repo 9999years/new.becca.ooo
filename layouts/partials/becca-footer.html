@@ -3,6 +3,8 @@
 {{range .Param "js"}}
 	{{if eq (substr . 0 1) "/"}}
 		<script src="{{printf "%v.js" .}}"></script>
+	{{else if and (gt (len .) 8) (eq (substr . 0 8) "https://")}}
+		<script src="{{printf "%v" .}}"></script>
 	{{else}}
 		<script src="{{printf "/js/%v.js" .}}"></script>
 	{{end}}
