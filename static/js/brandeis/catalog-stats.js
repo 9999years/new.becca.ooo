@@ -158,6 +158,8 @@ function course_enrollments() {
 function students_per_subject() {
     let data = google.visualization.arrayToDataTable([
         ['Subject', 'Average students / course' ],
+        ['CONT', 65.5],
+        ['PHSC', 54.27],
         ['IGS', 52.07017543859649],
         ['REL', 46.64],
         ['NPSY', 40.153225806451616],

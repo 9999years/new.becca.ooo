@@ -1,7 +1,7 @@
 +++
 title="Brandeis Course Catalog Statistics"
-description=""
-css=["google-charts"]
+description="An analysis of 13 years of Brandeis course catalogs"
+css=["google-charts", "brandeis/catalog-stats"]
 js=["https://www.gstatic.com/charts/loader.js", "brandeis/catalog-stats"]
 no_default_includes=true
 +++
@@ -19,6 +19,10 @@ this page are interactive — try mousing over or clicking them!
 Courses offered has increased by about 13% between Spring 2005 and Fall 2018.
 
 <div id="stacked_subject_courses_per_semester"></div>
+
+HS (history) and THA (theater arts) lead with MUS (musical studies) overtaking
+theater in about 2011 — perhaps due in part to [the 2010 closing of Brandeis’
+graduate theater school][tha-closing].
 
 For readability, only subjects with >1,000 courses offered (cumulative total)
 are shown. (BUS, with 999 courses listed, was a close contender, but not a very
@@ -183,11 +187,123 @@ as such, this number is 4–5× the student body. Interestingly, we see a regula
 Brandeis is [proud of its 10:1 student-to-faculty ratio][stf-ratio], but how
 does that hold up? The average university-wide all-time class size is 22
 students enrolled, but class size varies wildly by subject. In the chart below,
-only courses with a class size ≥35 or ≤10 are shown.
+only subjects with an average class size ≥35 or ≤10 are shown.
 
 <div id="students_per_subject"></div>
 
-Two outliers, CONT and PHSC, are not shown.
+<details><summary>The full students-per-class by subject table, alphabetized.</summary>
+
+<table class="subjects-table">
+<tr><th>Subject  </th><th> Size  </th></tr>
+<tr><td>AAAS     </td><td> 20.62 </td></tr>
+<tr><td>HIST     </td><td> 25.56 </td></tr>
+<tr><td>ANTH     </td><td> 27.50 </td></tr>
+<tr><td>ARBC     </td><td> 11.44 </td></tr>
+<tr><td>AAPI     </td><td> 16.66 </td></tr>
+<tr><td>BCHM     </td><td> 29.09 </td></tr>
+<tr><td>BIOL     </td><td> 34.04 </td></tr>
+<tr><td>BUS      </td><td> 31.04 </td></tr>
+<tr><td>CHEM     </td><td> 31.29 </td></tr>
+<tr><td>CHIN     </td><td> 17.39 </td></tr>
+<tr><td>CLAS     </td><td> 25.63 </td></tr>
+<tr><td>COMP     </td><td> 10.50 </td></tr>
+<tr><td>COSI     </td><td> 38.06 </td></tr>
+<tr><td>ECON     </td><td> 38.02 </td></tr>
+<tr><td>ED       </td><td> 9.97 </td></tr>
+<tr><td>ESL      </td><td> 11.60 </td></tr>
+<tr><td>ENVS     </td><td> 23.12 </td></tr>
+<tr><td>PHIL     </td><td> 27.58 </td></tr>
+<tr><td>EL       </td><td> 12.78 </td></tr>
+<tr><td>ENG      </td><td> 20.46 </td></tr>
+<tr><td>FA       </td><td> 18.46 </td></tr>
+<tr><td>FYS      </td><td> 11.77 </td></tr>
+<tr><td>FREN     </td><td> 14.92 </td></tr>
+<tr><td>GER      </td><td> 11.93 </td></tr>
+<tr><td>HS       </td><td> 21.32 </td></tr>
+<tr><td>GRK      </td><td> 7.15 </td></tr>
+<tr><td>HBRW     </td><td> 13.69 </td></tr>
+<tr><td>HISP     </td><td> 16.43 </td></tr>
+<tr><td>HRNS     </td><td> 10.98 </td></tr>
+<tr><td>HUM      </td><td> 25.92 </td></tr>
+<tr><td>POL      </td><td> 24.80 </td></tr>
+<tr><td>FIN      </td><td> 34.39 </td></tr>
+<tr><td>INT      </td><td> 3.70  </td></tr>
+<tr><td>IMES     </td><td> 30.45 </td></tr>
+<tr><td>ITAL     </td><td> 13.88 </td></tr>
+<tr><td>JAPN     </td><td> 15.03 </td></tr>
+<tr><td>JOUR     </td><td> 19.00 </td></tr>
+<tr><td>KOR      </td><td> 15.86 </td></tr>
+<tr><td>LING     </td><td> 21.13 </td></tr>
+<tr><td>LAT      </td><td> 13.09 </td></tr>
+<tr><td>LGLS     </td><td> 34.75 </td></tr>
+<tr><td>MATH     </td><td> 19.83 </td></tr>
+<tr><td>MUS      </td><td> 10.32 </td></tr>
+<tr><td>NEJS     </td><td> 12.69 </td></tr>
+<tr><td>PE       </td><td> 15.37 </td></tr>
+<tr><td>PHYS     </td><td> 25.67 </td></tr>
+<tr><td>PSYC     </td><td> 39.41 </td></tr>
+<tr><td>RUS      </td><td> 10.97 </td></tr>
+<tr><td>HIST/SOC </td><td> 10.33 </td></tr>
+<tr><td>SOC      </td><td> 28.82 </td></tr>
+<tr><td>SAS      </td><td> 17.40 </td></tr>
+<tr><td>THA      </td><td> 10.75 </td></tr>
+<tr><td>UWS      </td><td> 16.43 </td></tr>
+<tr><td>WMGS     </td><td> 21.76 </td></tr>
+<tr><td>YDSH     </td><td> 8.39 </td></tr>
+<tr><td>AMST     </td><td> 30.23 </td></tr>
+<tr><td>BCBP     </td><td> 4.30  </td></tr>
+<tr><td>BCSC     </td><td> 22.80 </td></tr>
+<tr><td>BIBC     </td><td> 22.00 </td></tr>
+<tr><td>BIOP     </td><td> 5.14 </td></tr>
+<tr><td>BIOT     </td><td> 11.76 </td></tr>
+<tr><td>BIPH     </td><td> 7.25  </td></tr>
+<tr><td>BISC     </td><td> 31.16 </td></tr>
+<tr><td>CA       </td><td> 35.00 </td></tr>
+<tr><td>CAST     </td><td> 15.28 </td></tr>
+<tr><td>CBIO     </td><td> 25.90 </td></tr>
+<tr><td>CHSC     </td><td> 29.55 </td></tr>
+<tr><td>COEX     </td><td> 15.57 </td></tr>
+<tr><td>COMH     </td><td> 5.33 </td></tr>
+<tr><td>COML     </td><td> 14.95 </td></tr>
+<tr><td>CONT     </td><td> 65.50 </td></tr>
+<tr><td>CP       </td><td> 13.00 </td></tr>
+<tr><td>EAS      </td><td> 14.25 </td></tr>
+<tr><td>EBIO     </td><td> 17.50 </td></tr>
+<tr><td>ECS      </td><td> 15.89 </td></tr>
+<tr><td>FECS     </td><td> 17.33 </td></tr>
+<tr><td>FILM     </td><td> 36.05 </td></tr>
+<tr><td>GECS     </td><td> 19.03 </td></tr>
+<tr><td>GS       </td><td> 8.33 </td></tr>
+<tr><td>GSAS     </td><td> 5.00  </td></tr>
+<tr><td>HECS     </td><td> 12.00 </td></tr>
+<tr><td>HINDI    </td><td> 5.50  </td></tr>
+<tr><td>HOID     </td><td> 20.00 </td></tr>
+<tr><td>HSSP     </td><td> 24.84 </td></tr>
+<tr><td>IECS     </td><td> 16.00 </td></tr>
+<tr><td>IGS      </td><td> 52.07 </td></tr>
+<tr><td>JCS      </td><td> 10.24 </td></tr>
+<tr><td>LALS     </td><td> 13.00 </td></tr>
+<tr><td>LAS      </td><td> 23.00 </td></tr>
+<tr><td>NBIO     </td><td> 30.11 </td></tr>
+<tr><td>NPHY     </td><td> 15.00 </td></tr>
+<tr><td>NPSY     </td><td> 40.15 </td></tr>
+<tr><td>PAX      </td><td> 19.32 </td></tr>
+<tr><td>PHSC     </td><td> 54.27 </td></tr>
+<tr><td>PMED     </td><td> 5.46 </td></tr>
+<tr><td>PORT     </td><td> 8.66 </td></tr>
+<tr><td>QBIO     </td><td> 12.56 </td></tr>
+<tr><td>RECS     </td><td> 9.95 </td></tr>
+<tr><td>REL      </td><td> 46.64 </td></tr>
+<tr><td>SAL      </td><td> 16.40 </td></tr>
+<tr><td>SECS     </td><td> 6.00  </td></tr>
+<tr><td>SJSP     </td><td> 9.38 </td></tr>
+<tr><td>SPAN     </td><td> 16.25 </td></tr>
+<tr><td>SQS      </td><td> 16.71 </td></tr>
+<tr><td>SYS      </td><td> 12.00 </td></tr>
+<tr><td>USEM     </td><td> 16.12 </td></tr>
+<tr><td>WMNS     </td><td> 17.42 </td></tr>
+</table>
+</details>
 
 The subject with the highest average-class-size is CONT, with 65 students per
 course. CONT is a placeholder subject; one course, CONT 300B, is taught per
@@ -210,121 +326,9 @@ smallest subject by class size, has a measly 3.7 students per class. INT holds
 one course, Academic Year Internship, which usually gets an enrollment of 1–5.
 
 Similarly, BCBP 300A “Introduction to Research in Biochemistry and Biophysics
-I” is a required course for the biochemistry / biophysics Ph.D with an
-enrollment that’s often zero, a rarity!
-
-The full table is shown below, alphabetized.
-
-Subject  | Size
----------|-------------------
-AAAS     | 20.62
-HIST     | 25.56
-ANTH     | 27.50
-ARBC     | 11.44
-AAPI     | 16.66
-BCHM     | 29.09
-BIOL     | 34.04
-BUS      | 31.04
-CHEM     | 31.29
-CHIN     | 17.39
-CLAS     | 25.63
-COMP     | 10.50
-COSI     | 38.06
-ECON     | 38.02
-ED       | 9.497
-ESL      | 11.60
-ENVS     | 23.12
-PHIL     | 27.58
-EL       | 12.78
-ENG      | 20.46
-FA       | 18.46
-FYS      | 11.77
-FREN     | 14.92
-GER      | 11.93
-HS       | 21.32
-GRK      | 7.815
-HBRW     | 13.69
-HISP     | 16.43
-HRNS     | 10.98
-HUM      | 25.92
-POL      | 24.80
-FIN      | 34.39
-INT      | 3.7
-IMES     | 30.45
-ITAL     | 13.88
-JAPN     | 15.03
-JOUR     | 19.0
-KOR      | 15.86
-LING     | 21.13
-LAT      | 13.09
-LGLS     | 34.75
-MATH     | 19.83
-MUS      | 10.32
-NEJS     | 12.69
-PE       | 15.37
-PHYS     | 25.67
-PSYC     | 39.41
-RUS      | 10.97
-HIST/SOC | 10.33
-SOC      | 28.82
-SAS      | 17.4
-THA      | 10.75
-UWS      | 16.43
-WMGS     | 21.76
-YDSH     | 8.239
-AMST     | 30.23
-BCBP     | 4.3
-BCSC     | 22.8
-BIBC     | 22.0
-BIOP     | 5.714
-BIOT     | 11.76
-BIPH     | 7.25
-BISC     | 31.16
-CA       | 35.0
-CAST     | 15.28
-CBIO     | 25.90
-CHSC     | 29.55
-COEX     | 15.57
-COMH     | 5.333
-COML     | 14.95
-CONT     | 65.5
-CP       | 13.0
-EAS      | 14.25
-EBIO     | 17.5
-ECS      | 15.89
-FECS     | 17.33
-FILM     | 36.05
-GECS     | 19.03
-GS       | 8.833
-GSAS     | 5.0
-HECS     | 12.0
-HINDI    | 5.5
-HOID     | 20.0
-HSSP     | 24.84
-IECS     | 16.0
-IGS      | 52.07
-JCS      | 10.24
-LALS     | 13.0
-LAS      | 23.0
-NBIO     | 30.11
-NPHY     | 15.0
-NPSY     | 40.15
-PAX      | 19.32
-PHSC     | 54.27
-PMED     | 5.846
-PORT     | 8.666
-QBIO     | 12.56
-RECS     | 9.195
-REL      | 46.64
-SAL      | 16.4
-SECS     | 6.0
-SJSP     | 9.538
-SPAN     | 16.25
-SQS      | 16.71
-SYS      | 12.0
-USEM     | 16.12
-WMNS     | 17.42
+I” is a required course for the biochemistry / biophysics Ph.D!
 
 [catalog]: http://registrar-prod.unet.brandeis.edu/registrar/schedule/classes/2018/Fall/100/UGRD
 [catalog-repo]: https://github.com/9999years/brandeis-course-data
 [stf-ratio]: http://www.brandeis.edu/about/facts/index.html
+[tha-closing]: http://www.wbur.org/news/2010/02/24/brandeis-cuts
