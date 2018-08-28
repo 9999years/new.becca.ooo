@@ -174,7 +174,9 @@ interactive charts below:
 </select>
 <div id="subject_courses_per_semester"></div>
 
-<div id="corr_subject_courses_per_semester"></div>
+<div id="subject_enrollments_per_semester"></div>
+
+<div id="subject_class_size_per_semester"></div>
 
 {{% rule %}}
 
