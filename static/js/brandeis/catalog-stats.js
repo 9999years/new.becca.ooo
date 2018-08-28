@@ -132,7 +132,7 @@ function subject_class_size_per_semester(subj) {
 }
 
 function course_enrollments() {
-    let [data, opts] = base_graph('Student-enrollments')
+    let [data, opts] = base_graph('Student-enrollments', {title: 'Student-enrollments (university-wide)'})
     data.addRows([
         [ '2004 Fall'   , 17672 ],
         [ '2005 Spring' , 16840 ],
