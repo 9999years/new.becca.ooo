@@ -6,12 +6,6 @@
 #photo   = "scd-4-gyuto"
 
 [[items]]
-name     = "Klein electrician’s scissors"
-price    = 16
-photo    = "klein-electrician"
-url      = "https://www.amazon.com/dp/B000VL03NC/"
-
-[[items]]
 name     = "Helping hand"
 price    = 7
 photo    = "helping-hand"
