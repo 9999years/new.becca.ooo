@@ -23,6 +23,7 @@ css=["brandeis"]
 * [listserv] / [list of lists]
 * [patient portal], [forms], [insurance]
 * [deis connect] --- application status
+* [academic calendar]
 
                |  
 ---------------|-------------------
@@ -70,3 +71,4 @@ css=["brandeis"]
 [rape crisis ctr]: https://www.brandeis.edu/rape-crisis-center/
 [dcl]: https://www.brandeis.edu/dcl/
 [bcc]: https://www.brandeis.edu/counseling/
+[academic calendar]: https://www.brandeis.edu/registrar/calendar/index.html
