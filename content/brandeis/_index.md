@@ -24,6 +24,7 @@ css=["brandeis"]
 * [patient portal], [forms], [insurance]
 * [deis connect] --- application status
 * [academic calendar]
+* [student jobs] ([direct link][direct_jobs])
 
                |  
 ---------------|-------------------
@@ -72,3 +73,5 @@ css=["brandeis"]
 [dcl]: https://www.brandeis.edu/dcl/
 [bcc]: https://www.brandeis.edu/counseling/
 [academic calendar]: https://www.brandeis.edu/registrar/calendar/index.html
+[student jobs]: https://www.brandeis.edu/student-financial-services/employment/jobs/
+[direct_jobs]: https://careers.brandeis.edu/psc/CAREERS/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_CE.GBL
