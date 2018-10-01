@@ -73,6 +73,13 @@ Abuse][utx2]; The University of Texas at Austin
 > increases in mental health and psychiatric diagnoses,” according to the
 > resolution delegates adopted.
 
+[Mental Health and Self-Worth in Socially Transitioned Transgender Youth][jaacap]
+
+> This study examined self-reported depression, anxiety, and self-worth in
+> socially transitioned transgender children ... Compared with national
+> averages, [socially transitioned] transgender children showed typical rates
+> of depression (*p* = .290) and marginally higher rates of anxiety (*p* =
+> .096)
 
 # Articles
 
@@ -197,3 +204,4 @@ woman”][opiumhug] & related discussion.
 [end]: https://www.endocrine.org/news-room/current-press-releases/experts-issue-recommendations-for-gender-affirmation-treatment-for-transgender-individuals
 [apa]: https://www.psychiatry.org/patients-families/gender-dysphoria/expert-qa
 [ama]: https://wire.ama-assn.org/ama-news/ama-takes-several-actions-supporting-transgender-patients
+[jaacap]: https://www.jaacap.org/article/S0890-8567%2816%2931941-4/fulltext
