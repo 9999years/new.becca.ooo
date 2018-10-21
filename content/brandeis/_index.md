@@ -7,7 +7,7 @@ css=["brandeis"]
 * [latte] --- digital course-work
 * [sage] --- course management, finances, personal info, etc.
 * [BranVan schedules] --- [current bus locations via TransLōc][transloc] or w/
-  [an app]. [campus / waltham BranVan website][branvan]. make sure to get the
+  [an app]. [campus / waltham BranVan registrations][branvan]. make sure to get the
   right schedule for the current day of the week and time of day![^1]
 * [dining halls open now]
 * [WhoCash / meal swipe balance]
@@ -49,7 +49,7 @@ css=["brandeis"]
 [BranVan schedules]: http://www.brandeis.edu/publicsafety/van-shuttle/index.html
 [transloc]: https://brandeis.transloc.com/
 [an app]: http://translocrider.com/
-[branvan]: https://branvan.brandeis.edu/about.php
+[branvan]: https://www.brandeis.edu/publicsafety/van-shuttle/branvan-reservation.html
 [WhoCash / meal swipe balance]: https://get.cbord.com/whocash/full/login.php
 [dining halls open now]: https://brandeis.sodexomyway.com/dining-near-me/open-now
 [account management]: https://identity.brandeis.edu/identity-manage/
