@@ -33,7 +33,6 @@ flavors = [
 	"live and die by the command line",
 	"workers of the world, unite!",
 	"mood lighting aficionado",
-	"favorite album: <i>if you’re reading this it’s too late</i> (drake, 2015, cash money records)",
 	"extended becca-naur form",
 	"ebnf lover",
 	//"vim is good actually",
