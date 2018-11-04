@@ -6,10 +6,24 @@
 #photo   = "scd-4-gyuto"
 
 [[items]]
-name     = "Helping hand"
-price    = 7
-photo    = "helping-hand"
-url      = "https://www.amazon.com/Neiko-01902-Adjustable-Magnifying-Alligator/dp/B000P42O3C/"
+name     = "Ensso fountain pen"
+photo    = "ensso-pen"
+features = "brass, medium polished stainless steel nib"
+price    = 60
+url      = "https://www.ensso.com/collections/frontpage/products/xs-minimalist-pocket-fountain-pen-brass"
+
+[[items]]
+name     = "Computer mouse"
+features = "Razer Basilisk"
+price    = 60
+photo    = "razer-basilisk"
+url      = "https://www.amazon.com/dp/B0752VK4XV/"
+
+[[items]]
+name     = "Higonokami by Nagao Seisakusho"
+url      = "https://www.amazon.com/dp/B00EU8MLQY"
+price    = 25
+photo    = "nagao-higonokami"
 
 [[items]]
 name     = "Etymotic cable"
@@ -17,11 +31,11 @@ price    = 50
 photo    = "er4-cable"
 url      = "https://www.amazon.com/dp/B004I62GXQ/"
 
-[[items]]
-name     = "Wire stripper / cutters"
-price    = 14
-photo    = "irwin-strippers"
-url      = "https://www.amazon.com/dp/B000JNNWQ2/"
+#[[items]]
+#name     = "Wire stripper / cutters"
+#price    = 14
+#photo    = "irwin-strippers"
+#url      = "https://www.amazon.com/dp/B000JNNWQ2/"
 
 #[[items]]
 #name    = "Ankle socks"
@@ -42,19 +56,6 @@ features = "Stainless steel"
 price    = 63
 photo    = "tri-mini-falcon"
 url      = "https://flyaway-toys.myshopify.com/products/tri-mini-falcon-stainless"
-
-[[items]]
-name     = "Higonokami by Nagao Seisakusho"
-url      = "https://www.amazon.com/dp/B00EU8MLQY"
-price    = 25
-photo    = "nagao-higonokami"
-
-[[items]]
-name     = "Computer mouse"
-features = "Razer Basilisk"
-price    = 60
-photo    = "razer-basilisk"
-url      = "https://www.amazon.com/dp/B0752VK4XV/"
 
 [[items]]
 name     = "Objective 2 headphone amplifier"
@@ -122,3 +123,16 @@ features = "red / matte black"
 price    = 32
 url      = "https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black"
 photo    = "dsptch-strap"
+
+[[items]]
+name = "Etymotic earbud tips"
+photo = "etymotic-tips"
+price = 15
+url = "https://www.amazon.com/dp/B0078JXDQ4/"
+
+[[items]]
+name = "Fidget spinner"
+photo = "fidget-spinner"
+price = 17
+url = "https://www.amazon.com/dp/B0774RJFC6/"
+

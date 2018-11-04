@@ -79,19 +79,20 @@ Process {
 	If($base.Length -eq 0) {
 		throw "$ImageName not found!"
 	} else {
+		$directory = $base[0].Directory
 		$base = $base[0].BaseName
 	}
 	
 	$success = $True
 	$OutputScales | %{
 		$scale = $_
-		"    $($scale)x"
+		"`t${scale}x"
 		$borderColor = TopLeftColor $ImageName
 		If($borderColor.Length -eq 0) {
 			throw "Empty color!"
 		}
 		$size = NewSize ($Width * $scale)
-		$outName = "$base-$($scale)x.jpg"
+		$outName = "$directory/$base-${scale}x.jpg"
 		magick convert -trim -border ($BorderWidth * $scale) `
 			-bordercolor $borderColor `
 			-resize $size $ImageName $outName
