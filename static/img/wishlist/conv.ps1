@@ -86,17 +86,17 @@ Process {
 	$success = $True
 	$OutputScales | %{
 		$scale = $_
-		"`t${scale}x"
 		$borderColor = TopLeftColor $ImageName
 		If($borderColor.Length -eq 0) {
 			throw "Empty color!"
 		}
 		$size = NewSize ($Width * $scale)
 		$outName = "$directory/$base-${scale}x.jpg"
+		"`t${scale}x → $outName"
 		magick convert -trim -border ($BorderWidth * $scale) `
 			-bordercolor $borderColor `
 			-resize $size $ImageName $outName
-		$success = $success -and (Test-Path $outName)
+		$success = $? -and $success -and (Test-Path $outName)
 		If(!$success) {
 			throw "Converting $ImageName at $($scale)x failed!"
 		}
