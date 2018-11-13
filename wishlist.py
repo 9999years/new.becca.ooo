@@ -36,7 +36,7 @@ def wishlist(url):
     # name, photo
     title = soup.find('title')
     if title:
-        title = title.text
+        title = title.text.strip()
         ret['name'] = title
         ret['photo'] = slugify(title)
 

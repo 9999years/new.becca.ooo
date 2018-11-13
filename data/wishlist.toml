@@ -9,7 +9,7 @@
 name     = "Ensso fountain pen"
 photo    = "ensso-pen"
 features = "brass, medium polished stainless steel nib"
-price    = 60
+price    = 70
 url      = "https://www.ensso.com/collections/frontpage/products/xs-minimalist-pocket-fountain-pen-brass"
 
 [[items]]
@@ -18,6 +18,16 @@ features = "Razer Basilisk"
 price    = 60
 photo    = "razer-basilisk"
 url      = "https://www.amazon.com/dp/B0752VK4XV/"
+
+
+[[items]]
+name = "Dell XPS 13"
+features = "9370, UHD display"
+photo = "dell-xps-13"
+price = 1840
+url = "https://www.dell.com/en-us/shop/dell-laptops/xps-13/spd/xps-13-9370-laptop"
+
+
 
 [[items]]
 name     = "Higonokami by Nagao Seisakusho"
