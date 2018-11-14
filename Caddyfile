@@ -1,0 +1,9 @@
+becca.ooo {
+	root /var/www/becca.ooo/public
+	gzip
+	log stdout
+	errors stderr
+	git github.com/9999years/becca.ooo {
+		hook /URL PASSWORD
+	}
+}
