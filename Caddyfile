@@ -3,7 +3,7 @@ becca.ooo {
 	gzip
 	log stdout
 	errors stderr
-	git github.com/9999years/becca.ooo {
+	git github.com/9999years/becca.ooo ../ {
 		hook /URL PASSWORD
 	}
 }
