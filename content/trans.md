@@ -23,6 +23,12 @@ shit” studies that say “oh, it turns out using trans people’s chosen names
 good for their mental health” because **a trans person asking you should be
 enough.**
 
+I also want this page not to be a “101” of any sort --- although *linking* to
+one of those might not be a bad idea. “Don’t ask trans people about their
+genitals” et. al. are simple courtesy that I shouldn’t stoop to repeat here.
+This page is for a detailed discussion and deconstruction of how society
+relates to trans people, not a “how not to be a complete shithead” guide.
+
 Until this page is revised, the previous content will remain below.
 
 ---
