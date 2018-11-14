@@ -4,6 +4,29 @@ description="a list of scientific and community-driven affirmative resources on 
 # to read: https://www.scopus.com/results/citedbyresults.uri?sort=plf-f&cite=2-s2.0-84925127060&src=s&imp=t&sid=5a3534a64c82fb45fe5701d6b80d930b&sot=cite&sdt=a&sl=0&origin=inward&editSaveSearch=&txGid=8bf5c03752d1e9c1de21e60de0fd0bdc
 +++
 
+# A preface
+
+The content on this page reflects my previously-held desire to be seen as
+*scientifically valid* --- for cis people to see solid research stating I’m a
+real human deserving of human rights and recant their transphobic ways.
+
+But that’s not how transphobia works. Research doesn’t actually matter to
+someone who wants to see me suffer. It’s not a rational process. I will revise
+this page, hopefully, to include *primarily theoretical sources*, i.e. a range
+of perspectives from trans rage to trans joy, about the way trans people are
+treated and mistreated, about the ways trans people have found joy, love, and
+community even within societies that have cast us out, and so on.
+
+I want to fight the medicalization of transness, the idea that being trans is a
+medical condition, be it a “disorder” or not. I want to move away from “no
+shit” studies that say “oh, it turns out using trans people’s chosen names is
+good for their mental health” because **a trans person asking you should be
+enough.**
+
+Until this page is revised, the previous content will remain below.
+
+---
+
 This is a list of scientific studies and opinion pieces / anecdotes from trans
 people seeking to affirm several of my core beliefs — which are widely held
 within the trans community:
