@@ -15,7 +15,7 @@ Extensions to include in should-exist.txt
 Param(
 	$Hugo="hugo",
 	$Sass="sass",
-	$SassDir="assets/css",
+	$SassDir="assets/styles",
 	$CssDir="static/css",
 	$UseDiffArgs=("-d", "--color=always", "--ignore-all-space", "--strip-trailing-cr"),
 	$UseDiff="diff.exe", # lol

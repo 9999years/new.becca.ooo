@@ -1,11 +1,9 @@
 {{partial "header.html" .}}
 {{if not (.Param "no_default_includes")}}
-<style>
-{{readFile "/static/css/main.css" | safeCSS}}
-</style>
+	<link rel=stylesheet type=text/css href="/css/main.css">
 {{end}}
 {{range .Param "css"}}
-<link rel=stylesheet type=text/css href="{{printf "/css/%v.css" . | relURL}}">
+	<link rel=stylesheet type=text/css href="{{printf "/css/%v.css" . | relURL}}">
 {{end}}
 {{with .Param "onload"}}<body onload="{{. | safeJS}}">{{end}}
 <div id=container>
