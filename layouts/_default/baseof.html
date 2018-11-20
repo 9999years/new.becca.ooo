@@ -1,15 +1,15 @@
-{{block "title" .}}
-	{{if not (.Param "hide-title")}}
+{{block "title" . -}}
+	{{- if not (.Param "hide-title")}}
 		<h1><a href="/">rebecca turner</a></h1>
-	{{end}}
-{{end}}
-{{block "nav" .}}
-	{{if not (.Param "hide-nav")}}
-		<span class="sep">→</span> <nav>
+	{{- end -}}
+{{- end -}}
+{{- block "nav" . -}}
+	{{- if not (.Param "hide-nav") -}}
+		<span class="sep">→</span><nav>
 		{{- range $i, $link := .Site.Data.nav.links}}
 		{{- if $i}} | {{end -}}
 		<a href="{{with $link.url}}{{.}}{{else}}/{{$link.txt}}{{end}}">{{$link.txt}}</a>
 		{{end}}</nav>
 		<hr />
-	{{end}}
-{{end}}
+	{{- end -}}
+{{- end -}}

@@ -1,21 +1,21 @@
-{{partial "header.html" .}}
-{{if not (.Param "no_default_includes")}}
+{{- partial "header.html" . -}}
+{{- if not (.Param "no_default_includes") -}}
 	<link rel=stylesheet type=text/css href="/css/main.css">
-{{end}}
-{{range .Param "css"}}
+{{- end -}}
+{{- range .Param "css"}}
 	<link rel=stylesheet type=text/css href="{{printf "/css/%v.css" . | relURL}}">
-{{end}}
-{{with .Param "onload"}}<body onload="{{. | safeJS}}">{{end}}
+{{- end -}}
+{{- with .Param "onload"}}<body onload="{{. | safeJS}}">{{end -}}
 <div id=container>
 	<header>
-	{{template "title" .}}
-	{{template "nav" .}}
+	{{- template "title" . -}}
+	{{- template "nav" . -}}
 	</header>
-	{{if not (.Param "hide-body-copy-tag")}}
+	{{- if not (.Param "hide-body-copy-tag")}}
 		<main{{with .Param "body-copy-id"}} id="{{.}}"{{end -}}
 		{{- if or (.Param "body-copy-classes") (.Param "center")}} class="
 		{{- if .Param "center" -}}center {{end}}
 		{{- .Param "body-copy-classes"}}"{{end -}}
 		{{- with .Param "body-copy-style"}} style="{{.}}"{{end}}>
-	{{end}}
-	{{with .Title}}<h1 id="{{urlize .}}">{{.}}</h1>{{end}}
+	{{- end -}}
+	{{with .Title}}<h1 id="{{urlize .}}">{{.}}</h1>{{end -}}
