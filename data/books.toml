@@ -18,3 +18,27 @@ title = "A Philosophy of Software Design"
 year = 2018
 isbn = "978-1732102200"
 publisher = "Yaknam Press"
+
+[[books]]
+author = "Joan Nestle"
+title = "The Persistent Desire: A Femme-Butch Reader"
+year = 1992
+publisher = "Alyson Publications"
+isbn = "978-1555831905"
+pages = 502
+
+[[books]]
+author = "Lillian Faderman"
+title = "Odd Girls and Twilight Lovers: A History of Lesbian Life in Twentieth-Century America"
+year = 1991
+isbn = "0231074883"
+publisher = "Penguin Books"
+pages = 373
+
+[[books]]
+author = "Lily Burana, Roxxie, et. al."
+title = "Dagger: On Butch Women"
+year = 1994
+pages = 231
+publisher = "Cleis Press"
+isbn = "978-0939416820"

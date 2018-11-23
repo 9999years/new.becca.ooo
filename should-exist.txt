@@ -7,12 +7,15 @@ ascii/simple/index.html
 ascii/ascii.txt
 ascii/index.html
 ascii/simple.txt
+books/index.html
+brandeis/catalog-stats/index.html
 brandeis/index.html
 contact/index.html
 crytyper/index.html
 css/ascii/ascii.css
 css/ascii/common.css
 css/ascii/simple.css
+css/brandeis/catalog-stats.css
 css/unicode/tools.css
 css/unicode/unicode.css
 css/brandeis.css
@@ -21,6 +24,7 @@ css/crytyper.css
 css/landing.css
 css/main.css
 css/reel.css
+css/url-editor.css
 css/volume.css
 css/wishlist.css
 css/xmpp.css
@@ -55,6 +59,7 @@ js/volume.js
 landing/index.html
 mandelbrot/index.html
 mountain/index.html
+not/index.html
 projects/index.html
 reel/hq/index.html
 reel/index.html
@@ -69,6 +74,7 @@ unicode/hearts/index.html
 unicode/index/index.html
 unicode/random/index.html
 unicode/index.html
+url-editor/index.html
 wishlist/index.html
 xmpp/index.html
 bathtub.php
