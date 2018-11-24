@@ -1,6 +1,7 @@
 [[books]]
 title = "Refactoring: Improving the Design of Existing Code"
 author = "Martin Fowler"
+year = 1999
 isbn = "978-0134757599"
 publisher = "Addison-Wesley Professional"
 edition = 2

@@ -92,7 +92,7 @@ Process {
 		}
 		$size = NewSize ($Width * $scale)
 		$outName = "$directory/$base-${scale}x.jpg"
-		"`t${scale}x → $outName"
+		"`t${scale}x -> $outName"
 		magick convert -trim -border ($BorderWidth * $scale) `
 			-bordercolor $borderColor `
 			-resize $size $ImageName $outName

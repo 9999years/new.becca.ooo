@@ -19,7 +19,6 @@ price    = 60
 photo    = "razer-basilisk"
 url      = "https://www.amazon.com/dp/B0752VK4XV/"
 
-
 [[items]]
 name = "Dell XPS 13"
 features = "9370, UHD display"
@@ -27,7 +26,11 @@ photo = "dell-xps-13"
 price = 1840
 url = "https://www.dell.com/en-us/shop/dell-laptops/xps-13/spd/xps-13-9370-laptop"
 
-
+[[items]]
+name = "“All of my best work is under NDA” pin"
+photo = "nda-pin"
+price = 13
+url = "https://www.etsy.com/listing/599546834/nda-scroll-pin"
 
 [[items]]
 name     = "Higonokami by Nagao Seisakusho"
