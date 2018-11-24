@@ -78,14 +78,13 @@ Process {
 	$base = Get-ChildItem $ImageName
 	If($base.Length -eq 0) {
 		throw "$ImageName not found!"
-	} else {
+	} Else {
 		$directory = $base[0].Directory
 		$base = $base[0].BaseName
 	}
 	
 	$success = $True
-	$OutputScales | %{
-		$scale = $_
+	ForEach($scale in $OutputScales) {
 		$borderColor = TopLeftColor $ImageName
 		If($borderColor.Length -eq 0) {
 			throw "Empty color!"
