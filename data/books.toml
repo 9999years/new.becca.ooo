@@ -43,3 +43,18 @@ year = 1994
 pages = 231
 publisher = "Cleis Press"
 isbn = "978-0939416820"
+
+[[books]]
+title = "Girls Guide to Taking Over the World: Writings From The Girl Zine Revolution"
+author = "Karen Green & Tristan Taormino"
+year = 1997
+pages = 240
+isbn = "978-0312155353"
+
+[[books]]
+title     = "Super Late Bloomer: My Early Days in Transition"
+author    = "Julia Kaye"
+year      = 2018
+pages     = 160
+publisher = "Andrews McMeel"
+isbn      = "978-1449489625"
