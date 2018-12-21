@@ -13,6 +13,11 @@ price    = 70
 url      = "https://www.ensso.com/collections/frontpage/products/xs-minimalist-pocket-fountain-pen-brass"
 
 [[items]]
+name = "Computer keyboard"
+price = 150
+url = "/keyboards"
+
+[[items]]
 name     = "Computer mouse"
 features = "Razer Basilisk"
 price    = 60

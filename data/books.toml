@@ -58,3 +58,11 @@ year      = 2018
 pages     = 160
 publisher = "Andrews McMeel"
 isbn      = "978-1449489625"
+
+[[books]]
+title = "The Humane Interface: New Directions for Designing Interactive Systems"
+author = "Jef Raskin"
+pages = 233
+isbn = "978-0201379372"
+year = 2000
+publisher = "Addison-Wesley"

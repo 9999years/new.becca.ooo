@@ -1,0 +1,34 @@
+# see also: https://www.reddit.com/r/MechanicalKeyboards/wiki/compact_keyboards/65
+# https://www.reddit.com/r/MechanicalKeyboards/wiki/ergonomic_keyboards
+
+[[keyboards]]
+name = "Leopold FC660M PD"
+price = 110
+url = "https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3548"
+
+[[keyboards]]
+name = "Massdrop ALT"
+price = 180
+url = "https://www.massdrop.com/buy/massdrop-alt-mechanical-keyboard"
+
+[[keyboards]]
+name = "Whitefox"
+price = 170
+url = "https://kono.store/products/whitefox-mechanical-keyboard"
+
+[[keyboards]]
+name = "Z70"
+features = "ANSI w/ 2.0 / 2.25"
+price = 180
+url = "https://kono.store/products/z70-pro-65-rgb-mechanical-keyboard?variant=6142838374432"
+
+[[keyboards]]
+name = "Varmillo VR68M"
+price = 190
+url = "https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3897"
+
+[[keyboards]]
+name = "Vortex Cypher"
+price = 95
+features = "split spacebar"
+url = "https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=4165"

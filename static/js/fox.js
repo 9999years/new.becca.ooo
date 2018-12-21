@@ -1,102 +1,3 @@
-<!DOCTYPE html>
-<title>THE FOX</title>
-<style>
-body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-body, input {
-	color: #ddd;
-	background-color: #001;
-	font-family: "Segoe UI", -apple-system, "Helvetica", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Sans",  "FreeSans", "Code2001", "Code2000", "DejaVu Sans",  sans-serif;
-	font-size: 16px;
-}
-
-.leftColumn {
-	float: left;
-	width: 400px
-}
-
-.rightColumn {
-	float: right
-}
-
-canvas {
-	display: block;
-}
-
-.inner {
-	display: inline-block
-}
-
-.sliderRow {
-	margin-bottom: 5px;
-	display:flex;
-	justify-content:space-between;
-}
-
-.sliderRow > div {
-	flex-grow:2;
-}
-
-.sliderRow > input[type=number] {
-	flex-grow:1;
-	max-width: 50px;
-	margin-right: 5px;
-}
-
-.sliderRow > input[type=range] {
-	flex-grow:3;
-}
-
-div.button {
-	user-select: none;
-}
-
-.label {
-	position: relative;
-	top: 6px
-}
-
-input {
-	display: inline-block;
-	border: 0;
-}
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-/*var animalSeeds = {
-hare:{
-startingHP:10,
-maxHP:20,
-reproductionRate:100,
-defense:0,
-digestionRate:2,
-camoflage:2,
-eatAmount:35,
-damage:1,
-speed:1,
-lifespan:50,
-vore:"herb",
-color:"0"
-},
-fox:{
-startingHP:100,
-maxHP:250,
-reproductionRate:20,
-defense:2,
-digestionRate:1,
-camoflage:1,
-eatAmount:25,
-damage:10,
-speed:3,
-lifespan:200,
-vore:"carne",
-color:"180"
-}
-};*/
 var stepTimer;
 var secondsTimer;
 var seconds = 0;
@@ -128,7 +29,7 @@ function minMax(a, b) {
 
 var animalSettings = {
 	hp:               minMax(0, 100),
-	maxHP:           minMax(50, 200),
+	maxHP:            minMax(50, 200),
 	lifespan:         minMax(0, 200),
 	speed:            minMax(1, 3),
 	reproductionRate: minMax(1, 100),
@@ -139,7 +40,7 @@ var animalSettings = {
 	attack:           minMax(0, 100)
 };
 
-function $(id) { return document.getElementById(id); }
+let $ = id => document.getElementById(id)
 
 function makeAnimal(x, y, hp, maxHP, lifespan, speed, reproductionRate, defense, digestionRate, vore, camoflage, eatAmount, damage, color, type) {
 	animalCount++;
@@ -195,7 +96,8 @@ function makeAnimal(x, y, hp, maxHP, lifespan, speed, reproductionRate, defense,
 		attack: attack
 	};
 }
-var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+let hasOwnProperty = Object.prototype.hasOwnProperty;
 
 function isEmpty(obj) {
 	// null and undefined are "empty"
@@ -212,23 +114,24 @@ function isEmpty(obj) {
 	}
 	return true;
 }
+
 function randomBase() {
 	var x = Math.sin(seed++) * 10000;
 	return x - Math.floor(x);
 }
 
-function random(min, max) //inclusive
-{
+// returns integer, inclusive
+function random(min, max) {
 	return Math.floor((randomBase() * (max - min + 1)) + min);
 }
 
 function randomFloat(min, max) {
-
-	return ((randomBase() * (max - min + 1)) + min);
+	return (randomBase() * (max - min + 1)) + min;
 }
 
+// random sign (i.e. 1 or -1)
 function randompm() {
-	return random(0,1) ? 1 : -1;
+	return random(0, 1) ? 1 : -1;
 }
 
 function atPoint(x, y, exclude, vore) {
@@ -241,9 +144,8 @@ function atPoint(x, y, exclude, vore) {
 	return result;
 }
 
-function scale(num,minIn,maxIn,minOut,maxOut) {
-	return ((num-minIn)/(maxIn-minIn))*(maxOut-minOut)+minOut;
-	//help
+function scale(num, minIn, maxIn, minOut, maxOut) {
+	return ((num - minIn) / (maxIn - minIn)) * (maxOut - minOut) + minOut;
 }
 
 function pad(n, width, z) {
@@ -287,7 +189,6 @@ function reproduce() {
 	});
 	this.sinceReproduced = 0;
 	animals.push(makeAnimal(this.x, this.y, this.hp * 0.5, this.maxHP, this.lifespan, this.speed, this.reproductionRate, this.defense, this.digestionRate, this.vore, this.camoflage, this.eatAmount, this.damage, this.color, this.type));
-	//(x, y, hp, maxHP, lifespan, speed, reproductionRate, defense, digestionRate, vore, camoflage, eatAmount, damage)
 	this.hp -= this.hp * 0.5; //lose half health
 }
 
@@ -781,474 +682,3 @@ function initalize() {
 	updateTime();
 	step();
 }
-</script>
-<div class="leftColumn">
-	<div class="sliderRow">
-		<div class="label">cells:</div>
-		<input type="number" value="50" step="1" id="worldSize"/>
-		<input type="range" step="1" min="5" value="50" max="150" id="worldSizeRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">grass grow speed:</div>
-		<input type="number" value="0.1" step="0.05" min="0" id="grow"/>
-		<input type="range" step="0.02" min="0.01" value="0.1" max="1" id="growRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">starting species:</div>
-		<input type="number" value="3" step="1" min="1" id="animalsNumber"/>
-		<input type="range" step="1" min="1" value="3" max="200" id="animalsNumberRange"/>
-	</div>
-
-
-	<div class="sliderRow">
-		<div class="label">hp (min):</div>
-		<input type="number" value="0" step="1" min="0" id="hpMinNumber"/>
-		<input type="range" step="1" min="0" max="150" value="0" id="hpMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">hp (max):</div>
-		<input type="number" value="100" step="1" min="0" id="hpMaxNumber"/>
-		<input type="range" step="1" min="0" max="150" value="100" id="hpMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">max hp (min):</div>
-		<input type="number" value="50" step="1" min="0" id="maxHPMinNumber"/>
-		<input type="range" step="1" min="0" max="250" value="50" id="maxHPMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">max hp (max):</div>
-		<input type="number" value="200" step="1" min="0" id="maxHPMaxNumber"/>
-		<input type="range" step="1" min="0" max="250" value="200" id="maxHPMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">lifespan (min):</div>
-		<input type="number" value="0" step="1" min="0" id="lifespanMinNumber"/>
-		<input type="range" step="1" min="0" max="300" value="0" id="lifespanMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">lifespan (max):</div>
-		<input type="number" value="200" step="1" min="0" id="lifespanMaxNumber"/>
-		<input type="range" step="1" min="0" max="300" value="200" id="lifespanMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">speed (min):</div>
-		<input type="number" value="1" step="1" min="0" id="speedMinNumber"/>
-		<input type="range" step="1" min="1" max="20" value="1" id="speedMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">speed (max):</div>
-		<input type="number" value="3" step="1" min="0" id="speedMaxNumber"/>
-		<input type="range" step="1" min="0" max="20" value="3" id="speedMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">reproduction rate (min):</div>
-		<input type="number" value="1" step="1" min="0" id="reproductionRateMinNumber"/>
-		<input type="range" step="1" min="0" max="150" value="1" id="reproductionRateMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">reproduction rate (max):</div>
-		<input type="number" value="100" step="1" min="0" id="reproductionRateMaxNumber"/>
-		<input type="range" step="1" min="0" max="150" value="100" id="reproductionRateMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">defense (min):</div>
-		<input type="number" value="0" step="1" min="0" id="defenseMinNumber"/>
-		<input type="range" step="1" min="0" max="50" value="0" id="defenseMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">defense (max):</div>
-		<input type="number" value="20" step="1" min="0" id="defenseMaxNumber"/>
-		<input type="range" step="1" min="0" max="50" value="20" id="defenseMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">digestion rate (min):</div>
-		<input type="number" value="0" step="0.1" min="0" id="digestionRateMinNumber"/>
-		<input type="range" step="0.01" min="0" max="10" value="0" id="digestionRateMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">digestion rate (max):</div>
-		<input type="number" value="2" step="0.1" min="0" id="digestionRateMaxNumber"/>
-		<input type="range" step="0.01" min="0" max="10" value="2" id="digestionRateMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">camoflage (min):</div>
-		<input type="number" value="0" step="1" min="0" id="camoflageMinNumber"/>
-		<input type="range" step="1" min="0" max="20" value="0" id="camoflageMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">camoflage (max):</div>
-		<input type="number" value="10" step="1" min="0" id="camoflageMaxNumber"/>
-		<input type="range" step="1" min="0" max="20" value="10" id="camoflageMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">hunger (min):</div>
-		<input type="number" value="20" step="1" min="0" id="eatAmountMinNumber"/>
-		<input type="range" step="1" min="1" max="200" value="20" id="eatAmountMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">hunger (max):</div>
-		<input type="number" value="100" step="1" min="0" id="eatAmountMaxNumber"/>
-		<input type="range" step="1" min="1" max="200" value="100" id="eatAmountMaxNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">attack (min):</div>
-		<input type="number" value="0" step="1" min="0" id="attackMinNumber"/>
-		<input type="range" step="1" min="0" max="300" value="0" id="attackMinNumberRange"/>
-	</div>
-	<div class="sliderRow">
-		<div class="label">attack (max):</div>
-		<input type="number" value="100" step="1" min="0" id="attackMaxNumber"/>
-		<input type="range" step="1" min="0" max="300" value="100" id="attackMaxNumberRange"/>
-	</div>
-
-	<div class="sliderRow">
-		<button id="reset">
-			reset
-		</button>
-		<button id="startStop">
-			stop
-		</button>
-		<button id="fps">
-			fps
-		</button>
-	</div>
-	<div class="row">
-	</div>
-</div>
-<div class="rightColumn">
-	<canvas height="600px" width="600px" id="output"></canvas>
-	<canvas height="200px" width="600px" id="populationGraph"></canvas>
-	<div class="row">
-		<canvas height="600px" width="300px" id="statsGraph"></canvas>
-		<div>time: <span id="stepsCountOutput">0</span></div>
-		<b>extinct:</b>
-		<div id="extinctionsList"></div>
-	</div>
-</div>
-<script>
-var start = true;
-
-function toggleStartStop() {
-	if(start) {
-		clearTimeout(stepTimer);
-		clearTimeout(secondsTimer);
-		start = false;
-		$("startStop").innerHTML = "start";
-	} else {
-		step();
-		updateTime();
-		$("startStop").innerHTML = "stop";
-		start = true;
-	}
-}
-
-$("reset").onclick = e => {
-	initalize();
-};
-
-$("startStop").onclick = e => {
-	toggleStartStop();
-};
-
-$("fps").onclick = e => {
-	if(FPS == 60) {
-		FPS = 6;
-	} else {
-		FPS = 60;
-	}
-};
-
-$("grow").onchange = $("grow").oninput = e => {
-	$('growRange').value = (e.target.value);
-	growAmount = parseFloat(e.target.value);
-};
-
-$("growRange").onchange = $("growRange").oninput = e => {
-	$('grow').value = e.target.value;
-	growAmount = parseFloat(e.target.value);
-};
-
-$("animalsNumber").onchange = $("animalsNumber").oninput = e => {
-	$('animalsNumberRange').value = (e.target.value);
-	numAnimals = parseFloat(e.target.value);
-	initalize();
-};
-
-$("animalsNumberRange").onchange = $("animalsNumberRange").oninput = e => {
-	$('animalsNumber').value = (e.target.value);
-	numAnimals = parseFloat(e.target.value);
-	initalize();
-};
-
-$("worldSize").onchange = $("worldSize").oninput = e => {
-	$('worldSizeRange').value = (e.target.value);
-	worldWidth = parseFloat(e.target.value);
-	worldHeight = worldWidth;
-	initalize();
-};
-
-$("worldSizeRange").onchange = $("worldSizeRange").oninput = e => {
-	$('worldSize').value = (e.target.value);
-	worldWidth = parseFloat(e.target.value);
-	worldHeight = worldWidth;
-	initalize();
-};
-
-//min ranges
-
-$("hpMinNumberRange").onchange = $("hpMinNumberRange").oninput = e => {
-	$("hpMinNumber").value = e.target.value;
-	animalSettings.hp.min = +e.target.value;
-	initalize();
-};
-
-$("maxHPMinNumberRange").onchange = $("maxHPMinNumberRange").oninput = e => {
-	$("maxHPMinNumber").value = e.target.value;
-	animalSettings.maxHP.min = +e.target.value;
-	initalize();
-};
-
-$("lifespanMinNumberRange").onchange = $("lifespanMinNumberRange").oninput = e => {
-	$("lifespanMinNumber").value = e.target.value;
-	animalSettings.lifespan.min = +e.target.value;
-	initalize();
-};
-
-$("speedMinNumberRange").onchange = $("speedMinNumberRange").oninput = e => {
-	$("speedMinNumber").value = e.target.value;
-	animalSettings.speed.min = +e.target.value;
-	initalize();
-};
-
-$("reproductionRateMinNumberRange").onchange = $("reproductionRateMinNumberRange").oninput = e => {
-	$("reproductionRateMinNumber").value = e.target.value;
-	animalSettings.reproductionRate.min = +e.target.value;
-	initalize();
-};
-
-$("defenseMinNumberRange").onchange = $("defenseMinNumberRange").oninput = e => {
-	$("defenseMinNumber").value = e.target.value;
-	animalSettings.defense.min = +e.target.value;
-	initalize();
-};
-
-$("digestionRateMinNumberRange").onchange = $("digestionRateMinNumberRange").oninput = e => {
-	$("digestionRateMinNumber").value = e.target.value;
-	animalSettings.digestionRate.min = +e.target.value;
-	initalize();
-};
-
-$("camoflageMinNumberRange").onchange = $("camoflageMinNumberRange").oninput = e => {
-	$("camoflageMinNumber").value = e.target.value;
-	animalSettings.camoflage.min = +e.target.value;
-	initalize();
-};
-
-$("eatAmountMinNumberRange").onchange = $("eatAmountMinNumberRange").oninput = e => {
-	$("eatAmountMinNumber").value = e.target.value;
-	animalSettings.eatAmount.min = +e.target.value;
-	initalize();
-};
-
-$("attackMinNumberRange").onchange = $("attackMinNumberRange").oninput = e => {
-	$("attackMinNumber").value = e.target.value;
-	animalSettings.attack.min = +e.target.value;
-	initalize();
-};
-
-//max ranges
-
-$("hpMaxNumberRange").onchange = $("hpMaxNumberRange").oninput = e => {
-	$("hpMaxNumber").value = e.target.value;
-	animalSettings.hp.max = +e.target.value;
-	initalize();
-};
-
-$("maxHPMaxNumberRange").onchange = $("maxHPMaxNumberRange").oninput = e => {
-	$("maxHPMaxNumber").value = e.target.value;
-	animalSettings.maxHP.max = +e.target.value;
-	initalize();
-};
-
-$("lifespanMaxNumberRange").onchange = $("lifespanMaxNumberRange").oninput = e => {
-	$("lifespanMaxNumber").value = e.target.value;
-	animalSettings.lifespan.max = +e.target.value;
-	initalize();
-};
-
-$("speedMaxNumberRange").onchange = $("speedMaxNumberRange").oninput = e => {
-	$("speedMaxNumber").value = e.target.value;
-	animalSettings.speed.max = +e.target.value;
-	initalize();
-};
-
-$("reproductionRateMaxNumberRange").onchange = $("reproductionRateMaxNumberRange").oninput = e => {
-	$("reproductionRateMaxNumber").value = e.target.value;
-	animalSettings.reproductionRate.max = +e.target.value;
-	initalize();
-};
-
-$("defenseMaxNumberRange").onchange = $("defenseMaxNumberRange").oninput = e => {
-	$("defenseMaxNumber").value = e.target.value;
-	animalSettings.defense.max = +e.target.value;
-	initalize();
-};
-
-$("digestionRateMaxNumberRange").onchange = $("digestionRateMaxNumberRange").oninput = e => {
-	$("digestionRateMaxNumber").value = e.target.value;
-	animalSettings.digestionRate.max = +e.target.value;
-	initalize();
-};
-
-$("camoflageMaxNumberRange").onchange = $("camoflageMaxNumberRange").oninput = e => {
-	$("camoflageMaxNumber").value = e.target.value;
-	animalSettings.camoflage.max = +e.target.value;
-	initalize();
-};
-
-$("eatAmountMaxNumberRange").onchange = $("eatAmountMaxNumberRange").oninput = e => {
-	$("eatAmountMaxNumber").value = e.target.value;
-	animalSettings.eatAmount.max = +e.target.value;
-	initalize();
-};
-
-$("attackMaxNumberRange").onchange = $("attackMaxNumberRange").oninput = e => {
-	$("attackMaxNumber").value = e.target.value;
-	animalSettings.attack.max = +e.target.value;
-	initalize();
-};
-
-//values
-
-//min values
-
-$("hpMinNumber").onchange = $("hpMinNumber").oninput = e => {
-	$("hpMinNumberRange").value = e.target.value;
-	animalSettings.hp.min = +e.target.value;
-	initalize();
-};
-
-$("maxHPMinNumber").onchange = $("maxHPMinNumber").oninput = e => {
-	$("maxHPMinNumberRange").value = e.target.value;
-	animalSettings.maxHP.min = +e.target.value;
-	initalize();
-};
-
-$("lifespanMinNumber").onchange = $("lifespanMinNumber").oninput = e => {
-	$("lifespanMinNumberRange").value = e.target.value;
-	animalSettings.lifespan.min = +e.target.value;
-	initalize();
-};
-
-$("speedMinNumber").onchange = $("speedMinNumber").oninput = e => {
-	$("speedMinNumberRange").value = e.target.value;
-	animalSettings.speed.min = +e.target.value;
-	initalize();
-};
-
-$("reproductionRateMinNumber").onchange = $("reproductionRateMinNumber").oninput = e => {
-	$("reproductionRateMinNumberRange").value = e.target.value;
-	animalSettings.reproductionRate.min = +e.target.value;
-	initalize();
-};
-
-$("defenseMinNumber").onchange = $("defenseMinNumber").oninput = e => {
-	$("defenseMinNumberRange").value = e.target.value;
-	animalSettings.defense.min = +e.target.value;
-	initalize();
-};
-
-$("digestionRateMinNumber").onchange = $("digestionRateMinNumber").oninput = e => {
-	$("digestionRateMinNumberRange").value = e.target.value;
-	animalSettings.digestionRate.min = +e.target.value;
-	initalize();
-};
-
-$("camoflageMinNumber").onchange = $("camoflageMinNumber").oninput = e => {
-	$("camoflageMinNumberRange").value = e.target.value;
-	animalSettings.camoflage.min = +e.target.value;
-	initalize();
-};
-
-$("eatAmountMinNumber").onchange = $("eatAmountMinNumber").oninput = e => {
-	$("eatAmountMinNumberRange").value = e.target.value;
-	animalSettings.eatAmount.min = +e.target.value;
-	initalize();
-};
-
-$("attackMinNumber").onchange = $("attackMinNumber").oninput = e => {
-	$("attackMinNumberRange").value = e.target.value;
-	animalSettings.attack.min = +e.target.value;
-	initalize();
-};
-
-//max values
-
-$("hpMaxNumber").onchange = $("hpMaxNumber").oninput = e => {
-	$("hpMaxNumberRange").value = e.target.value;
-	animalSettings.hp.max = +e.target.value;
-	initalize();
-};
-
-$("maxHPMaxNumber").onchange = $("maxHPMaxNumber").oninput = e => {
-	$("maxHPMaxNumberRange").value = e.target.value;
-	animalSettings.maxHP.max = +e.target.value;
-	initalize();
-};
-
-$("lifespanMaxNumber").onchange = $("lifespanMaxNumber").oninput = e => {
-	$("lifespanMaxNumberRange").value = e.target.value;
-	animalSettings.lifespan.max = +e.target.value;
-	initalize();
-};
-
-$("speedMaxNumber").onchange = $("speedMaxNumber").oninput = e => {
-	$("speedMaxNumberRange").value = e.target.value;
-	animalSettings.speed.max = +e.target.value;
-	initalize();
-};
-
-$("reproductionRateMaxNumber").onchange = $("reproductionRateMaxNumber").oninput = e => {
-	$("reproductionRateMaxNumberRange").value = e.target.value;
-	animalSettings.reproductionRate.max = +e.target.value;
-	initalize();
-};
-
-$("defenseMaxNumber").onchange = $("defenseMaxNumber").oninput = e => {
-	$("defenseMaxNumberRange").value = e.target.value;
-	animalSettings.defense.max = +e.target.value;
-	initalize();
-};
-
-$("digestionRateMaxNumber").onchange = $("digestionRateMaxNumber").oninput = e => {
-	$("digestionRateMaxNumberRange").value = e.target.value;
-	animalSettings.digestionRate.max = +e.target.value;
-	initalize();
-};
-
-$("camoflageMaxNumber").onchange = $("camoflageMaxNumber").oninput = e => {
-	$("camoflageMaxNumberRange").value = e.target.value;
-	animalSettings.camoflage.max = +e.target.value;
-	initalize();
-};
-
-$("eatAmountMaxNumber").onchange = $("eatAmountMaxNumber").oninput = e => {
-	$("eatAmountMaxNumberRange").value = e.target.value;
-	animalSettings.eatAmount.max = +e.target.value;
-	initalize();
-};
-
-$("attackMaxNumber").onchange = $("attackMaxNumber").oninput = e => {
-	$("attackMaxNumberRange").value = e.target.value;
-	animalSettings.attack.max = +e.target.value;
-	initalize();
-};
-
-worldCanvas = $("output");
-worldContext = worldCanvas.getContext("2d");
-statsCanvas = $("statsGraph");
-statsContext = statsCanvas.getContext("2d");
-graphCanvas = $("populationGraph");
-graphContext = graphCanvas.getContext("2d");
-initalize();
-</script>
