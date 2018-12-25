@@ -66,3 +66,43 @@ pages = 233
 isbn = "978-0201379372"
 year = 2000
 publisher = "Addison-Wesley"
+
+
+[[books]]
+author = "Tillie Walden"
+title = "On a Sunbeam"
+year = 2018
+isbn = "978-1250178138"
+publisher = "First Second"
+pages = 544
+
+[[books]]
+author = "China Miéville"
+title = "The City & The City"
+year = 2010
+publisher = "Del Rey"
+isbn = "978-0345497529"
+pages = 336
+
+[[books]]
+author = "Alison Bechdel"
+title = "Are You My Mother?: A Comic Drama"
+year = 2013
+pages = 304
+publisher = "Mariner Books"
+isbn = "978-0544002234"
+
+[[books]]
+author = "Edward M. Hallowell and John J. Ratey"
+title = "Driven to Distraction"
+year = 1995
+pages = 319
+isbn = "978-0684801285"
+
+[[books]]
+title = "Adult Children of Emotionally Immature Parents"
+author = "Lindsay C. Gibson"
+isbn = "978-1626251700"
+year = 2015
+pages = 216
+publisher = "New Harbinger Publications"

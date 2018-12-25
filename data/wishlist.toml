@@ -6,23 +6,9 @@
 #photo   = "scd-4-gyuto"
 
 [[items]]
-name     = "Ensso fountain pen"
-photo    = "ensso-pen"
-features = "brass, medium polished stainless steel nib"
-price    = 70
-url      = "https://www.ensso.com/collections/frontpage/products/xs-minimalist-pocket-fountain-pen-brass"
-
-[[items]]
 name = "Computer keyboard"
 price = 150
 url = "/keyboards"
-
-[[items]]
-name     = "Computer mouse"
-features = "Razer Basilisk"
-price    = 60
-photo    = "razer-basilisk"
-url      = "https://www.amazon.com/dp/B0752VK4XV/"
 
 [[items]]
 name = "Dell XPS 13"
@@ -43,23 +29,17 @@ url      = "https://www.amazon.com/dp/B00EU8MLQY"
 price    = 25
 photo    = "nagao-higonokami"
 
-[[items]]
-name     = "Etymotic cable"
-price    = 50
-photo    = "er4-cable"
-url      = "https://www.amazon.com/dp/B004I62GXQ/"
-
 #[[items]]
 #name     = "Wire stripper / cutters"
 #price    = 14
 #photo    = "irwin-strippers"
 #url      = "https://www.amazon.com/dp/B000JNNWQ2/"
 
-#[[items]]
-#name    = "Ankle socks"
-#price   = "6–10"
-#photo   = "ankle-socks"
-#url     = "http://www.gap.com/products/mens-ankle-socks.jsp"
+[[items]]
+name    = "Ankle socks"
+price   = "6–10"
+photo   = "ankle-socks"
+url     = "http://www.gap.com/products/mens-ankle-socks.jsp"
 
 [[items]]
 name     = "Balisong"
@@ -81,13 +61,6 @@ features = "rear power jack"
 price    = 100
 url      = "https://www.jdslabs.com/products/167/objective2-headphone-amplifier-b-stock/"
 photo    = "jds-objective2"
-
-[[items]]
-name     = "Soldering station"
-features = "Hakko FX888D"
-price    = 96
-photo    = "hakko-fx888d"
-url      = "https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M"
 
 #[[items]]
 #name    = "Unicorn jacket"
@@ -153,4 +126,3 @@ name = "Fidget spinner"
 photo = "fidget-spinner"
 price = 17
 url = "https://www.amazon.com/dp/B0774RJFC6/"
-
