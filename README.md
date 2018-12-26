@@ -4,32 +4,13 @@
 
 This is the source code for my personal website, [becca.ooo]. It’s been newly
 (April 2018) converted to a [SASS] / [Hugo] / [Markdown][bf] stack (with my
-server running [Caddy] and, regrettably, PHP 7 — hopefully PHP will be phased
-out in the near future, but that requires reading / translating very old very
-gross code as well as setting up a Ruby or Python fast CGI proxy and that’s just
-a big hassle).  There’s also some Javascript — for the flavor text on the
-[homepage][becca.ooo] as well as for the interactive web-app style things (see
-the [projects] page for examples / details). As a general rule, Javascript is a
-last-resort — it’s as minimal as possible and only used where strictly needed.
+server running [Caddy].  There’s also some Javascript — for the flavor text on
+the [homepage][becca.ooo] as well as for the interactive web-app style things
+(see the [projects] page for examples / details). As a general rule, Javascript
+is a last-resort — it’s as minimal as possible and only used where strictly
+needed.
 
-## Ideology
-
-As much as any action is political, my website is a political act — with it, I
-condemn massive pages and the blight of Javascript on the modern web. I recently
-attempted to navigate Nike’s mobile website and there was so much code running
-to enable swipe-driven interfaces that the whole website took about half of a
-second to respond to any sort of touch, which ironically completely negated all
-the cool intuitiveness they were aiming for with their gesture-based UI
-(additionally, swiping through often conflicted with my browser’s forward /
-backward swipe gestures). It was horrible, and *preventably* horrible: the pages
-were a straight grid of images. Even accounting for code to enable tap-based
-navigation through image galleries, the page weight was absolutely
-disproportionate and it made using the website miserable. Also, this is a great
-example of why the “seamless” autoloading gallery was a bad idea: every time a
-new batch of images were inserted into the page, my browser would slow down at
-all the data, unable to garbage collect the page’s images. It makes saving your
-place hard *and* it’s the reason the Tumblr app consistently crashes with OOM
-errors.
+## Goals
 
 I don’t like a lot of modern web development; I think it’s too hefty and too
 complicated. Simple is better. Who needs AMP or Node or anything?  Open a news
@@ -46,27 +27,17 @@ My goals with my website are:
    Utilise them!
 3. Centralize my contact and personal information
 
-I’m pretty proud that [becca.ooo] loads in three requests at about 6 KB, which
+I’m pretty proud that [becca.ooo] loads in 6 requests at about 5 KB, which
 is about 1/300th the size and 3/100ths the requests of [the average page] (in
 2018; 2MB & 100 req.s). All the content pages will load in a maximum of four
 requests, most in two or three:
-
-1. Main page HTML
-2. (Possibly) a favicon (see below)
-3. Main CSS
-4. (Possibly) auxiliary page-specific CSS
-
-The favicon is only loaded if a bigger image than the inlined 404-byte 32×32 PNG
-is required, and I’ll probably inline the SVG version once SVG favicons become
-[more widely supported][svg favicon support]. Caching essentially eliminates the
-favicon and CSS after the first load, too.
 
 The content pages are mostly CSS (about half, by weight). That’s something to
 work on! A fair amount of even `main.css` is pretty niche; there’s support for
 justified text, block quotes, lists, and screens below 380px wide. (That’s
 certainly an extreme — desktop Tumblr can’t handle a window less than 1000px
-wide. Sucks for you if you wanted to, I don’t know, browse Tumblr on *half* of a
-1080p monitor and do something else like uh, talk to a friend on the other
+wide. Sucks for you if you wanted to, I don’t know, browse Tumblr on *half* of
+a 1080p monitor and do something else like uh, talk to a friend on the other
 half.)
 
 ## The scripts
@@ -77,10 +48,10 @@ exist, a message is printed to STDERR. At the end, the number of not-found files
 is printed. (`should-exist.txt` is a list of files that *should* exist in a
 proper build.) This is all part of the Travis integration.
 
-`post-merge.sh` builds the site normally; it’s meant to be a Git hook. Create it
-with something like `ln .git/hooks/post-merge post-merge.sh`, but I forget if
-that’ll actually work or not. You’ll also need to `chmod +x` the thing. Either
-the link or the executable. I don’t remember.
+`post-merge.sh` builds the site normally; it’s meant to be a Git hook. Create
+it with something like `echo "../../post-merge.sh" >> .git/hooks/post-merge`,
+but I forget if that’ll actually work or not. You’ll also need to `chmod +x
+./post-merge.sh`.
 
 `dev.ps1 [-Build|-Install|-Diagnostic|-DiffShouldExist|-GenerateShouldExist]`
 performs several tasks.
