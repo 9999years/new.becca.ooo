@@ -4,7 +4,7 @@
 
 This is the source code for my personal website, [becca.ooo]. It’s been newly
 (April 2018) converted to a [SASS] / [Hugo] / [Markdown][bf] stack (with my
-server running [Caddy].  There’s also some Javascript — for the flavor text on
+server running [Caddy]).  There’s also some Javascript — for the flavor text on
 the [homepage][becca.ooo] as well as for the interactive web-app style things
 (see the [projects] page for examples / details). As a general rule, Javascript
 is a last-resort — it’s as minimal as possible and only used where strictly
@@ -49,7 +49,7 @@ is printed. (`should-exist.txt` is a list of files that *should* exist in a
 proper build.) This is all part of the Travis integration.
 
 `post-merge.sh` builds the site normally; it’s meant to be a Git hook. Create
-it with something like `echo "../../post-merge.sh" >> .git/hooks/post-merge`,
+it with something like `echo "./post-merge.sh" >> .git/hooks/post-merge`,
 but I forget if that’ll actually work or not. You’ll also need to `chmod +x
 ./post-merge.sh`.
 
