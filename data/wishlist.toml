@@ -6,9 +6,10 @@
 #photo   = "scd-4-gyuto"
 
 [[items]]
-name = "Computer keyboard"
+name = "Iris keyboard"
 price = 150
-url = "/keyboards"
+url = "https://docs.google.com/spreadsheets/d/1BTCjK-YIaKvWdn8uZ0-gypaR-piBfyqfORBFauyLO1s/edit?usp=sharing"
+photo = "iris-keyboard"
 
 [[items]]
 name = "Dell XPS 13"
@@ -18,10 +19,11 @@ price = 1840
 url = "https://www.dell.com/en-us/shop/dell-laptops/xps-13/spd/xps-13-9370-laptop"
 
 [[items]]
-name = "“All of my best work is under NDA” pin"
-photo = "nda-pin"
-price = 13
-url = "https://www.etsy.com/listing/599546834/nda-scroll-pin"
+name = "Fountain pen ink"
+features = "bright colors"
+price = 15
+url = "https://www.gouletpens.com/collections/bottled-ink"
+photo = "fountain-pen-ink"
 
 [[items]]
 name     = "Higonokami by Nagao Seisakusho"
@@ -50,7 +52,7 @@ photo    = "atropos-demon"
 
 [[items]]
 name     = "Tri Mini Falcon spinner"
-features = "Stainless steel"
+features = "stainless steel"
 price    = 63
 photo    = "tri-mini-falcon"
 url      = "https://flyaway-toys.myshopify.com/products/tri-mini-falcon-stainless"
@@ -115,11 +117,11 @@ price    = 32
 url      = "https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black"
 photo    = "dsptch-strap"
 
-[[items]]
-name = "Etymotic earbud tips"
-photo = "etymotic-tips"
-price = 15
-url = "https://www.amazon.com/dp/B0078JXDQ4/"
+#[[items]]
+#name = "Etymotic earbud tips"
+#photo = "etymotic-tips"
+#price = 15
+#url = "https://www.amazon.com/dp/B0078JXDQ4/"
 
 [[items]]
 name = "Fidget spinner"
