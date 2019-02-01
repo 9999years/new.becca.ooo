@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # keep this in sync with dev.ps1
+git lfs fetch
 git lfs checkout
 rm -rf static/css
 mkdir static/css
