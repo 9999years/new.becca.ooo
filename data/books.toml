@@ -106,3 +106,11 @@ isbn = "978-1626251700"
 year = 2015
 pages = 216
 publisher = "New Harbinger Publications"
+
+[[books]]
+title = "Zig-Zag Girl"
+author = "Brenna Twohy"
+isbn = "978-1546949138"
+year = 2017
+pages = 60
+publisher = "CreateSpace Independent Publishing Platform"

@@ -56,6 +56,9 @@ text="unicode"
 href="https://drive.google.com/drive/u/1/"
 text="drive"
 [[link]]
+href="https://drive.google.com/drive/u/0/"
+text="0"
+[[link]]
 href="https://www.reddit.com/r/CrackWatch/comments/821p3t/crack_watch_games/"
 text="cwg"
 [[link]]
@@ -73,3 +76,6 @@ text="tender"
 [[link]]
 href="https://washingtondc.craigslist.org/d/electronics/search/nva/ela"
 text="cl"
+[[link]]
+href="https://messages.android.com/"
+text="sms"
