@@ -1,0 +1,105 @@
+html, body
+  margin: 0
+  padding: 0
+
+html, body
+  font-family: "Segoe UI", "Segoe UI Symbol", -apple-system, "Helvetica", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Sans",  "FreeSans", "Code2001", "Code2000", "DejaVu Sans",  sans-serif
+  color: #222
+  font-size: 18px
+
+input
+  font-family: "Segoe UI", "Segoe UI Symbol", -apple-system, "Helvetica", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Noto Sans",  "FreeSans", "Code2001", "Code2000", "DejaVu Sans",  sans-serif
+  color: #222
+  font-size: 18px
+  font-size: 16px
+
+p
+  margin: 0 0 1em 0
+
+/* better underline with gradients
+
+a
+  color: #226
+  text-decoration: none
+  position: relative
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(34, 34, 102, 0.8) 50%)
+  background-repeat: repeat-x
+  background-size: 2px 0.1em
+  background-position: 0 1.15em
+
+  &:visited
+    color: #226
+    text-decoration: none
+    position: relative
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(34, 34, 102, 0.8) 50%)
+    background-repeat: repeat-x
+    background-size: 2px 0.1em
+    background-position: 0 1.15em
+
+  &:hover
+    color: #b26
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(187, 34, 102, 0.8) 50%)
+
+#container
+  margin: 50px auto
+  max-width: 1200px
+
+div.head
+  text-align: center
+  font-size: 36px
+
+canvas
+  cursor: move
+  cursor: -webkit-grab
+  display: block
+  margin: auto
+
+#controls
+  max-width: 600px
+  margin: auto
+
+code
+  font-family: monospace
+  background-color: #ddd
+
+#cursor-tracking-note
+  display: none
+  margin-bottom: 1em
+  padding: 1em
+  border: 1px solid #999
+
+input
+  &[type="range"]
+    margin: 0 auto
+    width: 100%
+    max-width: 100%
+    position: relative
+    top: 6px
+
+  &[type="number"]
+    width: 25%
+    max-width: 100px
+    float: right
+
+@media (min-width: 1000px)
+  #container
+    max-width: 1000px
+
+  canvas
+    display: inline-block
+
+  #controls
+    display: inline-block
+    max-width: 445px
+    margin-left: 50px
+    vertical-align: top
+    width: 100%
+
+@media (max-width: 600px)
+  #container
+    margin: 20px
+
+  canvas
+    margin-bottom: 1em
+    max-width: 100%
+    height: auto !important
