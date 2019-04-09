@@ -1,0 +1,51 @@
+---
+items:
+  - name: Books
+    price: 15
+    url: /books
+  - name: Iris keyboard
+    price: 150
+    url: https://docs.google.com/spreadsheets/d/1BTCjK-YIaKvWdn8uZ0-gypaR-piBfyqfORBFauyLO1s/edit?usp=sharing
+    photo: iris-keyboard
+  - name: 'Objective 2 headphone amplifier'
+    features: rear power jack
+    price: 100
+    url: https://www.jdslabs.com/products/167/objective2-headphone-amplifier-b-stock/
+    photo: jds-objective2
+  - name: 'Dell XPS 13'
+    features: '9370, UHD display'
+    photo: dell-xps-13
+    price: 1840
+    url: 'https://www.dell.com/en-us/shop/dell-laptops/xps-13/spd/xps-13-9370-laptop'
+  - name: Fountain pen ink
+    features: bright colors
+    price: 15
+    url: 'https://www.gouletpens.com/collections/bottled-ink'
+    photo: fountain-pen-ink
+  - name: Higonokami by Nagao Seisakusho
+    url: 'https://www.amazon.com/dp/B00EU8MLQY'
+    price: 25
+    photo: nagao-higonokami
+  - name: Ankle socks
+    price: 6–10
+    photo: ankle-socks
+    url: 'http://www.gap.com/products/mens-ankle-socks.jsp'
+  - name: Balisong
+    features: Atropos Demon
+    price: 225
+    url: 'http://atroposknife.ru/product/demon/'
+    photo: atropos-demon
+  - name: Tri Mini Falcon spinner
+    features: stainless steel
+    price: 63
+    photo: tri-mini-falcon
+    url: 'https://flyaway-toys.myshopify.com/products/tri-mini-falcon-stainless'
+  - name: DSPTCH camera wrist strap
+    features: red / matte black
+    price: 32
+    url: https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black
+    photo: dsptch-strap
+  - name: Fidget spinner
+    photo: fidget-spinner
+    price: 17
+    url: 'https://www.amazon.com/dp/B0774RJFC6/'

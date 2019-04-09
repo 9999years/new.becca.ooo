@@ -48,7 +48,7 @@ $Watch = If($PSCmdlet.ParameterSetName -eq "Server") {
 }
 
 # keep this in sync with post-merge.sh
-$sassArgs = ("--unix-newlines", "--sourcemap=none", "-E", "UTF-8", "--$Watch", $sassDirs)
+$sassArgs = ("--$Watch", $sassDirs)
 
 Switch($PSCmdlet.ParameterSetName) {
 	"Install" {
