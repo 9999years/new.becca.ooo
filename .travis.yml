@@ -1,18 +1,18 @@
-language: ruby
+language: node_js
+cache: npm
+dist: xenial
 
 install:
-  - gem install sass
-    # lol
-  - echo "downloading hugo! sorry travis' bandwidth"
-  - curl https://github.com/gohugoio/hugo/releases/download/v0.38.1/hugo_0.38.1_Linux-64bit.tar.gz -L -o hugo.tar.gz
-    # lol??
+  - npm install -g sass
+  - pip install yamllint
+  - curl https://github.com/gohugoio/hugo/releases/download/v0.55.0/hugo_0.55.0_Linux-64bit.tar.gz -L -o hugo.tar.gz
   - tar -xf hugo.tar.gz
-    # lol, make hugo in current dir "Work"
   - export PATH=$PATH:$PWD
   - rm -rf public || exit 0
 
 script:
   - ./post-merge.sh
+  - yamllint -c ./.yamllintrc ./data/*.yaml
   - ./check-exists.sh should-exist.txt
 
 notifications:
@@ -20,8 +20,8 @@ notifications:
         urls:
             - https://becca.ooo/__travis_webhook__
         # this is used for deploying the site; we don't want failures to build
-        on_success: always # default: always
-        on_failure: never # default: always
-        on_start: never   # default: never
-        on_cancel: never  # default: always
-        on_error: never   # default: always
+        on_success: always  # default: always
+        on_failure: never   # default: always
+        on_start: never     # default: never
+        on_cancel: never    # default: always
+        on_error: never     # default: always
