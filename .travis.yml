@@ -3,8 +3,8 @@ cache: npm
 dist: xenial
 
 install:
-  - npm install -g sass
-  - pip install yamllint
+  - npm install --global sass
+  - pip install --user yamllint
   - curl https://github.com/gohugoio/hugo/releases/download/v0.55.0/hugo_0.55.0_Linux-64bit.tar.gz -L -o hugo.tar.gz
   - tar -xf hugo.tar.gz
   - export PATH=$PATH:$PWD
