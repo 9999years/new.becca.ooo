@@ -3,6 +3,11 @@ items:
   - name: Books
     price: 15
     url: /books
+  - name: GPU
+    features: MSI GeForce RTX 2060
+    price: 360
+    url: https://www.newegg.com/Product/Product.aspx?Item=N82E16814137380
+    photo: rtx-2060
   - name: Iris keyboard
     price: 150
     url: https://docs.google.com/spreadsheets/d/1BTCjK-YIaKvWdn8uZ0-gypaR-piBfyqfORBFauyLO1s/edit?usp=sharing
@@ -49,3 +54,52 @@ items:
     photo: fidget-spinner
     price: 17
     url: 'https://www.amazon.com/dp/B0774RJFC6/'
+  #- name: Masui Gyuto 210mm
+    #url: 'http://www.japanesechefsknife.com/SPECIALS.html#SHIKICustomDamascus'
+    #features: Chef’s knife
+    #price: 266
+    #photo: scd-4-gyuto
+  #- name: Wire stripper / cutters
+    #price: 14
+    #photo: irwin-strippers
+    #url: 'https://www.amazon.com/dp/B000JNNWQ2/'
+  #- name: Unicorn jacket
+    #price: 22
+    #url: >-
+      #https://www.aliexpress.com/item/Free-Shipping-Spring-and-autumn-embroidery-sunscreen-outerwear-bf-HARAJUKU-casual-lovers-baseball-uniform-preppy-style/32772143879.html
+    #photo: unicorn-jacket
+  #- name: TWSBI ECO fountain pen
+    #features: 'Clear, F nib'
+    #url: 'https://www.amazon.com/gp/product/B01EINGBCU/'
+    #photo: eco
+    #price: 32
+  #- name: Fuji Superia 400
+    #url: 'http://www.amazon.com/gp/product/B00004TWLZ/'
+    #features: 35mm film
+    #price: 18
+    #photo: fuji-superia-400
+  #- name: Zoe Strap
+    #url: 'https://gordyscamerastraps.com/products/zoe-combination-strap'
+    #features: >-
+      #30″, light brown, red wrapping, burgundy neck pad, burgundy octagonal
+      #bumpers
+    #price: 62
+    #photo: zoe-strap
+  #- name: Pilot Namiki Falcon fountain pen
+    #url: 'http://www.amazon.com/dp/B00063NUW6/'
+    #features: soft fine nib
+    #price: 130
+    #photo: pilot-namiki
+  #- name: Stainless steel comb
+    #url: 'http://www.amazon.com/dp/B00L2AWTOM/'
+    #price: 36
+    #photo: stainless-steel-comb
+  #- name: Concrete icosahedron necklace
+    #url: >-
+      #https://www.etsy.com/listing/225468743/platonic-necklaces-icosahedron-concrete
+    #price: 40
+    #photo: concrete-icosahedron-necklace
+  #- name: Etymotic earbud tips
+    #photo: etymotic-tips
+    #price: 15
+    #url: 'https://www.amazon.com/dp/B0078JXDQ4/'
