@@ -14,6 +14,7 @@ script:
   - ./post-merge.sh
   - yamllint -c ./.yamllintrc ./data/*.yaml
   - ./check-exists.sh should-exist.txt
+  - shellcheck ./*.sh
 
 notifications:
     webhooks:
