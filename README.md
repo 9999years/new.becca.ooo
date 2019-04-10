@@ -1,6 +1,6 @@
 # [becca.ooo]
 
-[![Travis CI — Let’s hope it builds because it’s going live in at most an hour](https://travis-ci.org/9999years/becca.ooo.svg?branch=master)](https://travis-ci.org/9999years/becca.ooo)
+[![Travis CI](https://travis-ci.org/9999years/becca.ooo.svg?branch=master)](https://travis-ci.org/9999years/becca.ooo)
 
 This is the source code for my personal website, [becca.ooo]. It’s been newly
 (April 2018) converted to a [SASS] / [Hugo] / [Markdown][bf] stack (with my
