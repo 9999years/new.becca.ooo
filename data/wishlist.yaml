@@ -8,6 +8,10 @@ items:
     price: 360
     url: https://www.newegg.com/Product/Product.aspx?Item=N82E16814137380
     photo: rtx-2060
+  - name: YubiKey 5 NFC
+    price: 45
+    url: https://www.yubico.com/product/yubikey-5-nfc/
+    photo: yubikey-5-nfc
   - name: Iris keyboard
     price: 150
     url: https://docs.google.com/spreadsheets/d/1BTCjK-YIaKvWdn8uZ0-gypaR-piBfyqfORBFauyLO1s/edit?usp=sharing
