@@ -25,6 +25,7 @@ css=["brandeis"]
 * [deis connect] --- application status
 * [academic calendar]
 * [student jobs] ([direct link][direct_jobs])
+* [web print] --- only accessible from campus
 
                |  
 ---------------|-------------------
@@ -75,3 +76,4 @@ css=["brandeis"]
 [academic calendar]: https://www.brandeis.edu/registrar/calendar/index.html
 [student jobs]: https://www.brandeis.edu/student-financial-services/employment/jobs/
 [direct_jobs]: https://careers.brandeis.edu/psc/CAREERS/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_CE.GBL
+[web print]: https://papercut.ais.brandeis.edu:9192/user
