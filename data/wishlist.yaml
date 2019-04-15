@@ -1,109 +1,108 @@
 ---
-items:
-  - name: Books
-    price: 15
-    url: /books
-  - name: GPU
-    features: MSI GeForce RTX 2060
-    price: 360
-    url: https://www.newegg.com/Product/Product.aspx?Item=N82E16814137380
-    photo: rtx-2060
-  - name: YubiKey 5 NFC
-    price: 45
-    url: https://www.yubico.com/product/yubikey-5-nfc/
-    photo: yubikey-5-nfc
-  - name: Iris keyboard
-    price: 150
-    url: https://docs.google.com/spreadsheets/d/1BTCjK-YIaKvWdn8uZ0-gypaR-piBfyqfORBFauyLO1s/edit?usp=sharing
-    photo: iris-keyboard
-  - name: 'Objective 2 headphone amplifier'
-    features: rear power jack
-    price: 100
-    url: https://www.jdslabs.com/products/167/objective2-headphone-amplifier-b-stock/
-    photo: jds-objective2
-  - name: 'Dell XPS 13'
-    features: '9370, UHD display'
-    photo: dell-xps-13
-    price: 1840
-    url: 'https://www.dell.com/en-us/shop/dell-laptops/xps-13/spd/xps-13-9370-laptop'
-  - name: Fountain pen ink
-    features: bright colors
-    price: 15
-    url: 'https://www.gouletpens.com/collections/bottled-ink'
-    photo: fountain-pen-ink
-  - name: Higonokami by Nagao Seisakusho
-    url: 'https://www.amazon.com/dp/B00EU8MLQY'
-    price: 25
-    photo: nagao-higonokami
-  - name: Ankle socks
-    price: 6–10
-    photo: ankle-socks
-    url: 'http://www.gap.com/products/mens-ankle-socks.jsp'
-  - name: Balisong
-    features: Atropos Demon
-    price: 225
-    url: 'http://atroposknife.ru/product/demon/'
-    photo: atropos-demon
-  - name: Tri Mini Falcon spinner
-    features: stainless steel
-    price: 63
-    photo: tri-mini-falcon
-    url: 'https://flyaway-toys.myshopify.com/products/tri-mini-falcon-stainless'
-  - name: DSPTCH camera wrist strap
-    features: red / matte black
-    price: 32
-    url: https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black
-    photo: dsptch-strap
-  - name: Fidget spinner
-    photo: fidget-spinner
-    price: 17
-    url: 'https://www.amazon.com/dp/B0774RJFC6/'
-  #- name: Masui Gyuto 210mm
-    #url: 'http://www.japanesechefsknife.com/SPECIALS.html#SHIKICustomDamascus'
-    #features: Chef’s knife
-    #price: 266
-    #photo: scd-4-gyuto
-  #- name: Wire stripper / cutters
-    #price: 14
-    #photo: irwin-strippers
-    #url: 'https://www.amazon.com/dp/B000JNNWQ2/'
-  #- name: Unicorn jacket
-    #price: 22
-    #url: >-
-      #https://www.aliexpress.com/item/Free-Shipping-Spring-and-autumn-embroidery-sunscreen-outerwear-bf-HARAJUKU-casual-lovers-baseball-uniform-preppy-style/32772143879.html
-    #photo: unicorn-jacket
-  #- name: TWSBI ECO fountain pen
-    #features: 'Clear, F nib'
-    #url: 'https://www.amazon.com/gp/product/B01EINGBCU/'
-    #photo: eco
-    #price: 32
-  #- name: Fuji Superia 400
-    #url: 'http://www.amazon.com/gp/product/B00004TWLZ/'
-    #features: 35mm film
-    #price: 18
-    #photo: fuji-superia-400
-  #- name: Zoe Strap
-    #url: 'https://gordyscamerastraps.com/products/zoe-combination-strap'
-    #features: >-
-      #30″, light brown, red wrapping, burgundy neck pad, burgundy octagonal
-      #bumpers
-    #price: 62
-    #photo: zoe-strap
-  #- name: Pilot Namiki Falcon fountain pen
-    #url: 'http://www.amazon.com/dp/B00063NUW6/'
-    #features: soft fine nib
-    #price: 130
-    #photo: pilot-namiki
-  #- name: Stainless steel comb
-    #url: 'http://www.amazon.com/dp/B00L2AWTOM/'
-    #price: 36
-    #photo: stainless-steel-comb
-  #- name: Concrete icosahedron necklace
-    #url: >-
-      #https://www.etsy.com/listing/225468743/platonic-necklaces-icosahedron-concrete
-    #price: 40
-    #photo: concrete-icosahedron-necklace
-  #- name: Etymotic earbud tips
-    #photo: etymotic-tips
-    #price: 15
-    #url: 'https://www.amazon.com/dp/B0078JXDQ4/'
+- name: Books
+  price: 15
+  url: /books
+- name: GPU
+  features: MSI GeForce RTX 2060
+  price: 360
+  url: https://www.newegg.com/Product/Product.aspx?Item=N82E16814137380
+  photo: rtx-2060
+- name: YubiKey 5 NFC
+  price: 45
+  url: https://www.yubico.com/product/yubikey-5-nfc/
+  photo: yubikey-5-nfc
+- name: Iris keyboard
+  price: 150
+  url: https://docs.google.com/spreadsheets/d/1BTCjK-YIaKvWdn8uZ0-gypaR-piBfyqfORBFauyLO1s/edit?usp=sharing
+  photo: iris-keyboard
+- name: 'Objective 2 headphone amplifier'
+  features: rear power jack
+  price: 100
+  url: https://www.jdslabs.com/products/167/objective2-headphone-amplifier-b-stock/
+  photo: jds-objective2
+- name: 'Dell XPS 13'
+  features: '9370, UHD display'
+  photo: dell-xps-13
+  price: 1840
+  url: 'https://www.dell.com/en-us/shop/dell-laptops/xps-13/spd/xps-13-9370-laptop'
+- name: Fountain pen ink
+  features: bright colors
+  price: 15
+  url: 'https://www.gouletpens.com/collections/bottled-ink'
+  photo: fountain-pen-ink
+- name: Higonokami by Nagao Seisakusho
+  url: 'https://www.amazon.com/dp/B00EU8MLQY'
+  price: 25
+  photo: nagao-higonokami
+- name: Ankle socks
+  price: 6–10
+  photo: ankle-socks
+  url: 'http://www.gap.com/products/mens-ankle-socks.jsp'
+- name: Balisong
+  features: Atropos Demon
+  price: 225
+  url: 'http://atroposknife.ru/product/demon/'
+  photo: atropos-demon
+- name: Tri Mini Falcon spinner
+  features: stainless steel
+  price: 63
+  photo: tri-mini-falcon
+  url: 'https://flyaway-toys.myshopify.com/products/tri-mini-falcon-stainless'
+- name: DSPTCH camera wrist strap
+  features: red / matte black
+  price: 32
+  url: https://www.dsptch.com/collections/wrist/products/camera-wrist-strap-red-matte-black
+  photo: dsptch-strap
+- name: Fidget spinner
+  photo: fidget-spinner
+  price: 17
+  url: 'https://www.amazon.com/dp/B0774RJFC6/'
+#- name: Masui Gyuto 210mm
+  #url: 'http://www.japanesechefsknife.com/SPECIALS.html#SHIKICustomDamascus'
+  #features: Chef’s knife
+  #price: 266
+  #photo: scd-4-gyuto
+#- name: Wire stripper / cutters
+  #price: 14
+  #photo: irwin-strippers
+  #url: 'https://www.amazon.com/dp/B000JNNWQ2/'
+#- name: Unicorn jacket
+  #price: 22
+  #url: >-
+    #https://www.aliexpress.com/item/Free-Shipping-Spring-and-autumn-embroidery-sunscreen-outerwear-bf-HARAJUKU-casual-lovers-baseball-uniform-preppy-style/32772143879.html
+  #photo: unicorn-jacket
+#- name: TWSBI ECO fountain pen
+  #features: 'Clear, F nib'
+  #url: 'https://www.amazon.com/gp/product/B01EINGBCU/'
+  #photo: eco
+  #price: 32
+#- name: Fuji Superia 400
+  #url: 'http://www.amazon.com/gp/product/B00004TWLZ/'
+  #features: 35mm film
+  #price: 18
+  #photo: fuji-superia-400
+#- name: Zoe Strap
+  #url: 'https://gordyscamerastraps.com/products/zoe-combination-strap'
+  #features: >-
+    #30″, light brown, red wrapping, burgundy neck pad, burgundy octagonal
+    #bumpers
+  #price: 62
+  #photo: zoe-strap
+#- name: Pilot Namiki Falcon fountain pen
+  #url: 'http://www.amazon.com/dp/B00063NUW6/'
+  #features: soft fine nib
+  #price: 130
+  #photo: pilot-namiki
+#- name: Stainless steel comb
+  #url: 'http://www.amazon.com/dp/B00L2AWTOM/'
+  #price: 36
+  #photo: stainless-steel-comb
+#- name: Concrete icosahedron necklace
+  #url: >-
+    #https://www.etsy.com/listing/225468743/platonic-necklaces-icosahedron-concrete
+  #price: 40
+  #photo: concrete-icosahedron-necklace
+#- name: Etymotic earbud tips
+  #photo: etymotic-tips
+  #price: 15
+  #url: 'https://www.amazon.com/dp/B0078JXDQ4/'

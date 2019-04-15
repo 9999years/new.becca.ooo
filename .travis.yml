@@ -1,3 +1,4 @@
+---
 language: node_js
 cache: npm
 dist: xenial
@@ -5,18 +6,21 @@ node_js:
     - "11"
 
 install:
-  - npm install --global sass
-  - pip install --user yamllint
-  - curl https://github.com/gohugoio/hugo/releases/download/v0.55.0/hugo_0.55.0_Linux-64bit.tar.gz -L -o hugo.tar.gz
-  - tar -xf hugo.tar.gz
-  - export PATH=$PATH:$PWD
-  - rm -rf public || exit 0
+    - npm install --global sass
+    - pip install --user yamllint
+    - >
+        curl
+        https://github.com/gohugoio/hugo/releases/download/v0.55.0/hugo_0.55.0_Linux-64bit.tar.gz
+        -L -o hugo.tar.gz
+    - tar -xf hugo.tar.gz
+    - export PATH=$PATH:$PWD
+    - rm -rf public || exit 0
 
 script:
-  - ./post-merge.sh
-  - yamllint -c ./.yamllintrc ./data/*.yaml
-  - ./check-exists.sh should-exist.txt
-  - shellcheck ./*.sh
+    - ./post-merge.sh
+    - find -name '*.yml' -or -name '*.yaml' -exec yamllint -c ./.yamllintrc.yml '{}' +
+    - ./check-exists.sh should-exist.txt
+    - shellcheck ./*.sh
 
 notifications:
     webhooks:
