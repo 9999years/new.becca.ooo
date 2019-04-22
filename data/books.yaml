@@ -109,3 +109,8 @@ books:
       pages: 333
       isbn: '978-0807079058'
       publisher: Beacon Press
+    - title: Rae the Doe Gets Booked
+      author: Olive Brinker
+      pages: 200
+      year: 2019
+      url: "https://gaydisaster.com/products/rae-the-doe-gets-booked"
