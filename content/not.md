@@ -5,7 +5,7 @@ description="there are many rebecca turners. i am not these ones"
 
 there are many rebecca turners. i am not these ones
 
-* [npm cli programmer rebecca turner][4]
+* [former npm oss programmer rebecca turner][4]
 * [british olympian rebecca turner][1]
 * [host of mississippi talk show “good things with rebecca turner”][2]
 * [founder of “world of lucid dreaming” rebecca turner][3]
