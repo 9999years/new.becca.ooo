@@ -15,7 +15,6 @@ script:
     - git lfs checkout
     - find -name '*.yml' -or -name '*.yaml'
         -exec yamllint -c ./development/.yamllintrc.yml '{}' +
-    - shellcheck ./*.sh
     - hexo generate --verbose --debug
 
 after_success:
