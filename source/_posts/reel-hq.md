@@ -6,7 +6,7 @@ permalink: reel/hq
 extra_css:
    - reel
 extra_js:
-   - reel
+   - reel.bundle
 
 video: /img/reel/reel_hq.mp4
 other_link:

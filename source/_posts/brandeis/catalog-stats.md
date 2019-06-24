@@ -2,7 +2,7 @@
 title: Brandeis Course Catalog Statistics
 description: An analysis of 13 years of Brandeis course catalogs
 extra_js:
-   - https://www.gstatic.com/charts/loader.js
+   - https://www.gstatic.com/charts/loader.js  # TODO migrate to d3 or something
    - brandeis/catalog-stats
 extra_css:
    - brandeis/catalog-stats

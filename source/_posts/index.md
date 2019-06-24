@@ -1,6 +1,6 @@
 ---
 description: 'hello!! good to meet you!'
-extra_js: [flavor]
+# extra_js: [flavor.bundle]
 permalink: /
 layout: main
 ---
