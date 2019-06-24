@@ -1,0 +1,6 @@
+{% extends "_partial/base.njk" %}
+{% block post_content %}
+{% for txt, url in site.data.landing %}
+	<a href="{{ url }}"><div>{{ txt }}</div></a>
+{% endfor %}
+{% endblock %}

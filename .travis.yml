@@ -6,29 +6,23 @@ node_js:
     - "11"
 
 install:
-    - npm install --global sass
+    - npm install --global sass hexo-cli
     - pip install --user yamllint
-    - >
-        curl
-        https://github.com/gohugoio/hugo/releases/download/v0.55.0/hugo_0.55.0_Linux-64bit.tar.gz
-        -L -o hugo.tar.gz
-    - tar -xf hugo.tar.gz
-    - export PATH=$PATH:$PWD
-    - rm -rf public || exit 0
+    - npm install
 
 script:
-    - ./post-merge.sh
-    - find -name '*.yml' -or -name '*.yaml' -exec yamllint -c ./.yamllintrc.yml '{}' +
-    - ./check-exists.sh should-exist.txt
+    - git lfs fetch
+    - git lfs checkout
+    - find -name '*.yml' -or -name '*.yaml'
+        -exec yamllint -c ./development/.yamllintrc.yml '{}' +
     - shellcheck ./*.sh
+    - hexo generate --verbose --debug
 
-notifications:
-    webhooks:
-        urls:
-            - https://becca.ooo/__travis_webhook__
-        # this is used for deploying the site; we don't want failures to build
-        on_success: always  # default: always
-        on_failure: never   # default: always
-        on_start: never     # default: never
-        on_cancel: never    # default: always
-        on_error: never     # default: always
+after_success:
+    - openssl aes-256-cbc
+          -K $encrypted_c0404947024a_key
+          -iv $encrypted_c0404947024a_iv
+          -in .travis/travis_rsa.enc
+          -out .travis/travis_rsa
+          -d
+    - hexo deploy

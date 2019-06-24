@@ -1,0 +1,67 @@
+@import vars
+
+input, select
+  standard()
+  margin: 0 0.5em
+
+#main_canvas
+  width: 100%
+  height: 100%
+  z-index: -1
+
+input:
+  z-index: 1
+
+canvas:active
+  cursor: hand
+
+#snell_container
+  position: relative
+  height: 400px
+
+.top
+  position: absolute
+  top: 1em
+  left: 0
+
+.bottom
+  position: absolute
+  bottom: 0
+  right: 0
+
+.sliderRow
+  font-size: 25px
+  margin: auto
+  margin-bottom: 5px
+  display: flex
+  justify-content: space-between
+
+.sliderRow > div
+  flex-grow: 1
+
+.sliderRow > input[type=number]
+  flex-grow: 2
+
+.sliderRow > input[type=range]
+  flex-grow: 3
+
+.label,.sliderRow > .inner
+  position: relative
+  top: 3px
+
+#nsubiContainer .angle, #nsubiContainer .label
+  color: #f00
+
+#nsubrContainer .angle, #nsubrContainer .label
+  color: #00f
+
+#nsubi, #nsubr
+  max-width: 3em
+
+.angle
+  width: 150px
+  display: inherit
+  overflow: hidden
+  margin-left: 5px
+  position: relative
+  top: 5px

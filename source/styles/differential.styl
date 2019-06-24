@@ -1,0 +1,71 @@
+main
+  max-width: 1000px
+
+canvas
+  cursor: move
+  display: block
+  margin: auto
+
+#controls {
+  max-width: 600px;
+  margin: auto;
+}
+
+#formula-input {
+  width: 80%;
+  float: right;
+}
+
+input[type="range"] {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 6px;
+}
+
+input[type="number"] {
+  width: 25%;
+  max-width: 50px;
+  float: right;
+}
+
+#formula-note {
+  display: none;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #999;
+}
+
+#formula-note > p:last-child {
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  canvas, #controls {
+    display: inline-block;
+  }
+
+  #controls {
+    max-width: 445px;
+    margin-left: 50px;
+    vertical-align: top;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  #container {
+    margin: 20px;
+  }
+
+  canvas {
+    margin-bottom: 1em;
+    max-width: 100%;
+    height: auto!important;
+  }
+}

@@ -1,0 +1,11 @@
+<h1 id=nav-header><a href="{{ config.url }}">{{ config.title }}</a></h1>
+<span class="sep"> → </span>
+<nav>
+{% set nav_join = joiner(theme.nav_sep) %}
+{% for link in site.data.nav -%}
+	{{ nav_join() -}}
+	<a href="{{ link.url|default("/" + link) }}">
+		{{- link.txt|default(link) -}}
+	</a>
+{%- endfor %}
+</nav>

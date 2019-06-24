@@ -1,0 +1,13 @@
+@import '../vars'
+
+table
+  striped($hi)
+
+main
+  max-width: $body-width
+
+@media (max-width: $body-width + 2 * $margin)
+  td, th
+    //      binary        C escape        unicode
+    &:nth-child(5), &:nth-child(7), &:nth-child(8)
+      display: none

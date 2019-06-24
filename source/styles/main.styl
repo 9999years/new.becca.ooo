@@ -1,0 +1,185 @@
+@import vars
+
+body, html
+  standard()
+  margin: 0
+  padding: 0
+  border: 0
+  word-wrap: break-word
+
+::selection
+  background-color: rgba($hi, 0.25)
+  //color: $bg
+
+h1, h2, h3, h4, h5, h6
+  z-index: 1
+  font
+    size: $font-size * 1.5
+    weight: 300
+  margin: 1em 0 0.5em 0
+  position: relative
+
+  &:first-child
+    margin-top: 0.5em
+
+  & > a.headerlink
+    z-index: -1
+    display: none
+    text-decoration: none
+    color: $medium
+    position: absolute
+    left: -2 * $rel-link-margin
+    padding: 0.5em $rel-link-margin
+    top: -0.5em
+
+    &:before
+      content: '#'
+
+    &:hover
+      text-decoration: underline
+
+  &:hover > a.headerlink
+    display: block
+
+
+h1
+  font-size: $font-size * 2
+  font-weight: 500
+
+h2
+  font-size: $font-size * 1.5
+  font-weight: 400
+
+h3, h4, h5, h6
+  font-weight: initial
+
+p
+  margin: 1em 0
+
+a
+  color: $hi
+  text-decoration: underline
+
+  &:hover
+    color: $hi
+
+.center
+  text-align: center
+
+hr
+  border: none
+  border-top: 1px solid $txt
+  margin: 1em auto
+  max-width: 3 * $font-size
+  height: 0
+
+hr.full
+  width: 100%
+
+#container
+  margin: $margin
+  position: relative
+
+main
+  constrained()
+  text-align: left
+  & > img, & > p > img
+    max-width: 100%
+
+header
+  constrained()
+
+  & .nav-sep
+    padding: 0 0.25em
+
+header h1#nav-header
+  display: inline-block
+  margin: $margin 0
+  font-size: $font-size
+  font-weight: unset
+  margin: 0
+
+  a
+    color: $txt
+    background-image: none
+    text-decoration: none
+
+header nav
+  display: inline-block
+
+blockquote
+  margin: 0 0 0 1em
+  position: relative
+  left: -1em
+  font-style: italic
+
+  &:after
+    content: ""
+    border-left: 1px solid $txt
+    height: 100%
+    position: absolute
+    top: 0
+    left: -1em
+
+  > blockquote
+    // i guess
+    left: 0em
+
+li
+  margin-bottom: 0.25em
+
+ol
+  text-align: left
+
+  > li
+    padding-left: 0.25em
+
+ul
+  list-style: none
+
+  > li
+    position: relative
+
+    &:before
+      position: absolute
+      content: "–"
+      left: -1.5em
+
+li li
+  margin-left: 1.5em
+
+table
+  margin-bottom: 1em
+
+td
+  vertical-align: top
+
+  &:not(:last-child)
+    padding-right: 0.5em
+
+pre
+  overflow-x: scroll
+  padding: 0.5em
+
+code
+  padding: 1pt
+
+pre > code
+  background: none
+
+@media (max-width: $body-width + 2 * $margin)
+  blockquote
+    margin-left: 1em
+    left: 0
+
+@media (max-width: 380px)
+  #container
+    margin: ($margin / 2)
+
+  h1
+    font-size: $font-size * 1.5
+
+  h2
+    font
+      size: $font-size
+      weight: initial

@@ -1,0 +1,36 @@
+$bg ?= #fff
+$txt ?= #000
+$font-size ?= 16px
+// highlight
+$hi ?= #1741e8
+$light ?= #ededff
+$medium ?= #828282
+$margin ?= 25px
+$body-width ?= 800px
+$toc-width ?= 300px
+
+$rel-link-margin ?= 30px
+
+constrained()
+  margin: auto
+  max-width: $body-width
+
+standard()
+  font: $font-size \
+    "Segoe UI", // windows
+    "-apple-system", "San Francisco", "Helvetica", // apple
+    "Noto Sans", // google
+    "Geneva", "Helvetica Neue", "Helvetica", "Helvetica Neue LT", "Arial",
+    sans-serif, // backup for weird platforms
+    "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", // emoji
+    "Noto Serif", "Code2001", "Code2000", "HanaMinA", "HanaMinB",
+    "BabelStone Han", "DejaVu Sans", "DejaVu Serif", "DejaVu Sans Mono",
+    "UniDings" // backup / extra codepoints
+  background-color: $bg
+  color: $txt
+
+striped($color)
+  border-collapse: collapse
+
+  & tr:nth-child(even)
+    background-color: rgba($color, 0.1)

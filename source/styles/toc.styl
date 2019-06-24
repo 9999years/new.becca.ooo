@@ -1,0 +1,39 @@
+@import vars
+
+#toc
+  position: fixed
+  max-width: $toc-width
+  top: 2 * $margin
+  left: 2 * $margin
+
+  & ul
+    padding-left: 1em
+    margin: 0
+
+  & > h1
+    font-size: $font-size * 1.5
+    margin-top: 0
+
+header, main
+  max-width: ($body-width - $toc-width / 2)
+  padding-left: ($toc-width / 2)
+
+@media(max-width: $body-width + $toc-width + 3 * $margin)
+  header, main
+    padding-left: $toc-width
+
+  #toc
+    max-width: $toc-width - 2 * $margin
+
+@media(max-width: $body-width)
+  header, main
+    max-width: 100%
+    padding: 0
+
+  #toc
+    position: initial
+    margin: auto
+    max-width: 100%
+
+    & > h1
+      margin-top: initial

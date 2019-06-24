@@ -1,0 +1,14 @@
+becca.ooo {
+	root /var/www/becca.ooo
+	gzip
+	log stdout
+	errors stderr
+	expires {
+		match \.css$ 7d
+		match \.pdf$ 30d
+		match \.js$ 7d
+		match \.html$ 1d
+		match \.xml$ 7d
+		match ^img/ 30d
+	}
+}

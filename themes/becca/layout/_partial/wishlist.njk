@@ -1,0 +1,32 @@
+{%- macro sources(url) -%}
+src="/img/wishlist/{{ url }}-1x.jpg"{#-#}
+srcset="/img/wishlist/{{ url }}-1x.jpg 1x,{#-#}
+/img/wishlist/{{ url }}-2x.jpg 2x,{#-#}
+/img/wishlist/{{ url }}-3x.jpg 3x"
+{%- endmacro -%}
+{%- macro photo(url) -%}
+<div class=photo>
+    <div class=triangle></div>
+    <img {{ sources(url) }}>
+</div>
+{%- endmacro %}
+<tr>
+    <td>{% if item.url %}<a href="{{ item.url }}">{% endif -%}
+        {{ item.name|default('') }}
+        {%- if item.url %}</a>{% endif %}
+        {# put features in parens, and a linebreak before them if the
+        features + the title is > 40 chars #}
+        {%- if item.features -%}
+            {%- if (item.name.length + item.features.length) > 40 -%}
+                <br>
+            {%- endif -%}
+            ({{ item.features }})
+        {%- endif -%}
+    </td>
+    <td>
+        {{ item.price }}
+        {% if item.photo %}
+            {{ photo(item.photo) }}
+        {% endif %}
+    </td>
+</tr>

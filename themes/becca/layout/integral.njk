@@ -1,0 +1,51 @@
+{% extends "_partial/base.njk" %}
+{% block pre_content %}
+<canvas id="main-canvas"></canvas>
+<div id="controls">
+	<p>f(x) = <input type="text" id="formula-input" value="sin(x)"></input>
+
+	<div id="formula-note">
+		<p><b>Note:</b> Because of the architecture of this program, in f(x), carets (<code>^</code>) represent the logical <a href="https://en.m.wikipedia.org/wiki/Exclusive_or">xor</a> operation and <i>not</i> exponentiation.
+		<p>For exponents, use <code>pow(base, exponent)</code> — “x²”, for example, would be written as <code>pow(x, 2)</code>
+		<p><button id="got-it">Got it.</button>
+	</div>
+
+	<p>Integral:
+	<br>Partitions:
+	<input type="number" id="partitions-value" value="4">
+	<br><input type="range" id="partitions-range" min="1" max="100" value="4" step="1"></input>
+
+	<br>Bottom limit:
+	<input type="number" id="bottom-limit-value" value="0">
+	<br><input type="range" id="bottom-limit-range" min="-2.5" max="2.5" value="0" step="0.01"></input>
+
+	<br>Top limit:
+	<input type="number" id="top-limit-value" value="3.1415926">
+	<br><input type="range" id="top-limit-range" min="-2.5" max="2.5" value="3.1415926" step="0.01"></input>
+
+	<p>Approximation type:
+	<br><input type="radio" name="mode-radio" id="trapezoidal-button" checked> Trapezoidal
+	<br><input type="radio" name="mode-radio" id="rectangular-bottom-button"> Rectangular (start-point)
+	<br><input type="radio" name="mode-radio" id="rectangular-mid-button"> Rectangular (mid-point)
+	<br><input type="radio" name="mode-radio" id="rectangular-end-button"> Rectangular (end-point)
+	<br><input type="radio" name="mode-radio" id="definite-approximation"> Evaluate (definite integral)
+
+	<p>Graph:
+	<br>Width:
+	<input type="number" id="width-value" value="5">
+	<br><input type="range" id="width-range" min="0.01" max="50" value="5" step="0.01"></input>
+
+	<p>Height:
+	<input type="number" id="height-value" value="5">
+	<br><input type="range" id="height-range" min="0.01" max="50" value="5" step="0.01"></input>
+
+	<p>Center:
+	<br>x:
+	<input type="number" id="center-x-value" value="2">
+	<br><input type="range" id="center-x-range" min="-10" max="10" value="2" step="0.01"></input>
+
+	<br>y:
+	<input type="number" id="center-y-value" value="0">
+	<br><input type="range" id="center-y-range" min="-10" max="10" value="0" step="0.01"></input>
+</div>
+{% endblock %}

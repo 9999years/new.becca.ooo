@@ -1,0 +1,30 @@
+@import vars
+
+$link-margin = 0.25em
+$link-border = 0.1em
+
+main
+  font-size: 1.5 * $font-size
+  margin-top: 0.5em
+
+  a
+    position: relative
+    left: - $link-margin - $link-border
+
+    display: inline-block
+    border-radius: $link-margin
+    text-decoration: none
+    margin: $link-border $link-margin $link-border $link-border
+    margin-right: $link-margin
+
+    &:hover
+      background-color: initial
+      border: $link-border solid $hi
+      margin: 0 $link-margin - $link-border 0 0
+
+  div
+    margin: $link-margin
+
+  div.in
+    margin: $link-margin auto
+    position: relative

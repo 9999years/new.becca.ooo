@@ -1,7 +1,6 @@
-public
-static/css
-static/i-c-the-light/**
-static/chomp/**
-bin
-pdf
-reaction
+db.json
+*.log
+/node_modules/
+/public/
+/.deploy*/
+/.travis/travis_rsa

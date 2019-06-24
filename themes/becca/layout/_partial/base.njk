@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang=en-US>
+<meta charset=utf-8>
+<title>{{ config.short_title }}{% if page.title %} → {{ page.title }}{% endif %}</title>
+<meta name=description content="{{ page.description|default(site.description) }}">
+<meta name=viewport content="width=device-width, initial-scale=1">
+{% for icon in theme.favicons %}
+	<link rel=icon href="{{ icon.href }}" sizes="{{ icon.size }}" type="{{ icon.type | default("image/png") }}">
+{% endfor %}
+<link rel=manifest href=/manifest.json>
+<!-- to-do: include opengraph tags -->
+<meta name=theme-color content=#1741e8>
+{% if page.default_css | default(true) %}
+	<link rel=stylesheet type=text/css href=/styles/main.css>
+{% endif %}
+{% if page.toc|default(false) %}
+	<link rel=stylesheet type=text/css href="/styles/toc.css">
+{% endif %}
+{% for css in page.extra_css %}
+	<link rel=stylesheet type=text/css href="/styles/{{ css }}.css">
+{% endfor %}
+<div id=container>
+	<header
+		{%- if page.center %} class="center"{% endif -%}
+		>
+	{%- block pre_nav %}{% endblock -%}
+		{{ partial("_partial/header.njk") }}
+	</header>
+{% if page.body_tag|default(true) %}
+	<main id="main" {{ 'class="center"' if page.center }}>
+{% endif %}
+{% if page.title %}
+	<h1 class="title" id="{{ page.title|urlize }}">{{ page.title }}</h1>
+{% endif %}
+	{% block pre_content %}{% endblock %}
+	{{ page.content }}
+	{% block post_content %}{% endblock %}
+	{% if page.body_tag|default(true) %}
+		</main>
+	{% endif %}
+</div>
+{% for script in page.extra_js %}
+	{% set script_src = script.src|default(script) %}
+	{% set is_module = script.is_module|default(true) %}
+	{% if script_src.startsWith("<script") -%}
+		{{ script_src }}
+	{% else %}
+		<script {% if script.integrity -%}
+			integrity="{{ script.integrity }}" crossorigin="anonymous"
+		{%- endif -%}
+		{%- if script_src.startsWith("/") -%}
+			src="{{ script_src }}.js"
+		{%- elif script_src.startsWith("https://") -%}
+			src="{{ script_src }}"
+		{%- else -%}
+			src="/scripts/{{ script_src }}.js"
+		{%- endif -%}
+		></script>
+	{% endif %}
+{% endfor %}

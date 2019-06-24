@@ -1,0 +1,19 @@
+@import '../vars'
+
+button
+  cursor: pointer
+
+input, textarea, button
+  standard()
+  padding: 0.25em
+  border: 1px $txt solid
+
+textarea
+  width: 100%
+  margin: $font-size 0
+  padding: $font-size
+  max-width: $body-width - $font-size * 2
+
+@media (max-width: $body-width + $margin * 2)
+  textarea
+    padding: 0

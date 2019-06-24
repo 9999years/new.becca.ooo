@@ -1,0 +1,16 @@
+{% extends "_partial/base.njk" %}
+{% block post_content %}
+<ul>
+{% for book in site.data.books %}
+	<li>
+	{%- if book.url or book.isbn %}<a href="{{ book.url|default(book.isbn) }}">{% endif -%}
+	{% if book.title %}<i>{{ book.title }}</i>{% endif -%}
+	{% if book.url or book.isbn %}</a>{% endif -%}
+	{% if book.author.length > 40 %}<br>{% endif %}
+	({{ book.author -}}
+	{% if book.year %}, {{ book.year }}{% endif -%}
+	{% if book.edition %}, {{ book.edition }} ed.{% endif %})
+	</li>
+{% endfor %}
+</ul>
+{% endblock %}

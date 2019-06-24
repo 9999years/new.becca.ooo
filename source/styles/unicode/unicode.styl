@@ -1,0 +1,14 @@
+@import '../vars'
+
+.bullet
+  height: 0
+  position: relative
+  left: -2em
+
+@media (max-width: $body-width + 2 * ($margin + $font-size))
+  .bullet
+    height: initial
+    position: initial
+    display: inline-block
+    margin: 0 0.5em 0 0
+    padding: 0 4px
