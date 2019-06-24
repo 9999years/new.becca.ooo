@@ -24,7 +24,7 @@ February 2019--: **Systems Administrator**
 - Translated legacy website into a modern framework while rewriting and
   verifying old documentation. (Hugo, Markdown, SCSS, HTML)
 
-## [Western Jihadism Project][wjp], Brandeis University
+## Research Project, Brandeis University
 September 2018--January 2019: **Lead Software Engineer**
 
 - Improved uptime and reliability by documenting and automating an error-prone
