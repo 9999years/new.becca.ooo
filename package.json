@@ -10,6 +10,7 @@
     "he": "^1.2.0",
     "hexo": "^3.8.0",
     "hexo-all-minifier": "^0.5.3",
+    "hexo-deployer-sftp": "^0.1.0",
     "hexo-description": "^0.1.0",
     "hexo-excerpt": "^1.1.4",
     "hexo-filter-optimize": "^0.2.5",
@@ -29,7 +30,6 @@
     "uslug": "^1.0.3"
   },
   "devDependencies": {
-    "hexo-deployer-sftp": "^0.1.0",
     "ts-loader": "^6.0.3",
     "typescript": "^3.5.2",
     "webpack-glob-entries": "^1.0.1"

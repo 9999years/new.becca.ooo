@@ -3,10 +3,10 @@
 	"dir": "ltr",
 	"display": "minimal-ui",
 	"name": "becca.ooo",
-	"description": "The digital home of Rebecca Turner aka 9999years",
+	"description": "The digital home of Rebecca Turner, software engineer",
 	"short_name": "becca.ooo",
-	"theme_color": "#aff",
-	"background_color": "#012",
+	"theme_color": "#1741e8",
+	"background_color": "#ffffff",
 	"icons": [{
 			"src": "img/icon-32.png",
 			"sizes": "32x32",

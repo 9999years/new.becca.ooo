@@ -17,7 +17,7 @@ function glob(...globs) {
 const prepend = (base, ...suffixes) => suffixes.map(s => base + s)
 
 module.exports = {
-    mode: 'none',
+    mode: 'production',
     entry: glob(...prepend("source/scripts/**/*.", "js", "ts", "tsx")),
     output: {
         filename: (dat) => path.join('scripts',

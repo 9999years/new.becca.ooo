@@ -1,8 +1,6 @@
 # [becca.ooo]
 
-[![Travis CI](https://travis-ci.org/9999years/becca.ooo.svg?branch=master)](https://travis-ci.org/9999years/becca.ooo)
-
-This is the source code for my personal website, [becca.ooo].
+[![Travis CI][travis-svg]][travis]
 
 ## License
 
@@ -13,6 +11,8 @@ Whenever not specified, work within this repository is AGPLv3 licensed (see
 In short: fork the code, but not my writing.
 
 [becca.ooo]: https://becca.ooo/
+[travis-svg]: https://travis-ci.org/9999years/becca.ooo.svg?branch=master
+[travis]: https://travis-ci.org/9999years/becca.ooo
 [Caddy]: https://caddyserver.com/
 [the average page]: https://www.machmetrics.com/speed-blog/average-page-load-times-websites-2018/
 [Segoe]: https://en.m.wikipedia.org/wiki/Segoe
