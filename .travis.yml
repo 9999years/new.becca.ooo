@@ -15,7 +15,7 @@ script:
     - git lfs checkout
     - find -name '*.yml' -or -name '*.yaml'
         -exec yamllint -c ./development/.yamllintrc.yml '{}' +
-    - hexo generate --verbose --debug
+    - hexo generate --verbose
 
 after_success:
     - openssl aes-256-cbc
