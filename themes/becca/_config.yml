@@ -1,20 +1,3 @@
 home_link_label: Homepage
 home_nav_sep: •
 nav_sep: •
-
-favicons:
-    - href: "data:image/png;base64,\
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAGXRFWHRTb2Z0d2FyZQBBZG9i\
-        ZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNpiZGAQYqAlYGKgMRi1gCBgwS+t62Jfu3sdskgY\
-        ozCEYRnqbxHqr+dizy0o8PLeg3tnL/aHJZFsAVYANLFo1Tyg3XARcSWFr+8/kuMDrKYD/aRk\
-        rI8mfu/sBerE AdDtmKYDwct7D6ljAXLIfH3/4fKeg8DQx+MDFvLSBtDoWelFx1dvhMcBMJ6\
-        pZgHQ9GbXIIjDYeHzgJr5YGlFE7LpVM5oQMfumbWQhjn5BCzcaWUB8YFDfhANcR+MVjijFox\
-        aQDpgHG06Dn8LAAIMACsIS+qHle+XAAAAAElFTkSuQmCC"
-      size: 32x32
-
-    - href: /img/icon-196.png
-      size: any
-
-    - href: /img/icon.svg
-      size: any
-      type: image/svg+xml

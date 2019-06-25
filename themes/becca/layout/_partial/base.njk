@@ -4,11 +4,15 @@
 <title>{{ config.short_title }}{% if page.title %} → {{ page.title }}{% endif %}</title>
 <meta name=description content="{{ page.description|d(site.description) }}">
 <meta name=viewport content="width=device-width, initial-scale=1">
-{% for icon in theme.favicons -%}
+{% for icon in site.data.favicons -%}
     <link rel=icon {# -#}
-          href="{{ icon.href }}" {# -#}
-          sizes="{{ icon.size }}" {# -#}
-          type="{{ icon.type | d("image/png") }}">
+          href="{% if icon.href -%}
+                    {{ icon.href.replace(r/\n/g, "") }}
+                {%- else -%}
+                    /img/favicon-{{ icon.suffix|d(icon) }}.png
+                {%- endif -%}" {# -#}
+          sizes="{{ icon.size|d(icon + 'x' + icon) }}" {# -#}
+          type="{{ icon.type|d("image/png") }}">
 {% endfor %}
 <link rel=manifest href=/manifest.json>
 <!-- to-do: include opengraph tags -->
