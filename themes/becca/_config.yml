@@ -1,4 +1,6 @@
-nav_sep: <span class=nav-sep>|</span>
+home_link_label: Homepage
+home_nav_sep: •
+nav_sep: •
 
 favicons:
     - href: "data:image/png;base64,\

@@ -1,6 +1,11 @@
-- about
-- projects
-- art
-- url: /resume
+- url: /about
+  label: Read a short bio about me
+- url: /projects
+  label: Learn about my software projects
+- url: /art
+  label: See my art
+- url: /resume.pdf
   txt: résumé
-- contact
+  label: View my résumé
+- url: /contact
+  label: Get my contact information

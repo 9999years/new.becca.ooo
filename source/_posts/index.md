@@ -1,8 +1,14 @@
 ---
-description: 'hello!! good to meet you!'
+description: 'hello!! it’s lovely to meet you!'
 # extra_js: [flavor.bundle]
 permalink: /
 layout: main
 ---
 
-<span id="flavor">😊</span>
+I’m a [software engineer][GitHub] based in the Boston area, passionate about
+static analysis, typography, arpeggios, and lens flares.
+
+😊
+
+
+[GitHub]: https://github.com/9999years

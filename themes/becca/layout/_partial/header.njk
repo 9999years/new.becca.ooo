@@ -1,11 +1,25 @@
-<h1 id=nav-header><a href="{{ config.url }}">{{ config.title }}</a></h1>
-<span class="sep"> → </span>
+<h1 id=nav-header>{#-#}
+    <a href="{{ config.url }}" {# -#}
+       aria-label="{{ theme.home_link_label }}">
+        {{- config.title -}}
+    </a>{#-#}
+</h1>
+<span aria-hidden id="home-nav-sep">{{ theme.home_nav_sep }}</span>
 <nav>
-{% set nav_join = joiner(theme.nav_sep) %}
-{% for link in site.data.nav -%}
-	{{ nav_join() -}}
-	<a href="{{ link.url|default("/" + link) }}">
-		{{- link.txt|default(link) -}}
-	</a>
-{%- endfor %}
+    {% set nav_join = joiner(theme.nav_sep) %}
+    {% for link in site.data.nav -%}
+        {% if nav_join() %}
+            <span class=nav-sep aria-hidden>{{ theme.nav_sep }}</span>
+        {% endif %}
+        <a href="{{ link.url|default("/" + link) }}" {# -#}
+            {%- if link.label -%}
+                aria-label="{{ link.label }}"
+            {%- endif -%}
+        >
+        {{- link.txt
+            |default(link.url.replace(r/^\/+/, ""))
+            |default(link.label)
+            |default(link) -}}
+        </a>
+    {%- endfor %}
 </nav>
