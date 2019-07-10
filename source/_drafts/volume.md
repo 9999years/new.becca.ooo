@@ -1,7 +1,6 @@
 ---
 title: volume by integration
 description: to set the volume, solve an integral
-draft: true
 extra_js:
    - volume.bundle
 extra_css:
