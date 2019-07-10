@@ -4,12 +4,12 @@
         {{- config.title -}}
     </a>{#-#}
 </h1>
-<span aria-hidden id="home-nav-sep">{{ theme.home_nav_sep }}</span>
+<span aria-hidden=true id="home-nav-sep">{{ theme.home_nav_sep }}</span>
 <nav>
     {% set nav_join = joiner(theme.nav_sep) %}
     {% for link in site.data.nav -%}
         {% if nav_join() %}
-            <span class=nav-sep aria-hidden>{{ theme.nav_sep }}</span>
+            <span class=nav-sep aria-hidden=true>{{ theme.nav_sep }}</span>
         {% endif %}
         <a href="{{ link.url|default("/" + link) }}" {# -#}
             {%- if link.label -%}
