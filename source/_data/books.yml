@@ -112,3 +112,87 @@
   pages: 200
   year: 2019
   url: "https://gaydisaster.com/products/rae-the-doe-gets-booked"
+- title: Designing Type
+  author: Karen Cheng
+  pages: 224
+  year: 2006
+  isbn: '978-0300111507'
+  url: https://yalebooks.yale.edu/book/9780300111507/designing-type
+  publisher: Yale
+- title: Theory of Type Design
+  author: Gerand Unger
+  isbn: '978-9462084407'
+  pages: 240
+  url: https://www.nai010.com/en/publicaties/theory-of-type-design/186086/
+  edition: 2
+  year: 2018
+- title: 'Bi-Scriptual: Typography and Graphic Design with Multiple Script Systems'
+  url: https://www.niggli.ch/en/bi-scriptual.html
+  author: Ben Wittner et. al.
+  year: 2018
+  pages: 320
+  isbn: '978-3721209822'
+- title: 'Type Tricks: Your personal guide to type design'
+  author: Sofie Beier
+  year: 2017
+  pages: 206
+  isbn: '978-9063694586'
+  url: https://www.bispublishers.com/type-tricks.html
+- title: 'Reading Letters: Designing for Legibility'
+  author: Sofie Beier
+  pages: 208
+  url: https://www.bispublishers.com/reading-letters.html
+- title: 'Designing Diagrams: Making Information accessible through Design'
+  author: Jan Gauguin
+  pages: 199
+  isbn: '978-9063692285'
+  url: https://www.bispublishers.com/designing-diagrams.html
+- title: 'Counterpunch: making type in the sixteenth century, designing typefaces now'
+  author: Fred Smeijers
+  isbn: '978-0907259060'
+  pages: 184
+  year: 1997
+- title: 'Shady Characters: The Secret Life of Punctuation, Symbols & Other Typographical Marks'
+  author: Keith Houston
+  isbn: '978-0393064421'
+  year: 2014
+- title: 'Letters of Credit: A View of Type Design'
+  author: Walter Tracy
+  year: 1987
+  pages: 224
+  isbn: '978-1567922400'
+- title: Anatomy of a Typeface
+  author: Alexander Lawson
+  isbn: '978-0879233334'
+  year: 1990
+  pages: 428
+- title: 'Typologia: Studies in Type Design and Type Making'
+  author: Frederic Goudy
+  year: 1976
+  pages: 192
+  isbn: '978-0520032781'
+- title: 'The Stroke: Theory of Writing'
+  author: Gerrit Noordzij, trans. Peter Enneson
+  year: 2006
+  pages: 96
+  isbn: '978-0907259305'
+- title: 'Fine Print On Type: The Best Of Fine Print Magazine On Type And Typography'
+  author: Charles A. Bigelow et. al.
+  year: 1988
+  pages: 147
+  isbn: '978-0960729012'
+- title: 'How to create typefaces, from sketch to screen'
+  author: Cristóbal Henestrosa et. al.
+  pages: 150
+  year: 2012
+  isbn: '978-8493865436'
+- title: 'Size-specific adjustments to type designs: An investigation of the principles guiding the design of optical sizes'
+  author: 'Tim Ahrens & Shoko Mugikura'
+  pages: 192
+  year: 2008
+  isbn: '978-3000459375'
+- title: 'The modification of letterforms'
+  author: Stanley Hess
+  year: 1972
+  pages: 149
+  isbn: '978-0910158039'
