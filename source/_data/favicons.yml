@@ -1,4 +1,13 @@
 - 16
+- 64
+- 96
+- 128
+- 180
+- 192
+- 196
+- 256
+- 512
+- 1024
 - size: 32x32
   href: |
     data:image/png;base64,
@@ -11,15 +20,6 @@
     UOSAAwcOgGluxVKyzaDIAbBsxiHiMTAOACU+UPCDEtuAOIABHP+yFOkf+g5g4pAbWAdQCkYdMOqA
     odMqvnLnD8O/P58Y/ny5OjAOqJ36meHXh2MM788HDYwDQICVR5tB0HAdihilJSFJDgBVOtTuRw58
     IgR1kQcK/Pl8hQEAXq5tMHMdGNkAAAAASUVORK5CYII=
-- 64
-- 96
-- 128
-- 180
-- 192
-- 196
-- 256
-- 512
-- 1024
 # - href: /img/favicon.svg
   # size: any
   # type: image/svg+xml
