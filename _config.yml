@@ -69,6 +69,9 @@ deploy:
   privateKey: .travis/travis_rsa
 
 # Plugin / extension config
+books:
+  url_prefix: https://www.abebooks.com/servlet/SearchResults?isbn=
+
 marked:
   breaks: false
   modifyAnchors: 1
