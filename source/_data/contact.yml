@@ -1,6 +1,6 @@
 - label: email
-  link: mailto:637275@gmail.com
-  val: 637275@gmail.com
+  link: mailto:rbt@sent.as
+  val: rbt@sent.as
 
 - label: github
   link: https://github.com/9999years
@@ -32,7 +32,6 @@
 - label: snapchat
   link: https://www.snapchat.com/add/pupbecca
   val: pupbecca
-  uncommon: true
 
 - label: battle.net
   val: 'TransAndCool#1429'
