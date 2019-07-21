@@ -24,7 +24,14 @@
     <link rel=stylesheet type=text/css href="/styles/toc.css">
 {% endif %}
 {% for css in page.extra_css %}
-    <link rel=stylesheet type=text/css href="/styles/{{ css }}.css">
+    {% if css.integrity %}
+        <link rel=stylesheet type=text/css {# -#}
+              href="{{ css.href }}" {# -#}
+              integrity="{{ css.integrity }}" {# -#}
+              crossorigin=anonymous>
+    {% else %}
+        <link rel=stylesheet type=text/css href="/styles/{{ css }}.css">
+    {% endif %}
 {% endfor %}
 <div id=container>
     <header
