@@ -3,11 +3,6 @@
   price: 15
   url: /books
 
-- name: YubiKey 5 NFC
-  price: 45
-  url: https://www.yubico.com/product/yubikey-5-nfc/
-  photo: yubikey-5-nfc
-
 - name: 'Objective 2 headphone amplifier'
   features: rear power jack
   price: 100
@@ -24,8 +19,3 @@
   url: 'https://www.amazon.com/dp/B00EU8MLQY'
   price: 25
   photo: nagao-higonokami
-
-- name: Ankle socks
-  price: 6–10
-  photo: ankle-socks
-  url: 'http://www.gap.com/products/mens-ankle-socks.jsp'
