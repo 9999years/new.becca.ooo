@@ -22,10 +22,10 @@ extra_css:
 * [map (pdf)]
 * [undergrad degree requirements]
 * [listserv] / [list of lists]
-* [patient portal], [forms], [insurance]
+* [patient portal], [insurance]
 * [deis connect] --- application status
 * [academic calendar]
-* [student jobs] ([direct link][direct_jobs])
+* [student jobs] ([more info][job-info])
 * [web print] --- only accessible from campus
 
 <!-- -->       | <!-- -->
@@ -40,8 +40,8 @@ extra_css:
 (781) 736-3730 | [bcc]
 (781) 736-3785 | [bcc] hotline --- 24/7, operated by bcc staff
 
-[library OneSearch]: http://search.library.brandeis.edu/primo_library/libweb/action/search.do?vid=BRAND
-[available journals]: http://scholar.brandeis.edu/V?RN=827099071
+[library OneSearch]: https://search.library.brandeis.edu/primo-explore/search?vid=BRAND
+[available journals]: https://www.brandeis.edu/library/research/books-articles/index.html
 [myhousing]: https://brandeis.datacenter.adirondacksolutions.com/BRANDEIS_THDSS_PROD
 [latte]: https://moodle2.brandeis.edu/my/
 [sage]: https://sage.brandeis.edu/psp/CPROD90/EMPLOYEE/HRMS/s/WEBLIB_BR_SSO.ISCRIPT1.FieldFormula.iScript_redirectBRSSO
@@ -52,7 +52,7 @@ extra_css:
 [WhoCash / meal swipe balance]: https://get.cbord.com/whocash/full/login.php
 [dining halls open now]: https://brandeis.sodexomyway.com/dining-near-me/open-now
 [account management]: https://identity.brandeis.edu/identity-manage/
-[map (pdf)]: https://www.brandeis.edu/gradstudent/images/Campus%20Map%202015.pdf
+[map (pdf)]: https://www.brandeis.edu/about/visiting/images/directions/color-map.pdf
 [undergrad degree requirements]: http://www.brandeis.edu/advising/firstyears/academics/requirements.html
 [course catalogue by subject]: http://registrar-prod.unet.brandeis.edu/course/schedule/registrar/index
 [by requirement]: http://registrar-prod.unet.brandeis.edu/registrar/schedule/search
@@ -61,7 +61,6 @@ extra_css:
 [listserv]: https://lists.brandeis.edu/wws
 [list of lists]: https://lists.brandeis.edu/wws/lists
 [patient portal]: https://brandeis.medicatconnect.com/
-[forms]: http://www.brandeis.edu/health/Forms/
 [insurance]: https://www.universityhealthplans.com/letters/letter.cgi?group_id=299
 [deis connect]: https://admissions.brandeis.edu/apply/status
 [health ctr]: http://www.brandeis.edu/health/
@@ -71,7 +70,7 @@ extra_css:
 [dcl]: https://www.brandeis.edu/dcl/
 [bcc]: https://www.brandeis.edu/counseling/
 [academic calendar]: https://www.brandeis.edu/registrar/calendar/index.html
-[student jobs]: https://www.brandeis.edu/student-financial-services/employment/jobs/
-[direct_jobs]: https://careers.brandeis.edu/psc/CAREERS/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_CE.GBL
+[job-info]: https://www.brandeis.edu/student-financial-services/employment/jobs/
+[student jobs]: https://brandeis.wd5.myworkdayjobs.com/Jobs
 [web print]: https://papercut.ais.brandeis.edu:9192/user
 [sage-mobile]: https://identity.brandeis.edu/portal/index

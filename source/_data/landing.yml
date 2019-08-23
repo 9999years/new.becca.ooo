@@ -1,25 +1,99 @@
-- [🐤, https://twitter.com/]
-- [<span class="fab fa-tumblr"></span>, http://tumblr.com/]
-- [xkcd, https://xkcd.com/]
-- [<span class="fas fa-info"></span>, http://www.explainxkcd.com/wiki/index.php/Main_Page]
-- [📧, https://www.fastmail.com/]
-- [<span class="fas fa-mail-bulk"></span>, 'https://mail.google.com/mail/u/0/#inbox']
-- ['1', 'https://mail.google.com/mail/u/1/#inbox']
-- [<span class="fas fa-robot"></span>, https://www.reddit.com/new]
-- [<span class="fab fa-facebook-messenger"></span>, https://www.messenger.com/]
-- [☕, https://moodle2.brandeis.edu/my/]
-- [sage, https://sage.brandeis.edu/psp/CPROD90/EMPLOYEE/HRMS/s/WEBLIB_BR_SSO.ISCRIPT1.FieldFormula.iScript_redirectBRSSO]
-- [📱, https://identity.brandeis.edu/portal/index]
-- [<span class="fas fa-gavel"></span>, /brandeis/]
-- [🔣, /unicode/]
-- [💾, https://drive.google.com/drive/u/1/]
-- ['0', https://drive.google.com/drive/u/0/]
-- [📅, https://calendar.google.com/calendar/r]
-- [🎥, https://letterboxd.com/beccaooo/list/movies-i-have-downloaded-but-not-watched/]
-- [🔥, https://tinder.com/app/recs]
-- [<span class="fas fa-sms"></span>, https://messages.android.com/]
-- [☑, https://todoist.com/app]
-- [💸, https://app.youneedabudget.com]
-- [📝, https://app.standardnotes.org/]
-- [<span class="fas fa-quote-right"></span>, https://hangouts.google.com/]
-- [<span class="fab fa-github"></span>, https://github.com/]
+- txt: 🐤
+  url: https://twitter.com/
+
+- txt: '<span class="fab fa-tumblr"></span>'
+  url: http://tumblr.com/
+
+- txt: xkcd
+  url: https://xkcd.com/
+
+- txt: '<span class="fas fa-info"></span>'
+  url: http://www.explainxkcd.com/wiki/index.php/Main_Page
+  alt: xkcd explained
+
+- txt: 📧
+  url: https://www.fastmail.com/
+
+- txt: 'G<sub>0</sub>'
+  url: 'https://mail.google.com/mail/u/0/#inbox'
+  alt: gmail 0
+
+- txt: 'G<sub>1</sub>'
+  url: 'https://mail.google.com/mail/u/1/#inbox'
+  alt: gmail 1
+
+- txt: 'G<sub>2</sub>'
+  url: 'https://mail.google.com/mail/u/1/#inbox'
+  alt: gmail 2
+
+- txt: '<span class="fas fa-robot"></span>'
+  url: https://www.reddit.com/new
+  alt: reddit
+
+- txt: '<span class="fab fa-facebook-messenger"></span>'
+  url: https://www.messenger.com/
+  alt: fb msgr
+
+- txt: ☕
+  url: https://moodle2.brandeis.edu/my/
+  alt: brandeis latte
+
+- txt: sage
+  url: https://sage.brandeis.edu/psp/CPROD90/EMPLOYEE/HRMS/s/WEBLIB_BR_SSO.ISCRIPT1.FieldFormula.iScript_redirectBRSSO
+  alt: brandeis sage
+
+- txt: 📱
+  url: https://identity.brandeis.edu/portal/index
+  alt: brandeis sage mobile
+
+- txt: '<span class="fas fa-gavel"></span>'
+  url: /brandeis/
+  alt: more brandeis links
+
+- txt: 🔣
+  url: /unicode/
+  alt: unicode links
+
+- txt: '💾<sub>0</sub>'
+  url: https://drive.google.com/drive/u/0/
+  alt: google drive 0
+
+- txt: '💾<sub>1</sub>'
+  url: https://drive.google.com/drive/u/1/
+  alt: google drive 1
+
+- txt: 📅
+  url: https://calendar.google.com/calendar/r
+  alt: google calendar
+
+- txt: 🎥
+  url: https://letterboxd.com/beccaooo/list/movies-i-have-downloaded-but-not-watched/
+  alt: letterboxd
+
+- txt: 🔥
+  url: https://tinder.com/app/recs
+  alt: tinder
+
+- txt: '<span class="fas fa-sms"></span>'
+  url: https://messages.android.com/
+  alt: texts
+
+- txt: ☑
+  url: https://todoist.com/app
+  alt: todoist
+
+- txt: 💸
+  url: https://app.youneedabudget.com
+  alt: ynab
+
+- txt: 📝
+  url: https://app.standardnotes.org/
+  alt: notes
+
+- txt: '<span class="fas fa-quote-right"></span>'
+  url: https://hangouts.google.com/
+  alt: hangouts
+
+- txt: '<span class="fab fa-github"></span>'
+  url: https://github.com/
+  alt: github

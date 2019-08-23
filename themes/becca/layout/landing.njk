@@ -1,6 +1,8 @@
 {% extends "_partial/base.njk" %}
 {% block post_content %}
-{% for txt, url in site.data.landing %}
-	<a href="{{ url }}"><div>{{ txt }}</div></a>
+{% for link in site.data.landing %}
+    <a href="{{ link.url }}"
+        {%- if link.alt %} title="{{ link.alt }}"{% endif -%}
+        ><div>{{ link.txt }}</div></a>
 {% endfor %}
 {% endblock %}
