@@ -34,12 +34,6 @@ copying.
 
 [Proposed new characters on unicode.org]
 
-[Xah Lee's Unicode gallery] --- Includes a search engine, various
-categorical galleries, and discussion.
-
-[Variants on unicode.org] --- A list of variant ligatures for using
-alternate forms.
-
 [Unicode planes reference] --- Confused about what "BMP" means? Check
 here.
 
@@ -81,22 +75,20 @@ drawing field.
 shape recognition. Great for writing short bits of text in a language you don’t
 know.
 
-[Mouse input for Chinese characters]
-
 # Conversion (programming)
 
 {% bullet %} [Xem's EscApe utility on Github] --- By [Maxime Euzière].
-Converts any Unicode string to 33 different escape sequences. New: [v2 beta]!
+Converts any Unicode string to a bunch of different escape sequence syntaxes.
 
 [ASCII Xlate] --- Converts plain ASCII, binary, octal, hex, base32,
 base64, ASCII85, and decimal ASCII. Also calculates various hashes!
 
-[Guide to converting to UTF-8 in vasious programming languages]
+[Guide to converting to UTF-8 in various programming languages][convert-to-utf-8]
 
 # Conversion (decorative or linguistic)
 
-{% bullet %} [Unicate] --- Aconverts to various latin Unicode alphabets (e.g.
-fullwidth, math scripts, etc.).
+{% bullet %} [Unicate] --- Converts to various Latin Unicode "alphabets" (e.g.
+full-width, math scripts, etc.).
 
 [Text converter on qaz.wtf] --- Similar to the above.
 
@@ -110,16 +102,14 @@ a Chrome extension. Includes Zalgo generator and fullwidth transform.
 [Emojify text on jsfiddle] --- By [@FakeUnicode] on Twitter. Transforms
 text to emoji.
 
-[Acrostic generator on 9999yea.rs] --- Dubiously useful. Also converts
+[Acrostic generator] --- Dubiously useful. Also converts
 to Unicode Math Monospace.
 
-[Abbreviator on 9999yea.rs] --- Saves characters in tweets by using
+[Abbreviator] --- Saves characters in tweets by using
 precomposed characters.
 
 [Unitools] --- A good compilation of a bunch of other tools. Honorary
 mention.
-
-[Nepali converter]
 
 [Braille converter]
 
@@ -141,8 +131,6 @@ languages (as of April 2016), with about 50% glyph coverage.
 [Preview of all codepoints in the BMP] --- Useful for testing coverage.
 
 [GNU Unifont]
-
-{% bullet %} [Fonts for ancient scripts] --- Symbola 8.00 is available here.
 
 [BabelStone's Han font]
 
@@ -242,11 +230,10 @@ and blame lies entirely with the third parties involved.
 [Handwritten kanji recognition]: http://kanji.sljfaq.org/draw-canvas.html
 [Google Translate]: https://translate.google.com/
 [Mouse input for Chinese characters]: http://www.chinese-tools.com/tools/mouse.html
-[Xem's EscApe utility on Github]: https://xem.github.io/escape/
+[Xem's EscApe utility on Github]: https://rawgit.com/xem/escape/v2/index.html
 [Maxime Euzière]: https://xem.github.io/
-[v2 beta]: https://rawgit.com/xem/escape/v2/index.html
 [ASCII Xlate]: https://paulschou.com/tools/xlate/
-[Guide to converting to UTF-8 in vasious programming languages]: http://www.unicodetools.com/
+[convert-to-utf-8]: http://www.unicodetools.com/
 [Unicate]: http://mar.cx/unicate/
 [Text converter on qaz.wtf]: http://qaz.wtf/u/convert.cgi?text=unicode.9999yea.rs
 [Zalgo generator on eeemo.net]: http://eeemo.net/
@@ -254,8 +241,8 @@ and blame lies entirely with the third parties involved.
 [Strikethrough converter]: http://adamvarga.com/strike/
 [Adam Varga]: http://adamvarga.com/
 [Emojify text on jsfiddle]: https://jsfiddle.net/xHrxM/13/
-[Acrostic generator on 9999yea.rs]: http://u.9999yea.rs/grid/
-[Abbreviator on 9999yea.rs]: http://u.9999yea.rs/abbreviate/
+[Acrostic generator]: /unicode/grid/
+[Abbreviator]: /unicode/abbreviate/
 [Unitools]: https://www.unicod.es/
 [Nepali converter]: http://unicodenepali.com/
 [Braille converter]: http://libbraille.org/translator.php?src=unicode.9999yea.rs&table=basic6
@@ -266,7 +253,6 @@ and blame lies entirely with the third parties involved.
 [Unicode fonts by writing system]: http://www.cheat-sheets.org/sites/font.su/
 [Preview of all codepoints in the BMP]: http://www.visibone.com/htmlref/char/cer.htm
 [GNU Unifont]: http://unifoundry.com/unifont.html
-[Fonts for ancient scripts]: http://users.teilar.gr/~g1951d/
 [BabelStone's Han font]: http://www.babelstone.co.uk/Fonts/Han.html
 [Everson Mono font]: http://www.evertype.com/emono/
 [Hanazono font]: http://fonts.jp/hanazono/

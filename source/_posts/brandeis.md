@@ -26,6 +26,7 @@ extra_css:
 * [deis connect] --- application status
 * [academic calendar]
 * [student jobs] ([more info][job-info])
+* [workday] --- enter timesheets for your job
 * [web print] --- only accessible from campus
 
 <!-- -->       | <!-- -->
@@ -74,3 +75,4 @@ extra_css:
 [student jobs]: https://brandeis.wd5.myworkdayjobs.com/Jobs
 [web print]: https://papercut.ais.brandeis.edu:9192/user
 [sage-mobile]: https://identity.brandeis.edu/portal/index
+[workday]: https://wd5.myworkday.com/brandeis/d/home.htmld

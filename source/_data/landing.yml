@@ -97,3 +97,7 @@
 - txt: '<span class="fab fa-github"></span>'
   url: https://github.com/
   alt: github
+
+- txt: 🦞
+  url: https://lobste.rs/
+  alt: lobste.rs
