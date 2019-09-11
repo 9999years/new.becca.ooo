@@ -167,10 +167,20 @@ code
 pre > code
   background: none
 
-@media (max-width: $body-width + 2 * $margin)
+img.aside
+  float: right
+  max-width: ($body-width / 3)
+
+@media (max-width: ($body-width + 2 * $margin))
   blockquote
     margin-left: 1em
     left: 0
+
+@media (max-width: ($body-width * (2/3) + 2 * $margin))
+  img.aside
+    float: none
+    display: block
+    margin: 0.5em auto
 
 @media (max-width: 380px)
   #container

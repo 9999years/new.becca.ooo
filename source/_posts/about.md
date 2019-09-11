@@ -3,6 +3,12 @@ title: about
 description: some fun facts about my self
 ---
 
+<img title="A selfie of me in San Fransisco, smiling. My hair is bleached blond
+and has just been cut into a rough bob; it's a little bit wavy but not curly.
+My eyes are nearly shut when I smile. I am wearing a black backpack and a black
+shirt, although that's not a commonplace occurance for me." class="aside"
+src="/img/rebecca-turner.jpg">
+
 i was born in 1998 and i live near boston — i attend brandeis university in
 waltham — or sometimes washington dc, where my parents live. my pronouns are
 [she/her][she], and my mbti is infp, probably
