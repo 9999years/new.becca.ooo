@@ -1,3 +1,4 @@
+#! /usr/bin/pwsh
 <#
 .PARAM NewSize
 
@@ -43,6 +44,7 @@ Param (
 	[Double[]]$OutputScales=(1, 2, 3),
 	[String]$NewSize="250x250>",
 	[int]$BorderWidth=20,
+	[String]$Magick="magick",
 	[Switch]$PreserveOriginal
 )
 
@@ -67,7 +69,7 @@ Begin {
 		)
 	
 		Process {
-			 return magick convert $Name -format '%[pixel:p{0,0}]' info:-
+			 return & $Magick convert $Name -format '%[pixel:p{0,0}]' info:-
 		}
 	}
 }
@@ -92,7 +94,7 @@ Process {
 		$size = NewSize ($Width * $scale)
 		$outName = "$directory/$base-${scale}x.jpg"
 		"`t${scale}x -> $outName"
-		magick convert -trim -border ($BorderWidth * $scale) `
+		& $Magick convert -trim -border ($BorderWidth * $scale) `
 			-bordercolor $borderColor `
 			-resize $size $ImageName $outName
 		$success = $? -and $success -and (Test-Path $outName)

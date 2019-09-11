@@ -1,4 +1,10 @@
 ---
+- name: Kindle
+  features: paperwhite, 10th gen
+  price: 130
+  photo: kindle
+  url: https://www.amazon.com/dp/B075MWNNJG
+
 - name: Books
   price: 15
   url: /books
