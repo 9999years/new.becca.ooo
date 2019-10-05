@@ -18,7 +18,7 @@ extra_css:
   schdl.net]
 * [👩‍🏫 faculty guide (pictures and degrees)][faculty]
 * [🏠 myhousing][myhousing] --- housing and meal plans
-* [account management] --- email settings, password changes, shell access,
+* [⚙ account management][account] --- email settings, password changes, shell access,
   etc.
 * [🗺 map (pdf)][map]
 * [undergrad degree requirements]
@@ -34,8 +34,8 @@ extra_css:
 ---------------|-------------------
 (781) 736-3677 | [🩺 health ctr][health ctr]
 (781) 736-4999 | ext. 1. [🚐 branvan][branvan] --- 4pm--2:30am weekdays, 12pm--2:30am weekends. campus: 12pm--2:30am
-(781) 736-5000 | [👮‍♂️🐷 public safety][public safety] --- facilities, BEMCo, cops, et (branpo)c.
-(781) 736-3333 | 🚨 emergencies --- cops / (branpo) BEMCo
+(781) 736-5000 | [👮‍♂️🐷 public safety][public safety] --- facilities, BEMCo, cops (branpo), etc.
+(781) 736-3333 | 🚨 emergencies --- cops (branpo) / BEMCo
 (781) 736-8500 | [🧼👩‍🔧 facilities (8am--5pm)][facilities]
 (781) 736-3370 | [rape crisis ctr]
 (781) 736-5060 | [🏘 dcl][dcl]
@@ -53,7 +53,7 @@ extra_css:
 [branvan]: https://www.brandeis.edu/publicsafety/van-shuttle/branvan-reservation.html
 [whocash]: https://get.cbord.com/whocash/full/login.php
 [dining]: https://brandeis.sodexomyway.com/dining-near-me/open-now
-[account management]: https://identity.brandeis.edu/identity-manage/
+[account]: https://identity.brandeis.edu/identity-manage/
 [map]: https://www.brandeis.edu/about/visiting/images/directions/color-map.pdf
 [undergrad degree requirements]: http://www.brandeis.edu/advising/firstyears/academics/requirements.html
 [course catalogue by subject]: http://registrar-prod.unet.brandeis.edu/course/schedule/registrar/index
