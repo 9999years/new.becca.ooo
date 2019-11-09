@@ -1,4 +1,15 @@
 ---
+- name: Rice cooker
+  price: 40
+  url: https://www.amazon.com/dp/B01CYB6SPI
+  photo: hamilton-beach-rice-cooker
+
+- name: Glerups wool slippers
+  features: size 9.5–10, grey
+  price: 125
+  photo: glerups-slipper
+  url: https://www.amazon.com/dp/B005ZYW2AC
+
 - name: Kindle
   features: paperwhite, 10th gen
   price: 130

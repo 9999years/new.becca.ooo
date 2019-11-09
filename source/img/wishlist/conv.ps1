@@ -69,7 +69,17 @@ Begin {
 		)
 	
 		Process {
-			 return & $Magick convert $Name -format '%[pixel:p{0,0}]' info:-
+			 return & $Magick $Name -format '%[pixel:p{0,0}]' info:-
+		}
+	}
+
+	if ($Magick -ieq "magick") {
+		$Magick = "$Magick convert"
+	}
+
+	if (!(Get-Command $Magick -ErrorAction SilentlyContinue)) {
+		if (Get-Command convert) {
+			$Magick = "convert"
 		}
 	}
 }
@@ -94,7 +104,7 @@ Process {
 		$size = NewSize ($Width * $scale)
 		$outName = "$directory/$base-${scale}x.jpg"
 		"`t${scale}x -> $outName"
-		& $Magick convert -trim -border ($BorderWidth * $scale) `
+		& $Magick -trim -border ($BorderWidth * $scale) `
 			-bordercolor $borderColor `
 			-resize $size $ImageName $outName
 		$success = $? -and $success -and (Test-Path $outName)

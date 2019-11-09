@@ -19,3 +19,7 @@ install:
 # Deploy the site.
 deploy:
 	./node_modules/hexo/bin/hexo generate --verbose
+
+# Resize wishlist images.
+resize image:
+	./source/img/wishlist/conv.ps1 {{ image }}
