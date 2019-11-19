@@ -50,7 +50,7 @@ extra_css:
 [BranVan-schedules]: http://www.brandeis.edu/publicsafety/van-shuttle/index.html
 [transloc]: https://brandeis.transloc.com/
 [an app]: http://translocrider.com/
-[branvan]: https://www.brandeis.edu/publicsafety/van-shuttle/branvan-reservation.html
+[branvan]: https://slate.brandeis.edu/portal/branvanreserve
 [whocash]: https://get.cbord.com/whocash/full/login.php
 [dining]: https://brandeis.sodexomyway.com/dining-near-me/open-now
 [account]: https://identity.brandeis.edu/identity-manage/
