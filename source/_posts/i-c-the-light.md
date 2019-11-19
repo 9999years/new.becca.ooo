@@ -8,7 +8,6 @@ description: a distance-estimating ray marcher for rendering quaternion julia se
 
 From [Syntopia]:
 
-
 > Classic raytracing shoots one (or more) rays per pixel and calculates where the
 > rays intersect the geometry in the scene. Normally the geometry is described by
 > a set of primitives, like triangles or spheres, and some kind of spatial
@@ -25,16 +24,13 @@ From [Syntopia]:
 > estimator tells you how large a step you are allowed to march along the ray,
 > since you are guaranteed not to hit anything within this radius.
 
-[My paper on the ray marcher I wrote][paper]
-
-[Reference links](reference-links)
-
-[Github repo](https://github.com/9999years/i-c-the-light)
-
-[Gallery of image output](gallery)
+* [My paper on the ray marcher I wrote][paper]
+* [Reference links / research sources](reference-links)
+* [Github repo](https://github.com/9999years/i-c-the-light)
+* [Gallery of image output](gallery)
 
 ![A distance-estimated rendering of a pink 3D slice of a 4D quaternion Julia set
 fractal](/img/i-c-the-light/julia.jpg)
 
 [Syntopia]: http://blog.hvidtfeldts.net/index.php/2011/06/distance-estimated-3d-fractals-part-i/
-[paper]: i-c-the-light.pdf
+[paper]: /i-c-the-light.pdf
