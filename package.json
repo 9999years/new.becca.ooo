@@ -13,7 +13,7 @@
     "hexo-deployer-sftp": "^0.1.0",
     "hexo-description": "^0.1.0",
     "hexo-excerpt": "^1.1.4",
-    "hexo-filter-optimize": "^0.2.7",
+    "hexo-filter-optimize": "^0.3.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-sitemap": "^2.0.0",
