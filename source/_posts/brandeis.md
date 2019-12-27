@@ -6,7 +6,8 @@ extra_css:
 ---
 
 * [☕ latte][latte] --- digital course-work
-* [🌿 sage][sage] ([mobile][sage-mobile]) --- course management, finances, personal info, etc.
+* [🌿 sage][sage] ([mobile][sage-mobile]) --- course management, finances,
+  personal info, etc.
 * [🚌 BranVan schedules][BranVan-schedules] --- [current bus locations via
   TransLōc][transloc] or w/ [an app]. [🚐 campus / waltham BranVan
   registrations][branvan]. make sure to get the right schedule for the current
@@ -14,13 +15,13 @@ extra_css:
 * [🍴 dining halls open now][dining]
 * [💸 WhoCash / meal swipe balance][whocash]
 * [📚 library OneSearch][library] \([available journals])
-* [course catalogue by subject], [by requirement] / [scheduling tool on
-  schdl.net]
+* [course catalogue by subject], [by requirement] / [🔧 scheduling tool on
+  schdl.net][schdl]
 * [👩‍🏫 faculty guide (pictures and degrees)][faculty]
 * [🏠 myhousing][myhousing] --- housing and meal plans
 * [⚙ account management][account] --- email settings, password changes, shell access,
   etc.
-* [🗺 map (pdf)][map]
+* [🗺 campus map (pdf)][map]
 * [undergrad degree requirements]
 * [📧 listserv][listserv] / [list of lists]
 * [🩺 patient portal][patient portal], [insurance]
@@ -34,7 +35,7 @@ extra_css:
 ---------------|-------------------
 (781) 736-3677 | [🩺 health ctr][health ctr]
 (781) 736-4999 | ext. 1. [🚐 branvan][branvan] --- 4pm--2:30am weekdays, 12pm--2:30am weekends. campus: 12pm--2:30am
-(781) 736-5000 | [👮‍♂️🐷 public safety][public safety] --- facilities, BEMCo, cops (branpo), etc.
+(781) 736-5000 | [👮🐷 public safety][public safety] --- facilities, BEMCo, cops (branpo), etc.
 (781) 736-3333 | 🚨 emergencies --- cops (branpo) / BEMCo
 (781) 736-8500 | [🧼👩‍🔧 facilities (8am--5pm)][facilities]
 (781) 736-3370 | [rape crisis ctr]
@@ -58,7 +59,7 @@ extra_css:
 [undergrad degree requirements]: http://www.brandeis.edu/advising/firstyears/academics/requirements.html
 [course catalogue by subject]: http://registrar-prod.unet.brandeis.edu/course/schedule/registrar/index
 [by requirement]: http://registrar-prod.unet.brandeis.edu/registrar/schedule/search
-[scheduling tool on schdl.net]: https://brandeis.schdl.net/
+[schdl]: https://brandeis.schdl.net/
 [faculty]: https://www.brandeis.edu/facultyguide/arts-sciences.html
 [listserv]: https://lists.brandeis.edu/wws
 [list of lists]: https://lists.brandeis.edu/wws/lists
