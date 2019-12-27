@@ -1,36 +1,7 @@
 ---
-- name: Rice cooker
-  price: 40
-  url: https://www.amazon.com/dp/B01CYB6SPI
-  photo: hamilton-beach-rice-cooker
-
-- name: Glerups wool slippers
-  features: size 9.5–10, grey
-  price: 125
-  photo: glerups-slipper
-  url: https://www.amazon.com/dp/B005ZYW2AC
-
-- name: Kindle
-  features: paperwhite, 10th gen
-  price: 130
-  photo: kindle
-  url: https://www.amazon.com/dp/B075MWNNJG
-
 - name: Books
   price: 15
   url: /books
-
-- name: 'Objective 2 headphone amplifier'
-  features: rear power jack
-  price: 100
-  url: https://www.jdslabs.com/products/167/objective2-headphone-amplifier-b-stock/
-  photo: jds-objective2
-
-- name: Fountain pen ink
-  features: bright colors
-  price: 15
-  url: 'https://www.gouletpens.com/collections/bottled-ink'
-  photo: fountain-pen-ink
 
 - name: Higonokami by Nagao Seisakusho
   url: 'https://www.amazon.com/dp/B00EU8MLQY'
