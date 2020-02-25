@@ -9,6 +9,17 @@ build:
 generate:
 	just build
 
+# Generate a tar of the node_modules
+generate-node-tar:
+	#!/usr/bin/env bash
+	npm install --ignore-scripts
+	archive="node_modules_$(nix-hash --base32 package-lock.json).tar.gz"
+	if [[ ! -e "$archive" ]]
+	then
+		echo "compressing node_modules to $archive"
+		tar -cjf "$archive" node_modules
+	fi
+
 # Install development deps.
 install:
 	npm install
@@ -23,8 +34,3 @@ deploy:
 # Resize wishlist images.
 resize image:
 	./source/img/wishlist/conv.ps1 {{ image }}
-
-nix:
-	nix run nixpkgs.nodePackages.node2nix -c node2nix \
-		--lock package-lock.json \
-		--nodejs-12
