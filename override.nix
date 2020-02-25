@@ -112,7 +112,7 @@ let
       # optipng needs an extra ./configure flag
       # https://github.com/imagemin/optipng-bin/issues/108
       substituteInPlace node_modules/optipng-bin/lib/install.js \
-          --replace "\`./configure" "\`./configure --with-system-libpng"
+          --replace "\`./configure" "\`LD=\\$CC ./configure --with-system-libpng"
     '';
   };
 
