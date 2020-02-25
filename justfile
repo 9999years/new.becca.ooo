@@ -23,3 +23,8 @@ deploy:
 # Resize wishlist images.
 resize image:
 	./source/img/wishlist/conv.ps1 {{ image }}
+
+nix:
+	nix run nixpkgs.nodePackages.node2nix -c node2nix \
+		--lock package-lock.json \
+		--nodejs-12
