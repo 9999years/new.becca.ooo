@@ -1,0 +1,93 @@
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #0d0911;
+  color: #ab94bf;
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-strong,
+.hljs-name {
+  color: #f3b773;
+}
+
+.hljs-code {
+  color: #f5a78f;
+}
+
+.hljs-class .hljs-title,
+.hljs-title {
+  color: #faf9f3;
+}
+
+.hljs-literal,
+.hljs-string,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: #5ead9d;
+}
+
+.hljs-bullet,
+.hljs-subst,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #f5a78f;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion {
+  color: #948c96;
+}
+
+.hljs-meta {
+  color: #f5a78f;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id,
+.hljs-bold {
+  font-weight: bold;
+}
+
+.hljs-error {
+  color: #b53f28;
+  font-weight: bold;
+}
+
+.hljs-path {
+  text-decoration: underline;
+}
+
+.reveal .hljs:not(.has-highlights) {
+  color: #ab94bf;
+}
+.reveal .hljs.has-highlights tr:not(.highlight-line) {
+  opacity: 0.5;
+}
+.reveal .hljs.has-highlights tr:not(.highlight-line), .reveal .hljs.has-highlights tr:not(.highlight-line) span {
+  color: #aa9db6;
+}
+
+/*# sourceMappingURL=rustconf.css.map */

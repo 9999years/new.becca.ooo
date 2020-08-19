@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Rust for Non-Systems Programmers</title>
+<link href="dist/reset.css" rel="stylesheet"/>
+<link href="dist/reveal.css" rel="stylesheet"/>
+<link href="dist/theme/rustconf.css" id="theme" rel="stylesheet"/>
+<link href="plugin/highlight/rustconf.css" id="highlight-theme" rel="stylesheet"/>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/9144026ed3.js"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section data-timing="60"><div class="slide-wrapper">
+<h1>Rust <div class="small">for</div> Non-Systems Programmers</h1>
+<p><span class="author">Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)</span></p>
+<p><i class="fa-twitter fab"></i> <a href="https://twitter.com/16kbps">@16kbps</a> / <a href="https://becca.ooo/">becca.ooo</a></p>
+
+<aside class="notes"><p> Hey folks, my name is Rebecca Turner, I use <a href="https://pronoun.is/she/her/">she/her</a> pronouns, and I'm
+going to be talking about Rust for non-systems programmers.</p>
+</aside></div></section>
+<section class="center" data-timing="15"><div class="slide-wrapper">
+<ul>
+<li><i class="fa-link fas"></i> <a href="https://becca.ooo/rustconf/2020">becca.ooo/rustconf/2020</a></li>
+<li><i class="fa-github fab"></i> <a href="https://github.com/9999years/rustconf-2020-code">github.com/9999years/rustconf-2020-code</a></li>
+</ul>
+<aside class="notes"><p> Don't worry about taking notes; all the code I'm going to be showing you
+as well as these slides and a rough transcript are available online.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="title-card" data-timing="15"><div class="slide-wrapper">
+<h2>Why this talk?</h2>
+<aside class="notes"><p> I'm a non-systems programmer — before learning Rust, I mostly wrote
+Python — and now Rust is pretty much my favorite language.</p>
+<p>But if you looked at the <a href="https://rust-lang.org/">rust-lang.org</a> website before 2019, that might not
+make a lot of sense to you.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="image-slide" data-timing="17"><div class="slide-wrapper">
+<img alt='A screenshot of the rust-lang.org website in late 2018. The headline reads "Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety."' src="img/rust-2018-11-30.png"/>
+<aside class="notes"><p> Here's the <a href="https://rust-lang.org/">rust-lang.org</a> website at the end of 2018, right before
+they rolled out the new site. The headline emphasizes systems programming,
+speed, and memory safety — all things I don't directly care about that much.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="image-slide" data-timing="25"><div class="slide-wrapper">
+<img alt='A screenshot of the rust-lang.org website in mid-2020. The headline reads "A language empowering everyone to build reliable and efficient software." and sections under "Why Rust?" emphasize performance, reliability, and productivity.' src="img/rust-2020-07-19.png"/>
+<aside class="notes"><p> And here's the same website today in mid-2020. Now Rust is about "empowering
+everyone to build reliable and efficent software," and the website focuses on
+reliability and productivity. But a lot of the documentation has lagged behind
+and still assumes that new Rust programmers already know C++ or something
+similar.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="image-slide" data-timing="20"><div class="slide-wrapper">
+<div class="tweet"><div class="tweet-inner"><div class="user"><div class="col-left"><img alt="Twitter user @16kbps's avatar" class="" src="img/twitter-16kbps.jpg"/></div><div class="col-right"><div class="display-name">rebecca</div><div class="username">@16kbps</div></div></div><div class="tweet-main">
+  hi my names rebecca and i still dont understand rust
+  
+
+</div><div class="date">10:12 AM · May 1, 2017</div><div class="interactions"><span class="item"><span class="number">2</span><span class="label">Likes</span></span></div></div></div>
+<aside class="notes"><p> That made it really hard for me to learn Rust. I've never really
+understood memory management, so a lot of the documentation was pretty
+inaccessible to me.</p>
+<p>I want to talk about how we can use Rust as non-systems programmers without
+getting bogged down in the details of optimization and memory management.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="title-card" data-state="peach" data-timing="8"><div class="slide-wrapper">
+<h2>What can Rust <br/> do for you?</h2>
+<aside class="notes"><p> Before we start writing code, let's take a quick look at some of the
+things Rust makes strikingly easy — and don't worry if I go through these
+quickly, we'll come back to these features soon.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="8"><div class="slide-wrapper">
+<pre><code class="language-plain left">rustconf-code 0.1.0
+A command-line interface to the openweathermap.org API
+
+USAGE:
+    rustconf-code [OPTIONS]
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -c, --config &lt;config&gt;    Config filename; a JSON file with
+                             an `api_key` field
+                             [default: openweather_api.json]
+</code></pre>
+<aside class="notes"><p> Rust can do command-line argument parsing generated from a type definition…</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="9"><div class="slide-wrapper">
+<pre class="term"><span class="hljs-keyword">$</span> <span class="hljs-title">./target/debug/rustconf-code --confiig cfg.json</span>
+<span style="color: #CC0000"><b>error:</b></span> Found argument '<span style="color: #C4A000">--confiig</span>' which wasn't expected,
+       or isn't valid in this context
+       Did you mean <span style="color: #4E9A06">--config</span>?
+
+USAGE:
+    rustconf-code --config &lt;config&gt;
+
+For more information try <span style="color: #4E9A06">--help</span>
+</pre>
+<aside class="notes"><p> …with automatic typo-correction, while generating tab-completion
+scripts and man pages at compile-time.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="10"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ ./target/debug/rustconf-code --config bad-schema.json
+Error: Failed to deserialize configuration JSON
+
+Caused by:
+    invalid type: map, expected a string at line 2 column 14
+</code></pre>
+<aside class="notes"><p> Rust can give you great error reports for complex errors while
+automatically deserializing JSON to a custom type.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="8"><div class="slide-wrapper">
+<pre class="term">running 1 test
+test tests::str_test ... <span style="color: #CC0000">FAILED</span>
+
+failures:
+---- tests::str_test stdout ----
+thread 'tests::str_test' panicked at
+'assertion failed: `(left == right)`
+
+<b>Diff</b> <span style="color: #CC0000">&lt; left</span> / <span style="color: #4E9A06">right &gt;</span> :
+<span style="color: #CC0000">&lt;"Hello, RustConf!"</span>
+<span style="color: #4E9A06">&gt;"Hello, RustConf</span><span style="background-color:#005F00"><span style="color: #4E9A06"><b> 2020</b></span></span><span style="color: #4E9A06">!"</span>
+
+', src/main.rs:11:9
+
+test result: <span style="color: #CC0000">FAILED</span>. 0 passed; 1 failed; 0 ignored;
+0 measured; 0 filtered out
+</pre>
+<aside class="notes"><p> And Rust can output fancy test diffs with a one-line import that
+integrates with the default test framework.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="title-card" data-state="teal" data-timing="8"><div class="slide-wrapper">
+<h2>(And a lot more)</h2>
+<aside class="notes"><p> Rust can do a whole lot more, too. But I don't want to just list random
+Rust features for 30 minutes.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="title-card" data-timing="25"><div class="slide-wrapper">
+<h2>Let’s write a program</h2>
+<aside class="notes"><p> When I was learning Rust, a process that had 3 or 4 false starts since
+about 2016, I kept getting halfway through writing a program before I'd get
+stuck on a compiler error I couldn't figure out.</p>
+<p>So we're going to write a non-trivial Rust program together, and see how we can
+solve a lot of common problems in a Rust-y way — without worrying about the
+finer details that I have a hard time understanding.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="title-card" data-state="purple" data-timing="40"><div class="slide-wrapper">
+<h2>What is this talk <em>not</em>?</h2>
+<aside class="notes"><p> There's a lot of Rust features and tools that aren't important to me as
+a Python programmer, and I'm going to pretty much skip those entirely.</p>
+<p>We're not going to optimize anything, because the totally naive program we're
+going to write takes 1/10th of a second to run — and almost all of that time
+is spent waiting on some network requests.</p>
+<p>We're not going to talk about macros, or a lot of the fancy type system
+features Rust has, or pointers. I'm not even going to <em>say</em> the words "heap" or
+"stack" or "allocate" — if it wouldn't matter in Python or JavaScript or
+Ruby, it's out of scope here.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="title-card" data-state="peach" data-timing="45"><div class="slide-wrapper">
+<h2>Why do I like Rust?</h2>
+<aside class="notes"><p> I have ADHD, and it varies from person to person but one area I really
+struggle with is <a href="https://en.wikipedia.org/wiki/Working_memory"><em>working memory</em></a>, which is roughly how much
+information you can hold in your head at once. And as an engineer, that means
+that I can't hold much of the program concept in my mind while I work.</p>
+<p>It's really important that I have a powerful compiler, linters, and tests
+because otherwise I have no way of knowing that the program's correct.
+Type annotations and autocompletion aren't optional niceties for me — it's essential
+that my tooling tells me which operations are supported on which variables,
+because otherwise I have to look them up nearly every time.</p>
+<p>Rust <em>really shines</em> in all of these areas. I work <em>with</em> the compiler to
+check my work. And it helps me feel a lot more confident that my programs do
+what I think they do.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="60"><div class="slide-wrapper">
+<h2>Tooling</h2>
+
+<ul>
+<li class="fragment">Documentation: <a href="https://doc.rust-lang.org/rustdoc/what-is-rustdoc.html">rustdoc</a> (API docs) and <a href="https://rust-lang.github.io/mdBook/">mdBook</a> (long-form guides)</li>
+<li class="fragment">Language servers: <a href="official">rls</a> and <a href="community">rust-analyzer</a></li>
+<li class="fragment">Package manager, build system: <a href="https://doc.rust-lang.org/book/ch01-03-hello-cargo.html">Cargo</a></li>
+</ul>
+<aside class="notes"><p> Before we start looking at code, I want to point out a few of the tools
+that making writing Rust easy and fun.</p>
+<ul>
+<li>rustdoc compiles <code>///</code> doc comments written in Markdown to webpages —
+complete with search, links, and more.</li>
+<li>mdBook is used for writing longer-form narrative-style documentation; mdBook
+was created to write the Rust Book, the main source of rust documentation.</li>
+<li>Two very good language servers provide autocompletion, definition-jumping,
+quick fixes, and more. rls is distributed with Rust itself, and rust-analyzer
+is a community project.</li>
+<li>Cargo is a package manager and build system, integrating with the crates.io
+package repository, that handles everything from dependency resolution to
+building documentation, running tests, and benchmarking.</li>
+</ul>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="image-slide" data-timing="45"><div class="slide-wrapper">
+<h2>Documentation</h2>
+<div class="r-stack">
+<iframe class="main" data-fragment-index="0" importance="low" loading="lazy" src="https://docs.rs/rand/0.7.3/rand/"></iframe>
+<iframe class="fragment fade-in main" data-fragment-index="0" importance="low" loading="lazy" src="https://docs.rs/rand/0.7.3/rand/fn.thread_rng.html"></iframe>
+<iframe class="fragment fade-in main" data-fragment-index="1" importance="low" loading="lazy" src="https://docs.rs/rand/0.7.3/rand/rngs/struct.ThreadRng.html"></iframe>
+<iframe class="fragment fade-in main" data-fragment-index="2" importance="low" loading="lazy" src="https://docs.rs/rand/0.7.3/rand/rngs/struct.ThreadRng.html#implementations"></iframe>
+<iframe class="fragment fade-in main" data-fragment-index="3" importance="low" loading="lazy" src="https://docs.rs/rand/0.7.3/rand/trait.RngCore.html"></iframe>
+<iframe class="fragment fade-in main" data-fragment-index="4" importance="low" loading="lazy" src="https://docs.rs/rand/0.7.3/rand/trait.RngCore.html#required-methods"></iframe>
+</div>
+<aside class="notes"><p> Here's the generated documentation for the <a href="https://docs.rs/rand"><code>rand</code></a> crate, which you can
+find at <a href="https://docs.rs/rand/">docs.rs/rand</a>.</p>
+<ol>
+<li>We can see the overview they wrote, and we can search the crate's items —
+with keyboard shortcuts!</li>
+<li>If we click on the <code>thread_rng</code> function, we get to this definition. Let's
+click the return type and check out the documentation for <code>ThreadRng</code>.</li>
+<li>If we scroll down a bit, we can see the traits <code>ThreadRng</code> implements.
+<code>RngCore</code> looks interesting, so let's check out that one.</li>
+<li>We can see a description at first…</li>
+<li>And if we scroll down, we can see the required methods and their documentation.</li>
+</ol>
+<p>Having a uniform style and interface for documentation is really helpful when
+exploring a library's API and jumping between multiple libraries.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="80"><div class="slide-wrapper">
+<h2>Getting started</h2>
+<pre><code class="language-rust no-line-numbers" data-line-numbers="1-10|1|3-10|4|5-9|5|8" data-noescape="">use <a href="https://docs.rs/std">std</a>::env;
+
+fn main() {
+    let user = env::var("USER").unwrap();
+    if user == "becca" {
+        println!("Hello, Rebecca!");
+    } else {
+        println!("Hello, {}!", user);
+    }
+}
+</code></pre>
+<aside class="notes"><p> Here's a pretty simple rust program, just to show off a bit of syntax.</p>
+<ol>
+<li>
+<p>The <code>use</code> statement imports names from libraries. <code>::</code> is used as a path
+separator / namespacing operator.</p>
+</li>
+<li>
+<p>Next, we define a function with the <code>fn</code> keyword; The function named
+<code>main</code> is the entry point.</p>
+</li>
+<li>
+<p>We call the <code>var</code> function in the <code>env</code> module, and assign the value it
+returns to <code>user</code>; Rust figures out the type for us.</p>
+<p><code>env::var</code> returns a <code>Result</code>, so we have to unwrap it, which will crash
+if there's an error. We'll come back to that in a minute.</p>
+</li>
+<li>
+<p>Next, we have an <code>if</code> statement, which has braces but no parenthesis.</p>
+</li>
+<li>
+<p>Note that we're also comparing strings with <code>==</code> — we have operator overloading!</p>
+</li>
+<li>
+<p>Finally, we have this <code>println!</code> macro — the <code>!</code> means it's a macro, and
+the string literal there is actually turned into a series of formatting
+instructions at compile time, and the compiler checks that we have enough
+arguments and that they're the right types.</p>
+</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="5"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ cargo build
+   Compiling rustconf-code v0.1.0 (~/rustconf/rustconf-code)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+</code></pre>
+<aside class="notes"><p> We can run <code>cargo build</code> to compile the program.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="5"><div class="slide-wrapper">
+<pre><code class="language-shell-session">$ ./target/debug/rustconf-code
+Hello, Rebecca!
+$ USER=nell ./target/debug/rustconf-code
+Hello, nell!
+</code></pre>
+<aside class="notes"><p> And then we can run it, and it does what we expect.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="15"><div class="slide-wrapper">
+<pre><code class="language-shell-session no-line-numbers left" data-line-numbers="1-2|3-7">$ env USER= ./target/debug/rustconf-code
+Hello, !
+$ env USER="$(printf '\xc3\x28')" ./target/debug/rustconf-code
+thread 'main' panicked at 'called `Result::unwrap()` on an
+`Err` value: NotUnicode("\xC3(")', src/main.rs:4:16
+note: run with `RUST_BACKTRACE=1` environment variable to display
+a backtrace
+</code></pre>
+<aside class="notes"><p> …although, if the <code>USER</code> environment variable is empty, it might be a
+bit confusing, and if <code>USER</code> contains invalid UTF-8, it'll crash the whole
+program.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="25"><div class="slide-wrapper">
+<pre><code class="language-rust" data-noescape="">enum Result&lt;T, E&gt; {
+    Ok(T),
+    Err(E),
+}
+</code></pre>
+<aside class="notes"><p> <code>Result</code> is an <code>enum</code>, which is a type that can be <em>one</em> of a number of
+different things. It's also a generic type, so we can pick any two types <code>T</code>
+and <code>E</code> and use a <code>Result</code> type which can be either an <code>Ok</code> variant containing
+a <code>T</code> value or an <code>Err</code> variant containing an <code>E</code> value.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="20"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="5-14" data-noescape="">use <a href="https://docs.rs/std">std</a>::env;
+
+fn main() {
+    let user = env::var("USER");
+    match user {
+        Ok(user) =&gt; {
+            if user == "becca" {
+                println!("Hello, Rebecca!");
+            } else {
+                println!("Hello, {}!", user);
+            }
+        }
+        Err(_) =&gt; println!("I couldn't figure out who you are!"),
+    }
+}
+</code></pre>
+<aside class="notes"><p> One way we can deal with that error is by matching on it, which is a bit
+like an <code>isinstance</code> check. Here, we'll just handle an error by printing a
+simple message.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="30"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ env USER="$(printf '\xc3\x28')" ./target/debug/rustconf-code
+I couldn't figure out who you are!
+</code></pre>
+<aside class="notes"><p> Now, when we run our program with invalid data, we print an error
+message instead of crashing. We'll talk about some other ways to handle errors
+as we go, but for the definitive rundown check out Jane Ludsby's talk <a href="https://rustconf.com/schedule/error-handling-isn-t-all-about-errors">"Error
+Handling Isn't All About Errors"</a>.</p>
+<p>But this talk is about Rust's value as a practical programming language,
+which means doing more than writing "Hello, world!"s. So lets write a program
+in Rust and explore some of the ways the language helps us out.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="image-slide" data-timing="25"><div class="slide-wrapper">
+<img alt='A Star TSP100 Eco futurePRNT 72mm receipt printer, powered on with a printed receipt showing the RustConf homepage reading "Beaming to screens across the globe"' src="img/receipt-printer.jpg"/>
+<aside class="notes"><p> I have this receipt printer hooked up to my computer, and it's super fun
+to play with — there's no ink, so paper is incredibly cheap, and they're
+designed for restaurants and retail, so they're incredibly durable.</p>
+<p>I always forget to check the weather in the morning, so I want to write a
+program I can set to run before I wake up that tells me the weather, and how
+it'll feel compared to the previous day.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="35"><div class="slide-wrapper">
+<pre><code class="language-python no-line-numbers left" data-line-numbers="1-12|5-7|8-11|12">import json
+
+import requests
+
+with open("openweather_api.json") as f:
+    api_key_obj = json.load(f)
+    api_key = api_key_obj["api_key"]
+    res = requests.get(
+        "https://api.openweathermap.org/data/2.5/weather",
+        params={"q": "Waltham,MA,US", "appid": api_key},
+    )
+    print(res.text)
+</code></pre>
+<aside class="notes"><p> Weather APIs come and go, but right now
+<a href="https://openweathermap.org/">OpenWeather</a> is providing decent data for free — even if
+the default units are Kelvins.</p>
+<p>Here's a simple call of their API; we 1. load the API key from a JSON file, 2.
+make a request, and then 3. print out the response text.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="10"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ ./openweather.py
+{"coord":{"lon":-71.24,"lat":42.38},"weather":[{"id":801,"main":
+"Clouds","description":"few clouds","icon":"02d"}],"base":
+"stations","main":{"temp":298.14,"feels_like":297.91,"temp_min":
+296.48,"temp_max":299.82,"pressure":1009,"humidity":57}, ...
+</code></pre>
+<aside class="notes"><p> And when we run it, we get a minified JSON blob as output.</p>
+<p>Let's work on recreating this in Rust.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="80"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="1-15|4|5-6|7-13" data-noescape="">use <a href="https://docs.rs/serde_json">serde_json</a>::Value;
+
+fn main() {
+    let api_key_json = include_str!("../openweather_api.json");
+    let api_key_obj: Value =
+        serde_json::from_str(api_key_json).unwrap();
+    let api_key = api_key_obj
+        .as_object()
+        .unwrap()
+        .get("api_key")
+        .unwrap()
+        .as_str()
+        .unwrap();
+    println!("API key is {}", api_key);
+}
+</code></pre>
+<aside class="notes"><p> Here's a start at a line-by-line conversion of that program.</p>
+<ol>
+<li>
+<p>We're using <code>include_str!</code> here which actually reads a file as UTF-8 at
+<em>compile time</em> — we'll work on opening files in a bit, but this works well
+enough for now.</p>
+</li>
+<li>
+<p>Next, we use <a href="https://docs.rs/serde_json"><code>serde_json</code></a> to parse that string into a JSON value.</p>
+</li>
+<li>
+<p>Then, we get the <code>api_key</code> key out of the object as a string. Each time
+we assert something about the type of a value in this object, we need to
+unwrap it, because we might <em>not</em> have a value of the type we want, so we
+need to deal with that somehow.</p>
+<p>Note that this isn't entirely unique to Rust, though — our
+Python program would also crash if <code>api_key_obj</code> wasn't a JSON object, or if
+it didn't have a key named <code>api_key</code>, or if the value to that key wasn't a
+string. But Rust makes us be explicit about it.</p>
+<p>That's not entirely a bad thing — it helps us figure out where errors
+could happen — but it is awfully verbose and painful to write.</p>
+<p>Fortunately, there's a better way.</p>
+</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="15"><div class="slide-wrapper">
+<pre><code class="language-rust" data-noescape="">use <a href="https://docs.rs/serde">serde</a>::Deserialize;
+
+#[derive(Debug, Clone, Deserialize)]
+struct OpenWeatherConfig {
+    api_key: String,
+}
+</code></pre>
+<aside class="notes"><p> Here, we're declaring a struct, which is roughly a class, in the sense
+of a blob of data with named fields and methods. Then, we derive some traits
+for it. Which begs the question: what's a trait?</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="35"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers" data-line-numbers="1-3|4-11|1-11" data-noescape="">trait From&lt;T&gt; {
+  fn from(T) -&gt; Self;
+}
+
+impl From&lt;String&gt; for OpenWeatherConfig {
+  fn from(key: String) -&gt; Self {
+    Self {
+      api_key: key,
+    }
+  }
+}
+</code></pre>
+<aside class="notes"><p></p>
+<ol>
+<li>A trait is a set of method signatures that specify some interface; here, the
+<code>From</code> trait lets us convert from one type to another.</li>
+<li>We can implement a trait for a type with an <code>impl</code> block. Note the <code>Self</code>
+keyword there that indicates the <code>impl</code> block's type — that makes
+refactoring a lot easier and lets us talk about things like "a function that
+returns the same type as the value its called on".</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="40"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers" data-line-numbers="1-3|5-13" data-noescape="">trait Into&lt;T&gt; {
+  fn into(self) -&gt; T;
+}
+
+impl&lt;T, U&gt; Into&lt;U&gt; for T
+where
+  U: From&lt;T&gt;,
+{
+  fn into(self) -&gt; U {
+    U::from(self)
+  }
+}
+</code></pre>
+<aside class="notes"><p></p>
+<ol>
+<li>
+<p>Rust lets us do a lot of funky things with traits, and particularly traits
+with generic types like these.</p>
+<p>Here's the <code>Into</code> trait, which is <code>From</code> in the other direction.</p>
+</li>
+<li>
+<p>We can implement <code>Into&lt;U&gt;</code> for all types <code>T</code> as long as <code>U</code> implements
+<code>From&lt;T&gt;</code>; the implementation is pretty simple if you can wrap your head
+around that — we just call the <code>From</code> method.</p>
+<p>That's pretty magical — we just implement one, and the type system gives
+us the other one for free.</p>
+</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="30"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="1-7|9-10|9" data-noescape="">impl From&lt;String&gt; for OpenWeatherConfig {
+  fn from(key: String) -&gt; Self {
+    Self {
+      api_key: key,
+    }
+  }
+}
+
+let key: String = "92c2321c2e66af5bb3aaf07bdbfe9cb7".to_owned();
+let cfg: OpenWeatherConfig = key.into();
+</code></pre>
+<aside class="notes"><p></p>
+<ol>
+<li>So, <code>From&lt;String&gt;</code> implementation for <code>OpenWeatherConfig</code>,</li>
+<li>we can use the <code>into</code> method on the <code>String</code> type to convert to an
+<code>OpenWeatherConfig</code> object.</li>
+<li>But about that <code>to_owned</code> call there. What's the deal? Shouldn't a string
+literal already be a <code>String</code> without calling another method?</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="30"><div class="slide-wrapper">
+<pre><code class="left">let key: &amp;str = "92c2321c2e66af5bb3aaf07bdbfe9cb7";
+let key_owned: String = key.to_owned();
+</code></pre>
+<aside class="notes"><p> In Rust, string literals get baked into the compiled binary directly.
+Because that data is always sitting at a fixed location in the binary, we can't
+change it without copying it into memory first.</p>
+<p>If we want to have a string that belongs to us — rather than one referencing
+some data elsewhere in the program — we have to call the <code>to_owned</code> method to
+convert it, which creates a new <code>String</code> object and copies the data we need
+into it.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="50"><div class="slide-wrapper">
+<pre><code class="language-rust" data-noescape="">use <a href="https://docs.rs/serde">serde</a>::Deserialize;
+
+#[derive(Debug, Clone, Deserialize)]
+struct OpenWeatherConfig {
+    api_key: String,
+}
+</code></pre>
+<aside class="notes"><p> Back to our <code>OpenWeatherConfig</code> struct. We don't have to implement every
+trait by hand. The other option is to use a <em>derive macro,</em> which is a function
+— written in Rust — that reads the type's definition as a syntax tree and
+automatically generates an <code>impl</code> block for us.</p>
+<p>There's usually a few requirements for deriving traits — in particular, for
+traits like <code>Debug</code>, <code>Clone</code>, and <code>Deserialize</code>, we need all the types the
+struct is composed of (here, just <code>String</code>) to implement the same trait.</p>
+<p><code>Debug</code> lets us pretty-print the struct's data, <code>Clone</code> lets us deeply copy it,
+and <a href="https://docs.rs/serde"><code>serde</code></a>'s <code>Deserialize</code> lets us deserialize it from JSON — or, with
+other serde libraries, XML, YAML, TOML, Protobufs, and more.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="20"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">use <a href="https://docs.rs/serde">serde</a>::Deserialize;
+
+fn main() {
+    let config_json = include_str!("../openweather_api.json");
+    let config: OpenWeatherConfig =
+        serde_json::from_str(config_json).unwrap();
+    println!("{:?}", config);
+}
+</code></pre>
+<aside class="notes"><p> Here's what deserializing to a value looks like. Note that we don't need
+to explicitly construct our <code>OpenWeatherConfig</code> object — that, along with
+parsing the JSON, matching up keys to fields, and recursively constructing
+other <code>Deserialize</code>able values, is handled by <a href="https://docs.rs/serde"><code>serde</code></a> and <a href="https://docs.rs/serde_json"><code>serde_json</code></a>.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="10"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ cat openweather_api.json
+{
+  "api_key": "1b13e6aa173ce14137a50095476e653c"
+}
+
+$ cargo run
+    Finished dev [unoptimized + debuginfo] target(s) in 0.05s
+     Running `target/debug/rustconf-code`
+OpenWeatherConfig {
+    api_key: "1b13e6aa173ce14137a50095476e653c"
+}
+</code></pre>
+<aside class="notes"><p> Now when we run this, we get some nice pretty-printed debug output by default.</p>
+<p>That's not my actual API key, by the way. Don't worry.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="30"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">use <a href="https://docs.rs/std">std</a>::path::PathBuf;
+
+use <a href="https://docs.rs/structopt">structopt</a>::StructOpt;
+
+/// A command-line interface to the openweathermap.org API.
+#[derive(Debug, StructOpt)]
+struct Opt {
+    /// Config filename; a JSON file with an `api_key` field.
+    #[structopt(short, long, parse(from_os_str))]
+    config: PathBuf,
+}
+
+fn main() {
+    let opt = Opt::from_args();
+    // ...
+}
+</code></pre>
+<aside class="notes"><p> The next change I want to make is adding <a href="https://docs.rs/structopt"><code>structopt</code></a>, which
+derives a command-line interface from a struct definition. Instead of declaring
+all our arguments as strings and pulling them out of an untyped hashmap, we
+just declare them as struct fields — which means we get autocompletion for
+our command-line options, along with bonuses like detecting that <code>Option</code>
+fields aren't mandatory and <code>Vec</code> fields can have multiple values.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="8"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ ./target/debug/rustconf-code --help
+rustconf-code 0.1.0
+A command-line interface to the openweathermap.org API
+
+USAGE:
+    rustconf-code --config &lt;config&gt;
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -c, --config &lt;config&gt;    Config filename; a JSON file with
+                             an `api_key` field
+</code></pre>
+<aside class="notes"><p> We get a lot of perks from <a href="https://docs.rs/structopt"><code>structopt</code></a>, including the great
+generated help message.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="8"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ ./target/debug/rustconf-code --confgi my-custom-file.json
+error: Found argument '--confgi' which wasn't expected, or isn't
+       valid in this context
+       Did you mean --config?
+
+USAGE:
+    rustconf-code --config &lt;config&gt;
+
+For more information try --help
+</code></pre>
+<aside class="notes"><p> <a href="https://docs.rs/structopt"><code>structopt</code></a> even helps us with typos by default.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="25"><div class="slide-wrapper">
+<pre><code class="language-rust left no-line-numbers" data-line-numbers="3-10|5,7" data-noescape="">
+
+fn main() -&gt; eyre::Result&lt;()&gt; {
+    let opt = Opt::from_args();
+    let config_json = File::open(&amp;opt.config)?;
+    let config: OpenWeatherConfig =
+        serde_json::from_reader(&amp;config_json)?;
+    println!("Config: {:#?}", config);
+    Ok(())
+}
+</code></pre>
+<aside class="notes"><p> The next thing I want to do is add some error reporting, so we don't
+have to unwrap everything and cause panics when something fails. The <a href="https://docs.rs/eyre"><code>eyre</code></a> crate gives us the beautifully-formatted error messages I showed off at
+the beginning of the talk, and has a ton of other functionality we won't
+explore here.</p>
+<ol>
+<li>Now, we can handle errors with the <code>?</code> operator, which is a pretty simple but
+important bit of syntax sugar.</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="35"><div class="slide-wrapper">
+<pre><code class="language-rust left no-line-numbers" data-line-numbers="6-9,11-14" data-noescape="">
+
+fn main() -&gt; eyre::Result&lt;()&gt; {
+    let opt = Opt::from_args();
+    let config_json =
+        match File::open(&amp;opt.config) {
+            Ok(file) =&gt; file,
+            Err(err) =&gt; return Err(err.into()),
+        };
+    let config: OpenWeatherConfig =
+        match serde_json::from_reader(&amp;config_json) {
+            Ok(config) =&gt; config,
+            Err(err) =&gt; return Err(err.into()),
+        };
+    println!("Config: {:#?}", config);
+    Ok(())
+}
+</code></pre>
+<aside class="notes"><p> The <code>?</code>s are transformed into roughly these match statements; if we have
+an <code>Ok</code> value, we take that value and use it. Otherwise, we return the <code>Err</code>
+value from the whole function — we just bubble up the error to the caller.
+It's a little bit like throwing an exception, but we don't quit an arbitrary
+series of functions — we only go up one layer, and the type system doesn't
+let us ignore it.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="30"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="1,6-11,14" data-noescape="">use <a href="https://docs.rs/eyre">eyre</a>::WrapErr;
+
+fn main() -&gt; eyre::Result&lt;()&gt; {
+    let opt = Opt::from_args();
+    let config_json =
+        File::open(&amp;opt.config).wrap_err_with(|| {
+            format!(
+                "Failed to open config file {:?}",
+                opt.config
+            )
+        })?;
+    let config: OpenWeatherConfig =
+        serde_json::from_reader(&amp;config_json)
+            .wrap_err("Failed to deserialize JSON")?;
+    println!("Config: {:#?}", config);
+    Ok(())
+}
+</code></pre>
+<aside class="notes"><p> Using the <code>?</code> operator again, we're going to use the <code>wrap_err</code> methods
+from <a href="https://docs.rs/eyre"><code>eyre</code></a>'s <code>WrapErr</code> trait to more accurately describe what went wrong.
+We just write a bit about what we were doing that might have caused an error,
+and then that string will get displayed if the error report is printed. It's a
+pretty simple step — provided you do it from the start — and it makes
+debugging a <em>lot</em> easier.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="25"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ ./target/debug/rustconf-code --config nonexistent-file.json
+Error: Failed to open config file "nonexistent-file.json"
+
+Caused by:
+    No such file or directory (os error 2)
+
+$ ./target/debug/rustconf-code --config invalid-file.json
+Error: Failed to deserialize JSON
+
+Caused by:
+    trailing comma at line 3 column 1
+</code></pre>
+<aside class="notes"><p> Here we can try to use a nonexistent file or an invalid file for our
+config file and we can see the error messages we get.</p>
+<p>These are pretty simple, but they're especially useful when we have a bunch of
+layers of error context to figure out what we did wrong — and unlike
+exceptions in a lot of languages, we don't just get an enormous unreadable
+stack trace by default.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="15"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">use <a href="https://docs.rs/reqwest">reqwest</a>::blocking::{Client, Response};
+
+fn get_weather(
+    api_key: &amp;str,
+) -&gt; Result&lt;Response, reqwest::Error&gt; {
+    let client = Client::new();
+    client
+        .get("https://api.openweathermap.org/data/2.5/weather")
+        .query(&amp;[("q", "Waltham,MA,US"), ("appid", api_key)])
+        .send()
+}
+</code></pre>
+<aside class="notes"><p> Now we're going to use the <a href="https://docs.rs/reqwest"><code>reqwest</code></a> library to make a simple call
+to the <a href="https://openweathermap.org/">openweathermap.org</a> API.</p>
+<p>We create an HTTP client object, call the <code>get</code> method with the endpoint URL,
+add some query parameters, and send the request.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="10"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">println!("Response: {:#?}", get_weather(&amp;config.api_key)?);
+</code></pre>
+<pre><code class="language-shell-session left">$ cargo run
+Response: Response {
+    url: "https://api.openweathermap.org/data/2.5/weather?q=...",
+    status: 200,
+    headers: {
+        "server": "openresty",
+        "date": "Sun, 19 Jul 2020 19:30:04 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "465",
+        "connection": "keep-alive",
+        "x-cache-key": "/data/2.5/weather?q=waltham%2cma%2cus",
+    },
+}
+</code></pre>
+<aside class="notes"><p> We can see when we pretty-print the <code>Response</code> object, we get all the
+fields we might expect — headers, a status code, and so on.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="20"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">let res = get_weather(&amp;config.api_key)?;
+let bytes = res.bytes()?;
+println!("{}", String::from_utf8_lossy(&amp;*bytes));
+</code></pre>
+<pre><code class="language-json left">{"coord":{"lon":-71.24,"lat":42.38},"weather":[{"id":802,
+"main":"Clouds","description":"scattered clouds","icon":
+"03d"}],"base":"stations","main":{"temp":308.71,"feels_like":
+307.42,"temp_min":307.59,"temp_max":309.82,"pressure":1010,
+"humidity":37},"visibility":10000,"wind":{"speed":6.2, ...
+</code></pre>
+<aside class="notes"><p> We can also print the response text, which is this big minified JSON
+blob. We're going to deserialize that, too, but first let's clean up our
+interface to the <a href="https://openweathermap.org/">openweathermap.org</a> API.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="25"><div class="slide-wrapper">
+<pre><code class="language-rust" data-noescape="">use <a href="https://docs.rs/reqwest">reqwest</a>::blocking::Client;
+use <a href="https://docs.rs/serde">serde</a>::Deserialize;
+
+#[derive(Deserialize, Debug, Clone)]
+struct OpenWeather {
+    api_key: String,
+
+    lat: f64,
+    lon: f64,
+
+    #[serde(skip)]
+    client: Client,
+}
+</code></pre>
+<aside class="notes"><p> While we're at it, let's unify our config file with our API client –
+instead of passing an API key into every function call, we can keep it in the
+same struct that holds the <a href="https://docs.rs/reqwest"><code>reqwest</code></a> client. And because the <code>Client</code> has a
+default value, we can tell serde to use that instead of expecting it in our
+config file.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="10"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">fn main() -&gt; eyre::Result&lt;()&gt; {
+    // ...
+    let config: OpenWeather = serde_json::from_reader(
+        &amp;config_json,
+    )?;
+    // ...
+}
+</code></pre>
+<aside class="notes"><p> Now, we can just read our config object from the same JSON file we were
+using before, without even a constructor method.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="60"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="1-10|3|2,6" data-noescape="">impl OpenWeather {
+    fn get&lt;Response: DeserializeOwned&gt;(
+        &amp;self,
+        endpoint: &amp;str,
+        params: &amp;[(&amp;str, &amp;str)],
+    ) -&gt; eyre::Result&lt;Response&gt; {
+      // I have discovered a truly marvelous implementation
+      // of this method, which this slide is too narrow
+      // to contain.
+    }
+}
+</code></pre>
+<aside class="notes"><p> Now, to make our API a bit cleaner, let's start implementing methods.
+This gives us something that looks a lot like the classes we may have used in
+other languages, and although Rust doesn't have inheritance or subtyping,
+generic functions and traits can get us pretty close.</p>
+<p>An <code>impl</code> block lets us put methods on types.</p>
+<ol>
+<li>Like Python, Rust doesn't have an implicit <code>this</code> object you can reference
+— you need to write it explicitly.</li>
+<li>We also have angle brackets after the function name to indicate a generic
+function. Here, we have one generic parameter named <code>Response</code> and the colon
+indicates a <em>trait bound,</em> which means that <code>Response</code> has to be a type with
+an implementation of <code>DeserializeOwned</code> — which is exactly what
+<code>#[derive(Deserialize)]</code> gives us. Essentially, we've copied a type
+parameter from <a href="https://docs.rs/serde_json"><code>serde_json</code></a><code>::from_reader</code> so that we can deserialize
+any type we define.</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="10"><div class="slide-wrapper">
+<pre><code class="language-rust" data-noescape="">#[derive(Deserialize, Debug, Clone)]
+pub struct OneCall {
+    pub hourly: Vec&lt;Hourly&gt;,
+    pub daily: Vec&lt;Daily&gt;,
+}
+
+#[derive(Deserialize, Debug, Clone)]
+pub struct Hourly {
+    pub dt: UnixUTC,
+    pub temp: f64,
+    pub feels_like: f64,
+    pub humidity: f64,
+    pub clouds: f64,
+    pub rain: Option&lt;Rain&gt;,
+    pub snow: Option&lt;Snow&gt;,
+}
+</code></pre>
+<aside class="notes"><p> We can define structs for the API responses — these are pretty much
+copied from the <a href="https://openweathermap.org/">openweathermap.org</a> API docs.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="45"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="1-9|11-17" data-noescape="">impl OpenWeather {
+    fn onecall(&amp;self) -&gt; eyre::Result&lt;OneCall&gt; {
+        self.get(
+            "onecall",
+            &amp;[ ("exclude", "currently,minutely"),
+                ("units", "imperial"), ],
+        )
+    }
+}
+
+fn main() -&gt; eyre::Result&lt;()&gt; {
+    // ...
+    let onecall: OneCall = config
+        .onecall()
+        .wrap_err("Failed to deserialize hourly weather data")?;
+}
+</code></pre>
+<aside class="notes"><p></p>
+<ol>
+<li>
+<p>Then, we can define a helper method to make that request directly. Note that
+we don't need to annotate the generic types for the <code>self.get</code> call, though
+we can if we want — the compiler is smart enough to figure out what the
+type parameter needs to be from the return type of <code>self.get</code> on its own.</p>
+</li>
+<li>
+<p>And then we can use the new method in our <code>main</code> function to get the
+forecast data as a richly-typed struct.</p>
+</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="15"><div class="slide-wrapper">
+<pre><code class="language-rust" data-noescape="">#[derive(Debug, PartialEq)]
+enum TempDifference {
+    MuchColder,
+    Colder,
+    Same,
+    Warmer,
+    MuchWarmer,
+}
+</code></pre>
+<aside class="notes"><p> One thing I want from my forecast is to tell me if today is going to be
+warmer or colder than yesterday. So I'll create a <code>TempDifference</code> enum, and
+then a helper method to get the appropriate <code>TempDifference</code> for two floats.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="30"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">impl TempDifference {
+    fn from(from: f64, to: f64) -&gt; Self {
+        let delta = to - from;
+        match delta {
+            d if d &gt;  10.0 =&gt; TempDifference::MuchWarmer,
+            d if d &gt;   5.0 =&gt; TempDifference::Warmer,
+            d if d &lt; -10.0 =&gt; TempDifference::MuchColder,
+            d if d &lt;  -5.0 =&gt; TempDifference::Colder,
+            _ =&gt; TempDifference::Same,
+        }
+    }
+}
+</code></pre>
+<aside class="notes"><p> Here's that constructor function, which takes two floats, calculates
+their difference, and matches them to the correct <code>TempDifference</code> variant.</p>
+<p>We're also adding conditional statements to the match patterns, which helps make
+it a bit clearer that we're determining which range <code>delta</code> is in.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="40"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="1-13|1|3|5-12|7-10" data-noescape="">#[cfg(test)]
+mod test {
+    use <a href="https://docs.rs/super">super</a>::*;
+
+    #[test]
+    fn test_tempdiff() {
+        assert_eq!(
+            TempDifference::from(50.0, 69.0),
+            TempDifference::MuchWarmer
+        );
+        // And so on, but these slides are small...
+    }
+}
+</code></pre>
+<aside class="notes"><p> I'm <em>really bad</em> at arithmetic stuff like this, so I want to write a few
+tests to make sure I got the subtraction order and everything right.</p>
+<ol>
+<li>The <code>#[cfg(test)]</code> attribute means the entire <code>test</code> module is conditionally
+compiled, so our tests don't get lumped in to our other builds.</li>
+<li>We have to import the functions and values from the parent module — that
+is, the rest of the file — explicitly.</li>
+<li>Then, a test is a function annotated with the <code>#[test]</code> attribute.</li>
+<li>Finally, we can write asserts with the <code>assert!</code> and <code>assert_eq!</code> macros.</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="30"><div class="slide-wrapper">
+<pre class="term"><span class="hljs-keyword">$</span> <span class="hljs-title">cargo test</span>
+<span style="color: #4E9A06"><b>    Finished</b></span> test [unoptimized + debuginfo] target(s)
+             in 0.04s
+<span style="color: #4E9A06"><b>     Running</b></span> target/debug/deps/rustconf_code-affd1f0e8
+
+running 1 test
+test test::test_tempdiff ... <span style="color: #4E9A06">ok</span>
+
+test result: <span style="color: #4E9A06">ok</span>. 1 passed; 0 failed; 0 ignored;
+                 0 measured; 0 filtered out
+</pre>
+<aside class="notes"><p> And we can run our tests to make sure that we've written everything
+correctly. Another little thing I like about Rust? The type system lets me
+describe and check a lot of my code before it compiles correctly, so I end up
+writing tests that crash and fail immediately a <em>lot</em> less often than I do in
+other languages, which is a big boost to my self-esteem.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="20"><div class="slide-wrapper">
+<pre><code class="language-rust" data-noescape="">struct Stats {
+    min: f64,
+    max: f64,
+    avg: f64,
+    count: usize,
+}
+</code></pre>
+<aside class="notes"><p> I want to be able to state various things about a collection of
+temperatures — like their range and their average, so this <code>Stats</code> struct
+will handle that computation.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="40"><div class="slide-wrapper">
+<pre><code class="language-rust" data-noescape="">impl Default for Stats {
+    fn default() -&gt; Self {
+        Self {
+            min: f64::INFINITY,
+            max: f64::NEG_INFINITY,
+            avg: 0.0,
+            count: 0,
+        }
+    }
+}
+</code></pre>
+<aside class="notes"><p> Let's implement the <code>Default</code> trait for <code>Stats</code>, which gives us a way to
+construct a default value for a type. It's like Go's concept of a zero-value,
+but Rust doesn't require that every type have a default, because that's not
+always meaningful (types like file-handles, for instance, don't have a
+reasonable default).</p>
+<p>We're picking <code>f64::INFINITY</code> for the starting minimum value because every
+float is less than infinity, and <code>f64::NEG_INFINITY</code> for <code>max</code> for the same
+reason.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="15"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">impl Stats {
+    fn from(itr: impl Iterator&lt;Item = f64&gt;) -&gt; Self {
+        let mut ret = Self::default();
+        let mut sum = 0.0;
+        // ...
+    }
+}
+</code></pre>
+<aside class="notes"><p> Now we can construct a <code>Stats</code> object from an iterator of floats. We
+start by initializing a mutable return value and a sum of the iterator's
+elements.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="20"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">impl Stats {
+    fn from(itr: impl Iterator&lt;Item = f64&gt;) -&gt; Self {
+        // ...
+        for i in itr {
+            if i &lt; ret.min {
+                ret.min = i;
+            } else if i &gt; ret.max {
+                ret.max = i;
+            }
+            ret.count += 1;
+            sum += i;
+        }
+        // ...
+    }
+}
+</code></pre>
+<aside class="notes"><p> Next, we take each value in the iterator and update the return value's
+minimum and maximum values, as well as the element count and running total.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="8"><div class="slide-wrapper">
+<pre><code class="language-rust left" data-noescape="">impl Stats {
+    fn from(itr: impl Iterator&lt;Item = f64&gt;) -&gt; Self {
+        // ...
+        ret.avg = sum / ret.count as f64;
+        ret
+    }
+}
+</code></pre>
+<aside class="notes"><p> And finally, we compute the average value and return.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="20"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="1-2|3-5|7" data-noescape="">let yesterday =
+    Stats::from(historical.iter().map(|h| h.feels_like));
+let today = Stats::from(
+    onecall.hourly.iter().map(|h| h.feels_like).take(24),
+);
+
+let diff = TempDifference::from(yesterday.avg, today.avg);
+</code></pre>
+<aside class="notes"><p> Then, we can gather the temperatures for yesterday into a <code>Stats</code>
+object.</p>
+<p>Note that we're using lazy iterators here, so mapping each data-point to the
+temperature it "felt like" doesn't require writing a whole new array.</p>
+<ol>
+<li>We can do the same thing with our forecast, making sure to limit the
+forecast to 24 hourly datapoints.</li>
+<li>And then we can get a temperature difference between the two days.</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="60"><div class="slide-wrapper">
+<pre><code class="language-rust no-line-numbers left" data-line-numbers="1|2|3-13|8-11|12|1-13" data-noescape="">let today_is_warm = 60.0 &lt;= today.avg &amp;&amp; today.avg &lt;= 80.0;
+print!("Good morning! Today will be about {:.2}°F ", today.avg);
+println!(
+    "({min} - {max}°F); that's {diff} {than} yesterday{end}",
+    min = today.min,
+    max = today.max,
+    diff = diff,
+    than = match diff {
+        TempDifference::Same =&gt; "as",
+        _ =&gt; "than",
+    },
+    end = if today_is_warm { " :)" } else { "." },
+);
+</code></pre>
+<aside class="notes"><p> To finish up, let's print out the data we've gathered.</p>
+<ol>
+<li>
+<p>First, I want to print a smiley face for good weather, so I'll check if the
+average temperature today is between 60 and 80°F.</p>
+</li>
+<li>
+<p>Then, we'll print the first line, truncating today's average temperature to 2
+decimal places.</p>
+</li>
+<li>
+<p>Then, we're going to print the rest of it. There's a bunch going on here, so
+let's break it down.</p>
+<p>First, because <code>println!</code> is a macro, it can do weird things with the syntax
+— like this keyword-argument syntax that's only used for printing and
+formatting macros.</p>
+</li>
+<li>
+<p>Next, we have a <code>match</code> statement — Rust's <code>if</code>/<code>else</code> and <code>match</code>
+statements return a value, so we can use them inline like this.</p>
+</li>
+<li>
+<p>And then we finish with a smiley face if today is going to be warm, or a
+period otherwise.</p>
+</li>
+<li>
+<p>After printing all the information out, our program is done!</p>
+</li>
+</ol>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="15"><div class="slide-wrapper">
+<pre><code class="language-shell-session left">$ cargo build
+    Finished dev [unoptimized + debuginfo] target(s) in 0.04s
+
+$ ./target/debug/rustconf-code
+Good morning! Today will be about 85.16°F (76.42 - 94.96°F);
+that's about the same as yesterday.
+</code></pre>
+<aside class="notes"><p> Building and running it, we can see what the final output looks like
+after I fixed several issues with missing or superfluous whitespace, so now all
+we have left to do is print it out.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="center" data-timing="15"><div class="slide-wrapper">
+<pre><code class="language-shell-session">$ ./target/debug/rustconf-code | lp
+request id is star-22 (0 file(s))
+</code></pre>
+<aside class="notes"><p> We pipe our program's output to <code>lp</code>…</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="20"><div class="slide-wrapper">
+<video data-autoplay="" data-src="img/printing.mp4" type="video/mp4">
+</video></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="image-slide" data-timing="15"><div class="slide-wrapper">
+<img alt="Me holding a printed receipt in my hand, which reads &quot;Good morning! Today will be about 77.76°F (69.3 - 89.76°F); that's about the same as yesterday :)" src="img/printed-receipt.jpg"/>
+</div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="title-card" data-timing="40"><div class="slide-wrapper">
+<h2>Don’t be afraid to <code>.clone()</code></h2>
+<aside class="notes"><p> And before I go, let me leave you with one last piece of advice: if
+you're writing a Rust program, and you're trying to work with references, and
+it's just not working… <code>.clone()</code> your data.</p>
+<p>Cloning can fix a lot of annoying problems, and it's rarely a performance issue
+when writing scripts or command-line interfaces (particularly when compared to
+dynamic languages). But, if you end up in those circumstances, you can always
+ask another Rust programmer for help — our community is full of kind and
+helpful people willing to share a few minutes of their time to help fix errors
+I don't understand — I couldn't have learned Rust on my own, and as long as
+you're respectful of your peers, we're all glad to help.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section class="title-card" data-state="purple" data-timing="20"><div class="slide-wrapper">
+<h2>This is only a taste</h2>
+<aside class="notes"><p> Everything I just talked about is just a tiny portion of what you can do
+with Rust — and what Rust can do for you. There's so many features and tools
+I wanted to talk about that I didn't have time for — adding methods to
+foreign types, type-safe numbers and unit conversions.</p>
+</aside></div><div class="slide-footer">
+<div class="slide-footer-left">
+    Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)
+  </div>
+<div class="slide-footer-right">
+<i class="fa-twitter fab"></i>
+<a href="https://twitter.com/16kbps">@16kbps</a>
+    / <a href="https://becca.ooo">becca.ooo</a>
+</div>
+</div></section>
+<section data-timing="15"><div class="slide-wrapper">
+<h1>Rust <div class="small">for</div> Non-Systems Programmers</h1>
+<p><span class="author">Rebecca Turner (<a href="https://pronoun.is/she/her/">she/her</a>)</span></p>
+<p><i class="fa-twitter fab"></i> <a href="https://twitter.com/16kbps">@16kbps</a> / <a href="https://becca.ooo/">becca.ooo</a></p>
+<aside class="notes"><p> Thanks so much for listening, and I hope you do some amazing things with
+Rust!</p>
+</aside></div></section>
+</div>
+</div>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/highlight/rust.js"></script>
+<script src="plugin/highlight/shell.js"></script>
+<script>
+        Reveal.initialize({
+            width: 960,
+            height: 580,
+            hash: true,
+            controls: false,
+            progress: false,
+            showNotes: true,
+            transition: 'none',
+            totalTime: 30 * 60,
+            /* vertical- */ center: false,
+            plugins: [HighlightRustCompiler, HighlightShellSession, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+</html>
+

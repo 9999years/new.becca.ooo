@@ -23,6 +23,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - "**/rustconf/**/*.{js,html,css}"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -76,18 +77,8 @@ marked:
   breaks: false
   modifyAnchors: 1
 
-all_minifier: false
-html_minifier:
-    enable: false
-image_minifier:
-    enable: false
-
-# https://github.com/theme-next/hexo-filter-optimize
-filter_optimize:
-    enable: false
-
 stylus:
-      compress: false
+  compress: false
 
 tag_partials:
   - bullet
