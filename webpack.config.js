@@ -7,7 +7,7 @@ const script_root = 'source/scripts/'
 function glob(...globs) {
     return Object.assign(...globs.map(glob => {
         const entries = glob_entries(glob)
-        for(const k in entries) {
+        for (const k in entries) {
             entries[k] = path.relative(source_root, entries[k])
         }
         return entries
@@ -26,17 +26,17 @@ module.exports = {
             path.relative(
                 path.join(__dirname, script_root),
                 dat.chunk.entryModule.context,
-                ),
-            `${dat.chunk.name}.bundle.js`,
             ),
+            `${dat.chunk.name}.bundle.js`,
+        ),
         //filename: 'scripts/[name].bundle.js',
     },
     module: {
         rules: [
-            { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
+            {test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/},
         ]
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ],
+        extensions: ['.tsx', '.ts', '.js'],
     },
 }
