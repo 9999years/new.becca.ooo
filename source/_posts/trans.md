@@ -1,6 +1,6 @@
 ---
-title="trans studies and advocacy"
-description="a list of scientific and community-driven affirmative resources on transness"
+title: "trans studies and advocacy"
+description: "a list of scientific and community-driven affirmative resources on transness"
 # to read: https://www.scopus.com/results/citedbyresults.uri?sort=plf-f&cite=2-s2.0-84925127060&src=s&imp=t&sid=5a3534a64c82fb45fe5701d6b80d930b&sot=cite&sdt=a&sl=0&origin=inward&editSaveSearch=&txGid=8bf5c03752d1e9c1de21e60de0fd0bdc
 ---
 
