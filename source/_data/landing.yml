@@ -67,7 +67,7 @@
   alt: google calendar
 
 - txt: 🎥
-  url: https://letterboxd.com/beccaooo/list/movies-i-have-downloaded-but-not-watched/
+  url: https://letterboxd.com/beccaooo/watchlist/
   alt: letterboxd
 
 - txt: 🔥
@@ -79,8 +79,8 @@
   alt: texts
 
 - txt: ️☑
-  url: https://app.amazingmarvin.com/
-  alt: marvin
+  url: https://todoist.com/app/
+  alt: todoist
 
 - txt: 💸
   url: https://app.youneedabudget.com
@@ -90,21 +90,17 @@
   url: https://app.standardnotes.org/
   alt: notes
 
-- txt: '<span class="fas fa-quote-right"></span>'
+- txt: '<span class="fas fa-quote-right"></span><sub>0</sub>'
   url: https://hangouts.google.com/
   alt: hangouts
+
+- txt: '<span class="fas fa-quote-right"></span><sub>1</sub>'
+  url: https://hangouts.google.com/?authuser=1
+  alt: hangouts 1
 
 - txt: '<span class="fab fa-github"></span>'
   url: https://github.com/
   alt: github
-
-- txt: 🦞
-  url: https://lobste.rs/
-  alt: lobste.rs
-
-- txt: ⏱
-  url: https://wd5.myworkday.com/brandeis/d/task/2997$4767.htmld
-  alt: enter brandeis timesheet
 
 - txt: 📌
   url: https://pinboard.in/
