@@ -1,5 +1,5 @@
 ---
-title: "Slack is the worrrrrsssstttttt"
+title: "Slack’s threads are terrible for accessibility"
 description: "Slack’s threads might as well not exist — just like an accessible education for disabled students at Brandeis."
 date: 2020-10-23
 updated: 2020-10-25
@@ -7,8 +7,6 @@ updated: 2020-10-25
 
 *Note: This article was originally written as an analysis of Slack's
 collaborative features.*
-
-## Collaboration in Slack
 
 Slack's lackluster implementation of threading shapes the rest of its
 collaborative features, largely nullifying them. Slack gives users the
@@ -23,7 +21,12 @@ categorize, sort, or browse threads. Slacks' threads are branches off of a
 [phpbb][phpbb] or similar. For instance, threads can't be tagged, and it's
 difficult to add additional context to a thread — messages can't be pinned to a
 thread, not that it would really matter, because there's no way to search a
-thread. Further, replies sent to a thread are easily lost among a flurry of
+thread. The link between a thread and its channel is tenuous as well; there's
+no notifications for new threads or messages in threads you're not "following,"
+so unless you never miss a Slack message (difficult in general, especially if
+you're attempting to enforce any sort of work-life boundaries) it's easy to
+miss even large, active threads. On the flip side, when participating in a
+thread, replies are easily lost for the rest of the channel among a flurry of
 other messages unless you (tediously) check “also send to channel” every time
 you message — and these downfalls are compounded by the plethora of niche
 single-purpose channels Slack encourages users to create; users have to check
