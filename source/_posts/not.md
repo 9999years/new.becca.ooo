@@ -5,7 +5,9 @@ description: there are many rebecca turners. i am not these ones
 
 there are many rebecca turners. i am not these ones
 
-* [former npm oss programmer rebecca turner][4]
+* [software engineer rebecca turner, aka iarna][4], currently employed by
+  microsoft but perhaps best-known for her work at npm, where she was
+  responsible for [the npm cli][npm/cli], among other things
 * [british olympian rebecca turner][1]
 * [host of mississippi talk show “good things with rebecca turner”][2]
 * [founder of “world of lucid dreaming” rebecca turner][3]
@@ -39,3 +41,4 @@ there are many rebecca turners. i am not these ones
 [13]: https://www.fairsentencingofyouth.org/team/turner/
 [14]: https://health.usnews.com/doctors/rebecca-turner-568245
 [15]: https://www.littlerealestate.com.au/our-team/rebecca-turner
+[npm/cli]: https://github.com/npm/cli
