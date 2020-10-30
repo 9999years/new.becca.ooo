@@ -19,10 +19,10 @@ encodings] on Wikipedia.
 
 # Charts and character data
 
-{% bullet %} [PDF charts on unicode.org] --- The only complete and perpetually
+[PDF charts on unicode.org] --- The only complete and perpetually
 up-to-date reference.
 
-{% bullet %} [List of Unicode blocks on Wikipedia] --- Also available as a
+[List of Unicode blocks on Wikipedia] --- Also available as a
 [TXT file on unicode.org]
 
 [UNIDATA on unicode.org] --- "This directory contains the final data
@@ -39,7 +39,7 @@ here.
 
 # String analysis
 
-{% bullet %} [Unicode Inspector] --- By [@timwhitlock], displays the
+[Unicode Inspector] --- By [@timwhitlock], displays the
 codepoint, byte breakdown, block, symbol, name, and surrogates for each
 character in a string.
 
@@ -64,7 +64,7 @@ Displays binary/hex breakdown of strings of text.
 
 # Shape recognition
 
-{% bullet %} [shapecatcher] --- Recognizes Unicode characters through a
+[shapecatcher] --- Recognizes Unicode characters through a
 drawing field.
 
 [Kanji search on jisho.org] --- Find kanji characters by their parts.
@@ -77,7 +77,7 @@ know.
 
 # Conversion (programming)
 
-{% bullet %} [Xem's EscApe utility on Github] --- By [Maxime Euzière].
+[Xem's EscApe utility on Github] --- By [Maxime Euzière].
 Converts any Unicode string to a bunch of different escape sequence syntaxes.
 
 [ASCII Xlate] --- Converts plain ASCII, binary, octal, hex, base32,
@@ -87,12 +87,12 @@ base64, ASCII85, and decimal ASCII. Also calculates various hashes!
 
 # Conversion (decorative or linguistic)
 
-{% bullet %} [Unicate] --- Converts to various Latin Unicode "alphabets" (e.g.
+[Unicate] --- Converts to various Latin Unicode "alphabets" (e.g.
 full-width, math scripts, etc.).
 
 [Text converter on qaz.wtf] --- Similar to the above.
 
-{% bullet %} [Zalgo generator on eeemo.net] --- generates Zalgo text.
+[Zalgo generator on eeemo.net] --- generates Zalgo text.
 
 [Convert Text on the Chrome web store] --- Converts the case of text as
 a Chrome extension. Includes Zalgo generator and fullwidth transform.
@@ -115,13 +115,13 @@ mention.
 
 # Coverage: fonts & support
 
-{% bullet %} [Alan Wood's Unicode font list] --- Probably the most complete
+[Alan Wood's Unicode font list] --- Probably the most complete
 list of high-coverage fonts.
 
-{% bullet %} [PragmataPro] --- A monospaced programming font with 6,000 glyphs
+[PragmataPro] --- A monospaced programming font with 6,000 glyphs
 (and rising).
 
-{% bullet %} [CharacterMap] --- Analyzes glyphs from font files.
+[CharacterMap] --- Analyzes glyphs from font files.
 
 [Google Noto Fonts] --- A set of sans and serif fonts supporting 581
 languages (as of April 2016), with about 50% glyph coverage.
@@ -142,7 +142,7 @@ languages (as of April 2016), with about 50% glyph coverage.
 
 # Emoji
 
-{% bullet %} [Full Emoji Charts] --- all emoji with comparison pictures of
+[Full Emoji Charts] --- all emoji with comparison pictures of
 implementations on various platforms.
 
 [Emoji Symbols: Background Data on unicode.org], a.k.a. (L2/09-027) --- Japanese
@@ -161,7 +161,7 @@ and blame lies entirely with the third parties involved.
 
 # ASCII/Unicode art & Kaomoji
 
-{% bullet %} [cutekaomoji.com]
+[cutekaomoji.com]
 
 [List of 10,000+ kaomoji]
 
@@ -187,7 +187,7 @@ and blame lies entirely with the third parties involved.
 
 # Misc.
 
-{% bullet %} [Random Unicode character generator on jsfiddle] --- By
+[Random Unicode character generator on jsfiddle] --- By
 [@FakeUnicode] on Twitter.
 
 [List of Unicode arrows] --- Courtesy of [@fabrizioschiavi] of
@@ -202,7 +202,7 @@ and blame lies entirely with the third parties involved.
 [rebecca]: /
 [@FakeUnicode]: https://twitter.com/FakeUnicode
 [Unicode]: https://en.wikipedia.org/wiki/Unicode
-[Unicode encodings]: https://en.m.wikipedia.org/wiki/Unicode#Unicode_Transformation_Format_and_Universal_Coded_Character_Set
+[Unicode encodings]: https://https://en.wikipedia.org/wiki/Unicode#Mapping_and_encodings
 [just about everyone]: http://www.unicode.org/consortium/members.html
 [all their software]: http://www.unicode.org/resources/
 [Get into the details on Stack Overflow]: https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16
@@ -230,7 +230,7 @@ and blame lies entirely with the third parties involved.
 [Handwritten kanji recognition]: http://kanji.sljfaq.org/draw-canvas.html
 [Google Translate]: https://translate.google.com/
 [Mouse input for Chinese characters]: http://www.chinese-tools.com/tools/mouse.html
-[Xem's EscApe utility on Github]: https://rawgit.com/xem/escape/v2/index.html
+[Xem's EscApe utility on Github]: https://xem.github.io/escape/
 [Maxime Euzière]: https://xem.github.io/
 [ASCII Xlate]: https://paulschou.com/tools/xlate/
 [convert-to-utf-8]: http://www.unicodetools.com/
@@ -245,7 +245,7 @@ and blame lies entirely with the third parties involved.
 [Abbreviator]: /unicode/abbreviate/
 [Unitools]: https://www.unicod.es/
 [Nepali converter]: http://unicodenepali.com/
-[Braille converter]: http://libbraille.org/translator.php?src=unicode.9999yea.rs&table=basic6
+[Braille converter]: https://www.brailletranslator.org/
 [Alan Wood's Unicode font list]: http://www.alanwood.net/unicode/fonts.html
 [PragmataPro]: http://www.fsd.it/shop/fonts/pragmatapro/
 [CharacterMap]: https://bluejamesbond.github.io/CharacterMap/
@@ -265,7 +265,7 @@ and blame lies entirely with the third parties involved.
 [cutekaomoji.com]: http://cutekaomoji.com/
 [List of 10,000+ kaomoji]: http://japaneseemoticons.me/all-japanese-emoticons/
 [textfac.es]: https://textfac.es/
-[ASCII art collection on chris.com]: http://www.chris.com/ascii/
+[ASCII art collection on chris.com]: https://asciiart.website/
 [ASCII art on asciiworld.com]: http://www.asciiworld.com/
 [ASCII text art generator]: http://patorjk.com/software/taag/#p=display&f=Graffiti&t=unicode.9999yea.rs
 [Vim]: http://vim.wikia.com/wiki/Entering_special_characters
@@ -278,5 +278,4 @@ and blame lies entirely with the third parties involved.
 [@fabrizioschiavi]: https://twitter.com/fabrizioschiavi
 [Emoji allowed in Twitter usernames]: http://getemoji.com/#twitter
 [Character/byte counter]: https://mothereff.in/byte-counter
-[my unicode toys]: index/
 [emoji_history]: https://en.wikipedia.org/wiki/Miscellaneous_Symbols_and_Pictographs#History
