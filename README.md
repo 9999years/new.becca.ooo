@@ -11,7 +11,7 @@ Whenever not specified, work within this repository is AGPLv3 licensed (see
 In short: fork the code, but not my writing.
 
 [becca.ooo]: https://becca.ooo/
-[travis-svg]: https://travis-ci.org/9999years/becca.ooo.svg?branch=master
+[travis-svg]: https://travis-ci.org/9999years/becca.ooo.svg?branch=main
 [travis]: https://travis-ci.org/9999years/becca.ooo
 [Caddy]: https://caddyserver.com/
 [the average page]: https://www.machmetrics.com/speed-blog/average-page-load-times-websites-2018/
