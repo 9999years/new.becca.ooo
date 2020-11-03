@@ -19,11 +19,11 @@ encodings] on Wikipedia.
 
 # Charts and character data
 
-{% bullet %} [PDF charts on unicode.org] --- The only complete and perpetually
-up-to-date reference.
+<span class=bullet></span>[PDF charts on unicode.org][charts] --- The only
+complete and perpetually up-to-date reference.
 
-{% bullet %} [List of Unicode blocks on Wikipedia] --- Also available as a
-[TXT file on unicode.org]
+<span class=bullet></span>[List of Unicode blocks on
+Wikipedia][wikipedia-blocks] --- Also available as a [TXT file on unicode.org]
 
 [UNIDATA on unicode.org] --- "This directory contains the final data
 files for the Unicode Character Database, for Version 8.0.0 of the
@@ -39,9 +39,9 @@ here.
 
 # String analysis
 
-{% bullet %} [Unicode Inspector] --- By [@timwhitlock], displays the
-codepoint, byte breakdown, block, symbol, name, and surrogates for each
-character in a string.
+<span class=bullet></span>[Unicode Inspector][timwhitlock-inspector] --- By
+[@timwhitlock], displays the codepoint, byte breakdown, block, symbol, name,
+and surrogates for each character in a string.
 
 [Scarfboy search and string analysis]
 
@@ -64,8 +64,8 @@ Displays binary/hex breakdown of strings of text.
 
 # Shape recognition
 
-{% bullet %} [shapecatcher] --- Recognizes Unicode characters through a
-drawing field.
+<span class=bullet></span>[shapecatcher][shapecatcher] --- Recognizes Unicode
+characters through a drawing field.
 
 [Kanji search on jisho.org] --- Find kanji characters by their parts.
 
@@ -77,8 +77,9 @@ know.
 
 # Conversion (programming)
 
-{% bullet %} [Xem's EscApe utility on Github] --- By [Maxime Euzière].
-Converts any Unicode string to a bunch of different escape sequence syntaxes.
+<span class=bullet></span>[Xem's EscApe utility on Github] --- By [Maxime
+Euzière]. Converts any Unicode string to a bunch of different escape sequence
+syntaxes.
 
 [ASCII Xlate] --- Converts plain ASCII, binary, octal, hex, base32,
 base64, ASCII85, and decimal ASCII. Also calculates various hashes!
@@ -87,12 +88,13 @@ base64, ASCII85, and decimal ASCII. Also calculates various hashes!
 
 # Conversion (decorative or linguistic)
 
-{% bullet %} [Unicate] --- Converts to various Latin Unicode "alphabets" (e.g.
-full-width, math scripts, etc.).
+<span class=bullet></span>[Unicate][Unicate] --- Converts to various Latin
+Unicode "alphabets" (e.g. full-width, math scripts, etc.).
 
 [Text converter on qaz.wtf] --- Similar to the above.
 
-{% bullet %} [Zalgo generator on eeemo.net] --- generates Zalgo text.
+<span class=bullet></span>[Zalgo generator on eeemo.net][zalgo] --- generates
+Zalgo text.
 
 [Convert Text on the Chrome web store] --- Converts the case of text as
 a Chrome extension. Includes Zalgo generator and fullwidth transform.
@@ -115,13 +117,13 @@ mention.
 
 # Coverage: fonts & support
 
-{% bullet %} [Alan Wood's Unicode font list] --- Probably the most complete
-list of high-coverage fonts.
+<span class=bullet></span>[Alan Wood's Unicode font list] --- Probably the most
+complete list of high-coverage fonts.
 
-{% bullet %} [PragmataPro] --- A monospaced programming font with 6,000 glyphs
-(and rising).
+<span class=bullet></span>[PragmataPro] --- A monospaced programming font with
+6,000 glyphs (and rising).
 
-{% bullet %} [CharacterMap] --- Analyzes glyphs from font files.
+<span class=bullet></span>[CharacterMap] --- Analyzes glyphs from font files.
 
 [Google Noto Fonts] --- A set of sans and serif fonts supporting 581
 languages (as of April 2016), with about 50% glyph coverage.
@@ -142,7 +144,7 @@ languages (as of April 2016), with about 50% glyph coverage.
 
 # Emoji
 
-{% bullet %} [Full Emoji Charts] --- all emoji with comparison pictures of
+<span class=bullet></span>[Full Emoji Charts] --- all emoji with comparison pictures of
 implementations on various platforms.
 
 [Emoji Symbols: Background Data on unicode.org], a.k.a. (L2/09-027) --- Japanese
@@ -161,7 +163,7 @@ and blame lies entirely with the third parties involved.
 
 # ASCII/Unicode art & Kaomoji
 
-{% bullet %} [cutekaomoji.com]
+<span class=bullet></span>[cutekaomoji.com]
 
 [List of 10,000+ kaomoji]
 
@@ -187,8 +189,8 @@ and blame lies entirely with the third parties involved.
 
 # Misc.
 
-{% bullet %} [Random Unicode character generator on jsfiddle] --- By
-[@FakeUnicode] on Twitter.
+<span class=bullet></span>[Random Unicode character generator on jsfiddle] ---
+By [@FakeUnicode] on Twitter.
 
 [List of Unicode arrows] --- Courtesy of [@fabrizioschiavi] of
 [Pragmata Pro][PragmataPro] fame.
@@ -206,8 +208,8 @@ and blame lies entirely with the third parties involved.
 [just about everyone]: http://www.unicode.org/consortium/members.html
 [all their software]: http://www.unicode.org/resources/
 [Get into the details on Stack Overflow]: https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16
-[PDF charts on unicode.org]: http://www.unicode.org/charts/
-[List of Unicode blocks on Wikipedia]: https://en.wikipedia.org/wiki/Unicode_block
+[charts]: http://www.unicode.org/charts/
+[wikipedia-blocks]: https://en.wikipedia.org/wiki/Unicode_block
 [TXT file on unicode.org]: http://www.unicode.org/Public/UNIDATA/Blocks.txt
 [UNIDATA on unicode.org]: http://www.unicode.org/Public/UNIDATA/
 [CopyPasteCharacter]: http://www.copypastecharacter.com/all-characters
@@ -215,7 +217,7 @@ and blame lies entirely with the third parties involved.
 [Xah Lee's Unicode gallery]: http://xahlee.info/comp/unicode_index.html
 [Variants on unicode.org]: http://unicode.org/Public/UCD/latest/ucd/StandardizedVariants.html
 [Unicode planes reference]: https://en.wikipedia.org/wiki/Plane_(Unicode)
-[Unicode Inspector]: http://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%92%81u
+[timwhitlock-inspector]: http://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%92%81u
 [@timwhitlock]: https://twitter.com/timwhitlock
 [Scarfboy search and string analysis]: http://unicode.scarfboy.com/?s=4a1e
 [Understanding UTF-8 on jsfiddle]: https://jsfiddle.net/vrog8Lkf/
@@ -236,7 +238,7 @@ and blame lies entirely with the third parties involved.
 [convert-to-utf-8]: http://www.unicodetools.com/
 [Unicate]: http://mar.cx/unicate/
 [Text converter on qaz.wtf]: http://qaz.wtf/u/convert.cgi?text=unicode.9999yea.rs
-[Zalgo generator on eeemo.net]: http://eeemo.net/
+[zalgo]: http://eeemo.net/
 [Convert Text on the Chrome web store]: https://chrome.google.com/webstore/detail/convert-text/mcpglhjaahelnpjalcaeecgkjhkpokdn
 [Strikethrough converter]: http://adamvarga.com/strike/
 [Adam Varga]: http://adamvarga.com/
@@ -248,7 +250,7 @@ and blame lies entirely with the third parties involved.
 [Braille converter]: http://libbraille.org/translator.php?src=unicode.9999yea.rs&table=basic6
 [Alan Wood's Unicode font list]: http://www.alanwood.net/unicode/fonts.html
 [PragmataPro]: http://www.fsd.it/shop/fonts/pragmatapro/
-[CharacterMap]: https://bluejamesbond.github.io/CharacterMap/
+[CharacterMap]: https://mathew-kurian.github.io/CharacterMap/
 [Google Noto Fonts]: https://www.google.com/get/noto/
 [Unicode fonts by writing system]: http://www.cheat-sheets.org/sites/font.su/
 [Preview of all codepoints in the BMP]: http://www.visibone.com/htmlref/char/cer.htm
@@ -259,7 +261,7 @@ and blame lies entirely with the third parties involved.
 [Code2000 font]: https://en.wikipedia.org/wiki/Code2000
 [Full Emoji Charts]: http://unicode.org/emoji/charts/full-emoji-list.html
 [Emoji Symbols: Background Data on unicode.org]: https://www.unicode.org/L2/L2009/09027-emoji-backgrnd.pdf
-[Possible upcoming emoji on unicode.org]: http://www.unicode.org/emoji/charts/emoji-candidates.html
+[Possible upcoming emoji on unicode.org]: https://unicode.org/emoji/future/emoji-candidates.html
 [List of emoji ZWJ ligatures on unicode.org]: http://www.unicode.org/emoji/charts/emoji-zwj-sequences.html
 [Text vs Emoji reference on unicode.org]: http://www.unicode.org/emoji/charts/text-style.html
 [cutekaomoji.com]: http://cutekaomoji.com/

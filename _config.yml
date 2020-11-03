@@ -81,7 +81,6 @@ stylus:
   compress: false
 
 tag_partials:
-  - bullet
   - toc
 
 toc:
