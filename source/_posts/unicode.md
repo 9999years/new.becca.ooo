@@ -169,7 +169,7 @@ and blame lies entirely with the third parties involved.
 
 [textfac.es]
 
-[ASCII art collection on chris.com]
+[ASCII art collection on asciiart.website][asciiart.website], formerly chris.com
 
 [ASCII art on asciiworld.com]
 
@@ -199,86 +199,83 @@ By [@FakeUnicode] on Twitter.
 
 [Character/byte counter]
 
-[my unicode toys] --- by rebecca
-
 [rebecca]: /
 [@FakeUnicode]: https://twitter.com/FakeUnicode
 [Unicode]: https://en.wikipedia.org/wiki/Unicode
-[Unicode encodings]: https://en.m.wikipedia.org/wiki/Unicode#Unicode_Transformation_Format_and_Universal_Coded_Character_Set
-[just about everyone]: http://www.unicode.org/consortium/members.html
-[all their software]: http://www.unicode.org/resources/
+[Unicode encodings]: https://en.wikipedia.org/wiki/Unicode#Mapping_and_encodings
+[just about everyone]: https://unicode.org/consortium/members.html
+[all their software]: https://unicode.org/resources/
 [Get into the details on Stack Overflow]: https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16
-[charts]: http://www.unicode.org/charts/
+[charts]: https://unicode.org/charts/
 [wikipedia-blocks]: https://en.wikipedia.org/wiki/Unicode_block
-[TXT file on unicode.org]: http://www.unicode.org/Public/UNIDATA/Blocks.txt
-[UNIDATA on unicode.org]: http://www.unicode.org/Public/UNIDATA/
-[CopyPasteCharacter]: http://www.copypastecharacter.com/all-characters
-[Proposed new characters on unicode.org]: http://unicode.org/alloc/Pipeline.html
+[TXT file on unicode.org]: https://unicode.org/Public/UNIDATA/Blocks.txt
+[UNIDATA on unicode.org]: https://unicode.org/Public/UNIDATA/
+[CopyPasteCharacter]: https://www.copypastecharacter.com/all-characters
+[Proposed new characters on unicode.org]: https://unicode.org/alloc/Pipeline.html
 [Xah Lee's Unicode gallery]: http://xahlee.info/comp/unicode_index.html
 [Variants on unicode.org]: http://unicode.org/Public/UCD/latest/ucd/StandardizedVariants.html
 [Unicode planes reference]: https://en.wikipedia.org/wiki/Plane_(Unicode)
-[timwhitlock-inspector]: http://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%92%81u
+[timwhitlock-inspector]: https://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%92%81u
 [@timwhitlock]: https://twitter.com/timwhitlock
 [Scarfboy search and string analysis]: http://unicode.scarfboy.com/?s=4a1e
 [Understanding UTF-8 on jsfiddle]: https://jsfiddle.net/vrog8Lkf/
-[What Unicode character is this?]: http://www.babelstone.co.uk/Unicode/whatisit.html
-[BabelStone]: http://www.babelstone.co.uk/
+[What Unicode character is this?]: https://babelstone.co.uk/Unicode/whatisit.html
+[BabelStone]: https://babelstone.co.uk/
 [codepoints.net]: https://codepoints.net/search?q=punctuation
-[&what;]: http://www.amp-what.com/unicode/search/
-[FileFormat.info]: http://www.fileformat.info/info/unicode/char/search.htm
-[charcod.es]: http://charcod.es/
-[shapecatcher]: http://shapecatcher.com/
-[Kanji search on jisho.org]: http://jisho.org/#radical
-[Handwritten kanji recognition]: http://kanji.sljfaq.org/draw-canvas.html
+[&what;]: https://amp-what.com/unicode/search/
+[FileFormat.info]: https://fileformat.info/info/unicode/char/search.htm
+[charcod.es]: https://charcod.es/
+[shapecatcher]: https://shapecatcher.com/
+[Kanji search on jisho.org]: https://jisho.org/#radical
+[Handwritten kanji recognition]: https://kanji.sljfaq.org/draw-canvas.html
 [Google Translate]: https://translate.google.com/
 [Mouse input for Chinese characters]: http://www.chinese-tools.com/tools/mouse.html
-[Xem's EscApe utility on Github]: https://rawgit.com/xem/escape/v2/index.html
+[Xem's EscApe utility on Github]: https://xem.github.io/escape/
 [Maxime Euzière]: https://xem.github.io/
 [ASCII Xlate]: https://paulschou.com/tools/xlate/
-[convert-to-utf-8]: http://www.unicodetools.com/
+[convert-to-utf-8]: https://unicodetools.com/
 [Unicate]: http://mar.cx/unicate/
-[Text converter on qaz.wtf]: http://qaz.wtf/u/convert.cgi?text=unicode.9999yea.rs
-[zalgo]: http://eeemo.net/
+[Text converter on qaz.wtf]: https://qaz.wtf/u/convert.cgi?text=unicode.9999yea.rs
+[zalgo]: https://eeemo.net/
 [Convert Text on the Chrome web store]: https://chrome.google.com/webstore/detail/convert-text/mcpglhjaahelnpjalcaeecgkjhkpokdn
-[Strikethrough converter]: http://adamvarga.com/strike/
-[Adam Varga]: http://adamvarga.com/
+[Strikethrough converter]: https://adamvarga.com/strike/
+[Adam Varga]: https://adamvarga.com/
 [Emojify text on jsfiddle]: https://jsfiddle.net/xHrxM/13/
 [Acrostic generator]: /unicode/grid/
 [Abbreviator]: /unicode/abbreviate/
 [Unitools]: https://www.unicod.es/
 [Nepali converter]: http://unicodenepali.com/
-[Braille converter]: http://libbraille.org/translator.php?src=unicode.9999yea.rs&table=basic6
-[Alan Wood's Unicode font list]: http://www.alanwood.net/unicode/fonts.html
-[PragmataPro]: http://www.fsd.it/shop/fonts/pragmatapro/
+[Braille converter]: https://brailletranslator.org/
+[Alan Wood's Unicode font list]: http://alanwood.net/unicode/fonts.html
+[PragmataPro]: https://fsd.it/shop/fonts/pragmatapro/
 [CharacterMap]: https://mathew-kurian.github.io/CharacterMap/
-[Google Noto Fonts]: https://www.google.com/get/noto/
-[Unicode fonts by writing system]: http://www.cheat-sheets.org/sites/font.su/
-[Preview of all codepoints in the BMP]: http://www.visibone.com/htmlref/char/cer.htm
-[GNU Unifont]: http://unifoundry.com/unifont.html
-[BabelStone's Han font]: http://www.babelstone.co.uk/Fonts/Han.html
-[Everson Mono font]: http://www.evertype.com/emono/
-[Hanazono font]: http://fonts.jp/hanazono/
+[Google Noto Fonts]: https://google.com/get/noto/
+[Unicode fonts by writing system]: http://cheat-sheets.org/sites/font.su/
+[Preview of all codepoints in the BMP]: http://visibone.com/htmlref/char/cer.htm
+[GNU Unifont]: https://unifoundry.com/unifont/
+[BabelStone's Han font]: https://babelstone.co.uk/Fonts/Han.html
+[Everson Mono font]: https://evertype.com/emono/
+[Hanazono font]: https://fonts.jp/hanazono/
 [Code2000 font]: https://en.wikipedia.org/wiki/Code2000
-[Full Emoji Charts]: http://unicode.org/emoji/charts/full-emoji-list.html
-[Emoji Symbols: Background Data on unicode.org]: https://www.unicode.org/L2/L2009/09027-emoji-backgrnd.pdf
+[Full Emoji Charts]: https://unicode.org/emoji/charts/full-emoji-list.html
+[Emoji Symbols: Background Data on unicode.org]: https://unicode.org/L2/L2009/09027-emoji-backgrnd.pdf
 [Possible upcoming emoji on unicode.org]: https://unicode.org/emoji/future/emoji-candidates.html
-[List of emoji ZWJ ligatures on unicode.org]: http://www.unicode.org/emoji/charts/emoji-zwj-sequences.html
-[Text vs Emoji reference on unicode.org]: http://www.unicode.org/emoji/charts/text-style.html
-[cutekaomoji.com]: http://cutekaomoji.com/
-[List of 10,000+ kaomoji]: http://japaneseemoticons.me/all-japanese-emoticons/
+[List of emoji ZWJ ligatures on unicode.org]: https://unicode.org/emoji/charts/emoji-zwj-sequences.html
+[Text vs Emoji reference on unicode.org]: https://unicode.org/emoji/charts/text-style.html
+[cutekaomoji.com]: https://cutekaomoji.com/
+[List of 10,000+ kaomoji]: https://japaneseemoticons.me/all-japanese-emoticons/
 [textfac.es]: https://textfac.es/
-[ASCII art collection on chris.com]: http://www.chris.com/ascii/
-[ASCII art on asciiworld.com]: http://www.asciiworld.com/
-[ASCII text art generator]: http://patorjk.com/software/taag/#p=display&f=Graffiti&t=unicode.9999yea.rs
-[Vim]: http://vim.wikia.com/wiki/Entering_special_characters
+[asciiart.website]: https://asciiart.website/
+[ASCII art on asciiworld.com]: https://asciiworld.com/
+[ASCII text art generator]: https://patorjk.com/software/taag/#p=display&f=Graffiti&t=unicode.9999yea.rs
+[Vim]: https://vim.wikia.com/wiki/Entering_special_characters
 [Emacs]: https://superuser.com/questions/394405/how-to-type-a-unicode-character-by-its-number-in-emacs
-[Mac OS X]: http://www.poynton.com/notes/misc/mac-unicode-hex-input.html
+[Mac OS X]: https://poynton.com/notes/misc/mac-unicode-hex-input.html
 [Windows]: https://en.wikipedia.org/wiki/Unicode_input#In_Microsoft_Windows
 [Unix in GTK applications]: https://en.wikipedia.org/wiki/Unicode_input#In_X11_.28Linux_and_other_Unix_variants.29
 [Random Unicode character generator on jsfiddle]: https://jsfiddle.net/SaqVU/4/
 [List of Unicode arrows]: /arrows
 [@fabrizioschiavi]: https://twitter.com/fabrizioschiavi
-[Emoji allowed in Twitter usernames]: http://getemoji.com/#twitter
+[Emoji allowed in Twitter usernames]: https://getemoji.com/#twitter
 [Character/byte counter]: https://mothereff.in/byte-counter
-[my unicode toys]: index/
 [emoji_history]: https://en.wikipedia.org/wiki/Miscellaneous_Symbols_and_Pictographs#History
