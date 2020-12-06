@@ -124,6 +124,6 @@ for young adults with ADHD and 5.4% otherwise, a 90-fold difference).
 [slack-irc-eol]: https://web.archive.org/web/20180307125841/https://get.slack.help/hc/en-us/articles/201727913-Connect-to-Slack-over-IRC-and-XMPP
 [slack-screen-reader-a11y]: https://web.archive.org/web/20190325002116/https://www.reddit.com/r/Blind/comments/80ql6f/slack_taking_steps_to_improve_screen_reader/
 [why-i-procrastinate]: https://invisibleup.com/articles/27/
-[brandeis-failing-disabled-students]: https://brandeishoot.com/2020/02/07/open-letter-brandeis-is-failing-its-disabled-students/
+[brandeis-failing-disabled-students]: /brandeis/brandeis-is-failing-its-disabled-students/
 [brandeis-fight-song-parody]: http://www.thebrandeishoot.com/articles/1301
 [adhd-graduation-rates]: https://link.springer.com/article/10.1007/s10802-012-9658-z#Sec8
