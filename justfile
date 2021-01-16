@@ -34,3 +34,7 @@ deploy:
 # Resize wishlist images.
 resize image:
 	./source/img/wishlist/conv.ps1 {{ image }}
+
+# Update all deps in package.json to their latest release
+update-all:
+	npx npm-check-updates -u

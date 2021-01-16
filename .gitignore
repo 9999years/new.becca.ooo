@@ -4,3 +4,5 @@ db.json
 /public/
 /.deploy*/
 /.travis/travis_rsa
+
+.vercel
