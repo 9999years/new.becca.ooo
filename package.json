@@ -8,29 +8,29 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "he": "^1.2.0",
-    "hexo": "^4.2.0",
+    "hexo": "^4.2.1",
     "hexo-deployer-sftp": "^0.4.1",
     "hexo-description": "^0.1.0",
-    "hexo-excerpt": "^1.1.4",
+    "hexo-excerpt": "^1.1.6",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
-    "hexo-generator-sitemap": "^2.0.0",
+    "hexo-generator-sitemap": "^2.1.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "hexo-webpack": "^1.0.0",
     "jcanvas": "^21.0.1",
-    "jquery": "^3.5.0",
+    "jquery": "^3.5.1",
     "markdown-toc": "^1.2.0",
     "nunjucks": "^3.2.2",
     "object-assign": "^4.1.1",
-    "transliteration": "^2.1.8",
+    "transliteration": "^2.2.0",
     "uslug": "^1.0.4"
   },
   "devDependencies": {
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.8.2",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.9.7",
     "webpack-glob-entries": "^1.0.1"
   }
 }
