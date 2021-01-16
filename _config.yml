@@ -61,14 +61,6 @@ pagination_dir: page
 
 theme: becca
 
-# Deployment
-deploy:
-  type: sftp
-  host: becca.ooo
-  user: www-data
-  remotePath: /becca.ooo/
-  privateKey: .travis/travis_rsa
-
 # Plugin / extension config
 books:
   url_prefix: https://www.abebooks.com/servlet/SearchResults?isbn=
