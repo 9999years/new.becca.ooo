@@ -1,7 +1,5 @@
 # [becca.ooo]
 
-[![Travis CI][travis-svg]][travis]
-
 ## License
 
 Whenever not specified, work within this repository is AGPLv3 licensed (see
