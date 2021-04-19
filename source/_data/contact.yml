@@ -9,6 +9,10 @@
 - label: linkedin
   link: https://www.linkedin.com/in/9999years/
   val: 9999years
+  
+- label: calendly
+  link: https://calendly.com/rbturner/
+  val: rbturner
 
 - label: telegram
   link: https://telegram.me/beccaooo
@@ -28,6 +32,7 @@
 - label: snapchat
   link: https://www.snapchat.com/add/pupbecca
   val: pupbecca
+  uncommon: true
 
 - label: battle.net
   val: 'TransAndCool#1429'
