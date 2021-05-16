@@ -1,9 +1,0 @@
----
-- name: Books
-  price: 15
-  url: /books
-
-- name: Higonokami by Nagao Seisakusho
-  url: 'https://www.amazon.com/dp/B00EU8MLQY'
-  price: 25
-  photo: nagao-higonokami
