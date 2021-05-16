@@ -2,9 +2,9 @@
 title: rebecca™ by rebecca turner
 short_title: rebecca™
 subtitle:
-description: The digital home of Rebecca Turner, software engineer
+description: the digital home of rebecca turner, software engineer
 keywords:
-author: Rebecca Turner
+author: rebecca turner
 language: en
 timezone: America/New_York
 
@@ -62,9 +62,6 @@ pagination_dir: page
 theme: becca
 
 # Plugin / extension config
-books:
-  url_prefix: https://www.abebooks.com/servlet/SearchResults?isbn=
-
 marked:
   breaks: false
   modifyAnchors: 1
