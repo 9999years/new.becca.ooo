@@ -41,8 +41,7 @@ highlight:
   auto_detect: false
   tab_replace:
 
-exclude_generators:
-  - index
+exclude_generators: []
 
 # Category & Tag
 default_category: uncategorized
