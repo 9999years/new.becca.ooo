@@ -4,13 +4,6 @@
 - txt: '<span class="fab fa-tumblr"></span>'
   url: http://tumblr.com/
 
-- txt: xkcd
-  url: https://xkcd.com/
-
-- txt: '<span class="fas fa-info"></span>'
-  url: http://www.explainxkcd.com/wiki/index.php/Main_Page
-  alt: xkcd explained
-
 - txt: 📧
   url: https://www.fastmail.com/
 
@@ -22,10 +15,6 @@
   url: 'https://mail.google.com/mail/u/1/#inbox'
   alt: gmail 1
 
-- txt: 'G<sub>2</sub>'
-  url: 'https://mail.google.com/mail/u/1/#inbox'
-  alt: gmail 2
-
 - txt: '<span class="fas fa-robot"></span>'
   url: https://www.reddit.com/new
   alt: reddit
@@ -33,22 +22,6 @@
 - txt: '<span class="fab fa-facebook-messenger"></span>'
   url: https://www.messenger.com/
   alt: fb msgr
-
-- txt: ️☕
-  url: https://moodle2.brandeis.edu/my/
-  alt: brandeis latte
-
-- txt: 🌿
-  url: https://sage.brandeis.edu/psp/CPROD90/EMPLOYEE/HRMS/s/WEBLIB_BR_SSO.ISCRIPT1.FieldFormula.iScript_redirectBRSSO
-  alt: brandeis sage
-
-- txt: 📱
-  url: https://identity.brandeis.edu/portal/index
-  alt: brandeis sage mobile
-
-- txt: '<span class="fas fa-gavel"></span>'
-  url: /brandeis/
-  alt: more brandeis links
 
 - txt: 🔣
   url: /unicode/
@@ -58,21 +31,9 @@
   url: https://drive.google.com/drive/u/0/
   alt: google drive 0
 
-- txt: '💾<sub>1</sub>'
-  url: https://drive.google.com/drive/u/1/
-  alt: google drive 1
-
 - txt: 📅
   url: https://calendar.google.com/calendar/r
   alt: google calendar
-
-- txt: 🎥
-  url: https://letterboxd.com/beccaooo/watchlist/
-  alt: letterboxd
-
-- txt: 🔥
-  url: https://tinder.com/app/recs
-  alt: tinder
 
 - txt: '<span class="fas fa-sms"></span>'
   url: https://messages.android.com/
@@ -91,12 +52,8 @@
   alt: notes
 
 - txt: '<span class="fas fa-quote-right"></span><sub>0</sub>'
-  url: https://hangouts.google.com/
-  alt: hangouts
-
-- txt: '<span class="fas fa-quote-right"></span><sub>1</sub>'
-  url: https://hangouts.google.com/?authuser=1
-  alt: hangouts 1
+  url: https://chat.google.com/
+  alt: google chat
 
 - txt: '<span class="fab fa-github"></span>'
   url: https://github.com/
