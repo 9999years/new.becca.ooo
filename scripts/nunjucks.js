@@ -37,5 +37,3 @@ njkRenderer.compile = (data) =>
 	(locals, callback) => njkRenderer(data, locals, callback)
 
 hexo.extend.renderer.register("njk", "html", njkRenderer);
-hexo.extend.renderer.register("nunjucks", "html", njkRenderer);
-hexo.extend.renderer.register("j2", "html", njkRenderer);

@@ -5,6 +5,8 @@ description: a page to demonstrate markup and take advantage of all the features
 toc: true
 ---
 
+# markup test page
+
 i don't ever actually use six titles. but here's a test page so i can figure out
 what theyd look like if i did. nothing differentiates titles 3--6. solution:
 don't use them.

@@ -3,6 +3,8 @@ title: about
 description: some fun facts about my self
 ---
 
+# about
+
 <img title="A dated selfie of me in San Fransisco, smiling. My hair is bleached blond
 and has just been cut into a rough bob; it's a little bit wavy but not curly.
 My eyes are nearly shut when I smile. I am wearing a black backpack and a black

@@ -2,6 +2,11 @@
 title: Introduction to functional programming in Java
 ---
 
+# Introduction to functional programming in Java
+
+**Note:** This article was originally written for a course on Structure and
+Interpretation of Computer Programs (SICP).
+
 This is a new piece of documentation, written just for this course, so let me
 know if parts of it are unclear to you — or if you like it! Expect to read it
 fairly slowly (like any technical writing), and consult the [Java

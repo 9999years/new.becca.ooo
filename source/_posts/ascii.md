@@ -4,6 +4,8 @@ extra_css:
    - ascii/ascii
 ---
 
+# ASCII table
+
 [Available as a terminal-friendly .txt!](/ascii.txt) ([long version](/ascii-long.txt)), or with [less details](simple).
 
 [Char]|[Dec]|[Oct] |[Hex] | [Bin]    |[C0]| [C]   |[U]| [Name]

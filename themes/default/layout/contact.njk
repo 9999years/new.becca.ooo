@@ -1,0 +1,17 @@
+{% extends "_partial/base.njk" %}
+{% block post_content %}
+<table>
+{% for item in site.data.contact %}
+	{%- if item.uncommon %}{% else -%}
+		<tr>
+			<td>{{ item.label }}</td>
+			<td>
+				{%- if item.link %}<a href="{{ item.link }}">{% endif -%}
+				{{ item.val }}
+				{%- if item.link %}</a>{% endif -%}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}
+</table>
+{% endblock %}

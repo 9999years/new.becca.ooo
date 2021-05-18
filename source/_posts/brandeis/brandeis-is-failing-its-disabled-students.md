@@ -5,6 +5,8 @@ date: 2020-02-07
 updated: 2020-10-28
 ---
 
+# Open letter: Brandeis is failing its disabled students
+
 *Note: This letter was originally published in [The Brandeis Hoot][hoot]. The
 letter itself is a near-exact copy of an email I sent to interim student
 accessibility services director Scott Kalicki, explaining why I was

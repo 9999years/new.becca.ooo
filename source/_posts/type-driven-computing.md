@@ -4,6 +4,8 @@ description: towards a more cohesive computing experience
 draft: true
 ---
 
+# Type-Driven Computing
+
 I really like command line user interfaces. I think they live up to a sort of
 *conversationality* that computing often lacks. In the [desktop
 metaphor][desktop-metaphor], stacked GUI windows often feel like a clutter of

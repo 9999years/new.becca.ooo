@@ -4,7 +4,9 @@ description: a distance-estimating ray marcher for rendering quaternion julia se
      fractals
 ---
 
-## A distance-estimating ray marcher
+# i c the light
+
+A distance-estimating ray marcher
 
 From [Syntopia]:
 

@@ -4,10 +4,9 @@ server:
 build:
 	./node_modules/hexo/bin/hexo generate --verbose
 
-# Install development deps.
+# Install build deps
 install:
 	npm install
-	pip3 install --user yamllint
 	git lfs fetch
 	git lfs checkout
 

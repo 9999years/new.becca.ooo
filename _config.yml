@@ -1,79 +1,20 @@
-# Site
+# https://hexo.io/docs/configuration
+
 title: rebecca®
-short_title: rebecca®
-subtitle:
 description: the digital home of rebecca turner, software engineer
-keywords:
 author: rebecca turner
-language: en
 timezone: America/New_York
-
-# URL
 url: https://becca.ooo
-root: /
 permalink: :title/
-permalink_defaults:
-
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
 skip_render:
   - "**/rustconf/**/*.{js,html,css}"
-
-# Writing
-new_post_name: :title.md # File name of new posts
 default_layout: post.njk
-titlecase: false # Transform title into titlecase
-external_link: false # Open external links in new tab
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
-highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
-
-exclude_generators: []
-
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Date / Time format
-# http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 0
-pagination_dir: page
-
-theme: becca
+external_link: {enable: false} # Don't mess with external links (open in new tab)
+theme: default
+per_page: 0 # Disable pagination
 
 # Plugin / extension config
 marked:
   breaks: false
   modifyAnchors: 1
-
-stylus:
-  compress: false
-
-tag_partials:
-  - toc
-
-toc:
-  stripHeadingTags: true
-  before: |
-    <nav id="toc">
-    <h1>Contents</h1>
-  after: '</nav>'
+stylus: {compress: false}

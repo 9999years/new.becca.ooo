@@ -3,10 +3,12 @@ title: résumé
 description: 
 ---
 
+# résumé
+
 - <rbt.jobs@sent.as>
 - [becca.ooo][becca.ooo]
 - [github.com/9999years][github-profile]
-- [linkedin.com/in/9999years/][linkedin-profile]
+- [linkedin.com/in/9999years][linkedin-profile]
 
 [becca.ooo]: https://becca.ooo/
 [github-profile]: https://github.com/9999years/

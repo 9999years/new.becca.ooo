@@ -5,6 +5,8 @@ date: 2020-10-23
 updated: 2020-10-25
 ---
 
+# Slack’s threads are terrible for accessibility
+
 *Note: This article was originally written as an analysis of Slack's
 collaborative features.*
 

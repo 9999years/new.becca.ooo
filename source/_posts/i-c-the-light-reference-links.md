@@ -5,6 +5,8 @@ description: resources and publications that i used writing i c the light, a dis
 permalink: i-c-the-light/reference-links
 ---
 
+# i c the light
+
 ## Reference Links
 
 ### Distance Estimation / Ray Marching

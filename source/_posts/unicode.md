@@ -1,9 +1,10 @@
 ---
 title: Unicode Resources
 url: unicode
-toc: true
-extra_css: [unicode/unicode, toc]
+extra_css: [unicode/unicode]
 ---
+
+# Unicode Resources
 
 Created by [rebecca] with major help from [@FakeUnicode]
 
@@ -14,8 +15,6 @@ world’s writing systems and serve as a superset of all previously-existing
 character sets used and supported by [just about everyone] and [all their
 software]. [Get into the details on Stack Overflow] or see some of the [Unicode
 encodings] on Wikipedia.
-
-<!-- toc -->
 
 # Charts and character data
 

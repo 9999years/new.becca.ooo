@@ -5,6 +5,8 @@ extra_css:
    - ascii/simple
 ---
 
+## ASCII table
+
 [Also available as a .txt file that fits in an 80×24 terminal!](/ascii.txt)
 
 [Also available with more details!](../)
