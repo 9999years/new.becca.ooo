@@ -1,7 +1,7 @@
 - url: /about
   label: Read a short bio about me
-- url: /resume.pdf
+- url: /resume
   txt: résumé
-  label: View my résumé
+  label: Read my résumé
 - url: /contact
   label: Get my contact information
