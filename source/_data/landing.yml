@@ -1,0 +1,64 @@
+- txt: 🐤
+  url: https://twitter.com/
+
+- txt: '<span class="fab fa-tumblr"></span>'
+  url: http://tumblr.com/
+
+- txt: 📧
+  url: https://www.fastmail.com/
+
+- txt: 'G<sub>0</sub>'
+  url: 'https://mail.google.com/mail/u/0/#inbox'
+  alt: gmail 0
+
+- txt: 'G<sub>1</sub>'
+  url: 'https://mail.google.com/mail/u/1/#inbox'
+  alt: gmail 1
+
+- txt: '<span class="fas fa-robot"></span>'
+  url: https://www.reddit.com/new
+  alt: reddit
+
+- txt: '<span class="fab fa-facebook-messenger"></span>'
+  url: https://www.messenger.com/
+  alt: fb msgr
+
+- txt: 🔣
+  url: /unicode/
+  alt: unicode links
+
+- txt: '💾<sub>0</sub>'
+  url: https://drive.google.com/drive/u/0/
+  alt: google drive 0
+
+- txt: 📅
+  url: https://calendar.google.com/calendar/r
+  alt: google calendar
+
+- txt: '<span class="fas fa-sms"></span>'
+  url: https://messages.android.com/
+  alt: texts
+
+- txt: ️☑
+  url: https://todoist.com/app/
+  alt: todoist
+
+- txt: 💸
+  url: https://app.youneedabudget.com
+  alt: ynab
+
+- txt: 📝
+  url: https://app.standardnotes.org/
+  alt: notes
+
+- txt: '<span class="fas fa-quote-right"></span><sub>0</sub>'
+  url: https://chat.google.com/
+  alt: google chat
+
+- txt: '<span class="fab fa-github"></span>'
+  url: https://github.com/
+  alt: github
+
+- txt: 📌
+  url: https://pinboard.in/
+  alt: pinboard.in
